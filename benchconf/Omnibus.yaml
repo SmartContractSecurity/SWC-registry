@@ -1,0 +1,20 @@
+
+
+oudated_compiler_version/version_0_4_0:
+  ignore: false
+  issues:
+  - address: 
+    linenumber: 1
+    title: 'Outdated Compiler Version 0.4.0'
+    code: 'assert(false)' # Do we need this and and for what?
+
+
+pragma_not_locked/floating_pragma:
+  ignore: false
+  issues:
+  - address: 
+    linenumber: 1
+    title: 'Pragma not locked to specific compiler version'
+    code: 'assert(false)' # Do we need this and and for what?
+
+
