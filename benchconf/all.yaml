@@ -1,4 +1,4 @@
-integer_underflow_and_overflow/overflow_add:
+integer_overflow_and_underflow/overflow_add:
   ignore: false
   issues: 
   - address: 139
