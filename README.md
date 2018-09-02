@@ -1,5 +1,6 @@
-# Mythril tool benchmarks 
-A suite of benchmarks that could be used for variations of static, symbolic or runtime security analysis tools.
+# Omnibus
+
+Universal benchmarks for Ethereum smart contract security analysis tools.
 
 ## Benchmark format 
 
