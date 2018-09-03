@@ -1,0 +1,31 @@
+/*
+ * @source: https://github.com/ConsenSys/smart-contract-best-practices
+ * @author: Consensys Diligence
+ */
+
+
+pragma solidity 0.4.19;
+
+contract Overflow_simple_plus_bengin {
+	
+	mapping (address => uint256) public balanceOf;
+
+	// INSECURE
+	function transfer(address _to, uint256 _value) {
+	    /* Check if sender has balance */
+	    require(balanceOf[msg.sender] >= _value);
+	    /* Add and subtract new balances */
+	    balanceOf[msg.sender] -= _value;
+	    balanceOf[_to] += _value;
+	}
+
+	// SECURE
+	function transfer(address _to, uint256 _value) {
+	    /* Check if sender has balance and for overflows */
+	    require(balanceOf[msg.sender] >= _value && balanceOf[_to] + _value >= balanceOf[_to]);
+
+	    /* Add and subtract new balances */
+	    balanceOf[msg.sender] -= _value;
+	    balanceOf[_to] += _value;
+	}
+}
