@@ -1,7 +1,7 @@
 issues:
 - type: "OMN-VISIB-FUNCTION"
   bytecode_offset: 
-  line_number: 10
-  type: "OMN-VISIB-FUNCTION"
+  src_location: 10
+- type: "OMN-VISIB-FUNCTION"
   bytecode_offset: 
-  line_number: 16
+  src_location: 16

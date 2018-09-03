@@ -29,7 +29,7 @@ contract TestStorage {
         uints1[address1] = 88;
         uints1[address2] = 99;
 
-        DeviceData dev1 = DeviceData("deviceBrand", "deviceYear", "wearLevel");
+        DeviceData memory dev1 = DeviceData("deviceBrand", "deviceYear", "wearLevel");
 
         structs1[address1] = dev1;
 

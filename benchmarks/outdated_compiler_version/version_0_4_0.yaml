@@ -1,0 +1,4 @@
+issues:
+- type: "OMN-OUTDATED_COMP"
+  bytecode_offset: 
+  src_location: 1

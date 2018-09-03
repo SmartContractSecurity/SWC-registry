@@ -1,7 +1,7 @@
 issues:
 - type: "OMN-ARITH-OVERFLOW"
   bytecode_offset: 
-  line_number: 18
-  type: "OMN-ARITH-OVERFLOW"
+  src_location: 18
+- type: "OMN-ARITH-OVERFLOW"
   bytecode_offset: 
-  line_number: 19
+  src_location: 19

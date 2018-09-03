@@ -1,4 +1,4 @@
 issues:
 - type: "OMN-ARITH-OVERFLOW"
   bytecode_offset: 139
-  line_number: 8
+  src_location: 8

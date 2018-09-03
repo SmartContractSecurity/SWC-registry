@@ -1,0 +1,19 @@
+issues:
+- type: "OMN-VISIB-VARIABLE"
+  bytecode_offset: 
+  src_location: 5
+- type: "OMN-VISIB-VARIABLE"
+  bytecode_offset: 
+  src_location: 7
+- type: "OMN-VISIB-VARIABLE"
+  bytecode_offset: 
+  src_location: 9
+- type: "OMN-VISIB-VARIABLE"
+  bytecode_offset: 
+  src_location: 14
+- type: "OMN-VISIB-VARIABLE"
+  bytecode_offset: 
+  src_location: 16
+- type: "OMN-VISIB-VARIABLE"
+  bytecode_offset: 
+  src_location: 17
