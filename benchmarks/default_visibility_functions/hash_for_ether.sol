@@ -1,3 +1,10 @@
+/*
+ * @source: https://blog.sigmaprime.io/solidity-security.html
+ * @author: SigmaPrime 
+ */
+
+ pragma solidity 0.4.19;
+
 contract HashForEther {
 
     function withdrawWinnings() {
