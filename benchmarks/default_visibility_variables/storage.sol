@@ -1,10 +1,9 @@
-pragma solidity 0.4.17;
+pragma solidity 0.4.24;
 
 contract TestStorage {
 
     uint storeduint1 = 15;
     uint constant constuint = 16;
-    uint128 investmentsLimit = 17055; 
     uint32 investmentsDeadlineTimeStamp = uint32(now); 
 
     bytes16 string1 = "test1"; 
