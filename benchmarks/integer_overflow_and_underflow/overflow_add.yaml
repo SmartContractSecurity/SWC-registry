@@ -1,8 +1,0 @@
-integer_underflow_and_overflow/overflow_add:
-  has_bug: true  # Trail of bits suggests adding a test where has_bug: false
-  issues:
-    - location:
-        - bytecode_offset: 139
-          line_number: 15
-          src: 9:27  # or 9:27:0 to match solc ast?
-          vulnerability: Overflow

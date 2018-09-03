@@ -3,7 +3,6 @@
  * @author: Consensys Diligence
  */
 
-
 pragma solidity 0.4.19;
 
 contract Overflow_simple_plus_bengin {
@@ -11,7 +10,7 @@ contract Overflow_simple_plus_bengin {
 	mapping (address => uint256) public balanceOf;
 
 	// INSECURE
-	function transfer(address _to, uint256 _value) {
+	function transfer1(address _to, uint256 _value) public {
 	    /* Check if sender has balance */
 	    require(balanceOf[msg.sender] >= _value);
 	    /* Add and subtract new balances */
@@ -20,7 +19,7 @@ contract Overflow_simple_plus_bengin {
 	}
 
 	// SECURE
-	function transfer(address _to, uint256 _value) {
+	function transfer2(address _to, uint256 _value) public {
 	    /* Check if sender has balance and for overflows */
 	    require(balanceOf[msg.sender] >= _value && balanceOf[_to] + _value >= balanceOf[_to]);
 
