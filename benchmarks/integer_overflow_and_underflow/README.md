@@ -12,4 +12,3 @@ Critical
 
 ## References 
 [Ethereum Smart Contract Best Practices - Integer Overflow and Underflow](https://consensys.github.io/smart-contract-best-practices/known_attacks/#integer-overflow-and-underflow)
-

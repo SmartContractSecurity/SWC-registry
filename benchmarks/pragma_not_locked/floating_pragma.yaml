@@ -1,0 +1,7 @@
+pragma_not_locked/floating_pragma:
+  has_bug: true
+  issues:
+  - location:
+    line_number: 1
+    src: 17:5
+    vulnerability: Pragma not locked

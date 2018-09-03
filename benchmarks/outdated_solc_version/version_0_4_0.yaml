@@ -1,0 +1,7 @@
+oudated_compiler_version/version_0_4_0:
+  has_bug: true
+  issues:
+  - location:
+    line_number: 1
+    src: 17:5
+    vulnerability: Outdated Compiler Version
