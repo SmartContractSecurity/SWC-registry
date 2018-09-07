@@ -1,0 +1,132 @@
+{
+  "contracts" : 
+  {
+    "floating_pragma.sol:PragmaNotLocked" : 
+    {
+      "bin" : "60806040526001600055348015601457600080fd5b50609e806100236000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630c55699c146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820157a3ce44faec70ee5b1e73cc44b4593818b65d3abbf6e1c2a0f302dd1aba5f90029",
+      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630c55699c146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820157a3ce44faec70ee5b1e73cc44b4593818b65d3abbf6e1c2a0f302dd1aba5f90029",
+      "srcmap" : "25:51:0:-;;;72:1;56:17;;25:51;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:51:0;;;;;;;",
+      "srcmap-runtime" : "25:51:0:-;;;;;;;;;;;;;;;;;;;;;;;;56:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;56:17:0;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o"
+    }
+  },
+  "sourceList" : 
+  [
+    "floating_pragma.sol"
+  ],
+  "sources" : 
+  {
+    "floating_pragma.sol" : 
+    {
+      "AST" : 
+      {
+        "attributes" : 
+        {
+          "absolutePath" : "floating_pragma.sol",
+          "exportedSymbols" : 
+          {
+            "PragmaNotLocked" : 
+            [
+              5
+            ]
+          }
+        },
+        "children" : 
+        [
+          {
+            "attributes" : 
+            {
+              "literals" : 
+              [
+                "solidity",
+                "^",
+                "0.4",
+                ".0"
+              ]
+            },
+            "id" : 1,
+            "name" : "PragmaDirective",
+            "src" : "0:23:0"
+          },
+          {
+            "attributes" : 
+            {
+              "baseContracts" : 
+              [
+                null
+              ],
+              "contractDependencies" : 
+              [
+                null
+              ],
+              "contractKind" : "contract",
+              "documentation" : null,
+              "fullyImplemented" : true,
+              "linearizedBaseContracts" : 
+              [
+                5
+              ],
+              "name" : "PragmaNotLocked",
+              "scope" : 6
+            },
+            "children" : 
+            [
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "name" : "x",
+                  "scope" : 5,
+                  "stateVariable" : true,
+                  "storageLocation" : "default",
+                  "type" : "uint256",
+                  "visibility" : "public"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "name" : "uint",
+                      "type" : "uint256"
+                    },
+                    "id" : 2,
+                    "name" : "ElementaryTypeName",
+                    "src" : "56:4:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "argumentTypes" : null,
+                      "hexvalue" : "31",
+                      "isConstant" : false,
+                      "isLValue" : false,
+                      "isPure" : true,
+                      "lValueRequested" : false,
+                      "subdenomination" : null,
+                      "token" : "number",
+                      "type" : "int_const 1",
+                      "value" : "1"
+                    },
+                    "id" : 3,
+                    "name" : "Literal",
+                    "src" : "72:1:0"
+                  }
+                ],
+                "id" : 4,
+                "name" : "VariableDeclaration",
+                "src" : "56:17:0"
+              }
+            ],
+            "id" : 5,
+            "name" : "ContractDefinition",
+            "src" : "25:51:0"
+          }
+        ],
+        "id" : 6,
+        "name" : "SourceUnit",
+        "src" : "0:77:0"
+      }
+    }
+  },
+  "version" : "0.4.24+commit.e67f0147.Darwin.appleclang"
+}

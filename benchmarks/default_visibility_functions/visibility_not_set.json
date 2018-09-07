@@ -1,0 +1,198 @@
+{
+  "contracts" : 
+  {
+    "visibility_not_set.sol:VisibilityNotSet" : 
+    {
+      "bin" : "6080604052348015600f57600080fd5b5060a58061001e6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063dbbf17c7146044575b600080fd5b348015604f57600080fd5b5060566070565b604051808215151515815260200191505060405180910390f35b600060019050905600a165627a7a72305820abc578f185026837deb5c6e10507488e9a8c5cda9dfda6ea4d2286c43c6179640029",
+      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063dbbf17c7146044575b600080fd5b348015604f57600080fd5b5060566070565b604051808215151515815260200191505060405180910390f35b600060019050905600a165627a7a72305820abc578f185026837deb5c6e10507488e9a8c5cda9dfda6ea4d2286c43c6179640029",
+      "srcmap" : "119:102:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;119:102:0;;;;;;;",
+      "srcmap-runtime" : "119:102:0:-;;;;;;;;;;;;;;;;;;;;;;;;152:67;;8:9:-1;5:2;;;30:1;27;20:12;5:2;152:67:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;189:4;207;200:11;;152:67;:::o"
+    }
+  },
+  "sourceList" : 
+  [
+    "visibility_not_set.sol"
+  ],
+  "sources" : 
+  {
+    "visibility_not_set.sol" : 
+    {
+      "AST" : 
+      {
+        "attributes" : 
+        {
+          "absolutePath" : "visibility_not_set.sol",
+          "exportedSymbols" : 
+          {
+            "VisibilityNotSet" : 
+            [
+              10
+            ]
+          }
+        },
+        "children" : 
+        [
+          {
+            "attributes" : 
+            {
+              "literals" : 
+              [
+                "solidity",
+                "0.4",
+                ".24"
+              ]
+            },
+            "id" : 1,
+            "name" : "PragmaDirective",
+            "src" : "94:23:0"
+          },
+          {
+            "attributes" : 
+            {
+              "baseContracts" : 
+              [
+                null
+              ],
+              "contractDependencies" : 
+              [
+                null
+              ],
+              "contractKind" : "contract",
+              "documentation" : null,
+              "fullyImplemented" : true,
+              "linearizedBaseContracts" : 
+              [
+                10
+              ],
+              "name" : "VisibilityNotSet",
+              "scope" : 11
+            },
+            "children" : 
+            [
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "documentation" : null,
+                  "implemented" : true,
+                  "isConstructor" : false,
+                  "modifiers" : 
+                  [
+                    null
+                  ],
+                  "name" : "visibilityNotSet",
+                  "payable" : false,
+                  "scope" : 10,
+                  "stateMutability" : "nonpayable",
+                  "superFunction" : null,
+                  "visibility" : "public"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 2,
+                    "name" : "ParameterList",
+                    "src" : "177:2:0"
+                  },
+                  {
+                    "children" : 
+                    [
+                      {
+                        "attributes" : 
+                        {
+                          "constant" : false,
+                          "name" : "",
+                          "scope" : 9,
+                          "stateVariable" : false,
+                          "storageLocation" : "default",
+                          "type" : "bool",
+                          "value" : null,
+                          "visibility" : "internal"
+                        },
+                        "children" : 
+                        [
+                          {
+                            "attributes" : 
+                            {
+                              "name" : "bool",
+                              "type" : "bool"
+                            },
+                            "id" : 3,
+                            "name" : "ElementaryTypeName",
+                            "src" : "189:4:0"
+                          }
+                        ],
+                        "id" : 4,
+                        "name" : "VariableDeclaration",
+                        "src" : "189:4:0"
+                      }
+                    ],
+                    "id" : 5,
+                    "name" : "ParameterList",
+                    "src" : "188:6:0"
+                  },
+                  {
+                    "children" : 
+                    [
+                      {
+                        "attributes" : 
+                        {
+                          "functionReturnParameters" : 5
+                        },
+                        "children" : 
+                        [
+                          {
+                            "attributes" : 
+                            {
+                              "argumentTypes" : null,
+                              "hexvalue" : "74727565",
+                              "isConstant" : false,
+                              "isLValue" : false,
+                              "isPure" : true,
+                              "lValueRequested" : false,
+                              "subdenomination" : null,
+                              "token" : "bool",
+                              "type" : "bool",
+                              "value" : "true"
+                            },
+                            "id" : 6,
+                            "name" : "Literal",
+                            "src" : "207:4:0"
+                          }
+                        ],
+                        "id" : 7,
+                        "name" : "Return",
+                        "src" : "200:11:0"
+                      }
+                    ],
+                    "id" : 8,
+                    "name" : "Block",
+                    "src" : "195:24:0"
+                  }
+                ],
+                "id" : 9,
+                "name" : "FunctionDefinition",
+                "src" : "152:67:0"
+              }
+            ],
+            "id" : 10,
+            "name" : "ContractDefinition",
+            "src" : "119:102:0"
+          }
+        ],
+        "id" : 11,
+        "name" : "SourceUnit",
+        "src" : "94:130:0"
+      }
+    }
+  },
+  "version" : "0.4.24+commit.e67f0147.Darwin.appleclang"
+}

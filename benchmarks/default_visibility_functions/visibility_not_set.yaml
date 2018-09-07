@@ -2,6 +2,3 @@ issues:
 - type: "OMN-VISIB-FUNCTION"
   bytecode_offset: 
   src_location: 10
-- type: "OMN-VISIB-FUNCTION"
-  bytecode_offset: 
-  src_location: 16

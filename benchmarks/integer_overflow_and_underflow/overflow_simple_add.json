@@ -1,0 +1,272 @@
+{
+  "contracts" : 
+  {
+    "overflow_simple_add.sol:Overflow_Add" : 
+    {
+      "bin" : "6080604052600160005534801561001557600080fd5b5060e4806100246000396000f3006080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631003e2d214604e578063b69ef8a8146078575b600080fd5b348015605957600080fd5b5060766004803603810190808035906020019092919050505060a0565b005b348015608357600080fd5b50608a60b2565b6040518082815260200191505060405180910390f35b80600080828254019250508190555050565b600054815600a165627a7a72305820077b0ec6737bb945d5e2b5c6ac66f2db798978ac4e49bb51ddc8d0a4d0b6890e0029",
+      "bin-runtime" : "6080604052600436106049576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680631003e2d214604e578063b69ef8a8146078575b600080fd5b348015605957600080fd5b5060766004803603810190808035906020019092919050505060a0565b005b348015608357600080fd5b50608a60b2565b6040518082815260200191505060405180910390f35b80600080828254019250508190555050565b600054815600a165627a7a72305820077b0ec6737bb945d5e2b5c6ac66f2db798978ac4e49bb51ddc8d0a4d0b6890e0029",
+      "srcmap" : "26:132:0:-;;;76:1;54:23;;26:132;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:132:0;;;;;;;",
+      "srcmap-runtime" : "26:132:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;84:72;;8:9:-1;5:2;;;30:1;27;20:12;5:2;84:72:0;;;;;;;;;;;;;;;;;;;;;;;;;;54:23;;8:9:-1;5:2;;;30:1;27;20:12;5:2;54:23:0;;;;;;;;;;;;;;;;;;;;;;;84:72;142:7;131;;:18;;;;;;;;;;;84:72;:::o;54:23::-;;;;:::o"
+    }
+  },
+  "sourceList" : 
+  [
+    "overflow_simple_add.sol"
+  ],
+  "sources" : 
+  {
+    "overflow_simple_add.sol" : 
+    {
+      "AST" : 
+      {
+        "attributes" : 
+        {
+          "absolutePath" : "overflow_simple_add.sol",
+          "exportedSymbols" : 
+          {
+            "Overflow_Add" : 
+            [
+              15
+            ]
+          }
+        },
+        "children" : 
+        [
+          {
+            "attributes" : 
+            {
+              "literals" : 
+              [
+                "solidity",
+                "0.4",
+                ".24"
+              ]
+            },
+            "id" : 1,
+            "name" : "PragmaDirective",
+            "src" : "1:23:0"
+          },
+          {
+            "attributes" : 
+            {
+              "baseContracts" : 
+              [
+                null
+              ],
+              "contractDependencies" : 
+              [
+                null
+              ],
+              "contractKind" : "contract",
+              "documentation" : null,
+              "fullyImplemented" : true,
+              "linearizedBaseContracts" : 
+              [
+                15
+              ],
+              "name" : "Overflow_Add",
+              "scope" : 16
+            },
+            "children" : 
+            [
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "name" : "balance",
+                  "scope" : 15,
+                  "stateVariable" : true,
+                  "storageLocation" : "default",
+                  "type" : "uint256",
+                  "visibility" : "public"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "name" : "uint",
+                      "type" : "uint256"
+                    },
+                    "id" : 2,
+                    "name" : "ElementaryTypeName",
+                    "src" : "54:4:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "argumentTypes" : null,
+                      "hexvalue" : "31",
+                      "isConstant" : false,
+                      "isLValue" : false,
+                      "isPure" : true,
+                      "lValueRequested" : false,
+                      "subdenomination" : null,
+                      "token" : "number",
+                      "type" : "int_const 1",
+                      "value" : "1"
+                    },
+                    "id" : 3,
+                    "name" : "Literal",
+                    "src" : "76:1:0"
+                  }
+                ],
+                "id" : 4,
+                "name" : "VariableDeclaration",
+                "src" : "54:23:0"
+              },
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "documentation" : null,
+                  "implemented" : true,
+                  "isConstructor" : false,
+                  "modifiers" : 
+                  [
+                    null
+                  ],
+                  "name" : "add",
+                  "payable" : false,
+                  "scope" : 15,
+                  "stateMutability" : "nonpayable",
+                  "superFunction" : null,
+                  "visibility" : "public"
+                },
+                "children" : 
+                [
+                  {
+                    "children" : 
+                    [
+                      {
+                        "attributes" : 
+                        {
+                          "constant" : false,
+                          "name" : "deposit",
+                          "scope" : 14,
+                          "stateVariable" : false,
+                          "storageLocation" : "default",
+                          "type" : "uint256",
+                          "value" : null,
+                          "visibility" : "internal"
+                        },
+                        "children" : 
+                        [
+                          {
+                            "attributes" : 
+                            {
+                              "name" : "uint256",
+                              "type" : "uint256"
+                            },
+                            "id" : 5,
+                            "name" : "ElementaryTypeName",
+                            "src" : "97:7:0"
+                          }
+                        ],
+                        "id" : 6,
+                        "name" : "VariableDeclaration",
+                        "src" : "97:15:0"
+                      }
+                    ],
+                    "id" : 7,
+                    "name" : "ParameterList",
+                    "src" : "96:17:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 8,
+                    "name" : "ParameterList",
+                    "src" : "121:0:0"
+                  },
+                  {
+                    "children" : 
+                    [
+                      {
+                        "children" : 
+                        [
+                          {
+                            "attributes" : 
+                            {
+                              "argumentTypes" : null,
+                              "isConstant" : false,
+                              "isLValue" : false,
+                              "isPure" : false,
+                              "lValueRequested" : false,
+                              "operator" : "+=",
+                              "type" : "uint256"
+                            },
+                            "children" : 
+                            [
+                              {
+                                "attributes" : 
+                                {
+                                  "argumentTypes" : null,
+                                  "overloadedDeclarations" : 
+                                  [
+                                    null
+                                  ],
+                                  "referencedDeclaration" : 4,
+                                  "type" : "uint256",
+                                  "value" : "balance"
+                                },
+                                "id" : 9,
+                                "name" : "Identifier",
+                                "src" : "131:7:0"
+                              },
+                              {
+                                "attributes" : 
+                                {
+                                  "argumentTypes" : null,
+                                  "overloadedDeclarations" : 
+                                  [
+                                    null
+                                  ],
+                                  "referencedDeclaration" : 6,
+                                  "type" : "uint256",
+                                  "value" : "deposit"
+                                },
+                                "id" : 10,
+                                "name" : "Identifier",
+                                "src" : "142:7:0"
+                              }
+                            ],
+                            "id" : 11,
+                            "name" : "Assignment",
+                            "src" : "131:18:0"
+                          }
+                        ],
+                        "id" : 12,
+                        "name" : "ExpressionStatement",
+                        "src" : "131:18:0"
+                      }
+                    ],
+                    "id" : 13,
+                    "name" : "Block",
+                    "src" : "121:35:0"
+                  }
+                ],
+                "id" : 14,
+                "name" : "FunctionDefinition",
+                "src" : "84:72:0"
+              }
+            ],
+            "id" : 15,
+            "name" : "ContractDefinition",
+            "src" : "26:132:0"
+          }
+        ],
+        "id" : 16,
+        "name" : "SourceUnit",
+        "src" : "1:159:0"
+      }
+    }
+  },
+  "version" : "0.4.24+commit.e67f0147.Darwin.appleclang"
+}
