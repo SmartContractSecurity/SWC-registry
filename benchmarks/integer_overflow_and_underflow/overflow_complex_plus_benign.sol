@@ -3,7 +3,7 @@
  * @author: Consensys Diligence
  */
 
-pragma solidity 0.4.19;
+pragma solidity 0.4.24;
 
 contract Overflow_simple_plus_bengin {
 	
