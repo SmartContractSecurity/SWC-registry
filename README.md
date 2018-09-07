@@ -1,6 +1,6 @@
 # Omnibus
 
-Universal benchmarks for Ethereum smart contract security analysis tools.
+Universal and open taxonomy for smart contract security issues, plus benchmarks for Ethereum smart contract security analysis tools. 
 
 ## Benchmark format 
 
@@ -25,12 +25,18 @@ Line 3: `address` is the byte code offset that an analysis tool should discover 
 Line 4: `src_location` refers to the line of code that issue was found. 
  
 
-### Test case 
+### Adding a benchmark
 
-Any number of test cases can be added and configured within an issue category directory. A single benchmark should always have two test files: the source code and the compiled byte code. So in the case of `overflow_add` it does have a [overflow_add.sol](./benchmarks/integer_overflow_and_underflow/overflow_add.sol) and a [overflow_add.solbin](./benchmarks/integer_overflow_and_underflow/overflow_add.solbin) file. 
+Any number of test cases can be added and configured within an issue category directory. A single benchmark must have three files:
 
+1. A Solidity file containing zero or more issues (e.g. `my_benchmark.sol`)
+2. A JSON file generated with `solc` that contains the bytecode, AST and source code mappings (e.g. `my_benchmark.json`)
+3. The configuration file describing the issues expected to be detected in the sample (e.g. `my_benchmark.yaml`)
+
+```bash
+$ solc --pretty-json --combined-json ast,bin,bin-runtime,srcmap,srcmap-runtime my_benchmark.sol > my_benchmark.json
+```
 
 ### Issue information 
 
 Each issue class has a unique taxonomy and meta information that provides relevant details. The content is formatted as markdown and placed in a `<Taxonomy>.md`. So issue class `OMN-ARITH-OVERFLOW` has its meta infromation stored in `./taxonomy/OMN-ARITH-OVERFLOW.md` for example. 
-
