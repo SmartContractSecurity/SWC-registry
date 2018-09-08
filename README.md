@@ -1,10 +1,12 @@
 # Omnibus
 
-Universal and open taxonomy for smart contract security issues, plus benchmarks for Ethereum smart contract security analysis tools. 
+An universal and open taxonomy for smart contract security issues, and samples that can be be used to benchmark Ethereum smart contract security analysis tools. 
 
 ## Benchmark format 
 
-The benchmarks described in this repository use a machine-readable format for test cases that smart contract security analysis tools can use to train and measure their performance. It also allows for benchmark runners to execute a collection of benchmarks across different security analysis tools and create insightful comparisons. 
+The samples contain in this repository contain machine-readable test cases that can be used to improve smart contract security analysis tools and measure their performance. It is also useful for creating insightful comparisons between different types of analysis and optimizing the coverage achieved by combining different tools.
+
+Samples can (and should) be as varied as possible and include both micro-benchmarks and real-world samples of vulnerable smart contracts.
 
 Benchmarks are loosely grouped into subdirectories of within the benchmarks directory. A single benchmark consists of three files:
 
@@ -25,7 +27,7 @@ Copy the Solidity and JSON files into an existing subdirectory in `bechmarks` (o
 
 ### Configuration
 
-The configuration contains meta-information about the securituy issues contained in the sample. The configuration snippet below is an example for an [Integer Overflow benchmark](./benchmarks/integer_overflow_and_underflow/overflow_simple_add.yaml). 
+The configuration contains meta-information about the securituy issues contained in the sample. The configuration snippet below is an example for an [Integer Overflow benchmark](./benchmarks/integer_overflow_and_underflow/). 
 
 ```
 1: issues:
@@ -33,9 +35,9 @@ The configuration contains meta-information about the securituy issues contained
 3:   count: 1
 ```
 
-Line 1: A test case has zero, one or multiple `issues` that are listed in the configuration file.
-Line 2: `id` containts the identifier (composed of class and subclass) for the particular issue. Each subclass is described in a markdown file in the `taxonomy` directory. If no appropriate identifier exists, consider adding a new class and/or subclass.
-Line 3: `count` is the number of times that the issue of that class occurs in the sample.
+- Line 1: A test case has zero, one or multiple `issues` that are listed in the configuration file.
+- Line 2: `id` containts the identifier (composed of class and subclass) for the particular issue. Each subclass is described in a markdown file in the [taxonomy](./taxonomy) directory. If no appropriate identifier exists, consider adding a new class and/or subclass.
+- Line 3: `count` is the number of times that the issue of that class occurs in the sample.
 
 ### Taxnonomy
 
@@ -45,4 +47,4 @@ The Omnibus benchmark encompasses security issues as well as general information
 OMN-[CLASS]-[SUBCLASS]
 ```
 
-Each identifier has a descriptive markdown file in the `taxonomy` directory. For example, the `OMN-ARITH-OVERFLOW` identifier has its meta information stored in `./taxonomy/OMN-ARITH-OVERFLOW.md` for example. 
+Each identifier has a descriptive markdown file in the `taxonomy` directory. For example, the `OMN-ARITH-OVERFLOW` identifier has its meta information stored in [OMN-ARITH-OVERFLOW.md](./taxonomy/OMN-ARITH-OVERFLOW.md).
