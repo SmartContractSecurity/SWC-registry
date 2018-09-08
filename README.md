@@ -1,8 +1,8 @@
 # Omnibus
 
-An universal and open taxonomy for smart contract security issues, and samples that can be be used to benchmark Ethereum smart contract security analysis tools. 
+An universal and open taxonomy for smart contract security issues, and samples that can be be used to benchmark Ethereum smart contract security analysis tools.
 
-## Benchmark format 
+## Benchmark format
 
 The samples contain in this repository contain machine-readable test cases that can be used to improve smart contract security analysis tools and measure their performance. It is also useful for creating insightful comparisons between different types of analysis and optimizing the coverage achieved by combining different tools.
 
@@ -48,3 +48,8 @@ OMN-[CLASS]-[SUBCLASS]
 ```
 
 Each identifier has a descriptive markdown file in the `taxonomy` directory. For example, the `OMN-ARITH-OVERFLOW` identifier has its meta information stored in [OMN-ARITH-OVERFLOW.md](./taxonomy/OMN-ARITH-OVERFLOW.md).
+
+## Contact
+
+This repository is maintained by the [Mythril](https://mythril.ai) team. Ping us on the [Mythril Community Discord Server](https://discord.gg/kktn8Wt).
+
