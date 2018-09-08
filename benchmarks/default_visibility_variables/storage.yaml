@@ -1,4 +1,3 @@
 issues:
-- class: "OMN-SOLIDITY-VISIBILITY"
-  bytecode_offset: 
+- id: "OMN-SOLIDITY-VISIBILITY"
   count: 6

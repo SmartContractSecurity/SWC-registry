@@ -1,3 +1,3 @@
 issues:
-- class: "OMN-SOLIDITY-OLDCOMPILER"
+- id: "OMN-SOLIDITY-OLDCOMPILER"
   count: 1
