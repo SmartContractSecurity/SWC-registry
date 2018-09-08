@@ -1,4 +1,3 @@
 issues:
-- type: "OMN-FLOATING_PRAGMA"
-  bytecode_offset: 
-  src_location: 1
+- class: "OMN-SOLIDITY-PRAGMA"
+  count: 1

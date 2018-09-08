@@ -1,4 +1,3 @@
-
 pragma solidity 0.4.24;
 
 contract Overflow_Add {
@@ -8,4 +7,3 @@ contract Overflow_Add {
         balance += deposit;
     }
 }
-
