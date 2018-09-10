@@ -2,9 +2,19 @@
 
 An universal and open taxonomy for smart contract security issues, and samples that can be be used to benchmark Ethereum smart contract security analysis tools.
 
-## Benchmark format
+## Taxonomy
 
-The samples contain in this repository contain machine-readable test cases that can be used to improve smart contract security analysis tools and measure their performance. It is also useful for creating insightful comparisons between different types of analysis and optimizing the coverage achieved by combining different tools.
+The Omnibus benchmark encompasses security issues as well as general informational issues related to coding best practices. Individual issues are assigned identifiers that use the following format: 
+
+```
+OMN-[CLASS]-[SUBCLASS]
+```
+
+Each identifier has a descriptive markdown file in the `taxonomy` directory. For example, the `OMN-ARITH-OVERFLOW` identifier has its meta information stored in [OMN-ARITH-OVERFLOW.md](./taxonomy/OMN-ARITH-OVERFLOW.md).
+
+## Benchmarks
+
+For each subclass we include machine-readable test cases that show various exploitable and non-exploitable variants of the issue in question. These samples are useful for creating insightful comparisons between different types of analysis and optimizing the coverage achieved by combining different tools.
 
 Samples can (and should) be as varied as possible and include both micro-benchmarks and real-world samples of vulnerable smart contracts.
 
@@ -39,15 +49,7 @@ The configuration contains meta-information about the securituy issues contained
 - Line 2: `id` containts the identifier (composed of class and subclass) for the particular issue. Each subclass is described in a markdown file in the [taxonomy](./taxonomy) directory. If no appropriate identifier exists, consider adding a new class and/or subclass.
 - Line 3: `count` is the number of times that the issue of that class occurs in the sample.
 
-### Taxnonomy
 
-The Omnibus benchmark encompasses security issues as well as general informational issues related to coding best practices. Individual issues are assigned identifiers that use the following format: 
-
-```
-OMN-[CLASS]-[SUBCLASS]
-```
-
-Each identifier has a descriptive markdown file in the `taxonomy` directory. For example, the `OMN-ARITH-OVERFLOW` identifier has its meta information stored in [OMN-ARITH-OVERFLOW.md](./taxonomy/OMN-ARITH-OVERFLOW.md).
 
 ## Contact
 
