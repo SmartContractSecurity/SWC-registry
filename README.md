@@ -4,7 +4,7 @@ An universal and open taxonomy for smart contract security issues. Also includes
 
 ## Taxonomy
 
-The taxonomy encompasses security vulnerabilies as well as violations of secure coding best practices. Individual issues are assigned identifiers that use the following format: 
+The taxonomy encompasses security vulnerabilities as well as violations of secure coding best practices. Individual issues are assigned identifiers that use the following format: 
 
 ```
 OMN-[CLASS]-[SUBCLASS]
