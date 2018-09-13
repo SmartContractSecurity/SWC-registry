@@ -1,3 +1,9 @@
+description: "Test default function visibility"
 issues:
-- id: "OMN-SOLIDITY-VISIBILITY"
-  count: 1
+- id: "EIPXXXX-SOL-VISIBILITY:FUNCTION"
+  count: 2
+  location:
+  - bytecode_offset: 
+    line_number: 10
+  - bytecode_offset: 
+    line_number: 16

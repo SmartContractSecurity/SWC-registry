@@ -1,3 +1,7 @@
+description: "Test for floating pragma"
 issues:
-- id: "OMN-SOLIDITY-PRAGMA"
+- id: "EIPXXXX-SOL-FLOATING_PRAGMA"
   count: 1
+  location:
+  - bytecode_offset:
+    line_number: 1

@@ -1,3 +1,7 @@
+description: "Test for outdated Solidity compiler"
 issues:
-- id: "OMN-SOLIDITY-OLDCOMPILER"
+- id: "EIPXXXX-SOL-OUTDATED_COMPILER"
   count: 1
+  location:
+  - bytecode_offset:
+    line_number: 1

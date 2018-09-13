@@ -1,0 +1,7 @@
+description: "Test for uninitialised storage variable"
+issues:
+- id: "EIPXXXX-SOL-STORAGE:UNINITIALISED"
+  count: 1
+  location:
+  - bytecode_offset:
+    line_number: 39
