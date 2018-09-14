@@ -1,6 +1,6 @@
 description: "Test default function visibility"
 issues:
-- id: "EIPXXXX-SOL-VISIBILITY:FUNCTION"
+- id: "EIPXXXX-100"
   count: 2
   location:
   - bytecode_offset: 

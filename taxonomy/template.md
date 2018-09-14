@@ -7,7 +7,4 @@
 ## Remediation
 
 
-## Severity 
-
-
 ## References 

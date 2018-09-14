@@ -1,6 +1,6 @@
 description: "Test default state variable visibility"
 issues:
-- id: "EIPXXXX-SOL-VISIBILITY:VARIABLE"
+- id: "EIPXXXX-11"
   count: 6
   location:
   - bytecode_offset: 

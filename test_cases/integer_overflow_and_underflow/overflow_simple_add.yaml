@@ -1,6 +1,6 @@
 description: "Test a secure and insecure variant case of integer aritmethic"
 issues:
-- id: "EIPXXXX-SOL-ARITHMETIC:OVERFLOW"
+- id: "EIPXXXX-1"
   count: 1
   location:
   - bytecode_offset:

@@ -1,28 +1,39 @@
-# Standard Taxonomy of Security Issues in Ethereum Smart Contracts (EIP 31337)
+# Smart Contract Vulnerability Classification Registry
 
-An universal and open taxonomy for smart contract security issues. Also includes micro-samples and vulnerable real-world smart contracts that showcase different variants of each issue.
+The SCVCR does not attempt to reinvent the wheel in regards to vulnerability classification. Several schemes exist in the wider security community that are used for various purposes. The Common Weakness Enumeration ([CWE](https://cwe.mitre.org)) from MITRE does stand out among them though in terms of adoption and breadth of its coverage. The SCVCR leverages the CWE and loosely aligns in terms of the used taxonomies and structure while overlaying a wide range of vulnerability variants that are specific to smart contracts.  The SCVCR is an open vulnerability classification registry for developers, tool vendors and security practitioners. The content within this repository attempts to:
+
+- Provide a straight forward way to classify security issues in smart contract systems.
+- Define a common language for describing security issues in smart contract systems' architecture, design, or code.
+- Serve as a way to train and increase performance for smart contract security analysis tools.
 
 ## Taxonomy
 
-The taxonomy encompasses security vulnerabilities as well as violations of secure coding best practices. Individual issues are assigned identifiers that use the following format: 
+The following taxonomies, which are used throughout the SCVCR, are described in further detail below:
 
-```
-OMN-[CLASS]-[SUBCLASS]
-```
+**Variant:** A vulnerability that is described in a very low detail specific to a platform or technology. All variants described and referenced in the SCVCR are specific to smart contracts.  
+**Base/Class:** A vulnerability that is described in a more abstract and platform or technology independent way. CWE has a wide range of base/class types that provide a meaningful hierarchal context for smart contract specific vulnerability variants. 
+**Test Case:** Are the meat of the SCVCR. They are not only geared towards security analysis tool developers but are meant to provide the basis for meaningful vulnerability classification. 
 
-Each identifier has a descriptive markdown file in the `taxonomy` directory. For example, the `OMN-ARITH-OVERFLOW` identifier has its meta information stored in [OMN-ARITH-OVERFLOW.md](./taxonomy/OMN-ARITH-OVERFLOW.md).
 
-## Samples
+## Test cases
 
-For each subclass we include machine-readable test cases that show various exploitable and non-exploitable variants of the issue in question. These samples are useful for creating insightful comparisons between different types of analysis and optimizing the coverage achieved by combining different tools.
+Test cases can (and should) be as varied as possible and include simple test cases and real-world samples of vulnerable smart contracts. The test cases are grouped into subdirectories based on a single vulnerability variant or based on more complex real world contract systems that contains different vulnerability variants. A single test case consists of three files:
 
-Test cases can (and should) be as varied as possible and include both micro-benchmarks and real-world samples of vulnerable smart contracts.
+1. A contract file containing zero or more vulnerabilities (e.g. `overflow_simple_add.sol`)
+2. A JSON file generated with `solc` that contains the bytecode, AST and source code mappings (e.g. `overflow_simple_add.json`)
+3. The configuration file defining the types and number of vulnerabilities contained in the contract file (e.g. `overflow_simple_add.yaml`)
 
-The test cases are loosely grouped into subdirectories of within the benchmarks directory. A single benchmark consists of three files:
 
-1. A Solidity file containing zero or more issues (e.g. `my_benchmark.sol`)
-2. A JSON file generated with `solc` that contains the bytecode, AST and source code mappings (e.g. `my_benchmark.json`)
-3. The configuration file describing the class and number issues contained in the sample (e.g. `my_benchmark.yaml`)
+## Classification  
+
+The table below is a sample on how the classification and mapping of test cases will work. This will be auto generated from the taxonomy mark down files and the test cases. 
+
+|  Variant | Base/Class | Test cases |   
+|---|---|---|
+| [EIPXXXX-100 Function Default Visibility](./taxonomy/EIPXXXX-100.md)  | [CWE710 - Improper Adherence to Coding Standards](https://cwe.mitre.org/data/definitions/710.html) | [visibility_not_set.yaml](./benchmarks/default_visibility_functions/visibility_not_set.yaml) | 
+| [EIPXXXX-101 Integer Overflow and Underflow](./taxonomy/EIPXXXX-101.md)  |  [CWE-682 - Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html) |  [overflow_complex_plus_bengin.yaml](./benchmarks/default_visibility_functions/visibility_not_set.yaml) [visibility_not_set.yaml](./benchmarks/default_visibility_functions/visibility_not_set.yaml)  |
+| [EIPXXXX-102 Outdated Compiler Version](./taxonomy/EIPXXXX-102.md)   | [CWE937 - Using Components with Known Vulnerabilities](http://cwe.mitre.org/data/definitions/937.html)  |   |
+| [EIPXXXX-103 Floating Pragma](./taxonomy/EIPXXXX-103.md)   |  [CWE664 - Improper Control of a Resource Through its Lifetime](https://cwe.mitre.org/data/definitions/664.html) |   | 
 
 ## Creating a new test case
 
@@ -30,7 +41,7 @@ A test case consists of a single smart contract and must contain both the source
 
 
 ```bash
-$ solc --pretty-json --combined-json ast,bin,bin-runtime,srcmap,srcmap-runtime my_benchmark.sol > my_benchmark.json
+$ solc --pretty-json --combined-json ast,bin,bin-runtime,srcmap,srcmap-runtime overflow_simple_add.sol > overflow_simple_add.json
 ```
 
 Copy the Solidity and JSON files into an existing subdirectory in `bechmarks` (or create a new subdirectory if necessary). 
@@ -43,11 +54,17 @@ The configuration contains meta-information about the security issues contained 
 1: issues:
 2: - id: "OMN-ARITH-OVERFLOW"
 3:   count: 1
+4:   location:
+5:   - bytecode_offset:
+6:     line_number: 7
 ```
 
 - Line 1: A test case has zero, one or multiple `issues` that are listed in the configuration file.
-- Line 2: `id` containts the identifier (composed of class and subclass) for the particular issue. Each subclass is described in a markdown file in the [taxonomy](./taxonomy) directory. If no appropriate identifier exists, consider adding a new class and/or subclass.
+- Line 2: `id` contains the identifier (composed of class and subclass) for the particular issue. Each subclass is described in a markdown file in the [taxonomy](./taxonomy) directory. If no appropriate identifier exists, consider adding a new class and/or subclass.
 - Line 3: `count` is the number of times that the issue of that class occurs in the sample.
+- Line 4:
+- Line 5:
+- Line 6:
 
 ## Contact
 

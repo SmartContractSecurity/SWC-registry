@@ -1,14 +1,17 @@
 # Title 
-Function Default Visibility  
+Function Default Visibility 
+
+## Base/Class
+
 
 ## Description 
 
 
-## Remediation
+## Test Cases
 
 
-## Severity 
-Minor
+## Potential Mitigations
+
 
 ## References 
 [Ethereum Smart Contract Best Practices - Explicitly mark visibility in functions and state variables](https://consensys.github.io/smart-contract-best-practices/recommendations/#explicitly-mark-visibility-in-functions-and-state-variables)
