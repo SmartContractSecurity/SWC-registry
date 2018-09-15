@@ -2,6 +2,8 @@
 
 The SCVCR is an open vulnerability classification registry for Ethereum smart contract developers, tool vendors and security practitioners. The SCVCR does not attempt to reinvent the wheel in regards to vulnerability classification. From several schemes that exist in the wider security community, the Common Weakness Enumeration ([CWE](https://cwe.mitre.org)) from MITRE stands out in terms of adoption and breadth of coverage. The SCVCR is loosely aligned to the taxonomies and structure used in the CWE while overlaying a wide range of vulnerability variants that are specific to smart contracts.
 
+The goals of this project are as follows:
+
 - Provide a straight forward way to classify security issues in smart contract systems.
 - Define a common language for describing security issues in smart contract systems' architecture, design, or code.
 - Serve as a way to train and increase performance for smart contract security analysis tools.
