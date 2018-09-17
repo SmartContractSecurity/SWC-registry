@@ -8,18 +8,18 @@ The goals of this project are as follows:
 - Define a common language for describing security issues in smart contract systems' architecture, design, or code.
 - Serve as a way to train and increase performance for smart contract security analysis tools.
 
-## Taxonomy
+## Terminology
 
-The following taxonomies, which are used throughout the SWC, are described in further detail below:
+The following terminology is used throughout the SWC:
 
-**Variant:** A weakness that is described in a very low detail specific to a platform or technology. All variants described and referenced in the SWC are specific to smart contracts.  
-**Base/Class:** A weakness that is described in a more abstract and platform or technology independent way. CWE has a wide range of base/class types that provide a meaningful hierarchal context for smart contract specific weakness variants. 
-**Test Case:** Are the meat of the SWC. They are not only geared towards security analysis tool developers but are meant to provide the basis for meaningful weakness classification. 
+**Variant:** A specific weakness that is described in a very low detail specific to Eteherum smart contracts. Each variant is assigned an unique SWC ID.
+**SWC ID:** A numeric identifier assigned to a variant (e.g. SWC-100).
+**Base/Class:** An abstract base description of a class of weaknesses. CWE has a wide range of base/class types that provide a meaningful hierarchal context for smart contract specific weakness variants. Every SVC ID refers to one of the base classes in the CWE. 
+**Test Case:** Test cases are the meat of the SWC. They consist of micro-samples and real-world vulnerable smart contracts that demonstrate concrete instances of each SWC variant. Test cases serve as the basis for meaningful weakness classification and are useful to security analysis tool developers.
 
+## Creating a new SWC ID
 
-## Create a new SWC id 
-
-Make sure that there is no matching weakness in the registry. Create a file with a new SWC id in [taxonomy](./taxonomy). Use the the template and describe all weakness attributes. 
+Make sure that there is no matching weakness in the registry. Create a file with a new SWC ID in [taxonomy](./taxonomy). Use the the template and describe all weakness attributes. 
 
 ```
 # Title 
