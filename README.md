@@ -54,7 +54,7 @@ Weakness types and test cases can be linked in the following way.
 Test cases can (and should) be as varied as possible and include simple test cases and real-world samples of vulnerable smart contracts. The test cases are grouped into subdirectories based on a single weakness variant or based on more complex real world contract systems that can contain various weakness variants. A single test case consists of three files:
 
 1. A contract file containing zero or more weaknesses (e.g. `overflow_simple_add.sol`)
-2. A JSON file generated with `solc` that contains the bytecode, AST and source code mappings (e.g. `overflow_simple_add.json`)
+2. A JSON file generated with `solc` that contains the byte code, AST and source code mappings (e.g. `overflow_simple_add.json`)
 3. The configuration file defining the types and number of weaknesses contained in the contract file (e.g. `overflow_simple_add.yaml`)
 
 ### Sample
@@ -82,20 +82,22 @@ Make sure the credit the author and mention the source if you don't write the co
 The configuration contains meta-information about the weaknesses contained in a particular sample. E.g.:
 
 ```
-1: issues:
-2: - id: "SWC-101"
-3:   count: 1
-4:   location:
-5:   - bytecode_offset:
-6:     line_number: 7
+1: description: "Test a simple integer overflow"
+2: issues:
+3: - id: "SWC-101"
+4:   count: 1
+5:   location:
+6:   - bytecode_offset:
+7:     line_number: 7
 ```
 
-- Line 1: A test case has zero, one or multiple `issues` that are listed in the configuration file.
-- Line 2: `id` contains the SWC identifier for the particular weakness. Each weakness is described in a markdown file in the [taxonomy](./taxonomy) directory. 
-- Line 3: `count` is the number of times that the weakness occurs in the sample.
-- Line 4: `location` has sub attributes that allow humans and tools to easier identify where a weakness exists in the test case's contract. 
-- Line 5: `bytecode_offset` in the byte code where the weakness is located.
-- Line 6: `line_number` in the source code where the weakness is located.
+- Line 1: `description` provides additional information and context for the test case
+- Line 2: A test case has zero, one or multiple `issues` that are listed in the configuration file.
+- Line 3: `id` contains the SWC identifier for the particular weakness. Each weakness is described in a markdown file in the [taxonomy](./taxonomy) directory. 
+- Line 4: `count` is the number of times that the weakness occurs in the sample.
+- Line 5: `location` has sub attributes that allow humans and tools to easier identify where a weakness exists in the test case's contract. 
+- Line 6: `bytecode_offset` in the byte code where the weakness is located.
+- Line 7: `line_number` in the source code where the weakness is located.
 
 
 
