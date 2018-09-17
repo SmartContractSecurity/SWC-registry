@@ -1,0 +1,7 @@
+description: "Test default function visibility"
+issues:
+- id: "SWC-104"
+  count: 1
+  location:
+  - bytecode_offset: 294
+    line_number: 10
