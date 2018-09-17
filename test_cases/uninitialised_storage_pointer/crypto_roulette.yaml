@@ -1,6 +1,6 @@
 description: "Test for uninitialised storage variable"
 issues:
-- id: "EIPXXXX-SOL-STORAGE:UNINITIALISED"
+- id: "SWC-XXX"
   count: 1
   location:
   - bytecode_offset:

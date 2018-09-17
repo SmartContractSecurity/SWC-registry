@@ -1,6 +1,6 @@
 description: "Test for outdated Solidity compiler"
 issues:
-- id: "EIPXXXX-SOL-OUTDATED_COMPILER"
+- id: "SWC-102"
   count: 1
   location:
   - bytecode_offset:

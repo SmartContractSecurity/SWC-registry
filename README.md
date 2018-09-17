@@ -40,6 +40,15 @@ Link to external references that contain useful additional information on the is
 
 ```
 
+Weakness types and test cases can be linked in the following way. 
+
+|  Variant | Base/Class | Test cases |   
+|---|---|---|
+| [EIPXXXX-100 Function Default Visibility](./taxonomy/EIPXXXX-100.md)  | [CWE710 - Improper Adherence to Coding Standards](https://cwe.mitre.org/data/definitions/710.html) | [visibility_not_set.yaml](./benchmarks/default_visibility_functions/visibility_not_set.yaml) | 
+| [EIPXXXX-101 Integer Overflow and Underflow](./taxonomy/EIPXXXX-101.md)  |  [CWE-682 - Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html) |  [overflow_complex_plus_bengin.yaml](./benchmarks/integer_overflow_and_underflow/overflow_complex_plus_bengin.yaml) [overflow_simple_add.yaml](./benchmarks/integer_overflow_and_underflow/overflow_simple_add.yaml)  |
+| [EIPXXXX-102 Outdated Compiler Version](./taxonomy/EIPXXXX-102.md)   | [CWE937 - Using Components with Known Vulnerabilities](http://cwe.mitre.org/data/definitions/937.html)  |  [version_0_4_0.yaml](./benchmarks/outdated_compiler_version/version_0_4_0.yaml) |
+
+
 ## Create a test case  
 
 Test cases can (and should) be as varied as possible and include simple test cases and real-world samples of vulnerable smart contracts. The test cases are grouped into subdirectories based on a single weakness variant or based on more complex real world contract systems that can contain various weakness variants. A single test case consists of three files:

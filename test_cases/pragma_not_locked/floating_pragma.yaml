@@ -1,6 +1,6 @@
 description: "Test for floating pragma"
 issues:
-- id: "EIPXXXX-SOL-FLOATING_PRAGMA"
+- id: "SWC-103"
   count: 1
   location:
   - bytecode_offset:
