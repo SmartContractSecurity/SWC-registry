@@ -1,6 +1,6 @@
 description: "Test for uninitialised storage variable"
 issues:
-- id: "SWC-XXX"
+- id: "SWC-109"
   count: 1
   location:
   - bytecode_offset:
