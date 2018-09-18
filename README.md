@@ -1,6 +1,6 @@
 # Smart Contract Weakness Classification Registry
 
-The SWC is a smart contract specific software weakness classification scheme for developers, tool vendors and security practitioners. The SWC does not attempt to reinvent the wheel in regards to classification of security weaknesses. From several schemes that exist in the wider security community, the Common Weakness Enumeration ([CWE](https://cwe.mitre.org)) from MITRE stands out in terms of adoption and breadth of coverage. The SWC is loosely aligned to the taxonomies and structure used in the CWE while overlaying a wide range of weakness variants that are specific to smart contracts.
+The SWC is a smart contract specific software weakness classification scheme for developers, tool vendors and security practitioners. The SWC does not attempt to reinvent the wheel in regards to classification of security weaknesses. From several schemes that exist in the wider security community, the Common Weakness Enumeration ([CWE](https://cwe.mitre.org)) from MITRE stands out in terms of adoption and breadth of coverage. The SWC is loosely aligned to the terminologies and structure used in the CWE while overlaying a wide range of weakness variants that are specific to smart contracts.
 
 The goals of this project are as follows:
 
@@ -44,9 +44,9 @@ Weakness types and test cases can be linked in the following way.
 
 |  Variant | Base/Class | Test cases |   
 |---|---|---|
-| [SWC-100 Function Default Visibility](./taxonomy/SWC-100.md)  | [CWE710 - Improper Adherence to Coding Standards](https://cwe.mitre.org/data/definitions/710.html) | [visibility_not_set.yaml](./test_cases/default_visibility_functions/visibility_not_set.yaml) | 
-| [SWC-101 Integer Overflow and Underflow](./taxonomy/SWC-101.md)  |  [CWE-682 - Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html) |  [overflow_complex_plus_bengin.yaml](./benchmarks/integer_overflow_and_underflow/overflow_complex_plus_bengin.yaml) [overflow_simple_add.yaml](./test_cases/integer_overflow_and_underflow/overflow_simple_add.yaml)  |
-| [SWC-102 Outdated Compiler Version](./taxonomy/SWC-102.md)   | [CWE937 - Using Components with Known Vulnerabilities](http://cwe.mitre.org/data/definitions/937.html)  |  [version_0_4_0.yaml](./test_cases/outdated_compiler_version/version_0_4_0.yaml) |
+| [SWC-100 Function Default Visibility](./entries/SWC-100.md)  | [CWE710 - Improper Adherence to Coding Standards](https://cwe.mitre.org/data/definitions/710.html) | [visibility_not_set.yaml](./test_cases/default_visibility_functions/visibility_not_set.yaml) | 
+| [SWC-101 Integer Overflow and Underflow](./entries/SWC-101.md)  |  [CWE-682 - Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html) |  [overflow_complex_plus_bengin.yaml](./benchmarks/integer_overflow_and_underflow/overflow_complex_plus_bengin.yaml) [overflow_simple_add.yaml](./test_cases/integer_overflow_and_underflow/overflow_simple_add.yaml)  |
+| [SWC-102 Outdated Compiler Version](./entries/SWC-102.md)   | [CWE937 - Using Components with Known Vulnerabilities](http://cwe.mitre.org/data/definitions/937.html)  |  [version_0_4_0.yaml](./test_cases/outdated_compiler_version/version_0_4_0.yaml) |
 
 
 ## Create a test case  
