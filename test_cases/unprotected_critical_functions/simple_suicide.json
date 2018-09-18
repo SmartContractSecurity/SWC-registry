@@ -1,0 +1,218 @@
+{
+  "contracts" : 
+  {
+    "simple_suicide.sol:SimpleSuicide" : 
+    {
+      "bin" : "6080604052348015600f57600080fd5b50609d8061001e6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a56a3b5a146044575b600080fd5b348015604f57600080fd5b5060566058565b005b3373ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a72305820ef91c543c51cdd0b7e9142c825b0ee060caa08df8acc375c1e444d8f1ba2f84b0029",
+      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a56a3b5a146044575b600080fd5b348015604f57600080fd5b5060566058565b005b3373ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a72305820ef91c543c51cdd0b7e9142c825b0ee060caa08df8acc375c1e444d8f1ba2f84b0029",
+      "srcmap" : "0:92:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;0:92:0;;;;;;;",
+      "srcmap-runtime" : "0:92:0:-;;;;;;;;;;;;;;;;;;;;;;;;28:61;;8:9:-1;5:2;;;30:1;27;20:12;5:2;28:61:0;;;;;;;73:10;60:24;;"
+    }
+  },
+  "sourceList" : 
+  [
+    "simple_suicide.sol"
+  ],
+  "sources" : 
+  {
+    "simple_suicide.sol" : 
+    {
+      "AST" : 
+      {
+        "attributes" : 
+        {
+          "absolutePath" : "simple_suicide.sol",
+          "exportedSymbols" : 
+          {
+            "SimpleSuicide" : 
+            [
+              10
+            ]
+          }
+        },
+        "children" : 
+        [
+          {
+            "attributes" : 
+            {
+              "baseContracts" : 
+              [
+                null
+              ],
+              "contractDependencies" : 
+              [
+                null
+              ],
+              "contractKind" : "contract",
+              "documentation" : null,
+              "fullyImplemented" : true,
+              "linearizedBaseContracts" : 
+              [
+                10
+              ],
+              "name" : "SimpleSuicide",
+              "scope" : 11
+            },
+            "children" : 
+            [
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "documentation" : null,
+                  "implemented" : true,
+                  "isConstructor" : false,
+                  "modifiers" : 
+                  [
+                    null
+                  ],
+                  "name" : "sudicideAnyone",
+                  "payable" : false,
+                  "scope" : 10,
+                  "stateMutability" : "nonpayable",
+                  "superFunction" : null,
+                  "visibility" : "public"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 1,
+                    "name" : "ParameterList",
+                    "src" : "51:2:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 2,
+                    "name" : "ParameterList",
+                    "src" : "54:0:0"
+                  },
+                  {
+                    "children" : 
+                    [
+                      {
+                        "children" : 
+                        [
+                          {
+                            "attributes" : 
+                            {
+                              "argumentTypes" : null,
+                              "isConstant" : false,
+                              "isLValue" : false,
+                              "isPure" : false,
+                              "isStructConstructorCall" : false,
+                              "lValueRequested" : false,
+                              "names" : 
+                              [
+                                null
+                              ],
+                              "type" : "tuple()",
+                              "type_conversion" : false
+                            },
+                            "children" : 
+                            [
+                              {
+                                "attributes" : 
+                                {
+                                  "argumentTypes" : 
+                                  [
+                                    {
+                                      "typeIdentifier" : "t_address",
+                                      "typeString" : "address"
+                                    }
+                                  ],
+                                  "overloadedDeclarations" : 
+                                  [
+                                    null
+                                  ],
+                                  "referencedDeclaration" : 33,
+                                  "type" : "function (address)",
+                                  "value" : "selfdestruct"
+                                },
+                                "id" : 3,
+                                "name" : "Identifier",
+                                "src" : "60:12:0"
+                              },
+                              {
+                                "attributes" : 
+                                {
+                                  "argumentTypes" : null,
+                                  "isConstant" : false,
+                                  "isLValue" : false,
+                                  "isPure" : false,
+                                  "lValueRequested" : false,
+                                  "member_name" : "sender",
+                                  "referencedDeclaration" : null,
+                                  "type" : "address"
+                                },
+                                "children" : 
+                                [
+                                  {
+                                    "attributes" : 
+                                    {
+                                      "argumentTypes" : null,
+                                      "overloadedDeclarations" : 
+                                      [
+                                        null
+                                      ],
+                                      "referencedDeclaration" : 25,
+                                      "type" : "msg",
+                                      "value" : "msg"
+                                    },
+                                    "id" : 4,
+                                    "name" : "Identifier",
+                                    "src" : "73:3:0"
+                                  }
+                                ],
+                                "id" : 5,
+                                "name" : "MemberAccess",
+                                "src" : "73:10:0"
+                              }
+                            ],
+                            "id" : 6,
+                            "name" : "FunctionCall",
+                            "src" : "60:24:0"
+                          }
+                        ],
+                        "id" : 7,
+                        "name" : "ExpressionStatement",
+                        "src" : "60:24:0"
+                      }
+                    ],
+                    "id" : 8,
+                    "name" : "Block",
+                    "src" : "54:35:0"
+                  }
+                ],
+                "id" : 9,
+                "name" : "FunctionDefinition",
+                "src" : "28:61:0"
+              }
+            ],
+            "id" : 10,
+            "name" : "ContractDefinition",
+            "src" : "0:92:0"
+          }
+        ],
+        "id" : 11,
+        "name" : "SourceUnit",
+        "src" : "0:93:0"
+      }
+    }
+  },
+  "version" : "0.4.24+commit.e67f0147.Darwin.appleclang"
+}

@@ -1,0 +1,4 @@
+description: "Contract can be killed with 2 transactions"
+issues:
+- id: "SWC-106"
+  count: 0
