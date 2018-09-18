@@ -1,7 +1,0 @@
-description: "Test a simple integer overflow"
-issues:
-- id: "SWC-101"
-  count: 1
-  location:
-  - bytecode_offset:
-    line_number: 18

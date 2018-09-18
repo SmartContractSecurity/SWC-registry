@@ -1,4 +1,4 @@
-description: "Test a secure and insecure variant case of integer aritmethic"
+description: "Plain and simple ADD overflow example"
 issues:
 - id: "SWC-101"
   count: 1
