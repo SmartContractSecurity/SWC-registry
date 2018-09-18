@@ -4,4 +4,4 @@ issues:
   count: 1
   location:
   - bytecode_offset: 658
-    line_number: 11
+    line_number: 16
