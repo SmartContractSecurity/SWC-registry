@@ -45,7 +45,7 @@ Weakness types and test cases can be linked in the following way.
 |  Variant | Base/Class | Test cases |   
 |---|---|---|
 | [SWC-100 Function Default Visibility](./entries/SWC-100.md)  | [CWE710 - Improper Adherence to Coding Standards](https://cwe.mitre.org/data/definitions/710.html) | [visibility_not_set.yaml](./test_cases/default_visibility_functions/visibility_not_set.yaml) | 
-| [SWC-101 Integer Overflow and Underflow](./entries/SWC-101.md)  |  [CWE-682 - Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html) |  [Multiple test cases](./test_cases/integer_overflow_and_underflow/) |
+| [SWC-101 Integer Overflow and Underflow](./entries/SWC-101.md)  |  [CWE-682 - Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html) |  [Micro-test-cases](./test_cases/integer_overflow_and_underflow/), |BECToken|(./test_cases/real_world_samples/BECToken.sol) |
 | [SWC-102 Outdated Compiler Version](./entries/SWC-102.md)   | [CWE937 - Using Components with Known Vulnerabilities](http://cwe.mitre.org/data/definitions/937.html)  |  [version_0_4_0.yaml](./test_cases/outdated_compiler_version/version_0_4_0.yaml) |
 
 
