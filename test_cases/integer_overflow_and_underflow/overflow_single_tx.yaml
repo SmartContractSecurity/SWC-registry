@@ -1,0 +1,11 @@
+description: "Overflows and underflows micro-samples (single transaction)"
+issues:
+- id: "SWC-101"
+  count: 3
+  location:
+  - bytecode_offset: 525
+    line_number: 11
+  - bytecode_offset: 494
+    line_number: 16
+  - bytecode_offset: 476
+    line_number: 21

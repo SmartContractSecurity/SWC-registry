@@ -5,7 +5,7 @@
 
 pragma solidity 0.4.24;
 
-contract Overflow_simple_plus_bengin {
+contract OverflowVulnerableAndFixed {
 	
 	mapping (address => uint256) public balanceOf;
 

@@ -1,3 +1,4 @@
 .solhint.json
 .solium*
 *~
+.DS_Store
