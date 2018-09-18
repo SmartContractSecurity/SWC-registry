@@ -19,7 +19,7 @@ The following terminology is used throughout the SWC:
 
 ## Creating a new SWC ID
 
-Make sure that there is no matching weakness in the registry. Create a file with a new SWC ID in [taxonomy](./taxonomy). Use the the template and describe all weakness attributes. 
+Make sure that there is no matching weakness in the registry. Create a file with a new SWC ID in the [entries](./entries) directory. Use the [template](./entries/template.md) and describe all weakness attributes. 
 
 ```
 # Title 
@@ -44,9 +44,9 @@ Weakness types and test cases can be linked in the following way.
 
 |  Variant | Base/Class | Test cases |   
 |---|---|---|
-| [EIPXXXX-100 Function Default Visibility](./taxonomy/EIPXXXX-100.md)  | [CWE710 - Improper Adherence to Coding Standards](https://cwe.mitre.org/data/definitions/710.html) | [visibility_not_set.yaml](./test_cases/default_visibility_functions/visibility_not_set.yaml) | 
-| [EIPXXXX-101 Integer Overflow and Underflow](./taxonomy/EIPXXXX-101.md)  |  [CWE-682 - Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html) |  [overflow_complex_plus_bengin.yaml](./benchmarks/integer_overflow_and_underflow/overflow_complex_plus_bengin.yaml) [overflow_simple_add.yaml](./test_cases/integer_overflow_and_underflow/overflow_simple_add.yaml)  |
-| [EIPXXXX-102 Outdated Compiler Version](./taxonomy/EIPXXXX-102.md)   | [CWE937 - Using Components with Known Vulnerabilities](http://cwe.mitre.org/data/definitions/937.html)  |  [version_0_4_0.yaml](./test_cases/outdated_compiler_version/version_0_4_0.yaml) |
+| [SWC-100 Function Default Visibility](./taxonomy/SWC-100.md)  | [CWE710 - Improper Adherence to Coding Standards](https://cwe.mitre.org/data/definitions/710.html) | [visibility_not_set.yaml](./test_cases/default_visibility_functions/visibility_not_set.yaml) | 
+| [SWC-101 Integer Overflow and Underflow](./taxonomy/SWC-101.md)  |  [CWE-682 - Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html) |  [overflow_complex_plus_bengin.yaml](./benchmarks/integer_overflow_and_underflow/overflow_complex_plus_bengin.yaml) [overflow_simple_add.yaml](./test_cases/integer_overflow_and_underflow/overflow_simple_add.yaml)  |
+| [SWC-102 Outdated Compiler Version](./taxonomy/SWC-102.md)   | [CWE937 - Using Components with Known Vulnerabilities](http://cwe.mitre.org/data/definitions/937.html)  |  [version_0_4_0.yaml](./test_cases/outdated_compiler_version/version_0_4_0.yaml) |
 
 
 ## Create a test case  
@@ -93,7 +93,7 @@ The configuration contains meta-information about the weaknesses contained in a 
 
 - Line 1: `description` provides additional information and context for the test case
 - Line 2: A test case has zero, one or multiple `issues` that are listed in the configuration file.
-- Line 3: `id` contains the SWC identifier for the particular weakness. Each weakness is described in a markdown file in the [taxonomy](./taxonomy) directory. 
+- Line 3: `id` contains the SWC identifier for the particular weakness. Each weakness is described in a markdown file in the [entries](./entries) directory. 
 - Line 4: `count` is the number of times that the weakness occurs in the sample.
 - Line 5: `location` has sub attributes that allow humans and tools to easier identify where a weakness exists in the test case's contract. 
 - Line 6: `bytecode_offset` in the byte code where the weakness is located.
