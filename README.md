@@ -103,5 +103,5 @@ The configuration contains meta-information about the weaknesses contained in a 
 
 ## Contact
 
-This repository is maintained by the [Mythril](https://mythril.ai) team. Ping us on the [Mythril Community Discord Server](https://discord.gg/kktn8Wt).
+This repository is maintained by the [Mythril](https://mythril.ai) team. Join the #swc-registry channel on the [Mythril Community Discord Server](https://discord.gg/kktn8Wt) for discussions.
 
