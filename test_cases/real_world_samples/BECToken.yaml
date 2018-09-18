@@ -1,0 +1,7 @@
+description: "BECToken: Integer overflow in batchTransfer function"
+issues:
+- id: "SWC-101"
+  count: 1
+  location:
+  - bytecode_offset: 1587
+    line_number: 257
