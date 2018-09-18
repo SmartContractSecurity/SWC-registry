@@ -1,6 +1,6 @@
 description: "Test default state variable visibility"
 issues:
-- id: "EIPXXXX-11"
+- id: "SWC-108"
   count: 6
   location:
   - bytecode_offset: 
