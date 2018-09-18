@@ -12,8 +12,8 @@ The goals of this project are as follows:
 
 The following terminology is used throughout the SWC:
 
-- **Variant:** A specific weakness that is described in a very low detail specific to Eteherum smart contracts. Each variant is assigned an unique SWC ID.
 - **SWC ID:** A numeric identifier assigned to a variant (e.g. SWC-100).
+- **Variant:** A specific weakness that is described in a very low detail specific to Eteherum smart contracts. Each variant is assigned an unique SWC ID.
 - **Base/Class:** An abstract base description of a class of weaknesses. CWE has a wide range of base/class types that provide a meaningful hierarchal context for smart contract specific weakness variants. Every SVC ID is related to a Base or Class weakness type in the CWE. 
 - **Test Case:** Test cases are the meat of the SWC. They consist of micro-samples and real-world vulnerable smart contracts that demonstrate concrete instances of each SWC variant. Test cases serve as the basis for meaningful weakness classification and are useful to security analysis tool developers.
 
@@ -72,8 +72,8 @@ Make sure the credit the author and mention the source if you don't write the co
 
 ```
 /*
- * @source: https://github.com/ConsenSys/smart-contract-best-practices
- * @author: Consensys Diligence
+ * @source: <link>
+ * @author: <name>
  */
 ```
 
