@@ -1,7 +1,8 @@
-description: "Test default function visibility"
+description: "Unchecked Return Value"
 issues:
 - id: "SWC-104"
   count: 1
-  location:
-  - bytecode_offset: 294
-    line_number: 10
+  locations:
+  - bytecode_offsets: [294]
+    line_numbers: [10]
+

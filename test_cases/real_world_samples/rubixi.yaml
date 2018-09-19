@@ -2,10 +2,10 @@ description: "Rubixi: Ether can be drained in 2 transactions"
 issues:
 - id: "SWC-105"
   count: 3
-  location:
-  - bytecode_offset: 2014
-    line_number: 75
-  - bytecode_offset: 2644
-    line_number: 85
-  - bytecode_offset: 1673
-    line_number: 93
+  locations:
+  - bytecode_offsets: [2014]
+    line_numbers: [75]
+  - bytecode_offsets: [2644]
+    line_numbers: [85]
+  - bytecode_offsets: [1673]
+    line_numbers: [93]

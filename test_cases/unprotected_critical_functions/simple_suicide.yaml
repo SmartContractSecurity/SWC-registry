@@ -2,6 +2,6 @@ description: "Trivially killable contract"
 issues:
 - id: "SWC-106"
   count: 1
-  location:
-  - bytecode_offset: 112
-    line_number: 4
+  locations:
+  - bytecode_offsets: [112]
+    line_numbers: [4]

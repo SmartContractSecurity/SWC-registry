@@ -2,6 +2,6 @@ description: "Integer overflow (reachable by calling 2 functions over 2 transact
 issues:
 - id: "SWC-101"
   count: 1
-  location:
-  - bytecode_offset: 218
-    line_number: 24
+  locations:
+  - bytecode_offsets: [218]
+    line_numbers: [24]

@@ -1,7 +1,7 @@
-description: "Test for floating pragma"
+description: "Floating pragma"
 issues:
 - id: "SWC-103"
   count: 1
-  location:
-  - bytecode_offset:
-    line_number: 1
+  locations:
+  - bytecode_offsets:
+    line_numbers: [1]

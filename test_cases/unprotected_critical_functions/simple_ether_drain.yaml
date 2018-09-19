@@ -2,6 +2,6 @@ description: "Ether withdrawal function and correclty named constructor (not vul
 issues:
 - id: "SWC-105"
   count: 1
-  location:
-  - bytecode_offset: 156
-    line_number: 4
+  locations:
+  - bytecode_offsets: [156]
+    line_numbers: [4]

@@ -2,6 +2,6 @@ description: "Test for outdated Solidity compiler"
 issues:
 - id: "SWC-102"
   count: 1
-  location:
-  - bytecode_offset:
-    line_number: 1
+  locations:
+  - bytecode_offsets:
+    line_numbers: [1]

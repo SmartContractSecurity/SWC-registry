@@ -2,6 +2,6 @@ description: "Test for uninitialised storage variable"
 issues:
 - id: "SWC-109"
   count: 1
-  location:
-  - bytecode_offset:
-    line_number: 39
+  locations:
+  - bytecode_offsets:
+    line_numbers: [39]

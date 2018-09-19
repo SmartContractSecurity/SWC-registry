@@ -1,9 +1,9 @@
-description: "Test default function visibility"
+description: "Default function visibility"
 issues:
 - id: "SWC-100"
   count: 2
-  location:
-  - bytecode_offset: 
-    line_number: 10
-  - bytecode_offset: 
-    line_number: 16
+  locations:
+  - bytecode_offsets: 
+    line_numbers: [10]
+  - bytecode_offsets: 
+    line_numbers: [16]
