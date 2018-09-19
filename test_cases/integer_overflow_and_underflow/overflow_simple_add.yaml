@@ -2,6 +2,6 @@ description: "Plain and simple ADD overflow example"
 issues:
 - id: "SWC-101"
   count: 1
-  location:
-  - bytecode_offset:
-    line_number: 7
+  locations:
+  - bytecode_offsets:
+    line_numbers: [7]

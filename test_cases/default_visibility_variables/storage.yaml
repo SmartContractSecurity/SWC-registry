@@ -1,17 +1,17 @@
-description: "Test default state variable visibility"
+description: "Default state variable visibility"
 issues:
 - id: "SWC-108"
   count: 6
-  location:
-  - bytecode_offset: 
-    line_number: 5
-  - bytecode_offset: 
-    line_number: 7
-  - bytecode_offset: 
-    line_number: 9
-  - bytecode_offset: 
-    line_number: 14
-  - bytecode_offset: 
-    line_number: 16
-  - bytecode_offset: 
-    line_number: 17
+  locations:
+  - bytecode_offsets: 
+    line_numbers: [5]
+  - bytecode_offsets: 
+    line_numbers: [7]
+  - bytecode_offsets: 
+    line_numbers: [9]
+  - bytecode_offsets: 
+    line_numbers: [14]
+  - bytecode_offsets: 
+    line_numbers: [16]
+  - bytecode_offsets: 
+    line_numbers: [17]

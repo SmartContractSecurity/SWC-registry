@@ -2,6 +2,7 @@ description: "Integer overflow (reachable in 2 transactions)"
 issues:
 - id: "SWC-101"
   count: 1
-  location:
-  - bytecode_offset: 196
-    line_number: 21
+  locations:
+  - bytecode_offsets: [196]
+    line_numbers: [21]
+

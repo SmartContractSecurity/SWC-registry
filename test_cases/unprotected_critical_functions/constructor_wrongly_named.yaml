@@ -2,7 +2,7 @@ description: "Ether withdrawal function and wrongly named constructor (vulnerabl
 issues:
 - id: "SWC-105"
   count: 1
-  location:
-  - bytecode_offset: 722
-    line_number: 18
+  locations:
+  - bytecode_offsets: [722]
+    line_numbers: [18]
 
