@@ -1,4 +1,5 @@
 # Smart Contract Weakness Classification Registry
+[![Discord](https://img.shields.io/discord/481002907366588416.svg)](https://discord.gg/vwX58mr)
 
 The SWC is a smart contract specific software weakness classification scheme for developers, tool vendors and security practitioners. The SWC does not attempt to reinvent the wheel in regards to classification of security weaknesses. From several schemes that exist in the wider security community, the Common Weakness Enumeration ([CWE](https://cwe.mitre.org)) from MITRE stands out in terms of adoption and breadth of coverage. The SWC is loosely aligned to the terminologies and structure used in the CWE while overlaying a wide range of weakness variants that are specific to smart contracts.
 
@@ -104,4 +105,3 @@ The configuration contains meta-information about the weaknesses contained in a 
 ## Contact
 
 This repository is maintained by the [Mythril](https://mythril.ai) team. Join the #swc-registry channel on the [Mythril Community Discord Server](https://discord.gg/kktn8Wt) for discussions.
-
