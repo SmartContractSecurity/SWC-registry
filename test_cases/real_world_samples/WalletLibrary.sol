@@ -1,4 +1,3 @@
-// 0xa657491c1e7f16adb39b9b60e87bbb8d93988bc3#code
 //sol Wallet
 // Multi-sig, daily-limited account proxy/wallet.
 // @authors:
@@ -105,7 +104,7 @@ contract WalletLibrary is WalletEvents {
 
   // constructor is given number of sigs required to do protected "onlymanyowners" transactions
   // as well as the selection of addresses capable of confirming them.
-  function initMultiowned(address[] _owners, uint _required) {
+  function initMultiowned(address[] _owners, uint _required) only_uninitialized {
     m_numOwners = _owners.length + 1;
     m_owners[1] = uint(msg.sender);
     m_ownerIndex[uint(msg.sender)] = 1;
@@ -199,7 +198,7 @@ contract WalletLibrary is WalletEvents {
   }
 
   // constructor - stores initial daily limit and records the present day's index.
-  function initDaylimit(uint _limit) {
+  function initDaylimit(uint _limit) only_uninitialized {
     m_dailyLimit = _limit;
     m_lastDay = today();
   }
@@ -212,9 +211,12 @@ contract WalletLibrary is WalletEvents {
     m_spentToday = 0;
   }
 
+  // throw unless the contract is not yet initialized.
+  modifier only_uninitialized { if (m_numOwners > 0) throw; _; }
+
   // constructor - just pass on the owner array to the multiowned and
   // the limit to daylimit
-  function initWallet(address[] _owners, uint _required, uint _daylimit) {
+  function initWallet(address[] _owners, uint _required, uint _daylimit) only_uninitialized {
     initDaylimit(_daylimit);
     initMultiowned(_owners, _required);
   }
@@ -394,4 +396,3 @@ contract WalletLibrary is WalletEvents {
   // pending transactions we have at present.
   mapping (bytes32 => Transaction) m_txs;
 }
-
