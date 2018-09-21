@@ -3,5 +3,5 @@ issues:
 - id: "SWC-107"
   count: 1
   locations:
-  - bytecode_offsets: [658]
-    line_numbers: [16]
+  - bytecode_offsets: [565, 655]
+    line_numbers: [17,18]
