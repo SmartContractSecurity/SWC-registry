@@ -18,7 +18,7 @@ The following terminology is used throughout the SWC:
 - **Base/Class:** An abstract base description of a class of weaknesses. CWE has a wide range of base/class types that provide a meaningful hierarchal context for smart contract specific weakness variants. Every SWC ID is related to a Base or Class weakness type in the CWE. 
 - **Test Case:** Test cases are the meat of the SWC. They consist of micro-samples and real-world vulnerable smart contracts that demonstrate concrete instances of each SWC variant. Test cases serve as the basis for meaningful weakness classification and are useful to security analysis tool developers.
 
-## Creating a new SWC ID
+## Creating a new SWC entry
 
 Make sure that there is no matching weakness in the registry. Create a file with a new SWC ID in the [entries](./entries) directory. Use the [template](./entries/template.md) and describe all weakness attributes. 
 
