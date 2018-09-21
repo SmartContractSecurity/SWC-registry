@@ -1,0 +1,216 @@
+{
+  "contracts" : 
+  {
+    "assert_minimal.sol:AssertMinimal" : 
+    {
+      "bin" : "6080604052348015600f57600080fd5b50608f8061001e6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c0406226146044575b600080fd5b348015604f57600080fd5b5060566058565b005b60001515606157fe5b5600a165627a7a72305820ff863437b08f3b0d329c3a22cb748b9a0e8ec1748dfe1fe0e268c6acf92693e80029",
+      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063c0406226146044575b600080fd5b348015604f57600080fd5b5060566058565b005b60001515606157fe5b5600a165627a7a72305820ff863437b08f3b0d329c3a22cb748b9a0e8ec1748dfe1fe0e268c6acf92693e80029",
+      "srcmap" : "131:83:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;131:83:0;;;;;;;",
+      "srcmap-runtime" : "131:83:0:-;;;;;;;;;;;;;;;;;;;;;;;;160:52;;8:9:-1;5:2;;;30:1;27;20:12;5:2;160:52:0;;;;;;;199:5;192:13;;;;;;160:52::o"
+    }
+  },
+  "sourceList" : 
+  [
+    "assert_minimal.sol"
+  ],
+  "sources" : 
+  {
+    "assert_minimal.sol" : 
+    {
+      "AST" : 
+      {
+        "attributes" : 
+        {
+          "absolutePath" : "assert_minimal.sol",
+          "exportedSymbols" : 
+          {
+            "AssertMinimal" : 
+            [
+              10
+            ]
+          }
+        },
+        "children" : 
+        [
+          {
+            "attributes" : 
+            {
+              "literals" : 
+              [
+                "solidity",
+                "^",
+                "0.4",
+                ".19"
+              ]
+            },
+            "id" : 1,
+            "name" : "PragmaDirective",
+            "src" : "105:24:0"
+          },
+          {
+            "attributes" : 
+            {
+              "baseContracts" : 
+              [
+                null
+              ],
+              "contractDependencies" : 
+              [
+                null
+              ],
+              "contractKind" : "contract",
+              "documentation" : null,
+              "fullyImplemented" : true,
+              "linearizedBaseContracts" : 
+              [
+                10
+              ],
+              "name" : "AssertMinimal",
+              "scope" : 11
+            },
+            "children" : 
+            [
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "documentation" : null,
+                  "implemented" : true,
+                  "isConstructor" : false,
+                  "modifiers" : 
+                  [
+                    null
+                  ],
+                  "name" : "run",
+                  "payable" : false,
+                  "scope" : 10,
+                  "stateMutability" : "nonpayable",
+                  "superFunction" : null,
+                  "visibility" : "public"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 2,
+                    "name" : "ParameterList",
+                    "src" : "172:2:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 3,
+                    "name" : "ParameterList",
+                    "src" : "182:0:0"
+                  },
+                  {
+                    "children" : 
+                    [
+                      {
+                        "children" : 
+                        [
+                          {
+                            "attributes" : 
+                            {
+                              "argumentTypes" : null,
+                              "isConstant" : false,
+                              "isLValue" : false,
+                              "isPure" : false,
+                              "isStructConstructorCall" : false,
+                              "lValueRequested" : false,
+                              "names" : 
+                              [
+                                null
+                              ],
+                              "type" : "tuple()",
+                              "type_conversion" : false
+                            },
+                            "children" : 
+                            [
+                              {
+                                "attributes" : 
+                                {
+                                  "argumentTypes" : 
+                                  [
+                                    {
+                                      "typeIdentifier" : "t_bool",
+                                      "typeString" : "bool"
+                                    }
+                                  ],
+                                  "overloadedDeclarations" : 
+                                  [
+                                    null
+                                  ],
+                                  "referencedDeclaration" : 14,
+                                  "type" : "function (bool) pure",
+                                  "value" : "assert"
+                                },
+                                "id" : 4,
+                                "name" : "Identifier",
+                                "src" : "192:6:0"
+                              },
+                              {
+                                "attributes" : 
+                                {
+                                  "argumentTypes" : null,
+                                  "hexvalue" : "66616c7365",
+                                  "isConstant" : false,
+                                  "isLValue" : false,
+                                  "isPure" : true,
+                                  "lValueRequested" : false,
+                                  "subdenomination" : null,
+                                  "token" : "bool",
+                                  "type" : "bool",
+                                  "value" : "false"
+                                },
+                                "id" : 5,
+                                "name" : "Literal",
+                                "src" : "199:5:0"
+                              }
+                            ],
+                            "id" : 6,
+                            "name" : "FunctionCall",
+                            "src" : "192:13:0"
+                          }
+                        ],
+                        "id" : 7,
+                        "name" : "ExpressionStatement",
+                        "src" : "192:13:0"
+                      }
+                    ],
+                    "id" : 8,
+                    "name" : "Block",
+                    "src" : "182:30:0"
+                  }
+                ],
+                "id" : 9,
+                "name" : "FunctionDefinition",
+                "src" : "160:52:0"
+              }
+            ],
+            "id" : 10,
+            "name" : "ContractDefinition",
+            "src" : "131:83:0"
+          }
+        ],
+        "id" : 11,
+        "name" : "SourceUnit",
+        "src" : "105:110:0"
+      }
+    }
+  },
+  "version" : "0.4.24+commit.e67f0147.Darwin.appleclang"
+}

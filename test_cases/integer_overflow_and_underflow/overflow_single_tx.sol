@@ -1,3 +1,8 @@
+/*
+ * @source: https://github.com/ConsenSys/evm-analyzer-benchmark-suite
+ * @author: Suhabe Bugrara
+ */
+
 //Single transaction overflow
 //Post-transaction effect: overflow escapes to publicly-readable storage
 

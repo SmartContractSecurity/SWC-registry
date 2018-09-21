@@ -1,0 +1,8 @@
+description: "Assert can be triggered with 2 transactions"
+issues:
+- id: "SWC-110"
+  count: 1
+  locations:
+  - bytecode_offsets: [161]
+    line_numbers: [16]
+

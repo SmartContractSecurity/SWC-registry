@@ -1,0 +1,8 @@
+description: "Assert is triggered through constructor argument"
+issues:
+- id: "SWC-110"
+  count: 1
+  locations:
+  - bytecode_offsets: []
+    line_numbers: [17]
+
