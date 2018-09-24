@@ -1,0 +1,25 @@
+version: 2
+jobs:
+  deploy-website:
+    docker:
+      - image: circleci/node:8.11.1
+
+    steps:
+      - checkout
+      - run:
+          name: Deploying to GitHub Pages
+          command: |
+            git config --global user.email "$GIT_USER@users.noreply.github.com"
+            git config --global user.name "$GIT_USER"
+            echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
+            cd website && yarn install && npm run update-sidebar && GIT_USER=$GIT_USER yarn run publish-gh-pages
+
+workflows:
+  version: 2
+  build_and_deploy:
+    jobs:
+      - deploy-website:
+          filters:
+            branches:
+              only: website
+
