@@ -1,5 +1,6 @@
 # Smart Contract Weakness Classification Registry
 [![CircleCI](https://circleci.com/gh/SmartContractSecurity/SWC-registry/tree/website.svg?style=svg)](https://circleci.com/gh/SmartContractSecurity/SWC-registry/tree/website)
+[![Pages](https://img.shields.io/badge/pages-online-blue.svg)](https://smartcontractsecurity.github.io/SWC-registry/)
 [![Discord](https://img.shields.io/discord/481002907366588416.svg)](https://discord.gg/qcNvR2r)
 
 
