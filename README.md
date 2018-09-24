@@ -9,15 +9,6 @@ The goals of this project are as follows:
 - Define a common language for describing security issues in smart contract systems' architecture, design, or code.
 - Serve as a way to train and increase performance for smart contract security analysis tools.
 
-## Terminology
-
-The following terminology is used throughout the SWC:
-
-- **SWC ID:** A numeric identifier assigned to a variant (e.g. SWC-100).
-- **Variant:** A specific weakness that is described in a very low detail specific to Eteherum smart contracts. Each variant is assigned an unique SWC ID.
-- **Base/Class:** An abstract base description of a class of weaknesses. CWE has a wide range of base/class types that provide a meaningful hierarchal context for smart contract specific weakness variants. Every SWC ID is related to a Base or Class weakness type in the CWE. 
-- **Test Case:** Test cases are the meat of the SWC. They consist of micro-samples and real-world vulnerable smart contracts that demonstrate concrete instances of each SWC variant. Test cases serve as the basis for meaningful weakness classification and are useful to security analysis tool developers.
-
 ## Creating a new SWC entry
 
 Make sure that there is no matching weakness in the registry. Create a file with a new SWC ID in the [entries](./entries) directory. Use the [template](./entries/template.md) and describe all weakness attributes. 
@@ -26,9 +17,9 @@ Make sure that there is no matching weakness in the registry. Create a file with
 # Title 
 Pick a meaningful title.
 
-## Base/Class ID
-Link a CWE base or class type to the variant. 
-e.g.  [CWE-682 - Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html)
+## Relationships
+Link a CWE Base or Class type to the CWS variant. 
+e.g.  [CWE-682: Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html)
 
 ## Description 
 Describe the nature and potential impact of the weakness on the contract system. 
@@ -40,14 +31,6 @@ Describe ways on how to fix the weakness.
 Link to external references that contain useful additional information on the issue. 
 
 ```
-
-Weakness types and test cases can be linked in the following way. 
-
-|  Variant | Base/Class | Test cases |   
-|---|---|---|
-| [SWC-100 Function Default Visibility](./entries/SWC-100.md)  | [CWE710 - Improper Adherence to Coding Standards](https://cwe.mitre.org/data/definitions/710.html) | [visibility_not_set.yaml](./test_cases/default_visibility_functions/visibility_not_set.yaml) | 
-| [SWC-101 Integer Overflow and Underflow](./entries/SWC-101.md)  |  [CWE-682 - Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html) | [Micro-test-cases](./test_cases/integer_overflow_and_underflow/), [BECToken](./test_cases/real_world_samples/BECToken.yaml) |
-| [SWC-102 Outdated Compiler Version](./entries/SWC-102.md) | [CWE937 - Using Components with Known Vulnerabilities](http://cwe.mitre.org/data/definitions/937.html)  |  [version_0_4_0.yaml](./test_cases/outdated_compiler_version/version_0_4_0.yaml) |
 
 
 ## Create a test case  
