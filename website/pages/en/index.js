@@ -18,16 +18,30 @@ const showdown = require('showdown');
 
 const converter = new showdown.Converter();
 
+const getBaseClassHTML = (item) => {
+  let data = '';
+  try {
+    data = item['Base/Class ID'].raw.trim();
+  }
+  catch (err) {}
+  return converter.makeHtml(data);
+}
+
+const getTitleHTML = (item) => {
+  return converter.makeHtml(item.raw && item.raw.trim());
+}
+
 const generateTable = () => {
     const result = [];
     fs.readdirSync('docs').forEach((file) => {
       const content = fs.readFileSync(`docs/${file}`, 'utf8');
       const parsed = md2json.parse(content);
       const { Title } = parsed;
+      const [name, ..._] = file.split('.md');
       result.unshift({ 
-        name: file.split('.md')[0],
-        title: converter.makeHtml(Title.raw && Title.raw.trim()),
-        baseClass: converter.makeHtml(Title['Base/Class ID'] && Title['Base/Class ID'].raw && Title['Base/Class ID'].raw.trim() || ''),
+        name,
+        title: getTitleHTML(Title),
+        baseClass: getBaseClassHTML(Title),
       });
     });
     return result;      
