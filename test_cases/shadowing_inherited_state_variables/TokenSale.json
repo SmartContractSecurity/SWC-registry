@@ -1,0 +1,503 @@
+{
+  "contracts" : 
+  {
+    "TokenSale.sol:Presale" : 
+    {
+      "bin" : "608060405269021e19e0c9bab2400000600055683635c9adc5dea0000060015534801561002b57600080fd5b5060a18061003a6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806371d26fdb146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600080549050905600a165627a7a72305820075ee1f189f8d925cd8394e1bf5d4d7a586487dfcfb34c777cfba96acf60fa3f0029",
+      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806371d26fdb146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600080549050905600a165627a7a72305820075ee1f189f8d925cd8394e1bf5d4d7a586487dfcfb34c777cfba96acf60fa3f0029",
+      "srcmap" : "197:103:0:-;;;65:11;50:26;;248:10;233:25;;265:33;8:9:-1;5:2;;;30:1;27;20:12;5:2;265:33:0;197:103;;;;;;",
+      "srcmap-runtime" : "197:103:0:-;;;;;;;;;;;;;;;;;;;;;;;;112:81;;8:9:-1;5:2;;;30:1;27;20:12;5:2;112:81:0;;;;;;;;;;;;;;;;;;;;;;;;156:4;179:7;;172:14;;112:81;:::o"
+    },
+    "TokenSale.sol:Tokensale" : 
+    {
+      "bin" : "608060405269021e19e0c9bab240000060005534801561001e57600080fd5b5060a18061002d6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806371d26fdb146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600080549050905600a165627a7a72305820dcfc8c894e80387d66914801ab0f0b3a84551e3e259d8e8344d31597effd06630029",
+      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806371d26fdb146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600080549050905600a165627a7a72305820dcfc8c894e80387d66914801ab0f0b3a84551e3e259d8e8344d31597effd06630029",
+      "srcmap" : "25:170:0:-;;;65:11;50:26;;83:23;8:9:-1;5:2;;;30:1;27;20:12;5:2;83:23:0;25:170;;;;;;",
+      "srcmap-runtime" : "25:170:0:-;;;;;;;;;;;;;;;;;;;;;;;;112:81;;8:9:-1;5:2;;;30:1;27;20:12;5:2;112:81:0;;;;;;;;;;;;;;;;;;;;;;;;156:4;179:7;;172:14;;112:81;:::o"
+    }
+  },
+  "sourceList" : 
+  [
+    "TokenSale.sol"
+  ],
+  "sources" : 
+  {
+    "TokenSale.sol" : 
+    {
+      "AST" : 
+      {
+        "attributes" : 
+        {
+          "absolutePath" : "TokenSale.sol",
+          "exportedSymbols" : 
+          {
+            "Presale" : 
+            [
+              29
+            ],
+            "Tokensale" : 
+            [
+              17
+            ]
+          }
+        },
+        "children" : 
+        [
+          {
+            "attributes" : 
+            {
+              "literals" : 
+              [
+                "solidity",
+                "0.4",
+                ".24"
+              ]
+            },
+            "id" : 1,
+            "name" : "PragmaDirective",
+            "src" : "0:23:0"
+          },
+          {
+            "attributes" : 
+            {
+              "baseContracts" : 
+              [
+                null
+              ],
+              "contractDependencies" : 
+              [
+                null
+              ],
+              "contractKind" : "contract",
+              "documentation" : null,
+              "fullyImplemented" : true,
+              "linearizedBaseContracts" : 
+              [
+                17
+              ],
+              "name" : "Tokensale",
+              "scope" : 30
+            },
+            "children" : 
+            [
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "name" : "hardcap",
+                  "scope" : 17,
+                  "stateVariable" : true,
+                  "storageLocation" : "default",
+                  "type" : "uint256",
+                  "visibility" : "internal"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "name" : "uint",
+                      "type" : "uint256"
+                    },
+                    "id" : 2,
+                    "name" : "ElementaryTypeName",
+                    "src" : "50:4:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "argumentTypes" : null,
+                      "hexvalue" : "3130303030",
+                      "isConstant" : false,
+                      "isLValue" : false,
+                      "isPure" : true,
+                      "lValueRequested" : false,
+                      "subdenomination" : "ether",
+                      "token" : "number",
+                      "type" : "int_const 10000000000000000000000",
+                      "value" : "10000"
+                    },
+                    "id" : 3,
+                    "name" : "Literal",
+                    "src" : "65:11:0"
+                  }
+                ],
+                "id" : 4,
+                "name" : "VariableDeclaration",
+                "src" : "50:26:0"
+              },
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "documentation" : null,
+                  "implemented" : true,
+                  "isConstructor" : true,
+                  "modifiers" : 
+                  [
+                    null
+                  ],
+                  "name" : "Tokensale",
+                  "payable" : false,
+                  "scope" : 17,
+                  "stateMutability" : "nonpayable",
+                  "superFunction" : null,
+                  "visibility" : "public"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 5,
+                    "name" : "ParameterList",
+                    "src" : "101:2:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 6,
+                    "name" : "ParameterList",
+                    "src" : "104:0:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "statements" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 7,
+                    "name" : "Block",
+                    "src" : "104:2:0"
+                  }
+                ],
+                "id" : 8,
+                "name" : "FunctionDefinition",
+                "src" : "83:23:0"
+              },
+              {
+                "attributes" : 
+                {
+                  "constant" : true,
+                  "documentation" : null,
+                  "implemented" : true,
+                  "isConstructor" : false,
+                  "modifiers" : 
+                  [
+                    null
+                  ],
+                  "name" : "fetchCap",
+                  "payable" : false,
+                  "scope" : 17,
+                  "stateMutability" : "view",
+                  "superFunction" : null,
+                  "visibility" : "public"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 9,
+                    "name" : "ParameterList",
+                    "src" : "129:2:0"
+                  },
+                  {
+                    "children" : 
+                    [
+                      {
+                        "attributes" : 
+                        {
+                          "constant" : false,
+                          "name" : "",
+                          "scope" : 16,
+                          "stateVariable" : false,
+                          "storageLocation" : "default",
+                          "type" : "uint256",
+                          "value" : null,
+                          "visibility" : "internal"
+                        },
+                        "children" : 
+                        [
+                          {
+                            "attributes" : 
+                            {
+                              "name" : "uint",
+                              "type" : "uint256"
+                            },
+                            "id" : 10,
+                            "name" : "ElementaryTypeName",
+                            "src" : "156:4:0"
+                          }
+                        ],
+                        "id" : 11,
+                        "name" : "VariableDeclaration",
+                        "src" : "156:4:0"
+                      }
+                    ],
+                    "id" : 12,
+                    "name" : "ParameterList",
+                    "src" : "155:6:0"
+                  },
+                  {
+                    "children" : 
+                    [
+                      {
+                        "attributes" : 
+                        {
+                          "functionReturnParameters" : 12
+                        },
+                        "children" : 
+                        [
+                          {
+                            "attributes" : 
+                            {
+                              "argumentTypes" : null,
+                              "overloadedDeclarations" : 
+                              [
+                                null
+                              ],
+                              "referencedDeclaration" : 4,
+                              "type" : "uint256",
+                              "value" : "hardcap"
+                            },
+                            "id" : 13,
+                            "name" : "Identifier",
+                            "src" : "179:7:0"
+                          }
+                        ],
+                        "id" : 14,
+                        "name" : "Return",
+                        "src" : "172:14:0"
+                      }
+                    ],
+                    "id" : 15,
+                    "name" : "Block",
+                    "src" : "162:31:0"
+                  }
+                ],
+                "id" : 16,
+                "name" : "FunctionDefinition",
+                "src" : "112:81:0"
+              }
+            ],
+            "id" : 17,
+            "name" : "ContractDefinition",
+            "src" : "25:170:0"
+          },
+          {
+            "attributes" : 
+            {
+              "contractDependencies" : 
+              [
+                17
+              ],
+              "contractKind" : "contract",
+              "documentation" : null,
+              "fullyImplemented" : true,
+              "linearizedBaseContracts" : 
+              [
+                29,
+                17
+              ],
+              "name" : "Presale",
+              "scope" : 30
+            },
+            "children" : 
+            [
+              {
+                "attributes" : 
+                {
+                  "arguments" : null
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "contractScope" : null,
+                      "name" : "Tokensale",
+                      "referencedDeclaration" : 17,
+                      "type" : "contract Tokensale"
+                    },
+                    "id" : 18,
+                    "name" : "UserDefinedTypeName",
+                    "src" : "217:9:0"
+                  }
+                ],
+                "id" : 19,
+                "name" : "InheritanceSpecifier",
+                "src" : "217:9:0"
+              },
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "name" : "hardcap",
+                  "scope" : 29,
+                  "stateVariable" : true,
+                  "storageLocation" : "default",
+                  "type" : "uint256",
+                  "visibility" : "internal"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "name" : "uint",
+                      "type" : "uint256"
+                    },
+                    "id" : 20,
+                    "name" : "ElementaryTypeName",
+                    "src" : "233:4:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "argumentTypes" : null,
+                      "hexvalue" : "31303030",
+                      "isConstant" : false,
+                      "isLValue" : false,
+                      "isPure" : true,
+                      "lValueRequested" : false,
+                      "subdenomination" : "ether",
+                      "token" : "number",
+                      "type" : "int_const 1000000000000000000000",
+                      "value" : "1000"
+                    },
+                    "id" : 21,
+                    "name" : "Literal",
+                    "src" : "248:10:0"
+                  }
+                ],
+                "id" : 22,
+                "name" : "VariableDeclaration",
+                "src" : "233:25:0"
+              },
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "documentation" : null,
+                  "implemented" : true,
+                  "isConstructor" : true,
+                  "name" : "Presale",
+                  "payable" : false,
+                  "scope" : 29,
+                  "stateMutability" : "nonpayable",
+                  "superFunction" : null,
+                  "visibility" : "public"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 23,
+                    "name" : "ParameterList",
+                    "src" : "281:2:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 26,
+                    "name" : "ParameterList",
+                    "src" : "296:0:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "arguments" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : 
+                    [
+                      {
+                        "attributes" : 
+                        {
+                          "argumentTypes" : null,
+                          "overloadedDeclarations" : 
+                          [
+                            null
+                          ],
+                          "referencedDeclaration" : 17,
+                          "type" : "type(contract Tokensale)",
+                          "value" : "Tokensale"
+                        },
+                        "id" : 24,
+                        "name" : "Identifier",
+                        "src" : "284:9:0"
+                      }
+                    ],
+                    "id" : 25,
+                    "name" : "ModifierInvocation",
+                    "src" : "284:11:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "statements" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 27,
+                    "name" : "Block",
+                    "src" : "296:2:0"
+                  }
+                ],
+                "id" : 28,
+                "name" : "FunctionDefinition",
+                "src" : "265:33:0"
+              }
+            ],
+            "id" : 29,
+            "name" : "ContractDefinition",
+            "src" : "197:103:0"
+          }
+        ],
+        "id" : 30,
+        "name" : "SourceUnit",
+        "src" : "0:302:0"
+      }
+    }
+  },
+  "version" : "0.4.24+commit.e67f0147.Darwin.appleclang"
+}
