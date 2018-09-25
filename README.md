@@ -87,10 +87,10 @@ The configuration contains meta-information about the weaknesses contained in a 
 
 ## Contribute
 
-Before you make a PR for the first time make sure you:
+Before you create a PR for the first time make sure you have read:
 
-- you have read the sections [Create a new SWC entry](#create-a-new-swc-entry) and [Create a test case](#create-a-test-case).
-- you have read several existing SWC definitions and their test cases. 
+- the sections [Create a new SWC entry](#create-a-new-swc-entry) and [Create a test case](#create-a-test-case).
+- read several existing SWC definitions and their test cases. 
 
 From time to time there will be challenges on [Gitcoin](https://gitcoin.co). Follow the below link to check what challenges are currently open.  
 
