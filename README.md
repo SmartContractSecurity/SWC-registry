@@ -89,12 +89,12 @@ The configuration contains meta-information about the weaknesses contained in a 
 
 Before you make a PR for the first time make sure you:
 
-- you have read the sections [Create a test case](#create-a-test-case) and [Create a new SWC entry](#create-a-new-swc-entry)
+- you have read the sections [Create a new SWC entry](#create-a-new-swc-entry) and [Create a test case](#create-a-test-case).
 - you have read several existing SWC definitions and their test cases. 
 
 From time to time there will be challenges on [Gitcoin](https://gitcoin.co). Follow the below link to check what challenges are currently open.  
 
-<a href="https://gitcoin.co/explorer?q=SWC-registry">
+<a href="https://gitcoin.co/explorer?q=SWC">
     <img src="https://gitcoin.co/funding/embed?repo=https://github.com/SmartContractSecurity/SWC-registry/&max_age=60&badge=1">
 </a>
 
