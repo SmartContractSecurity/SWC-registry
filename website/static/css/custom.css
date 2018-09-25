@@ -14,3 +14,15 @@
 
 @media only screen and (min-width: 1500px) {
 }
+
+.registry-table {
+	font-size: 13px;
+}
+
+.registry-table p {
+	margin: 0;
+}
+
+td a {
+	color: #181858;
+}
