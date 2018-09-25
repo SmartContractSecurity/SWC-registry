@@ -1,0 +1,7 @@
+description: "Delagation sets target address in delegatecall() from user input"
+issues:
+- id: "SWC-112"
+  count: 1
+  locations:
+  - bytecode_offsets:
+    line_numbers: [33]
