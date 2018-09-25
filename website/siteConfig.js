@@ -32,7 +32,10 @@ const siteConfig = {
   highlight: {
     theme: 'default',
   },
-  scripts: ['https://buttons.github.io/buttons.js'],
+  scripts: [
+    'https://buttons.github.io/buttons.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.1.0/tablesort.min.js'
+  ],
   onPageNav: 'separate',
   cleanUrl: true,
   ogImage: 'img/docusaurus.png',

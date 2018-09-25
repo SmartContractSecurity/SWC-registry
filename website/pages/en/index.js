@@ -7,6 +7,7 @@
 
 const React = require('react');
 const fs = require('fs');
+const path = require('path');
 const CompLibrary = require('../../core/CompLibrary.js');
 
 const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
@@ -15,8 +16,20 @@ const GridBlock = CompLibrary.GridBlock;
 const siteConfig = require(`${process.cwd()}/siteConfig.js`);
 const md2json = require('md-2-json');
 const showdown = require('showdown');
+const yaml = require('js-yaml');
 
 const converter = new showdown.Converter();
+
+const walkSync = (dir, filelist = []) => {
+  fs.readdirSync(dir).forEach(file => {
+
+    filelist = fs.statSync(path.join(dir, file)).isDirectory()
+      ? walkSync(path.join(dir, file), filelist)
+      : filelist.concat(path.join(dir, file));
+
+  });
+return filelist;
+}
 
 const getBaseClassHTML = (item) => {
   let data = '';
@@ -26,18 +39,51 @@ const getBaseClassHTML = (item) => {
   return converter.makeHtml(data);
 }
 
+const genrateTestCases = () => {
+  const result = {};
+  const files = walkSync('../test_cases');
+  for (let i = 0; i < files.length; i += 1) {
+    const file = files[i];
+    if (file.endsWith('.yaml')) {
+      const content = fs.readFileSync(file, 'utf8');
+
+      try {
+        const doc = yaml.safeLoad(content);
+        for (let index = 0; index < doc.issues.length; index += 1) {
+          const issue = doc.issues[index];
+          if (!result[`${issue.id}`]) {
+            result[`${issue.id}`] = [];
+          }
+          const testCasePath = file.split('../')[1];
+          const url = `https://github.com/SmartContractSecurity/SWC-registry/blob/master/${testCasePath}`;
+
+          const splitedPath = testCasePath.split('/')
+          const name = splitedPath[splitedPath.length - 1]
+          result[`${issue.id}`].push({ name, url });
+        }
+      } catch (e) {
+      }
+    }
+  }
+  return result;
+}
+
 const generateTable = () => {
     const result = [];
+    const testCases = genrateTestCases();
     fs.readdirSync('docs').forEach((file) => {
       const content = fs.readFileSync(`docs/${file}`, 'utf8');
       const parsed = md2json.parse(content);
       const { Title } = parsed;
+      const name = file.split('.md')[0];
       result.unshift({ 
-        name: file.split('.md')[0],
+        name,
         title: converter.makeHtml(Title.raw && Title.raw.trim()),
         baseClass: getBaseClassHTML(Title),
+        issues: testCases[name]
       });
     });
+    // console.log(result)
     return result;      
 }
 
@@ -131,7 +177,13 @@ const RenderSWC = () => {
         </td>
         <td dangerouslySetInnerHTML={createMarkup(item.title)}></td>
         <td dangerouslySetInnerHTML={createMarkup(item.baseClass)}></td>
-        <td></td>
+        <td>
+          <ul>
+            {item.issues && item.issues.map((item, index) => 
+              <li key={index}><a href={item.url}>{item.name}</a></li>
+            )}
+          </ul>
+        </td>
       </tr>
     )
   })
