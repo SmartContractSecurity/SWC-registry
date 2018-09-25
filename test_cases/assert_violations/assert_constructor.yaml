@@ -1,0 +1,8 @@
+description: "Assert violation in constructor"
+issues:
+- id: "SWC-110"
+  count: 1
+  locations:
+  - bytecode_offsets: [24]
+    line_numbers: [10]
+

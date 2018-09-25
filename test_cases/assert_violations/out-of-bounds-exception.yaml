@@ -1,0 +1,5 @@
+description: "Exceptions triggered by out-of-bounds array (not an explicit assert violation)."
+issues:
+- id: "SWC-110"
+  count: 0
+
