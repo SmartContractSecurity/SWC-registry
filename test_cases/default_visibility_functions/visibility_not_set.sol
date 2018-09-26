@@ -1,6 +1,7 @@
 /*
- * @source: https://blog.sigmaprime.io/solidity-security.html
+ * @source: https://github.com/sigp/solidity-security-blog#visibility
  * @author: SigmaPrime 
+ * Modified by Gerhard Wagner
  */
 
 pragma solidity 0.4.24;

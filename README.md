@@ -3,7 +3,6 @@
 [![Pages](https://img.shields.io/badge/pages-online-blue.svg)](https://smartcontractsecurity.github.io/SWC-registry/)
 [![Discord](https://img.shields.io/discord/481002907366588416.svg)](https://discord.gg/qcNvR2r)
 
-
 The SWC is a smart contract specific software weakness classification scheme for developers, tool vendors and security practitioners. The SWC does not attempt to reinvent the wheel in regards to classification of security weaknesses. From several schemes that exist in the wider security community, the Common Weakness Enumeration ([CWE](https://cwe.mitre.org)) from MITRE stands out in terms of adoption and breadth of coverage. The SWC is loosely aligned to the terminologies and structure used in the CWE while overlaying a wide range of weakness variants that are specific to smart contracts.
 
 The goals of this project are as follows:
@@ -12,7 +11,7 @@ The goals of this project are as follows:
 - Define a common language for describing security issues in smart contract systems' architecture, design, or code.
 - Serve as a way to train and increase performance for smart contract security analysis tools.
 
-## Creating a new SWC entry
+## Create a new SWC entry
 
 Make sure that there is no matching weakness in the registry. Create a file with a new SWC ID in the [entries](./entries) directory. Use the [template](./entries/template.md) and describe all weakness attributes. 
 
@@ -86,7 +85,18 @@ The configuration contains meta-information about the weaknesses contained in a 
 - Line 6: `bytecode_offsets` is a list of valid byte code offsets that can be reported to identify a weakness.  
 - Line 7: `line_numbers` is a list of valid line numbers that can be reported to identify a weakness.
 
+## Contribute
 
+Before you create a PR for the first time make sure you have read:
+
+- the sections [Create a new SWC entry](#create-a-new-swc-entry) and [Create a test case](#create-a-test-case).
+- read several existing SWC definitions and their test cases. 
+
+From time to time there will be challenges on [Gitcoin](https://gitcoin.co). Follow the below link to check what challenges are currently open.  
+
+<a href="https://gitcoin.co/explorer?q=SWC">
+    <img src="https://gitcoin.co/funding/embed?repo=https://github.com/SmartContractSecurity/SWC-registry/&max_age=60&badge=1">
+</a>
 
 ## Contact
 
