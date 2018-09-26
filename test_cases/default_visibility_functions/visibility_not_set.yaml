@@ -4,6 +4,6 @@ issues:
   count: 2
   locations:
   - bytecode_offsets: 
-    line_numbers: [10]
+    line_numbers: [11]
   - bytecode_offsets: 
-    line_numbers: [16]
+    line_numbers: [17]
