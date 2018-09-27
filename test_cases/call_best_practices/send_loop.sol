@@ -1,3 +1,9 @@
+/*
+ * @source: https://consensys.github.io/smart-contract-best-practices/known_attacks/#dos-with-unexpected-revert
+ * @author: ConsenSys Diligence
+ * Modified by Bernhard Mueller
+ */
+
 pragma solidity 0.4.24;
 
 contract Refunder {
