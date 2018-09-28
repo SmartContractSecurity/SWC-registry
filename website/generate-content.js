@@ -58,13 +58,17 @@ const populateDocumentation = () => {
       if (samples !== undefined) {
         samplesTemplate = '\n## Contract Samples';
         for (let index = 0; index < samples.length; index += 1) {
-          let solidityPath = samples[index].replace('.yaml', '.sol');
+
+          const configPath = samples[index];
+          const solidityPath = samples[index].replace('.yaml', '.sol');
+
           const samplesContent = fs.readFileSync(solidityPath, 'utf8');
+          const configContent = fs.readFileSync(configPath, 'utf8');
 
           let solidityPathSplited = solidityPath.split('/');
           smartContractName = solidityPathSplited[solidityPathSplited.length - 1]
           samplesTemplate += '\n### ' + smartContractName
-          samplesTemplate += '\n```\n' + samplesContent + '\n```\n'
+          samplesTemplate += '\n```solidity\n' + samplesContent + '\n```\n'
         }
         
       }

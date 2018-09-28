@@ -8,7 +8,8 @@
 // See https://docusaurus.io/docs/site-config for all the possible
 // site configuration options.
 
-// List of projects/orgs using your project for the users page.
+var hljsDefineSolidity = require('highlightjs-solidity');
+
 const siteConfig = {
   title: 'SWC-registry',
   tagline: 'Smart Contract Weakness Classification and Test Cases',
@@ -31,16 +32,18 @@ const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} SmartContractSecurity`,
   highlight: {
     theme: 'default',
+    hljs: function(hljs) {
+      return hljsDefineSolidity(hljs);
+    }
   },
   scripts: [
-    'https://buttons.github.io/buttons.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.1.0/tablesort.min.js'
   ],
   onPageNav: 'separate',
   cleanUrl: true,
   ogImage: 'img/docusaurus.png',
   twitterImage: 'img/docusaurus.png',
   repoUrl: 'https://github.com/SmartContractSecurity/SWC-registry',
+
 };
 
 module.exports = siteConfig;
