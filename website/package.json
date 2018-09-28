@@ -7,7 +7,7 @@
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
-    "update-sidebar": "node generate_sidebar.js > sidebars.json"
+    "update-sidebar": "node generate_sidebar.js > sidebars.json && node generate-content.js"
   },
   "devDependencies": {
     "docusaurus": "^1.4.0"
