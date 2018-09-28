@@ -24,5 +24,9 @@
 }
 
 td a {
-	color: #181858;
+	color: #2a2ad4;
+}
+
+td a:hover {
+	color: #1164e8;
 }
