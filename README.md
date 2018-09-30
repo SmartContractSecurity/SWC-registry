@@ -11,9 +11,9 @@ The goals of this project are as follows:
 - Define a common language for describing security issues in smart contract systems' architecture, design, or code.
 - Serve as a way to train and increase performance for smart contract security analysis tools.
 
-## Create a new SWC entry
+## Creating a new SWC entry
 
-Make sure that there is no matching weakness in the registry. Create a file with a new SWC ID in the [entries](./entries) directory. Use the [template](./entries/template.md) and describe all weakness attributes. 
+Make sure that there is no matching weakness in the registry. Ideally, also coordinate with the community in [#swc-registry](https://discord.gg/qcNvR2r) to prevent conflicting entries. Create a file with a new SWC ID in the [entries](./entries) directory. Use the [template](./entries/template.md) and describe all weakness attributes. 
 
 ```
 # Title 
@@ -34,14 +34,13 @@ Link to external references that contain useful additional information on the is
 
 ```
 
+## Creating a test case  
 
-## Create a test case  
+Test cases can (and should) be as varied as possible and include both simple test cases and real-world samples of vulnerable smart contracts. The test cases are grouped into subdirectories based on a single weakness variant or based on more complex real world contract systems that can contain various weakness variants. A single test case consists of three files:
 
-Test cases can (and should) be as varied as possible and include simple test cases and real-world samples of vulnerable smart contracts. The test cases are grouped into subdirectories based on a single weakness variant or based on more complex real world contract systems that can contain various weakness variants. A single test case consists of three files:
-
-1. A contract file containing zero or more weaknesses (e.g. `overflow_simple_add.sol`)
-2. A JSON file generated with `solc` that contains the byte code, AST and source code mappings (e.g. `overflow_simple_add.json`)
-3. The configuration file defining the types and number of weaknesses contained in the contract file (e.g. `overflow_simple_add.yaml`)
+1. A contract file containing zero or more weaknesses (e.g. [overflow_simple_add.sol](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/integer_overflow_and_underflow/overflow_simple_add.sol)
+2. A JSON file generated with `solc` that contains the byte code, AST and source code mappings (e.g. [overflow_simple_add.json](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/integer_overflow_and_underflow/overflow_simple_add.json))
+3. The configuration file defining the types and number of weaknesses contained in the contract file (e.g. [overflow_simple_add.yaml](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/integer_overflow_and_underflow/overflow_simple_add.yaml))
 
 ### Sample
 
@@ -85,7 +84,7 @@ The configuration contains meta-information about the weaknesses contained in a 
 - Line 6: `bytecode_offsets` is a list of valid byte code offsets that can be reported to identify a weakness.  
 - Line 7: `line_numbers` is a list of valid line numbers that can be reported to identify a weakness.
 
-## Contribute
+## Contributing
 
 Before you create a PR for the first time make sure you have read:
 
