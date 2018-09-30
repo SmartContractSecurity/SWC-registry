@@ -22,4 +22,4 @@ workflows:
           filters:
             branches:
               only: website
-
+              ignore: gh-pages
