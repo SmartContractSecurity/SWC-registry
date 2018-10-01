@@ -1,0 +1,16 @@
+---
+description:
+  type: string
+  required: true
+issues:
+- id:
+    type: string
+    required: true
+  count:
+    type: number
+    required: true
+  locations:
+  - bytecode_offsets:
+    - type: number
+    line_numbers:
+    - type: number
