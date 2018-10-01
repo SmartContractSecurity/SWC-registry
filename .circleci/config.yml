@@ -1,9 +1,20 @@
 version: 2
 jobs:
+  validate-config:
+    docker:
+      - image: circleci/node:8.11.1
+    steps:
+      - checkout
+      - run:
+          name: Validate SWC yaml config schema
+          command: |
+            cd tests
+            npm i yaml-schema-validator
+            ./test.sh
+
   deploy-website:
     docker:
       - image: circleci/node:8.11.1
-
     steps:
       - checkout
       - run:
@@ -23,3 +34,5 @@ workflows:
             branches:
               only: website
               ignore: gh-pages
+      - validate-config
+
