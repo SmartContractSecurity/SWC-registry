@@ -1,0 +1,7 @@
+description: "Timestamp Dependence"
+issues:
+- id: "SWC-116"
+  count: 1
+  locations:
+  - bytecode_offsets: []
+    line_numbers: [6]
