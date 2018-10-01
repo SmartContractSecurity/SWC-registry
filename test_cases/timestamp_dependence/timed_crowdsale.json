@@ -1,0 +1,257 @@
+{
+  "contracts" : 
+  {
+    "timed_crowdsale.sol:TimedCrowdsale" : 
+    {
+      "bin" : "6080604052348015600f57600080fd5b5060ab8061001e6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636d6f385c146044575b600080fd5b348015604f57600080fd5b5060566070565b604051808215151515815260200191505060405180910390f35b6000635c2aad804210159050905600a165627a7a72305820dac999340ad5c8efef98f3579f8fb27feecc72c694ce0438201acdd13205ca480029",
+      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680636d6f385c146044575b600080fd5b348015604f57600080fd5b5060566070565b604051808215151515815260200191505060405180910390f35b6000635c2aad804210159050905600a165627a7a72305820dac999340ad5c8efef98f3579f8fb27feecc72c694ce0438201acdd13205ca480029",
+      "srcmap" : "26:181:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:181:0;;;;;;;",
+      "srcmap-runtime" : "26:181:0:-;;;;;;;;;;;;;;;;;;;;;;;;105:100;;8:9:-1;5:2;;;30:1;27;20:12;5:2;105:100:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;152:4;190:10;171:15;:29;;164:36;;105:100;:::o"
+    }
+  },
+  "sourceList" : 
+  [
+    "timed_crowdsale.sol"
+  ],
+  "sources" : 
+  {
+    "timed_crowdsale.sol" : 
+    {
+      "AST" : 
+      {
+        "attributes" : 
+        {
+          "absolutePath" : "timed_crowdsale.sol",
+          "exportedSymbols" : 
+          {
+            "TimedCrowdsale" : 
+            [
+              13
+            ]
+          }
+        },
+        "children" : 
+        [
+          {
+            "attributes" : 
+            {
+              "literals" : 
+              [
+                "solidity",
+                "^",
+                "0.4",
+                ".25"
+              ]
+            },
+            "id" : 1,
+            "name" : "PragmaDirective",
+            "src" : "0:24:0"
+          },
+          {
+            "attributes" : 
+            {
+              "baseContracts" : 
+              [
+                null
+              ],
+              "contractDependencies" : 
+              [
+                null
+              ],
+              "contractKind" : "contract",
+              "documentation" : null,
+              "fullyImplemented" : true,
+              "linearizedBaseContracts" : 
+              [
+                13
+              ],
+              "name" : "TimedCrowdsale",
+              "scope" : 14
+            },
+            "children" : 
+            [
+              {
+                "attributes" : 
+                {
+                  "constant" : true,
+                  "documentation" : null,
+                  "implemented" : true,
+                  "isConstructor" : false,
+                  "modifiers" : 
+                  [
+                    null
+                  ],
+                  "name" : "isSaleFinished",
+                  "payable" : false,
+                  "scope" : 13,
+                  "stateMutability" : "view",
+                  "superFunction" : null,
+                  "visibility" : "public"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 2,
+                    "name" : "ParameterList",
+                    "src" : "128:2:0"
+                  },
+                  {
+                    "children" : 
+                    [
+                      {
+                        "attributes" : 
+                        {
+                          "constant" : false,
+                          "name" : "",
+                          "scope" : 12,
+                          "stateVariable" : false,
+                          "storageLocation" : "default",
+                          "type" : "bool",
+                          "value" : null,
+                          "visibility" : "internal"
+                        },
+                        "children" : 
+                        [
+                          {
+                            "attributes" : 
+                            {
+                              "name" : "bool",
+                              "type" : "bool"
+                            },
+                            "id" : 3,
+                            "name" : "ElementaryTypeName",
+                            "src" : "152:4:0"
+                          }
+                        ],
+                        "id" : 4,
+                        "name" : "VariableDeclaration",
+                        "src" : "152:4:0"
+                      }
+                    ],
+                    "id" : 5,
+                    "name" : "ParameterList",
+                    "src" : "151:6:0"
+                  },
+                  {
+                    "children" : 
+                    [
+                      {
+                        "attributes" : 
+                        {
+                          "functionReturnParameters" : 5
+                        },
+                        "children" : 
+                        [
+                          {
+                            "attributes" : 
+                            {
+                              "argumentTypes" : null,
+                              "commonType" : 
+                              {
+                                "typeIdentifier" : "t_uint256",
+                                "typeString" : "uint256"
+                              },
+                              "isConstant" : false,
+                              "isLValue" : false,
+                              "isPure" : false,
+                              "lValueRequested" : false,
+                              "operator" : ">=",
+                              "type" : "bool"
+                            },
+                            "children" : 
+                            [
+                              {
+                                "attributes" : 
+                                {
+                                  "argumentTypes" : null,
+                                  "isConstant" : false,
+                                  "isLValue" : false,
+                                  "isPure" : false,
+                                  "lValueRequested" : false,
+                                  "member_name" : "timestamp",
+                                  "referencedDeclaration" : null,
+                                  "type" : "uint256"
+                                },
+                                "children" : 
+                                [
+                                  {
+                                    "attributes" : 
+                                    {
+                                      "argumentTypes" : null,
+                                      "overloadedDeclarations" : 
+                                      [
+                                        null
+                                      ],
+                                      "referencedDeclaration" : 18,
+                                      "type" : "block",
+                                      "value" : "block"
+                                    },
+                                    "id" : 6,
+                                    "name" : "Identifier",
+                                    "src" : "171:5:0"
+                                  }
+                                ],
+                                "id" : 7,
+                                "name" : "MemberAccess",
+                                "src" : "171:15:0"
+                              },
+                              {
+                                "attributes" : 
+                                {
+                                  "argumentTypes" : null,
+                                  "hexvalue" : "31353436333030383030",
+                                  "isConstant" : false,
+                                  "isLValue" : false,
+                                  "isPure" : true,
+                                  "lValueRequested" : false,
+                                  "subdenomination" : null,
+                                  "token" : "number",
+                                  "type" : "int_const 1546300800",
+                                  "value" : "1546300800"
+                                },
+                                "id" : 8,
+                                "name" : "Literal",
+                                "src" : "190:10:0"
+                              }
+                            ],
+                            "id" : 9,
+                            "name" : "BinaryOperation",
+                            "src" : "171:29:0"
+                          }
+                        ],
+                        "id" : 10,
+                        "name" : "Return",
+                        "src" : "164:36:0"
+                      }
+                    ],
+                    "id" : 11,
+                    "name" : "Block",
+                    "src" : "158:47:0"
+                  }
+                ],
+                "id" : 12,
+                "name" : "FunctionDefinition",
+                "src" : "105:100:0"
+              }
+            ],
+            "id" : 13,
+            "name" : "ContractDefinition",
+            "src" : "26:181:0"
+          }
+        ],
+        "id" : 14,
+        "name" : "SourceUnit",
+        "src" : "0:207:0"
+      }
+    }
+  },
+  "version" : "0.4.25+commit.59dbf8f1.Windows.msvc"
+}
