@@ -56,6 +56,9 @@
       "SWC-116": {
         "title": "SWC-116"
       },
+      "SWC-117": {
+        "title": "SWC-117"
+      },
       "SWC-118": {
         "title": "SWC-118"
       },
@@ -73,7 +76,7 @@
       }
     },
     "links": {
-      "Docs": "Docs"
+      "Registry": "Registry"
     },
     "categories": {
       "SWC ID": "SWC ID"
