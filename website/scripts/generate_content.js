@@ -69,6 +69,8 @@ const populateDocumentation = () => {
           smartContractName = solidityPathSplited[solidityPathSplited.length - 1]
           samplesTemplate += '\n### ' + smartContractName
           samplesTemplate += '\n```Solidity\n' + samplesContent + '\n```\n'
+          samplesTemplate += '\n#### Config\n'
+          samplesTemplate += '\n```yaml\n' + configContent + '\n```\n'
         }
         
       }
