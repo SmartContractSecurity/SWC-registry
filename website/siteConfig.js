@@ -10,7 +10,7 @@
 
 // List of projects/orgs using your project for the users page.
 const siteConfig = {
-  title: 'SWC-registry',
+  title: 'Overview',
   tagline: 'Smart Contract Weakness Classification and Test Cases',
   url: 'https://SmartContractSecurity.github.io',
   baseUrl: '/SWC-registry/',
@@ -18,7 +18,7 @@ const siteConfig = {
   organizationName: 'SmartContractSecurity',
   customDocsPath: 'entries',
   headerLinks: [
-    {doc: 'SWC-100', label: 'Docs'},
+    {doc: 'SWC-100', label: 'Registry'},
   ],
   headerIcon: 'img/docusaurus.svg',
   footerIcon: 'img/docusaurus.svg',
