@@ -2,6 +2,7 @@
 [![CircleCI](https://circleci.com/gh/SmartContractSecurity/SWC-registry/tree/website.svg?style=svg)](https://circleci.com/gh/SmartContractSecurity/SWC-registry/tree/website)
 [![Pages](https://img.shields.io/badge/pages-online-blue.svg)](https://smartcontractsecurity.github.io/SWC-registry/)
 [![Discord](https://img.shields.io/discord/481002907366588416.svg)](https://discord.gg/qcNvR2r)
+[![Waffle.io - Columns and their card count](https://badge.waffle.io/SmartContractSecurity/SWC-registry.svg?columns=all)](https://waffle.io/SmartContractSecurity/SWC-registry)
 
 The SWC is a smart contract specific software weakness classification scheme for developers, tool vendors and security practitioners. The SWC does not attempt to reinvent the wheel in regards to classification of security weaknesses. From several schemes that exist in the wider security community, the Common Weakness Enumeration ([CWE](https://cwe.mitre.org)) from MITRE stands out in terms of adoption and breadth of coverage. The SWC is loosely aligned to the terminologies and structure used in the CWE while overlaying a wide range of weakness variants that are specific to smart contracts.
 
