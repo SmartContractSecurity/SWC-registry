@@ -28,7 +28,7 @@ const walkSync = (dir, filelist = []) => {
       : filelist.concat(path.join(dir, file));
 
   });
-return filelist;
+  return filelist;
 }
 
 const getBaseClassHTML = (item) => {
