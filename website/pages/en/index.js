@@ -196,7 +196,7 @@ const RenderSWC = () => {
           <tr>
             <th>ID</th>
             <th>Title</th>
-            <th>Base/Class</th>
+            <th>Relationships</th>
             <th>Test cases</th>
           </tr>
         </thead>
