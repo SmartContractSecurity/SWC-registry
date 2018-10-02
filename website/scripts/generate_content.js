@@ -66,10 +66,14 @@ const populateDocumentation = () => {
           const configContent = fs.readFileSync(configPath, 'utf8');
 
           let solidityPathSplited = solidityPath.split('/');
-          smartContractName = solidityPathSplited[solidityPathSplited.length - 1]
+          const smartContractName = solidityPathSplited[solidityPathSplited.length - 1]
+
+          let configPathSplited = configPath.split('/');
+          const configName = configPathSplited[configPathSplited.length - 1]
+
           samplesTemplate += '\n### ' + smartContractName
           samplesTemplate += '\n```Solidity\n' + samplesContent + '\n```\n'
-          samplesTemplate += '\n#### Config\n'
+          samplesTemplate += `\n#### ${configName}\n`;
           samplesTemplate += '\n```yaml\n' + configContent + '\n```\n'
         }
         

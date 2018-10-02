@@ -23,10 +23,21 @@
 	margin: 0;
 }
 
+.toc .toggleNav ul li a,
 td a {
 	color: #2a2ad4;
 }
 
+.toc .toggleNav ul li a:hover,
 td a:hover {
 	color: #1164e8;
+}
+
+
+.mainContainer {
+	padding-top: 0;
+}
+
+.mainContainer table {
+	margin-top: 20px;
 }
