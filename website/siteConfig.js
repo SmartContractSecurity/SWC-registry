@@ -16,7 +16,7 @@ const siteConfig = {
   baseUrl: '/SWC-registry/',
   projectName: 'SWC-registry',
   organizationName: 'SmartContractSecurity',
-  customDocsPath: 'entries',
+  customDocsPath: 'website/docs',
   headerLinks: [
     {doc: 'SWC-100', label: 'Registry'},
   ],
