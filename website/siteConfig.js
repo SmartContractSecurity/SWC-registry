@@ -31,6 +31,7 @@ const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} SmartContractSecurity`,
   highlight: {
     theme: 'default',
+    defaultLang: 'javascript'
   },
   scripts: [
     'https://buttons.github.io/buttons.js',
