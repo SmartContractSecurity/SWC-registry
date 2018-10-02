@@ -1,0 +1,23 @@
+description: "Use of Deprecated Solidity Functions"
+issues:
+- id: "SWC-111"
+  count: 9
+  locations:
+  - bytecode_offsets: []
+    line_numbers: [17]
+  - bytecode_offsets: []
+    line_numbers: [18]
+  - bytecode_offsets: []
+    line_numbers: [19]
+  - bytecode_offsets: []
+    line_numbers: [55]
+  - bytecode_offsets: []
+    line_numbers: [60]
+  - bytecode_offsets: []
+    line_numbers: [73]
+  - bytecode_offsets: []
+    line_numbers: [341]
+  - bytecode_offsets: []
+    line_numbers: [510]
+  - bytecode_offsets: []
+    line_numbers: [512]
