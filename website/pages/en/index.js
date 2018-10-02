@@ -69,9 +69,10 @@ const genrateTestCases = () => {
 }
 
 const generateTable = () => {
-    const result = [];
-    const testCases = genrateTestCases();
-    fs.readdirSync('docs').forEach((file) => {
+  const result = [];
+  const testCases = genrateTestCases();
+  fs.readdirSync('docs').forEach((file) => {
+    if (file !== '.gitkeep') {
       const content = fs.readFileSync(`docs/${file}`, 'utf8');
       const parsed = md2json.parse(content);
       const { Title } = parsed;
@@ -82,9 +83,10 @@ const generateTable = () => {
         baseClass: getBaseClassHTML(Title),
         issues: testCases[name]
       });
-    });
-    // console.log(result)
-    return result;      
+    }
+  });
+  // console.log(result)
+  return result;      
 }
 
 const imgUrl = (img) => `${siteConfig.baseUrl}img/${img}`;
