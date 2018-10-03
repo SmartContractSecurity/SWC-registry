@@ -1,0 +1,7 @@
+description: "Lack of input parameter check"
+issues:
+- id: "SWC-124"
+  count: 1
+  locations:
+  - bytecode_offsets: []
+    line_numbers: [10, 11, 12, 13]
