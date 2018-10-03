@@ -98,3 +98,7 @@ pre .cl {
 	display: block;
 	clear: both;
 }
+
+input#search_input_react {
+	line-height: 27px;
+}

@@ -9,6 +9,10 @@
 // site configuration options.
 
 // List of projects/orgs using your project for the users page.
+var hljsDefineSolidity = require('highlightjs-solidity');
+// var hljs = require('highlightjs');
+// hljsDefineSolidity(hljs);
+
 const siteConfig = {
   title: 'Overview',
   tagline: 'Smart Contract Weakness Classification and Test Cases',
@@ -31,7 +35,15 @@ const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} SmartContractSecurity`,
   highlight: {
     theme: 'default',
-    defaultLang: 'javascript'
+    defaultLang: 'javascript',
+    hljs: function(hljs) {
+      return hljsDefineSolidity(hljs);
+      // hljs.initHighlightingOnLoad();
+    }
+  },
+  algolia: {
+    apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+    indexName: 'docsearch',
   },
   scripts: [],
   footerscripts: [
