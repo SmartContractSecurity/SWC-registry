@@ -23,19 +23,26 @@
 	margin: 0;
 }
 
+.toc-headings a,
 .toc .toggleNav ul li a,
 td a {
 	color: #2a2ad4;
 }
 
+.toc .toggleNav ul li.navListItemActive a,
+.toc-headings a:hover,
 .toc .toggleNav ul li a:hover,
 td a:hover {
 	color: #1164e8;
 }
 
+.toc .toggleNav ul li.navListItemActive a {
+	text-decoration: underline;
+}
 
-.mainContainer {
-	padding-top: 0;
+
+.homeWrapper {
+	padding-bottom: 0;
 }
 
 .mainContainer table {

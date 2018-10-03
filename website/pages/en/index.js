@@ -204,11 +204,11 @@ class Index extends React.Component {
       <Container>
         <HomeSplash language='' />
         <div className="mainContainer">
-          <p>The following table contains an overview of the SWC-registry. 
-            A single row consists of the SWC identifier, the weakness title, 
-            its CWE closest parent and the list of test samples that contain 
-            the weakness. The link for the SWC identifier and the test samples 
-            link to individual SWC details. Relationship links lead to the CWE Base or Class type.</p>
+          <p>The following table contains an overview of the SWC registry. 
+            Each row consists of an SWC identifier (ID), weakness title, CWE parent
+             and list of related code samples. The links in the "ID" and "test cases" 
+             columns lead to details about the respective SWC. Links in the 
+             "Base/Class" column lead to the CWE Base or Class type.</p>
           <RenderSWC />
         </div>
       </Container>
