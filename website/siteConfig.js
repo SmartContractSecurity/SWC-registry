@@ -9,6 +9,8 @@
 // site configuration options.
 
 // List of projects/orgs using your project for the users page.
+var hljsDefineSolidity = require('highlightjs-solidity');
+
 const siteConfig = {
   title: 'Overview',
   tagline: 'Smart Contract Weakness Classification and Test Cases',
@@ -18,7 +20,7 @@ const siteConfig = {
   organizationName: 'SmartContractSecurity',
   customDocsPath: 'website/docs',
   headerLinks: [
-    {doc: 'SWC-100', label: 'Registry'},
+    { doc: 'SWC-100', label: 'Registry' },
   ],
   headerIcon: 'img/docusaurus.svg',
   footerIcon: 'img/docusaurus.svg',
@@ -31,6 +33,9 @@ const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} SmartContractSecurity`,
   highlight: {
     theme: 'default',
+    hljs: function (hljs) {
+      hljsDefineSolidity(hljs);
+    },
   },
   scripts: [
     'https://buttons.github.io/buttons.js',
