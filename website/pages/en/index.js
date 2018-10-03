@@ -187,7 +187,7 @@ const RenderSWC = () => {
         <tr>
           <th>ID</th>
           <th>Title</th>
-          <th>Base/Class</th>
+          <th>Relationships</th>
           <th>Test cases</th>
         </tr>
       </thead>
@@ -207,8 +207,8 @@ class Index extends React.Component {
           <p>The following table contains an overview of the SWC registry. 
             Each row consists of an SWC identifier (ID), weakness title, CWE parent
              and list of related code samples. The links in the "ID" and "test cases" 
-             columns lead to details about the respective SWC. Links in the 
-             "Base/Class" column lead to the CWE Base or Class type.</p>
+             columns links to details about the respective SWC. Links in the 
+             "Relationships" column lead to the CWE Base or Class type.</p>
           <RenderSWC />
         </div>
       </Container>
