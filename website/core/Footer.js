@@ -39,6 +39,16 @@ class Footer extends React.Component {
           </div>
         </section>
         <section className="copyright">{this.props.config.copyright}</section>
+        {this.props.config.footerscripts &&
+          this.props.config.footerscripts.map(function(source, idx) {
+            return (
+              <script
+                type="text/javascript"
+                key={'script' + idx}
+                src={source}
+              />
+            );
+          })}
       </footer>
     );
   }
