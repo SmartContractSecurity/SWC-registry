@@ -33,8 +33,9 @@ const siteConfig = {
     theme: 'default',
     defaultLang: 'javascript'
   },
-  scripts: [
-    'https://buttons.github.io/buttons.js',
+  scripts: [],
+  footerscripts: [
+    'https://rawgit.com/s0b0lev/SWC-registry/website/website/scripts/lineNumbers.js',
   ],
   onPageNav: 'separate',
   cleanUrl: true,
