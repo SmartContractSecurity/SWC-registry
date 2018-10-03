@@ -17,7 +17,7 @@ const siteConfig = {
   url: 'https://SmartContractSecurity.github.io',
   baseUrl: '/SWC-registry/',
   projectName: 'SWC-registry',
-  organizationName: 'SmartContractSecurity',
+  organizationName: 'ersul4ik',
   customDocsPath: 'website/docs',
   headerLinks: [
     { doc: 'SWC-100', label: 'Registry' },
