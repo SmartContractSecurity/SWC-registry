@@ -55,11 +55,9 @@ const genrateTestCases = () => {
             result[`${issue.id}`] = [];
           }
           const testCasePath = file.split('../')[1];
-          const url = `https://github.com/SmartContractSecurity/SWC-registry/blob/master/${testCasePath}`;
-
           const splitedPath = testCasePath.split('/')
           const name = splitedPath[splitedPath.length - 1]
-          result[`${issue.id}`].push({ name, url });
+          result[`${issue.id}`].push(name.replace('.yaml', '.sol'));
         }
       } catch (e) {
       }
@@ -85,15 +83,20 @@ const generateTable = () => {
       });
     }
   });
-  // console.log(result)
   return result;      
 }
 
 const imgUrl = (img) => `${siteConfig.baseUrl}img/${img}`;
 
-const docUrl = (doc, language) => `${siteConfig.baseUrl}docs/${language ? `${language}/` : ''}${doc}`;
+const docUrl = (doc) => `${siteConfig.baseUrl}docs/${doc}`;
 
-const pageUrl = (page, language) => siteConfig.baseUrl + (language ? `${language}/` : '') + page;
+const docSectionUrl = (doc, section) => {
+  let sectionPath = section.toLowerCase();
+  sectionPath = sectionPath.split('_').join('-');
+  sectionPath = sectionPath.split('.').join('');
+  return `${siteConfig.baseUrl}docs/${doc}#${sectionPath}`;
+}
+
 
 const Button = props => {
   return (
@@ -152,17 +155,6 @@ const Block = props => (
 );
 
 
-const Description = () => {
-  const content = fs.readFileSync('meta/README.md', 'utf8');
-  return (
-    <Container>
-      <MarkdownBlock>
-        {content}
-      </MarkdownBlock>
-    </Container>
-  )
-};
-
 function createMarkup(html) {
   return {__html: html};
 }
@@ -173,7 +165,7 @@ const RenderSWC = () => {
     return (
       <tr key={item.name}>
         <td width="100">
-          <a href={docUrl(item.name, '')}>
+          <a href={docUrl(item.name)}>
             {`${item.name}`}
           </a>
         </td>
@@ -181,8 +173,8 @@ const RenderSWC = () => {
         <td dangerouslySetInnerHTML={createMarkup(item.baseClass)}></td>
         <td>
           <ul>
-            {item.issues && item.issues.map((item, index) => 
-              <li key={index}><a href={item.url}>{item.name}</a></li>
+            {item.issues && item.issues.map((issue, index) => 
+              <li key={index}><a href={docSectionUrl(item.name, issue)}>{issue}</a></li>
             )}
           </ul>
         </td>
@@ -190,21 +182,19 @@ const RenderSWC = () => {
     )
   })
   return (
-    <Container>
-      <table style={{ width: '100%', display: 'inline-table' }}>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Title</th>
-            <th>Base/Class</th>
-            <th>Test cases</th>
-          </tr>
-        </thead>
-        <tbody>
-          {renderFiles}
-        </tbody>
-      </table>
-    </Container>
+    <table style={{ width: '100%', display: 'inline-table' }}>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Title</th>
+          <th>Relationships</th>
+          <th>Test cases</th>
+        </tr>
+      </thead>
+      <tbody>
+        {renderFiles}
+      </tbody>
+    </table>
   );
 }
 
@@ -214,8 +204,12 @@ class Index extends React.Component {
       <Container>
         <HomeSplash language='' />
         <div className="mainContainer">
+          <p>The following table contains an overview of the SWC registry. 
+            Each row consists of an SWC identifier (ID), weakness title, CWE parent
+             and list of related code samples. The links in the "ID" and "test cases" 
+             columns links to details about the respective SWC. Links in the 
+             "Relationships" column lead to the CWE Base or Class type.</p>
           <RenderSWC />
-          <Description />
         </div>
       </Container>
     );
