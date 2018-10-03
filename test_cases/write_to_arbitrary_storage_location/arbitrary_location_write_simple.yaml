@@ -5,3 +5,8 @@ issues:
   locations:
   - bytecode_offsets: [294]
     line_numbers: [26]
+- id: "SWC-101"
+  count: 1
+  locations:
+  - bytecode_offsets: [331]
+    line_numbers: [21]
