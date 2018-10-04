@@ -41,10 +41,10 @@ const siteConfig = {
       // hljs.initHighlightingOnLoad();
     }
   },
-  algolia: {
-    apiKey: '25626fae796133dc1e734c6bcaaeac3c',
-    indexName: 'docsearch',
-  },
+  // algolia: {
+  //   apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+  //   indexName: 'docsearch',
+  // },
   scripts: [],
   footerscripts: [
     'https://rawgit.com/s0b0lev/SWC-registry/website/website/scripts/lineNumbers.js',
