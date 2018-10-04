@@ -12,7 +12,7 @@ The goals of this project are as follows:
 - Define a common language for describing security issues in smart contract systems' architecture, design, or code.
 - Serve as a way to train and increase performance for smart contract security analysis tools.
 
-## Creating a new SWC entry
+## Creating a new Test Cases
 
 Make sure that there is no matching weakness in the registry. Ideally, also coordinate with the community in [#swc-registry](https://discord.gg/qcNvR2r) to prevent conflicting entries. Create a file with a new SWC ID in the [entries](./entries) directory. Use the [template](./entries/template.md) and describe all weakness attributes. 
 
