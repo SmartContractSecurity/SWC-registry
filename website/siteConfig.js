@@ -10,6 +10,8 @@
 
 // List of projects/orgs using your project for the users page.
 var hljsDefineSolidity = require('highlightjs-solidity');
+// var hljs = require('highlightjs');
+// hljsDefineSolidity(hljs);
 
 const siteConfig = {
   title: 'Overview',
@@ -20,7 +22,7 @@ const siteConfig = {
   organizationName: 'SmartContractSecurity',
   customDocsPath: 'website/docs',
   headerLinks: [
-    { doc: 'SWC-100', label: 'Registry' },
+    {doc: 'SWC-100', label: 'Registry'},
   ],
   headerIcon: 'img/docusaurus.svg',
   footerIcon: 'img/docusaurus.svg',
@@ -33,13 +35,19 @@ const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} SmartContractSecurity`,
   highlight: {
     theme: 'default',
-    hljs: function (hljs) {
-      hljsDefineSolidity(hljs);
-    },
+    defaultLang: 'javascript',
+    hljs: function(hljs) {
+      return hljsDefineSolidity(hljs);
+      // hljs.initHighlightingOnLoad();
+    }
   },
-  scripts: [
-    'https://buttons.github.io/buttons.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.1.0/tablesort.min.js'
+  // algolia: {
+  //   apiKey: '25626fae796133dc1e734c6bcaaeac3c',
+  //   indexName: 'docsearch',
+  // },
+  scripts: [],
+  footerscripts: [
+    'https://rawgit.com/s0b0lev/SWC-registry/website/website/scripts/lineNumbers.js',
   ],
   onPageNav: 'separate',
   cleanUrl: true,
