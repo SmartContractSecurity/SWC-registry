@@ -40,11 +40,16 @@ td a:hover {
 	text-decoration: underline;
 }
 
-
+.homeContainer .homeWrapper{
+	padding: 0;
+    margin-top: 30px;
+}
 .homeWrapper {
 	padding-bottom: 0;
 }
-
+.mainContainer{
+	padding: 0;
+}
 .mainContainer table {
 	margin-top: 20px;
 }
