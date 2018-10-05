@@ -126,7 +126,7 @@ const Logo = props => (
 
 const ProjectTitle = () => (
   <h2 className="projectTitle">
-    SWC-registry
+    SWC Registry
     <small>{siteConfig.tagline}</small>
   </h2>
 );
