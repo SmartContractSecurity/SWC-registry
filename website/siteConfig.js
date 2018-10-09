@@ -4,14 +4,7 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-// See https://docusaurus.io/docs/site-config for all the possible
-// site configuration options.
-
-// List of projects/orgs using your project for the users page.
 var hljsDefineSolidity = require('highlightjs-solidity');
-// var hljs = require('highlightjs');
-// hljsDefineSolidity(hljs);
 
 const siteConfig = {
   title: 'Overview',
@@ -38,13 +31,12 @@ const siteConfig = {
     defaultLang: 'javascript',
     hljs: function(hljs) {
       return hljsDefineSolidity(hljs);
-      // hljs.initHighlightingOnLoad();
     }
   },
-  // algolia: {
-  //   apiKey: '25626fae796133dc1e734c6bcaaeac3c',
-  //   indexName: 'docsearch',
-  // },
+  algolia: {
+    apiKey: '064ab94cd5d5382009d9640000aeea98',
+    indexName: 'smartcontractsecurity',
+  },
   scripts: [],
   footerscripts: [
     'https://rawgit.com/s0b0lev/SWC-registry/website/website/scripts/lineNumbers.js',
