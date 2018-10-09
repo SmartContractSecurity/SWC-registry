@@ -14,7 +14,7 @@ contract Missing{
         _;
     }
 
-    function constructor()
+    function Cosnstructor()
         public 
     {
         owner = msg.sender;
