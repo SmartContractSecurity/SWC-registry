@@ -126,7 +126,7 @@ const Logo = props => (
 
 const ProjectTitle = () => (
   <h2 className="projectTitle">
-    SWC-registry
+    SWC Registry
     <small>{siteConfig.tagline}</small>
   </h2>
 );
@@ -206,9 +206,9 @@ class Index extends React.Component {
         <div className="mainContainer">
           <p>The following table contains an overview of the SWC registry. 
             Each row consists of an SWC identifier (ID), weakness title, CWE parent
-             and list of related code samples. The links in the "ID" and "test cases" 
-             columns links to details about the respective SWC. Links in the 
-             "Relationships" column lead to the CWE Base or Class type.</p>
+             and list of related code samples. The links in the ID and Test Cases
+             columns link to the respective SWC definition. Links in the 
+             Relationships column link to the CWE Base or Class type.</p>
           <RenderSWC />
         </div>
       </Container>
