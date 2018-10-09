@@ -35,7 +35,7 @@ Link to external references that contain useful additional information on the is
 
 ```
 
-## Creating a test case  
+## Creating a new Test Case  
 
 Test cases can (and should) be as varied as possible and include both simple test cases and real-world samples of vulnerable smart contracts. The test cases are grouped into subdirectories based on a single weakness variant or based on more complex real world contract systems that can contain various weakness variants. A single test case consists of three files:
 
