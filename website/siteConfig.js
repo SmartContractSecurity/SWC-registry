@@ -15,7 +15,8 @@ const siteConfig = {
   organizationName: 'SmartContractSecurity',
   customDocsPath: 'website/docs',
   headerLinks: [
-    {doc: 'SWC-100', label: 'Registry'},
+    { doc: 'SWC-100', label: 'Registry' },
+    {href: 'https://github.com/SmartContractSecurity/SWC-registry', label: 'Github'},
   ],
   headerIcon: 'img/docusaurus.svg',
   footerIcon: 'img/docusaurus.svg',
