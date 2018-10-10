@@ -40,11 +40,70 @@ td a:hover {
 	text-decoration: underline;
 }
 
-
+.homeContainer .homeWrapper{
+	padding: 0;
+    margin-top: 30px;
+}
 .homeWrapper {
 	padding-bottom: 0;
 }
-
+.mainContainer{
+	padding: 0;
+}
 .mainContainer table {
 	margin-top: 20px;
+}
+
+.hljs {
+	padding: 0;
+	padding-left: 10px;
+}
+
+pre {
+	display: block;
+	margin-top: 0;
+	/*margin-bottom: 1rem;*/
+	/*font-size: 0.7rem;*/
+	line-height: 1.4;
+	white-space: pre;
+	overflow: auto;
+	/*background-color: #f9f9f9;*/
+	border: 1px solid #ddd;
+	/*padding: .5rem;*/
+	max-height: 800px;
+	font-family: monospace;
+}
+
+pre  code {
+	color: inherit;
+	background-color: transparent;
+	padding: 0;
+	display: block;
+}
+pre .line-number {
+	display: grid;
+	float: left;
+	/*margin: 0 1em 0 -1em;*/
+	padding: 0 .5em 0 1em;
+	border-right: 1px solid #ddd;
+	text-align: right;
+}
+
+pre .line-number span {
+	padding: 2.5px;
+    font-size: 10px;
+}
+
+pre span {
+	/*display: block;*/
+	/*color: #ccc;*/
+}
+
+pre .cl {
+	display: block;
+	clear: both;
+}
+
+input#search_input_react {
+	line-height: 27px;
 }

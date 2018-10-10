@@ -4,11 +4,6 @@
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-// See https://docusaurus.io/docs/site-config for all the possible
-// site configuration options.
-
-// List of projects/orgs using your project for the users page.
 var hljsDefineSolidity = require('highlightjs-solidity');
 
 const siteConfig = {
@@ -17,7 +12,7 @@ const siteConfig = {
   url: 'https://SmartContractSecurity.github.io',
   baseUrl: '/SWC-registry/',
   projectName: 'SWC-registry',
-  organizationName: 'ersul4ik',
+  organizationName: 'SmartContractSecurity',
   customDocsPath: 'website/docs',
   headerLinks: [
     { doc: 'SWC-100', label: 'Registry' },
@@ -34,13 +29,18 @@ const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} SmartContractSecurity`,
   highlight: {
     theme: 'default',
-    hljs: function (hljs) {
-      hljsDefineSolidity(hljs);
-    },
+    defaultLang: 'javascript',
+    hljs: function(hljs) {
+      return hljsDefineSolidity(hljs);
+    }
   },
-  scripts: [
-    'https://buttons.github.io/buttons.js',
-    'https://cdnjs.cloudflare.com/ajax/libs/tablesort/5.1.0/tablesort.min.js'
+  algolia: {
+    apiKey: '064ab94cd5d5382009d9640000aeea98',
+    indexName: 'smartcontractsecurity',
+  },
+  scripts: [],
+  footerscripts: [
+    'https://rawgit.com/s0b0lev/SWC-registry/website/website/scripts/lineNumbers.js',
   ],
   onPageNav: 'separate',
   cleanUrl: true,
