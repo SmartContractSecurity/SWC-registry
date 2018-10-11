@@ -1,5 +1,5 @@
 /*
-  Generate swc-defenition.json
+  Generate swc-definition.json
   "SWC-101": {
     "markdown": "",
     "content": {
