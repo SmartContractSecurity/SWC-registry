@@ -1,13 +1,12 @@
 {
   "scripts": {
-    "examples": "docusaurus-examples",
-    "start": "docusaurus-start",
-    "build": "docusaurus-build",
+    "start": "npm run generate-content && docusaurus-start",
+    "build": "npm run generate-content && docusaurus-build",
     "publish-gh-pages": "docusaurus-publish",
     "write-translations": "docusaurus-write-translations",
     "version": "docusaurus-version",
     "rename-version": "docusaurus-rename-version",
-    "content": "node scripts/generate_content.js && node scripts/generate_sidebar.js > sidebars.json"
+    "generate-content": "node scripts/generate_content.js && node scripts/generate_sidebar.js > sidebars.json && node scripts/generate_swc_defenition.js > export/swc-defenition.json"
   },
   "devDependencies": {
     "docusaurus": "^1.4.0"
