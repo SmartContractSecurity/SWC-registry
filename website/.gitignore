@@ -3,3 +3,4 @@ build/
 sidebar.json
 sidebars.json
 docs/*.md
+export/*.json
