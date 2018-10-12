@@ -34,10 +34,6 @@ jobs:
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
             cd scripts && yarn && yarn run updateswc
-            cd ../
-            git add export/
-            git commit --allow-empty -m "Update SWC definition"
-            git push -q https://${GIT_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
 
 workflows:
   version: 2
