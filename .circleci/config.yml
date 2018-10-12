@@ -8,10 +8,8 @@ jobs:
       - run:
           name: Validate SWC yaml config schema
           command: |
-            cd tests
-            npm i yaml-schema-validator
-            ./test.sh
-
+            cd scripts
+            yarn && yarn run schema-validation
   deploy-website:
     docker:
       - image: circleci/node:8.11.1
@@ -24,6 +22,22 @@ jobs:
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
             cd website && yarn install && npm run content && GIT_USER=$GIT_USER yarn run publish-gh-pages
+  updateswc:
+    docker:
+      - image: circleci/node:8.11.1
+    steps:
+      - checkout
+      - run:
+          name: Update SWC definition
+          command: |
+            git config --global user.email "$GIT_USER@users.noreply.github.com"
+            git config --global user.name "$GIT_USER"
+            echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
+            cd scripts && yarn && yarn run updateswc
+            cd ../
+            git add export/
+            git commit --allow-empty -m "Update SWC definition"
+            git push -q https://${GIT_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
 
 workflows:
   version: 2
@@ -34,5 +48,11 @@ workflows:
             branches:
               only: website
               ignore: gh-pages
-      - validate-config
-
+      - updateswc:
+          filters:
+            branches:
+              only: master
+      - validate-config:
+          filters:
+            branches:
+              only: master
