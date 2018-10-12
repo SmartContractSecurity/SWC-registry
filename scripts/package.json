@@ -4,11 +4,13 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "md-2-json": "^1.0.5",
     "yaml-schema-validator": "^1.1.7"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "/bin/bash test.sh"
+    "schema-validation": "/bin/bash test.sh",
+    "updateswc": "node update_swc.js > ../export/swc-definition.js"
   },
   "author": "",
   "license": "ISC"
