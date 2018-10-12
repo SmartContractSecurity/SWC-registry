@@ -36,9 +36,14 @@ jobs:
             cd scripts
             yarn && yarn run updateswc
             cd ../
-            git add export/
-            git commit -m "Update SWC definition"
-            git push -q https://${GIT_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
+            command=$(git status|grep test.txt|wc -l)
+            if ((command > 0)); then
+              git add export/
+              git commit -m "Update SWC definition"
+              git push -q https://${GIT_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
+            else
+              echo "SWC definition already up to date"
+            fi
 
 workflows:
   version: 2
