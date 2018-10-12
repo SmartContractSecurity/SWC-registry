@@ -35,12 +35,9 @@ jobs:
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
             cd scripts && yarn && yarn run updateswc
             cd ../
-            command=$(git status|grep -c swc-definition.json)
-            if ((command > 0)); then
-              git add export/
-              git commit -m "Update SWC definition"
-              git push -q https://${GIT_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
-            fi
+            git add export/
+            git commit -m "Update SWC definition"
+            git push -q https://${GIT_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
 
 workflows:
   version: 2
