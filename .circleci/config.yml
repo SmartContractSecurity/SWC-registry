@@ -36,7 +36,7 @@ jobs:
             cd scripts && yarn && yarn run updateswc
             cd ../
             git add export/
-            git commit -m "Update SWC definition"
+            git commit --allow-empty -m "Update SWC definition"
             git push -q https://${GIT_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
 
 workflows:
