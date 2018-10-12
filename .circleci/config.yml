@@ -10,7 +10,6 @@ jobs:
           command: |
             cd scripts
             yarn && yarn run schema-validation
-
   deploy-website:
     docker:
       - image: circleci/node:8.11.1
@@ -23,7 +22,6 @@ jobs:
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
             cd website && yarn install && npm run content && GIT_USER=$GIT_USER yarn run publish-gh-pages
-
   updateswc:
     docker:
       - image: circleci/node:8.11.1
@@ -40,7 +38,7 @@ jobs:
             cd ../
             git add export/
             git commit -m "Update SWC definition"
-            git push origin master
+            git push -q https://${GIT_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
 
 workflows:
   version: 2
@@ -59,4 +57,3 @@ workflows:
           filters:
             branches:
               only: master
-

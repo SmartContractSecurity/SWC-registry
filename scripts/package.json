@@ -9,8 +9,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "schema-validation": "/bin/bash test.sh",
-    "updateswc": "node update_swc.js > ../export/swc-definition.js"
+    "schema-validation": "/bin/bash validate_swc_configs.sh",
+    "updateswc": "node update_swc.js > ../export/swc-definition.json"
   },
   "author": "",
   "license": "ISC"
