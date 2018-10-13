@@ -13,10 +13,10 @@ jobs:
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
             cd scripts && yarn && yarn run schema-validation && yarn run updateswc
             cd ../
-            command=$(git status|grep -c test.txt)
+            command=$(git status|grep -c 'swc-definition.json')
             if ((command > 0)); then
               git add export/
-              git commit --allow-empty -m "Update SWC definition"
+              git commit --allow-empty -m "Update SWC definition [ci skip]"
               git push -q https://${GIT_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
             fi
 
