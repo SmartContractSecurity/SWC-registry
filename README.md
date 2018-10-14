@@ -102,3 +102,4 @@ From time to time there will be challenges on [Gitcoin](https://gitcoin.co). Fol
 
 This repository is maintained by the [Mythril](https://mythril.ai) team. Join the #swc-registry channel on the [Mythril Community Discord Server](https://discord.gg/qcNvR2r) for discussions.
 
+
