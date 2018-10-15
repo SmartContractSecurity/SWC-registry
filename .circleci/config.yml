@@ -6,38 +6,39 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Validate SWC yaml config and generate swc-definition.json
-          command:  |
+          name: Validate schema and generage SWC definition
+          shell: /bin/sh
+          command: |
             git config --global user.email "$GIT_USER@users.noreply.github.com"
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
             cd scripts && npm install && npm run schema-validation && npm run updateswc
             cd ../
-            command=$(git status|grep -c 'swc-definition.json')
+            command=$(git status|grep -c 'export/swc-definition.json')
             if ((command > 0)); then
               git add export/
               git commit -m "Update SWC definition [ci skip]"
-              git push -q https://${GIT_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
+              git push -q https://${GITHUB_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
             fi
 
-  deploy-website:
+  deploy-gh-pages:
     docker:
       - image: circleci/node:8.11.1
     steps:
       - checkout
       - run:
-          name: Deploying to GitHub Pages
+          name: Deploying website GitHub Pages
           command: |
             git config --global user.email "$GIT_USER@users.noreply.github.com"
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
-            cd website && npm install && npm run content && GIT_USER=$GIT_USER npm run publish-gh-pages
+            cd website && npm install && npm run generate-content && GIT_USER=$GIT_USER npm run publish-gh-pages
 
 workflows:
   version: 2
   build_and_deploy:
     jobs:
-      - deploy-website:
+      - deploy-gh-pages:
           filters:
             branches:
               only: website
