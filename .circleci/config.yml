@@ -11,7 +11,7 @@ jobs:
             git config --global user.email "$GIT_USER@users.noreply.github.com"
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
-            cd scripts && yarn && yarn run schema-validation && yarn run updateswc
+            cd scripts && npm install && npm run schema-validation && npm run updateswc
             cd ../
             command=$(git status|grep -c 'swc-definition.json')
             if ((command > 0)); then
@@ -31,7 +31,7 @@ jobs:
             git config --global user.email "$GIT_USER@users.noreply.github.com"
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install && npm run content && GIT_USER=$GIT_USER yarn run publish-gh-pages
+            cd website && npm install && npm run content && GIT_USER=$GIT_USER npm run publish-gh-pages
 
 workflows:
   version: 2
