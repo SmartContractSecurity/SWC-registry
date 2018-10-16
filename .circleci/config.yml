@@ -1,54 +1,49 @@
 version: 2
 jobs:
-  validate-config:
+  swc-config:
     docker:
       - image: circleci/node:8.11.1
     steps:
       - checkout
       - run:
-          name: Validate SWC yaml config schema
-          command: |
-            cd scripts
-            yarn && yarn run schema-validation
-  deploy-website:
-    docker:
-      - image: circleci/node:8.11.1
-    steps:
-      - checkout
-      - run:
-          name: Deploying to GitHub Pages
+          name: Validate schema and generage SWC definition
+          shell: /bin/sh
           command: |
             git config --global user.email "$GIT_USER@users.noreply.github.com"
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
-            cd website && yarn install && npm run content && GIT_USER=$GIT_USER yarn run publish-gh-pages
-  updateswc:
+            cd scripts && npm install && npm run schema-validation && npm run updateswc
+            cd ../
+            command=$(git status|grep -c 'export/swc-definition.json')
+            if ((command > 0)); then
+              git add export/
+              git commit -m "Update SWC definition [ci skip]"
+              git push -q https://${GITHUB_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
+            fi
+
+  deploy-gh-pages:
     docker:
       - image: circleci/node:8.11.1
     steps:
       - checkout
       - run:
-          name: Update SWC definition
+          name: Deploying website GitHub Pages
           command: |
             git config --global user.email "$GIT_USER@users.noreply.github.com"
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
-            cd scripts && yarn && yarn run updateswc
+            cd website && npm install && npm run generate-content && GIT_USER=$GIT_USER npm run publish-gh-pages
 
 workflows:
   version: 2
   build_and_deploy:
     jobs:
-      - deploy-website:
+      - deploy-gh-pages:
           filters:
             branches:
               only: website
               ignore: gh-pages
-      - updateswc:
-          filters:
-            branches:
-              only: master
-      - validate-config:
+      - swc-config:
           filters:
             branches:
               only: master
