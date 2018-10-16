@@ -9,7 +9,7 @@
     "generate-content": "node scripts/generate_content.js && node scripts/generate_sidebar.js > sidebars.json && node scripts/generate_swc_definition.js > export/swc-defenition.json"
   },
   "devDependencies": {
-    "docusaurus": "^1.4.0"
+    "docusaurus": "^1.5.0"
   },
   "dependencies": {
     "eslint": "^5.6.0",
