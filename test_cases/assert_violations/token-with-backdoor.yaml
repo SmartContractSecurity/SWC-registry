@@ -1,0 +1,7 @@
+description: "Assertion can be violated with 3 transactions"
+issues:
+- id: "SWC-110"
+  count: 1
+  locations:
+  - bytecode_offsets: [698]
+    line_numbers: [28]
