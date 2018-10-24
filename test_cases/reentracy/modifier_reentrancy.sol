@@ -14,7 +14,7 @@ contract ModifierEntrancy {
     require(keccak256(abi.encodePacked("Nu Token")) == Bank(msg.sender).supportsToken());
     _;
   }
-  //Checks that the caller of airDrop has a zero balances
+  //Checks that the caller has a zero balance
   modifier hasNoBalance {
       require(tokenBalance[msg.sender] == 0);
       _;
@@ -27,7 +27,7 @@ contract Bank{
     }
 }
 
-contract attack{
+contract attack{ //An example of a contract that breaks the contract above.
     bool hasBeenCalled;
     function supportsToken() external returns(bytes32){
         if(!hasBeenCalled){

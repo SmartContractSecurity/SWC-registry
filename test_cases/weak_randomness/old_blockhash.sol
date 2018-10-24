@@ -1,6 +1,7 @@
 pragma solidity ^0.4.24;
 
 //Based on the the Capture the Ether challange at https://capturetheether.com/challenges/lotteries/predict-the-block-hash/
+//Note that while it seems to have a 1/2^256 chance you guess the right hash, actually blockhash returns zero for blocks numbers that are more than 256 blocks ago so you can guess zero and wait.
 contract PredictTheBlockHashChallenge {
 
     struct guess{
