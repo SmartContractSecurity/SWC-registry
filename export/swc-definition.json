@@ -256,5 +256,14 @@
       "Remediation": "The use of loop into smart contracts is recommended only when strictly necessary, the number of iterations should be low in any case. For the case of empty an array, the best case is simply not to clear all elements but keep a separate count of live elements. For the action of empty a large array it can simply set the count of live element to zero.
       In case of an important action (function needs to be called for receive a token prize) stuck cause gas limit, there could be a risky way that consists of spamming the network to attempt an increase of gas limit, it could be very expensive."
     }
+  },
+  "SWC-129": {
+    "markdown": "# Title \nTypographical Error\n\n## Relationships\n\n\n## Description \nThis typographical error could happen when the intent of a defined operation into smart contract is to sum a number to a variable (+=), for instance, but it accidentally has been defined in a wrong way (=+), introducing a typo which happened to be a valid operator. Instead of sum it to the variable it initializes again the variable with a positive number or with another variable. In any case the unary + operator is deprecated in new solidity compiler versions.\n\n## Remediation\nThe vulnerability would have been avoided by performing pre-condition checks on any math operation or implementing safe math library, as the one provided using SafeMath developed by OpenZeppelin. This contract provides functions to perform mathematical operations with safety checks.\n\n## References \n* [HackerGold Bug Analysis](https://blog.zeppelin.solutions/hackergold-bug-analysis-68d893cad738)\n* [SafeMath by OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-solidity/blob/master/contracts/math/SafeMath.sol)\n* [Disallow Unary plus](https://github.com/ethereum/solidity/issues/1760)\n",
+    "content": {
+      "Title": "Typographical Error",
+      "Relationships": "",
+      "Description": "This typographical error could happen when the intent of a defined operation into smart contract is to sum a number to a variable (+=), for instance, but it accidentally has been defined in a wrong way (=+), introducing a typo which happened to be a valid operator. Instead of sum it to the variable it initializes again the variable with a positive number or with another variable. In any case the unary + operator is deprecated in new solidity compiler versions.",
+      "Remediation": "The vulnerability would have been avoided by performing pre-condition checks on any math operation or implementing safe math library, as the one provided using SafeMath developed by OpenZeppelin. This contract provides functions to perform mathematical operations with safety checks."
+    }
   }
 }
