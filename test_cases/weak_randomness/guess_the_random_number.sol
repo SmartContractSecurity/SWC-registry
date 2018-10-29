@@ -1,3 +1,9 @@
+
+/*
+ * @source: https://capturetheether.com/challenges/lotteries/guess-the-random-number/
+ * @author: Steve Marx
+ */
+
 pragma solidity ^0.4.21;
 
 contract GuessTheRandomNumberChallenge {
