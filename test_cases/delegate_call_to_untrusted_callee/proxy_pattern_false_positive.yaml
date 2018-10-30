@@ -3,5 +3,5 @@ description: "Proxy execution via the revert delegate call"
  - id: "SWC-112"
    count: 0
    locations:
-  - bytecode_offsets:
-    line_numbers: 
+   - bytecode_offsets:
+     line_numbers: 
