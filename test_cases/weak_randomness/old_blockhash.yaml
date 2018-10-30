@@ -1,0 +1,7 @@
+description: "Weak Sources of Randomness"
+issues:
+- id: "SWC-120"
+  count: 1
+  locations:
+  - bytecode_offsets: []
+    line_numbers: [29]
