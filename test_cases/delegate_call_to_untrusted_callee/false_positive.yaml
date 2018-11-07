@@ -1,4 +1,0 @@
-description: "Proxy execution via the revert delegate call"
- issues:
- - id: "SWC-112"
-   count: 0
