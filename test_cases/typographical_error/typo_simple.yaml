@@ -1,0 +1,6 @@
+description: "Typographical error in an operation of summing a variable (uint) with 1"
+issues:
+- id: "SWC-129"
+  count: 1
+  locations:
+  - line_numbers: [9]

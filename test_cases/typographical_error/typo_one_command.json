@@ -1,0 +1,270 @@
+{
+  "contracts" : 
+  {
+    "typo_one_command.sol:TypoOneCommand" : 
+    {
+      "bin" : "60806040526001600055348015601457600080fd5b50608e806100236000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630762f42b146044575b600080fd5b348015604f57600080fd5b5060566058565b005b60016000819055505600a165627a7a72305820fbb7ed0e7c7e69333fc21733930b9810f6ff058579746b64ac5063053ac6a0150029",
+      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630762f42b146044575b600080fd5b348015604f57600080fd5b5060566058565b005b60016000819055505600a165627a7a72305820fbb7ed0e7c7e69333fc21733930b9810f6ff058579746b64ac5063053ac6a0150029",
+      "srcmap" : "26:116:0:-;;;73:1;56:18;;26:116;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:116:0;;;;;;;",
+      "srcmap-runtime" : "26:116:0:-;;;;;;;;;;;;;;;;;;;;;;;;81:59;;8:9:-1;5:2;;;30:1;27;20:12;5:2;81:59:0;;;;;;;130:3;119:9;:14;;;;81:59::o"
+    }
+  },
+  "sourceList" : 
+  [
+    "typo_one_command.sol"
+  ],
+  "sources" : 
+  {
+    "typo_one_command.sol" : 
+    {
+      "AST" : 
+      {
+        "attributes" : 
+        {
+          "absolutePath" : "typo_one_command.sol",
+          "exportedSymbols" : 
+          {
+            "TypoOneCommand" : 
+            [
+              14
+            ]
+          }
+        },
+        "children" : 
+        [
+          {
+            "attributes" : 
+            {
+              "literals" : 
+              [
+                "solidity",
+                "^",
+                "0.4",
+                ".25"
+              ]
+            },
+            "id" : 1,
+            "name" : "PragmaDirective",
+            "src" : "0:24:0"
+          },
+          {
+            "attributes" : 
+            {
+              "baseContracts" : 
+              [
+                null
+              ],
+              "contractDependencies" : 
+              [
+                null
+              ],
+              "contractKind" : "contract",
+              "documentation" : null,
+              "fullyImplemented" : true,
+              "linearizedBaseContracts" : 
+              [
+                14
+              ],
+              "name" : "TypoOneCommand",
+              "scope" : 15
+            },
+            "children" : 
+            [
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "name" : "numberOne",
+                  "scope" : 14,
+                  "stateVariable" : true,
+                  "storageLocation" : "default",
+                  "type" : "uint256",
+                  "visibility" : "internal"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "name" : "uint",
+                      "type" : "uint256"
+                    },
+                    "id" : 2,
+                    "name" : "ElementaryTypeName",
+                    "src" : "56:4:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "argumentTypes" : null,
+                      "hexvalue" : "31",
+                      "isConstant" : false,
+                      "isLValue" : false,
+                      "isPure" : true,
+                      "lValueRequested" : false,
+                      "subdenomination" : null,
+                      "token" : "number",
+                      "type" : "int_const 1",
+                      "value" : "1"
+                    },
+                    "id" : 3,
+                    "name" : "Literal",
+                    "src" : "73:1:0"
+                  }
+                ],
+                "id" : 4,
+                "name" : "VariableDeclaration",
+                "src" : "56:18:0"
+              },
+              {
+                "attributes" : 
+                {
+                  "constant" : false,
+                  "documentation" : null,
+                  "implemented" : true,
+                  "isConstructor" : false,
+                  "modifiers" : 
+                  [
+                    null
+                  ],
+                  "name" : "alwaysOne",
+                  "payable" : false,
+                  "scope" : 14,
+                  "stateMutability" : "nonpayable",
+                  "superFunction" : null,
+                  "visibility" : "public"
+                },
+                "children" : 
+                [
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 5,
+                    "name" : "ParameterList",
+                    "src" : "99:2:0"
+                  },
+                  {
+                    "attributes" : 
+                    {
+                      "parameters" : 
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 6,
+                    "name" : "ParameterList",
+                    "src" : "109:0:0"
+                  },
+                  {
+                    "children" : 
+                    [
+                      {
+                        "children" : 
+                        [
+                          {
+                            "attributes" : 
+                            {
+                              "argumentTypes" : null,
+                              "isConstant" : false,
+                              "isLValue" : false,
+                              "isPure" : false,
+                              "lValueRequested" : false,
+                              "operator" : "=",
+                              "type" : "uint256"
+                            },
+                            "children" : 
+                            [
+                              {
+                                "attributes" : 
+                                {
+                                  "argumentTypes" : null,
+                                  "overloadedDeclarations" : 
+                                  [
+                                    null
+                                  ],
+                                  "referencedDeclaration" : 4,
+                                  "type" : "uint256",
+                                  "value" : "numberOne"
+                                },
+                                "id" : 7,
+                                "name" : "Identifier",
+                                "src" : "119:9:0"
+                              },
+                              {
+                                "attributes" : 
+                                {
+                                  "argumentTypes" : null,
+                                  "isConstant" : false,
+                                  "isLValue" : false,
+                                  "isPure" : true,
+                                  "lValueRequested" : false,
+                                  "operator" : "+",
+                                  "prefix" : true,
+                                  "type" : "int_const 1"
+                                },
+                                "children" : 
+                                [
+                                  {
+                                    "attributes" : 
+                                    {
+                                      "argumentTypes" : null,
+                                      "hexvalue" : "31",
+                                      "isConstant" : false,
+                                      "isLValue" : false,
+                                      "isPure" : true,
+                                      "lValueRequested" : false,
+                                      "subdenomination" : null,
+                                      "token" : "number",
+                                      "type" : "int_const 1",
+                                      "value" : "1"
+                                    },
+                                    "id" : 8,
+                                    "name" : "Literal",
+                                    "src" : "132:1:0"
+                                  }
+                                ],
+                                "id" : 9,
+                                "name" : "UnaryOperation",
+                                "src" : "130:3:0"
+                              }
+                            ],
+                            "id" : 10,
+                            "name" : "Assignment",
+                            "src" : "119:14:0"
+                          }
+                        ],
+                        "id" : 11,
+                        "name" : "ExpressionStatement",
+                        "src" : "119:14:0"
+                      }
+                    ],
+                    "id" : 12,
+                    "name" : "Block",
+                    "src" : "109:31:0"
+                  }
+                ],
+                "id" : 13,
+                "name" : "FunctionDefinition",
+                "src" : "81:59:0"
+              }
+            ],
+            "id" : 14,
+            "name" : "ContractDefinition",
+            "src" : "26:116:0"
+          }
+        ],
+        "id" : 15,
+        "name" : "SourceUnit",
+        "src" : "0:143:0"
+      }
+    }
+  },
+  "version" : "0.4.25+commit.59dbf8f1.Darwin.appleclang"
+}
