@@ -1,6 +1,6 @@
-description: "Default function visibility"
+description: "Simple requirement violation"
 issues:
-- id: "SWC-100"
+- id: "SWC-123"
   count: 0
   locations:
   - bytecode_offsets: []
