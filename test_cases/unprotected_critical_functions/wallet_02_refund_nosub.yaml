@@ -1,0 +1,7 @@
+description: "Attacker can pay in a small amount of Ether and call refund() repeatedly to empty the contract"
+issues:
+- id: "SWC-105"
+  count: 1
+  locations:
+  - bytecode_offsets: [776]
+    line_numbers: [29]

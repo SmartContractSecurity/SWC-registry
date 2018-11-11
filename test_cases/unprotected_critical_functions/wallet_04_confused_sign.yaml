@@ -1,0 +1,7 @@
+description: "Attacker can withdraw unlimited funds due to error in withdraw function"
+issues:
+- id: "SWC-105"
+  count: 1
+  locations:
+  - bytecode_offsets: [340]
+    line_numbers: [24]
