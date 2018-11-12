@@ -1,4 +1,4 @@
-description: "Attacker can withdraw unlimited funds due to error in withdraw function"
+description: "Attacker can withdraw unlimited funds due erroneous comparison operator in withdraw function"
 issues:
 - id: "SWC-105"
   count: 1
