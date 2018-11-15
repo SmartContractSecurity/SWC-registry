@@ -1,0 +1,7 @@
+description: "Use of deprecated functions and aliases"
+issues:
+- id: "SWC-112"
+  count: 1
+  locations:
+  - bytecode_offsets: [415]
+    line_numbers: [16]
