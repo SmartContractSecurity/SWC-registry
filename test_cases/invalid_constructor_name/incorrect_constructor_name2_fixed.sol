@@ -5,7 +5,7 @@
  */
 
 
-pragma solidity 0.4.24;
+pragma solidity 0.4.25;
 
 contract Missing{
     address private owner;
@@ -15,7 +15,7 @@ contract Missing{
         _;
     }
 
-    function constructor()
+    constructor()
         public
     {
         owner = msg.sender;
