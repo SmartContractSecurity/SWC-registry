@@ -1,7 +1,7 @@
 description: "Use of deprecated functions and aliases"
 issues:
 - id: "SWC-111"
-  count: 6
+  count: 7
   locations:
   - bytecode_offsets: 
     line_numbers: [5]
@@ -15,3 +15,5 @@ issues:
     line_numbers: [15]
   - bytecode_offsets: 
     line_numbers: [18]
+  - bytecode_offsets: 
+    line_numbers: [20]

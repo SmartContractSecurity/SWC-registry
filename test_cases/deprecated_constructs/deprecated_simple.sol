@@ -1,4 +1,4 @@
-pragma solidity ^0.4.0;
+
 
 contract DeprecatedSimple {
 	
@@ -15,9 +15,11 @@ contract DeprecatedSimple {
 			throw;
 		}
 
+		address(this).callcode();
+
 		suicide(address(0));
 	}
 
-
+	function () public {}
 
 }
