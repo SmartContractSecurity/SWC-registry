@@ -1,7 +1,7 @@
-description: "Use of deprecated functions and aliases"
+description: "Simple proxy pattern with delegatecall"
 issues:
 - id: "SWC-112"
   count: 1
   locations:
-  - bytecode_offsets: [415]
-    line_numbers: [18]
+  - bytecode_offsets: [232]
+    line_numbers: [8]
