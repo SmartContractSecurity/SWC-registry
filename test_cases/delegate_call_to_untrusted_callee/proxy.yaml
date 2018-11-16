@@ -3,5 +3,5 @@ issues:
 - id: "SWC-112"
   count: 1
   locations:
-  - bytecode_offsets: [232]
+  - bytecode_offsets: [337]
     line_numbers: [8]
