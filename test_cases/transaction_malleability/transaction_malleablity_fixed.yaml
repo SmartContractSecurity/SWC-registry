@@ -1,0 +1,7 @@
+description: "Calculates transaction identifier with signature"
+issues:
+- id: "SWC-117"
+  count: 0
+  locations:
+  - bytecode_offsets: []
+    line_numbers: []
