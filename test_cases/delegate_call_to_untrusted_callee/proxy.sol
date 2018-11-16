@@ -2,9 +2,11 @@ pragma solidity ^0.4.24;
 
 contract Proxy {
 
+  address owner;
   address callee;
 
   constructor() {
+    owner = msg.sender;  
   	callee = address(0x0);
   }
 
