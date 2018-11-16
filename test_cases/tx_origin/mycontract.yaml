@@ -3,5 +3,5 @@ issues:
 - id: "SWC-115"
   count: 1
   locations:
-  - bytecode_offsets:
+  - bytecode_offsets: [204]
     line_numbers: [18]
