@@ -16,16 +16,16 @@ contract Missing{
 
     // The name of the constructor should be Missing
     // Anyone can call the IamMissing once the contract is deployed
-    function IamMissing()
-        public 
+    function Missing()
+        public
     {
         owner = msg.sender;
     }
 
-    function () payable {} 
+    function () payable {}
 
-    function withdraw() 
-        public 
+    function withdraw()
+        public
         onlyowner
     {
        owner.transfer(this.balance);
