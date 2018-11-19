@@ -3,10 +3,10 @@
   {
     "incorrect_constructor_name1.sol:Missing" : 
     {
-      "bin" : "608060405234801561001057600080fd5b506101c6806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632e4071d41461004e5780633ccfd60b14610065575b005b34801561005a57600080fd5b5061006361007c565b005b34801561007157600080fd5b5061007a6100be565b005b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561011957600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050158015610197573d6000803e3d6000fd5b505600a165627a7a7230582032476c2f6e82dc5d70b64f9efcdc3c504c66f1144c927b272e4af713dbf3cc9a0029",
-      "bin-runtime" : "60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632e4071d41461004e5780633ccfd60b14610065575b005b34801561005a57600080fd5b5061006361007c565b005b34801561007157600080fd5b5061007a6100be565b005b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561011957600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050158015610197573d6000803e3d6000fd5b505600a165627a7a7230582032476c2f6e82dc5d70b64f9efcdc3c504c66f1144c927b272e4af713dbf3cc9a0029",
-      "srcmap" : "212:467:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;212:467:0;;;;;;;",
-      "srcmap-runtime" : "212:467:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;462:77;;8:9:-1;5:2;;;30:1;27;20:12;5:2;462:77:0;;;;;;574:103;;8:9:-1;5:2;;;30:1;27;20:12;5:2;574:103:0;;;;;;462:77;522:10;514:5;;:18;;;;;;;;;;;;;;;;;;462:77::o;574:103::-;311:5;;;;;;;;;;;299:17;;:10;:17;;;291:26;;;;;;;;642:5;;;;;;;;;;;:14;;:28;657:4;:12;;;642:28;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;642:28:0;574:103::o"
+      "bin" : "608060405234801561001057600080fd5b506101c6806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632e4071d41461004e5780633ccfd60b14610065575b005b34801561005a57600080fd5b5061006361007c565b005b34801561007157600080fd5b5061007a6100be565b005b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561011957600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050158015610197573d6000803e3d6000fd5b505600a165627a7a7230582075d6be81be41d2e66796bc4493d4bed6f7ef3fecc9b0c429ad5f708f32516fd00029",
+      "bin-runtime" : "60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680632e4071d41461004e5780633ccfd60b14610065575b005b34801561005a57600080fd5b5061006361007c565b005b34801561007157600080fd5b5061007a6100be565b005b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614151561011957600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050158015610197573d6000803e3d6000fd5b505600a165627a7a7230582075d6be81be41d2e66796bc4493d4bed6f7ef3fecc9b0c429ad5f708f32516fd00029",
+      "srcmap" : "213:467:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;213:467:0;;;;;;;",
+      "srcmap-runtime" : "213:467:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;463:77;;8:9:-1;5:2;;;30:1;27;20:12;5:2;463:77:0;;;;;;575:103;;8:9:-1;5:2;;;30:1;27;20:12;5:2;575:103:0;;;;;;463:77;523:10;515:5;;:18;;;;;;;;;;;;;;;;;;463:77::o;575:103::-;312:5;;;;;;;;;;;300:17;;:10;:17;;;292:26;;;;;;;;643:5;;;;;;;;;;;:14;;:28;658:4;:12;;;643:28;;;;;;;;;;;;;;;;;;;;;;;;8:9:-1;5:2;;;45:16;42:1;39;24:38;77:16;74:1;67:27;5:2;643:28:0;575:103::o"
     }
   },
   "sourceList" : 
@@ -38,13 +38,14 @@
               "literals" : 
               [
                 "solidity",
+                "^",
                 "0.4",
                 ".24"
               ]
             },
             "id" : 1,
             "name" : "PragmaDirective",
-            "src" : "187:23:0"
+            "src" : "187:24:0"
           },
           {
             "attributes" : 
@@ -91,12 +92,12 @@
                     },
                     "id" : 2,
                     "name" : "ElementaryTypeName",
-                    "src" : "234:7:0"
+                    "src" : "235:7:0"
                   }
                 ],
                 "id" : 3,
                 "name" : "VariableDeclaration",
-                "src" : "234:21:0"
+                "src" : "235:21:0"
               },
               {
                 "attributes" : 
@@ -118,7 +119,7 @@
                     "children" : [],
                     "id" : 4,
                     "name" : "ParameterList",
-                    "src" : "281:0:0"
+                    "src" : "282:0:0"
                   },
                   {
                     "children" : 
@@ -165,7 +166,7 @@
                                 },
                                 "id" : 5,
                                 "name" : "Identifier",
-                                "src" : "291:7:0"
+                                "src" : "292:7:0"
                               },
                               {
                                 "attributes" : 
@@ -213,12 +214,12 @@
                                         },
                                         "id" : 6,
                                         "name" : "Identifier",
-                                        "src" : "299:3:0"
+                                        "src" : "300:3:0"
                                       }
                                     ],
                                     "id" : 7,
                                     "name" : "MemberAccess",
-                                    "src" : "299:10:0"
+                                    "src" : "300:10:0"
                                   },
                                   {
                                     "attributes" : 
@@ -234,37 +235,37 @@
                                     },
                                     "id" : 8,
                                     "name" : "Identifier",
-                                    "src" : "311:5:0"
+                                    "src" : "312:5:0"
                                   }
                                 ],
                                 "id" : 9,
                                 "name" : "BinaryOperation",
-                                "src" : "299:17:0"
+                                "src" : "300:17:0"
                               }
                             ],
                             "id" : 10,
                             "name" : "FunctionCall",
-                            "src" : "291:26:0"
+                            "src" : "292:26:0"
                           }
                         ],
                         "id" : 11,
                         "name" : "ExpressionStatement",
-                        "src" : "291:26:0"
+                        "src" : "292:26:0"
                       },
                       {
                         "id" : 12,
                         "name" : "PlaceholderStatement",
-                        "src" : "327:1:0"
+                        "src" : "328:1:0"
                       }
                     ],
                     "id" : 13,
                     "name" : "Block",
-                    "src" : "281:54:0"
+                    "src" : "282:54:0"
                   }
                 ],
                 "id" : 14,
                 "name" : "ModifierDefinition",
-                "src" : "262:73:0"
+                "src" : "263:73:0"
               },
               {
                 "attributes" : 
@@ -297,7 +298,7 @@
                     "children" : [],
                     "id" : 15,
                     "name" : "ParameterList",
-                    "src" : "481:2:0"
+                    "src" : "482:2:0"
                   },
                   {
                     "attributes" : 
@@ -310,7 +311,7 @@
                     "children" : [],
                     "id" : 16,
                     "name" : "ParameterList",
-                    "src" : "504:0:0"
+                    "src" : "505:0:0"
                   },
                   {
                     "children" : 
@@ -345,7 +346,7 @@
                                 },
                                 "id" : 17,
                                 "name" : "Identifier",
-                                "src" : "514:5:0"
+                                "src" : "515:5:0"
                               },
                               {
                                 "attributes" : 
@@ -375,32 +376,32 @@
                                     },
                                     "id" : 18,
                                     "name" : "Identifier",
-                                    "src" : "522:3:0"
+                                    "src" : "523:3:0"
                                   }
                                 ],
                                 "id" : 19,
                                 "name" : "MemberAccess",
-                                "src" : "522:10:0"
+                                "src" : "523:10:0"
                               }
                             ],
                             "id" : 20,
                             "name" : "Assignment",
-                            "src" : "514:18:0"
+                            "src" : "515:18:0"
                           }
                         ],
                         "id" : 21,
                         "name" : "ExpressionStatement",
-                        "src" : "514:18:0"
+                        "src" : "515:18:0"
                       }
                     ],
                     "id" : 22,
                     "name" : "Block",
-                    "src" : "504:35:0"
+                    "src" : "505:35:0"
                   }
                 ],
                 "id" : 23,
                 "name" : "FunctionDefinition",
-                "src" : "462:77:0"
+                "src" : "463:77:0"
               },
               {
                 "attributes" : 
@@ -433,7 +434,7 @@
                     "children" : [],
                     "id" : 24,
                     "name" : "ParameterList",
-                    "src" : "554:2:0"
+                    "src" : "555:2:0"
                   },
                   {
                     "attributes" : 
@@ -446,7 +447,7 @@
                     "children" : [],
                     "id" : 25,
                     "name" : "ParameterList",
-                    "src" : "565:0:0"
+                    "src" : "566:0:0"
                   },
                   {
                     "attributes" : 
@@ -459,12 +460,12 @@
                     "children" : [],
                     "id" : 26,
                     "name" : "Block",
-                    "src" : "565:2:0"
+                    "src" : "566:2:0"
                   }
                 ],
                 "id" : 27,
                 "name" : "FunctionDefinition",
-                "src" : "545:22:0"
+                "src" : "546:22:0"
               },
               {
                 "attributes" : 
@@ -493,7 +494,7 @@
                     "children" : [],
                     "id" : 28,
                     "name" : "ParameterList",
-                    "src" : "591:2:0"
+                    "src" : "592:2:0"
                   },
                   {
                     "attributes" : 
@@ -506,7 +507,7 @@
                     "children" : [],
                     "id" : 31,
                     "name" : "ParameterList",
-                    "src" : "633:0:0"
+                    "src" : "634:0:0"
                   },
                   {
                     "attributes" : 
@@ -529,12 +530,12 @@
                         },
                         "id" : 29,
                         "name" : "Identifier",
-                        "src" : "619:9:0"
+                        "src" : "620:9:0"
                       }
                     ],
                     "id" : 30,
                     "name" : "ModifierInvocation",
-                    "src" : "619:9:0"
+                    "src" : "620:9:0"
                   },
                   {
                     "children" : 
@@ -594,12 +595,12 @@
                                     },
                                     "id" : 32,
                                     "name" : "Identifier",
-                                    "src" : "642:5:0"
+                                    "src" : "643:5:0"
                                   }
                                 ],
                                 "id" : 34,
                                 "name" : "MemberAccess",
-                                "src" : "642:14:0"
+                                "src" : "643:14:0"
                               },
                               {
                                 "attributes" : 
@@ -629,44 +630,44 @@
                                     },
                                     "id" : 35,
                                     "name" : "Identifier",
-                                    "src" : "657:4:0"
+                                    "src" : "658:4:0"
                                   }
                                 ],
                                 "id" : 36,
                                 "name" : "MemberAccess",
-                                "src" : "657:12:0"
+                                "src" : "658:12:0"
                               }
                             ],
                             "id" : 37,
                             "name" : "FunctionCall",
-                            "src" : "642:28:0"
+                            "src" : "643:28:0"
                           }
                         ],
                         "id" : 38,
                         "name" : "ExpressionStatement",
-                        "src" : "642:28:0"
+                        "src" : "643:28:0"
                       }
                     ],
                     "id" : 39,
                     "name" : "Block",
-                    "src" : "633:44:0"
+                    "src" : "634:44:0"
                   }
                 ],
                 "id" : 40,
                 "name" : "FunctionDefinition",
-                "src" : "574:103:0"
+                "src" : "575:103:0"
               }
             ],
             "id" : 41,
             "name" : "ContractDefinition",
-            "src" : "212:467:0"
+            "src" : "213:467:0"
           }
         ],
         "id" : 42,
         "name" : "SourceUnit",
-        "src" : "187:493:0"
+        "src" : "187:494:0"
       }
     }
   },
-  "version" : "0.4.24+commit.e67f0147.Darwin.appleclang"
+  "version" : "0.4.25+commit.59dbf8f1.Darwin.appleclang"
 }
