@@ -1,0 +1,6 @@
+description: "Single transaction overflow in mapping"
+issues:
+- id: "SWC-101"
+  count: 1
+  locations:
+  - line_numbers: [9]
