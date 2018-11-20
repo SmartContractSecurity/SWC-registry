@@ -1,0 +1,7 @@
+description: "Improper Admin Scoping"
+issues:
+- id: "SWC-130"
+  count: 1
+  locations:
+  - bytecode_offsets: []
+  - line_numbers: [17]
