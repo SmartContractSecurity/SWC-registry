@@ -3,4 +3,5 @@ issues:
 - id: "SWC-101"
   count: 1
   locations:
-  - line_numbers: [10]
+  - bytecode_offsets: []
+    line_numbers: [10]
