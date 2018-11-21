@@ -1,4 +1,4 @@
-description: "Integer overflow (unreachable)"
+description: "Single transaction overflow"
 issues:
 - id: "SWC-101"
   count: 0
