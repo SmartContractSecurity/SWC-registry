@@ -1,0 +1,7 @@
+description: "Single transaction overflow"
+issues:
+- id: "SWC-101"
+  count: 1
+  locations:
+  - bytecode_offsets: []
+    line_numbers: [10]
