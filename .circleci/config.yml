@@ -6,13 +6,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Validate schema and generage SWC definition
+          name: Generate SWC definition
           shell: /bin/sh
           command: |
             git config --global user.email "$GIT_USER@users.noreply.github.com"
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
-            cd scripts && npm install && npm run schema-validation && npm run updateswc
+            cd scripts && npm install && npm run updateswc
             cd ../
             command=$(git status|grep -c 'export/swc-definition.json')
             if ((command > 0)); then
@@ -20,6 +20,10 @@ jobs:
               git commit -m "Update SWC definition [ci skip]"
               git push -q https://${GITHUB_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
             fi
+      - run:
+          name: Validate schema
+          command: |
+            cd scripts/ && npm install jsonlint && npm run schema-validation
 
   deploy-gh-pages:
     docker:
@@ -38,12 +42,12 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
-      - deploy-gh-pages:
-          filters:
-            branches:
-              only: website
-              ignore: gh-pages
-      - swc-config:
-          filters:
-            branches:
-              only: master
+    - deploy-gh-pages:
+        filters:
+          branches:
+            only: website
+            ignore: gh-pages
+    - swc-config:
+        filters:
+          branches:
+            only: master
