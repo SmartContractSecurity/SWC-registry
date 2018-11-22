@@ -7,3 +7,10 @@ find ../test_cases -name '*.yaml' -print | while read line; do
         echo "SUCCESS: $line"
     fi
 done
+
+find ../test_cases -name '*.json' -print | while read line; do
+    command=$(jsonlint $line > /dev/null)
+    if (($? > 0)); then
+        echo "ERROR: Wrong json object - $line"
+    fi
+done

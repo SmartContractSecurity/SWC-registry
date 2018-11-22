@@ -23,7 +23,7 @@ jobs:
       - run:
           name: Validate schema
           command: |
-            cd scripts/ && npm run schema-validation
+            cd scripts/ && npm install -g jsonlint && npm run schema-validation
 
   deploy-gh-pages:
     docker:
