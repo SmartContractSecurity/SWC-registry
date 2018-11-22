@@ -9,7 +9,7 @@ find ../test_cases -name '*.yaml' -print | while read line; do
 done
 
 find ../test_cases -name '*.json' -print | while read line; do
-    command=$(jsonlint $line > /dev/null)
+    command=$(node_modules/jsonlint/lib/cli.js $line > /dev/null)
     if (($? > 0)); then
         echo "ERROR: Wrong json object - $line"
     fi
