@@ -1,0 +1,8 @@
+description: "Check that two mappings are not colliding with each other"
+issues:
+- id: "SWC-110"
+  count: 0
+  locations:
+  - bytecode_offsets: []
+    line_numbers: []
+

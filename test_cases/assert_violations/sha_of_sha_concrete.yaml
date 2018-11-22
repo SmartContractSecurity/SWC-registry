@@ -1,0 +1,8 @@
+description: "Check that mapping that uses SHA valeu as a key does not collide with concretes"
+issues:
+- id: "SWC-110"
+  count: 0
+  locations:
+  - bytecode_offsets: []
+    line_numbers: []
+

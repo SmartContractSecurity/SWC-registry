@@ -1,0 +1,8 @@
+description: "Check of collission in map that use SHA as a keys"
+issues:
+- id: "SWC-110"
+  count: 1
+  locations:
+  - bytecode_offsets: [319]
+    line_numbers: [18]
+
