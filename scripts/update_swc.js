@@ -46,3 +46,5 @@ for (let i = 0; i < files.length; i += 1) {
 }
 
 console.log(JSON.stringify(result, null, 2));
+// Return 0 status code
+process.exit();
