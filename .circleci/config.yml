@@ -50,4 +50,6 @@ workflows:
     - swc-config:
         filters:
           branches:
-            only: master
+            ignore:
+              - website
+              - gh-pages
