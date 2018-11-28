@@ -47,9 +47,4 @@ workflows:
             branches:
               only: website
               ignore: gh-pages
-      - swc-config:
-          filters:
-            branches:
-              ignore:
-                - website
-                - gh-pages
+      - swc-config
