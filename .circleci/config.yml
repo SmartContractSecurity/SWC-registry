@@ -57,11 +57,11 @@ workflows:
             branches:
               only: website
               ignore: gh-pages
-      - swc-config-update
+      - swc-config-update:
           filters:
             branches:
               only: master
-      - swc-config-validate
+      - swc-config-validate:
           filters:
             branches:
               ignore:
