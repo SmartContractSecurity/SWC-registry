@@ -42,12 +42,9 @@ workflows:
   version: 2
   build_and_deploy:
     jobs:
-    - deploy-gh-pages:
-        filters:
-          branches:
-            only: website
-            ignore: gh-pages
-    - swc-config:
-        filters:
-          branches:
-            only: master
+      - deploy-gh-pages:
+          filters:
+            branches:
+              only: website
+              ignore: gh-pages
+      - swc-config
