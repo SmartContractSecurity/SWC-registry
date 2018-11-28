@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  swc-config:
+  swc-config-update:
     docker:
       - image: circleci/node:8.11.1
     steps:
@@ -20,10 +20,20 @@ jobs:
               git commit -m "Update SWC definition [ci skip]"
               git push -q https://${GITHUB_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
             fi
+
+  swc-config-validate:
+    docker:
+      - image: circleci/node:8.11.1
+    steps:
+      - checkout
       - run:
           name: Validate schema
+          shell: /bin/sh
           command: |
-            cd scripts/ && npm install jsonlint && npm run schema-validation
+            git config --global user.email "$GIT_USER@users.noreply.github.com"
+            git config --global user.name "$GIT_USER"
+            echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
+            cd scripts/ && npm install jsonlint && npm run schema-validation && npm run updateswc
 
   deploy-gh-pages:
     docker:
@@ -47,4 +57,13 @@ workflows:
             branches:
               only: website
               ignore: gh-pages
-      - swc-config
+      - swc-config-update
+          filters:
+            branches:
+              only: master
+      - swc-config-validate
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+                - website
