@@ -1,0 +1,8 @@
+description: "Assert violation after call to concretely created contract with argument"
+issues:
+- id: "SWC-110"
+  count: 1
+  locations:
+  - bytecode_offsets: [277]
+    line_numbers: [11]
+
