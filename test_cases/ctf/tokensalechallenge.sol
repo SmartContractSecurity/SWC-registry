@@ -1,5 +1,5 @@
 /*
- * @source: http://blockchain.unica.it/projects/ethereum-survey/attacks.html#simpledao
+ * @source: https://capturetheether.com/challenges/math/token-sale/
  * @author: Steve Marx
  */
 
