@@ -1,51 +1,37 @@
 {
   "contracts" : 
   {
-    "floating_pragma_fixed.sol:PragmaFixed" : 
+    "no_pragma.sol:PragmaNotLocked" : 
     {
-      "bin" : "60806040526001600055348015601457600080fd5b50609e806100236000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630c55699c146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820259c8c94be7cc4db9ddd13bc1183f3f124a1fe50498206cbc8dcb75a8181464f0029",
-      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630c55699c146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820259c8c94be7cc4db9ddd13bc1183f3f124a1fe50498206cbc8dcb75a8181464f0029",
-      "srcmap" : "25:47:0:-;;;68:1;52:17;;25:47;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:47:0;;;;;;;",
-      "srcmap-runtime" : "25:47:0:-;;;;;;;;;;;;;;;;;;;;;;;;52:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;52:17:0;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o"
+      "bin" : "60806040526001600055348015601457600080fd5b50609e806100236000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630c55699c146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820fbf9aeea013852dfb73eefa0e4f407f51df3c737217fae00288fe611ceb2c6fe0029",
+      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680630c55699c146044575b600080fd5b348015604f57600080fd5b506056606c565b6040518082815260200191505060405180910390f35b600054815600a165627a7a72305820fbf9aeea013852dfb73eefa0e4f407f51df3c737217fae00288fe611ceb2c6fe0029",
+      "srcmap" : "1:51:0:-;;;48:1;32:17;;1:51;8:9:-1;5:2;;;30:1;27;20:12;5:2;1:51:0;;;;;;;",
+      "srcmap-runtime" : "1:51:0:-;;;;;;;;;;;;;;;;;;;;;;;;32:17;;8:9:-1;5:2;;;30:1;27;20:12;5:2;32:17:0;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o"
     }
   },
   "sourceList" : 
   [
-    "floating_pragma_fixed.sol"
+    "no_pragma.sol"
   ],
   "sources" : 
   {
-    "floating_pragma_fixed.sol" : 
+    "no_pragma.sol" : 
     {
       "AST" : 
       {
         "attributes" : 
         {
-          "absolutePath" : "floating_pragma_fixed.sol",
+          "absolutePath" : "no_pragma.sol",
           "exportedSymbols" : 
           {
-            "PragmaFixed" : 
+            "PragmaNotLocked" : 
             [
-              5
+              4
             ]
           }
         },
         "children" : 
         [
-          {
-            "attributes" : 
-            {
-              "literals" : 
-              [
-                "solidity",
-                "0.4",
-                ".25"
-              ]
-            },
-            "id" : 1,
-            "name" : "PragmaDirective",
-            "src" : "0:23:0"
-          },
           {
             "attributes" : 
             {
@@ -62,10 +48,10 @@
               "fullyImplemented" : true,
               "linearizedBaseContracts" : 
               [
-                5
+                4
               ],
-              "name" : "PragmaFixed",
-              "scope" : 6
+              "name" : "PragmaNotLocked",
+              "scope" : 5
             },
             "children" : 
             [
@@ -74,7 +60,7 @@
                 {
                   "constant" : false,
                   "name" : "x",
-                  "scope" : 5,
+                  "scope" : 4,
                   "stateVariable" : true,
                   "storageLocation" : "default",
                   "type" : "uint256",
@@ -88,9 +74,9 @@
                       "name" : "uint",
                       "type" : "uint256"
                     },
-                    "id" : 2,
+                    "id" : 1,
                     "name" : "ElementaryTypeName",
-                    "src" : "52:4:0"
+                    "src" : "32:4:0"
                   },
                   {
                     "attributes" : 
@@ -106,24 +92,24 @@
                       "type" : "int_const 1",
                       "value" : "1"
                     },
-                    "id" : 3,
+                    "id" : 2,
                     "name" : "Literal",
-                    "src" : "68:1:0"
+                    "src" : "48:1:0"
                   }
                 ],
-                "id" : 4,
+                "id" : 3,
                 "name" : "VariableDeclaration",
-                "src" : "52:17:0"
+                "src" : "32:17:0"
               }
             ],
-            "id" : 5,
+            "id" : 4,
             "name" : "ContractDefinition",
-            "src" : "25:47:0"
+            "src" : "1:51:0"
           }
         ],
-        "id" : 6,
+        "id" : 5,
         "name" : "SourceUnit",
-        "src" : "0:73:0"
+        "src" : "1:52:0"
       }
     }
   },

@@ -1,5 +1,5 @@
 pragma solidity 0.4.25;
 
-contract PragmaNotLocked {
+contract PragmaFixed {
     uint public x = 1;
 }
