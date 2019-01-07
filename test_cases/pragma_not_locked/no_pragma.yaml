@@ -4,4 +4,4 @@ issues:
   count: 1
   locations:
   - bytecode_offsets:
-    line_numbers: []
+    line_numbers: [1]
