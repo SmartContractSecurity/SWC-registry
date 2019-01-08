@@ -8,4 +8,6 @@ issues:
   - bytecode_offsets:
     line_numbers: [11]
   - bytecode_offsets:
+    line_numbers: [16]    
+  - bytecode_offsets:
     line_numbers: [17]
