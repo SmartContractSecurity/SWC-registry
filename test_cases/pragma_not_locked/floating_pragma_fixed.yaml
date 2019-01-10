@@ -1,7 +1,7 @@
 description: "Floating pragma fixed"
 issues:
 - id: "SWC-103"
-  count: 0
+  count: 1
   locations:
   - bytecode_offsets:
-    line_numbers: []
+    line_numbers: [1]
