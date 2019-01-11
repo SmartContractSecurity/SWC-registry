@@ -12,7 +12,7 @@
   "scripts": {
     "json-lint": "/bin/bash bash/json_lint.sh",
     "yaml-schema-lint": "/bin/bash bash/yaml_schema_lint.sh",
-    "yaml-content-validte": "node yaml_validate.js",
+    "yaml-content-validate": "node yaml_validate.js",
     "markdown-validate": "node update_swc.js markdown-validate",
     "update-swc": "node update_swc.js > ../export/swc-definition.json"
   },

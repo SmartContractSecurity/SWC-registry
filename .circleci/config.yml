@@ -27,13 +27,31 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Validate schema
+          name: Install requrements
           shell: /bin/sh
           command: |
-            git config --global user.email "$GIT_USER@users.noreply.github.com"
-            git config --global user.name "$GIT_USER"
-            echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
-            cd scripts/ && npm install jsonlint && npm run schema-validation && npm run updateswc
+            cd scripts/ && npm install jsonlint
+      - run:
+          name: Validate test case YAML config schema
+          shell: /bin/sh
+          command: |
+            cd scripts/ && npm run yaml-schema-lint
+      - run:
+          name: Validate Markdown structure
+          shell: /bin/sh
+          command: |
+            cd scripts/ && npm run markdown-validate
+      - run:
+          name: Validate JSON files
+          shell: /bin/sh
+          command: |
+            cd scripts/ && npm run json-lint
+      - run:
+          name: Validate content of YAML config files
+          shell: /bin/sh
+          command: |
+            cd scripts/ && npm run yaml-content-validate
+      
 
   deploy-gh-pages:
     docker:
