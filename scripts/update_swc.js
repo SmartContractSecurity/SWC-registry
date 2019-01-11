@@ -1,15 +1,3 @@
-/*
-  Generate swc-definition.json
-  "SWC-101": {
-    "markdown": "",
-    "content": {
-      "Title": "",
-      "Relationships": "",
-      "Description": "",
-      "Remediation": ""
-    }
-  },
-*/
 const fs = require('fs');
 const path = require('path');
 const md2json = require('md-2-json');
@@ -23,6 +11,9 @@ const walkSync = (dir) => {
   });
   return filelist;
 };
+
+
+const command = process.argv[2];
 
 
 const generateSWC = () => {
@@ -46,18 +37,18 @@ const generateSWC = () => {
       };
     } catch(e) {
       console.log(`[ERROR] Wrong document format: ${name}.md`)
-      console.log(e)
-      process.exit(1);
-    }
-    
-    if (Object.values(result[name]).indexOf("") > -1) {
-      console.log(`Error: ${name}`)
-      process.exit(1);
+      if (command && command === 'markdown-validate') {
+        process.exit(1);
+      }
     }
   })
   return result;
 }
 
-console.log(JSON.stringify(generateSWC(), null, 2));
+const swc = generateSWC();
+
+if (!command || command !== 'markdown-validate') {
+  console.log(JSON.stringify(swc, null, 2));
+}
 // Return 0 status code
 process.exit();

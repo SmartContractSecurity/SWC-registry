@@ -4,13 +4,17 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "js-yaml": "^3.12.1",
     "md-2-json": "^1.0.5",
     "yaml-schema-validator": "^1.1.7"
   },
   "devDependencies": {},
   "scripts": {
-    "schema-validation": "/bin/bash validate_swc_configs.sh",
-    "updateswc": "node update_swc.js > ../export/swc-definition.json"
+    "json-lint": "/bin/bash bash/json_lint.sh",
+    "yaml-schema-lint": "/bin/bash bash/yaml_schema_lint.sh",
+    "yaml-content-validte": "node yaml_validate.js",
+    "markdown-validate": "node update_swc.js markdown-validate",
+    "update-swc": "node update_swc.js > ../export/swc-definition.json"
   },
   "author": "",
   "license": "ISC"
