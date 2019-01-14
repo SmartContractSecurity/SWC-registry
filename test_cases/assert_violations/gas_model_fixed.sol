@@ -2,7 +2,7 @@
  * @source: ChainSecurity
  * @author: Anton Permenev
  */
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.21;
 
 contract GasModelFixed{
     uint x = 100;

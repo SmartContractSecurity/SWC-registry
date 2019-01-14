@@ -5,7 +5,7 @@
  * - set(66)
  * - check(0x4100000000000000000000000000000000000000000000000000000000000000)
  */
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.22;
 
 contract ShaOfShaCollission{
 
