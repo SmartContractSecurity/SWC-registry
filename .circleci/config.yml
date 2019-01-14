@@ -30,7 +30,7 @@ jobs:
           name: Validate test case YAML config schema
           shell: /bin/sh
           command: |
-            cd scripts/ && npm run yaml-schema-lint
+            cd scripts/ && npm install && npm run yaml-schema-lint
 
   swc-markdown:
     docker:
@@ -41,7 +41,7 @@ jobs:
           name: Validate Markdown structure
           shell: /bin/sh
           command: |
-            cd scripts/ && npm run markdown-validate
+            cd scripts/ && npm install && npm run markdown-validate
 
   swc-json-lint:
     docker:
@@ -63,7 +63,7 @@ jobs:
           name: Validate content of YAML config files
           shell: /bin/sh
           command: |
-            cd scripts/ && npm run yaml-content-validate
+            cd scripts/ && npm install && npm run yaml-content-validate
       
 
   deploy-gh-pages:
