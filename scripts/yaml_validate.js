@@ -20,6 +20,7 @@ const walkSync = (dir) => {
 };
 
 let hasIssue = false;
+const pattern = /^(SWC-)\d{3}$/;
 
 const validateYamlConfig = () => {
     const configs = walkSync('../test_cases');
@@ -35,9 +36,16 @@ const validateYamlConfig = () => {
             console.log(content);
         }
 
-        // TODO: test SWC-[\d+] pattern
-
         jsonContent.issues.map((issue) => {
+            // TODO: test SWC-[\d+] pattern
+            if (!pattern.test(issue.id)) {
+                // Issue count description
+                hasIssue = true;
+                console.log('================')
+                console.log(`ERROR: ${file} . Wrong SWC-ID format!`)
+                console.log(content);
+            }
+
             // issue count is a valid integer
             if (issue.count > 0) {
                 if (issue.count !== issue.locations.length) {
