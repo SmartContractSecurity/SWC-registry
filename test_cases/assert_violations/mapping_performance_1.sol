@@ -2,7 +2,7 @@
  * @source: ChainSecurity
  * @author: Anton Permenev
  */
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.22;
 
 contract MappingPerformance1set{
 

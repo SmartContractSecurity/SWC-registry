@@ -1,11 +1,13 @@
 description: "Shadowing a state variable in functions"
 issues:
 - id: "SWC-119"
-  count: 3
+  count: 4
   locations:
   - bytecode_offsets:
     line_numbers: [7]
   - bytecode_offsets:
     line_numbers: [11]
+  - bytecode_offsets:
+    line_numbers: [16]    
   - bytecode_offsets:
     line_numbers: [17]

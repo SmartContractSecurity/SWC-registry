@@ -1,0 +1,16 @@
+description: "Integer overflow leading into Ether theft"
+issues:
+- id: "SWC-101"
+  count: 3
+  locations:
+  - bytecode_offsets: [390]
+    line_numbers: [21]
+  - bytecode_offsets: [472]
+    line_numbers: [23]
+  - bytecode_offsets: [672]
+    line_numbers: [30]
+- id: "SWC-105"
+  count: 1
+  locations:
+  - bytecode_offsets: [693]
+    line_numbers: [30]

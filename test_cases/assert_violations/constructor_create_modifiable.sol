@@ -6,7 +6,7 @@
  * - ContructorCreateModifiable.check()
  */
 
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.22;
 
 contract ContructorCreateModifiable{
     B b = new B(10);

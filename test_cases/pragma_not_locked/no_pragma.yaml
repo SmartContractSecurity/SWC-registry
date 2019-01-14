@@ -1,4 +1,4 @@
-description: "Floating pragma fixed"
+description: "Floating pragma"
 issues:
 - id: "SWC-103"
   count: 1
