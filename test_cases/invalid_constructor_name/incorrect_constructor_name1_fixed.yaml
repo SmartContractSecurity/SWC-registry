@@ -3,5 +3,5 @@ issues:
 - id: "SWC-118"
   count: 0
   locations:
-  - bytecode_offsets:
-    line_numbers: [0]
+  - bytecode_offsets: []
+    line_numbers: []
