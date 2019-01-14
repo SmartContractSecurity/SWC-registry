@@ -9,7 +9,6 @@ issues:
     line_numbers: [23]
   - bytecode_offsets: [672]
     line_numbers: [30]
-issues:
 - id: "SWC-105"
   count: 1
   locations:
