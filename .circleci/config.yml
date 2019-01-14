@@ -21,36 +21,49 @@ jobs:
               git push -q https://${GITHUB_TOKEN}@github.com/${GIT_ORGANIZATION}/SWC-registry.git master
             fi
 
-  swc-config-validate:
+  swc-yaml-config-schema:
     docker:
       - image: circleci/node:8.11.1
     steps:
       - checkout
       - run:
-          name: Install requrements
-          shell: /bin/sh
-          command: |
-            cd scripts/ && npm install jsonlint
-      - run:
           name: Validate test case YAML config schema
           shell: /bin/sh
           command: |
-            cd scripts/ && npm run yaml-schema-lint
+            cd scripts/ && npm install && npm run yaml-schema-lint
+
+  swc-markdown:
+    docker:
+      - image: circleci/node:8.11.1
+    steps:
+      - checkout
       - run:
           name: Validate Markdown structure
           shell: /bin/sh
           command: |
-            cd scripts/ && npm run markdown-validate
+            cd scripts/ && npm install && npm run markdown-validate
+
+  swc-json-lint:
+    docker:
+      - image: circleci/node:8.11.1
+    steps:
+      - checkout
       - run:
           name: Validate JSON files
           shell: /bin/sh
           command: |
-            cd scripts/ && npm run json-lint
+            cd scripts/ && npm install jsonlint && npm run json-lint
+
+  swc-yaml-config-content:
+    docker:
+      - image: circleci/node:8.11.1
+    steps:
+      - checkout
       - run:
           name: Validate content of YAML config files
           shell: /bin/sh
           command: |
-            cd scripts/ && npm run yaml-content-validate
+            cd scripts/ && npm install && npm run yaml-content-validate
       
 
   deploy-gh-pages:
@@ -79,7 +92,25 @@ workflows:
           filters:
             branches:
               only: master
-      - swc-config-validate:
+      - swc-yaml-config-content:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+                - website
+      - swc-yaml-config-schema:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+                - website
+      - swc-markdown:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+                - website
+      - swc-json-lint:
           filters:
             branches:
               ignore:
