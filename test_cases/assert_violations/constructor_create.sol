@@ -3,7 +3,7 @@
  * @author: Anton Permenev
  */
 
-pragma solidity ^0.4.19;
+pragma solidity ^0.4.25;
 
 contract ConstructorCreate{
     B b = new B();
