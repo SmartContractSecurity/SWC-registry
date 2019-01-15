@@ -1,8 +1,11 @@
+defaults: &defaults
+  docker:
+    - image: circleci/node:8.11.2
+
 version: 2
 jobs:
   swc-config-update:
-    docker:
-      - image: circleci/node:8.11.1
+    <<: *defaults
     steps:
       - checkout
       - run:
@@ -22,8 +25,7 @@ jobs:
             fi
 
   swc-yaml-config-schema:
-    docker:
-      - image: circleci/node:8.11.1
+    <<: *defaults
     steps:
       - checkout
       - run:
@@ -33,8 +35,7 @@ jobs:
             cd scripts/ && npm install && npm run yaml-schema-lint
 
   swc-markdown:
-    docker:
-      - image: circleci/node:8.11.1
+    <<: *defaults
     steps:
       - checkout
       - run:
@@ -44,8 +45,7 @@ jobs:
             cd scripts/ && npm install && npm run markdown-validate
 
   swc-json-lint:
-    docker:
-      - image: circleci/node:8.11.1
+    <<: *defaults
     steps:
       - checkout
       - run:
@@ -55,8 +55,7 @@ jobs:
             cd scripts/ && npm install jsonlint && npm run json-lint
 
   swc-yaml-config-content:
-    docker:
-      - image: circleci/node:8.11.1
+    <<: *defaults
     steps:
       - checkout
       - run:
@@ -64,11 +63,9 @@ jobs:
           shell: /bin/sh
           command: |
             cd scripts/ && npm install && npm run yaml-content-validate
-      
 
   deploy-gh-pages:
-    docker:
-      - image: circleci/node:8.11.1
+    <<: *defaults
     steps:
       - checkout
       - run:
