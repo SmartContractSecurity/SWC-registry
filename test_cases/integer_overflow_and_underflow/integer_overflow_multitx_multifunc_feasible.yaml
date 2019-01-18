@@ -1,7 +1,9 @@
-description: "Integer overflow (reachable by calling 2 functions over 2 transactions)"
+description: Integer overflow (reachable by calling 2 functions over 2 transactions)
 issues:
-- id: "SWC-101"
+- id: SWC-101
   count: 1
   locations:
-  - bytecode_offsets: [218]
-    line_numbers: [24]
+  - bytecode_offset:
+      '0xbb68c4c8f6fcd35812698d0a14558c75beb55bafffd9249b19ea6f53229831ca': [218]
+    line_numbers:
+      integer_overflow_multitx_multifunc_feasible.sol: [24]

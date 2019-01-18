@@ -1,11 +1,17 @@
-description: "Overflows and underflows micro-samples (single transaction)"
+description: Overflows and underflows micro-samples (single transaction)
 issues:
-- id: "SWC-101"
+- id: SWC-101
   count: 3
   locations:
-  - bytecode_offsets: [525]
-    line_numbers: [11]
-  - bytecode_offsets: [494]
-    line_numbers: [16]
-  - bytecode_offsets: [476]
-    line_numbers: [21]
+  - bytecode_offset:
+      '0x3d4c963ea89d873f2d1f7310b46e9282fd0443b8d2126475f0f2d3c7de7d08cd': [525]
+    line_numbers:
+      overflow_single_tx.sol: [11]
+  - bytecode_offset:
+      '0x3d4c963ea89d873f2d1f7310b46e9282fd0443b8d2126475f0f2d3c7de7d08cd': [494]
+    line_numbers:
+      overflow_single_tx.sol: [16]
+  - bytecode_offset:
+      '0x3d4c963ea89d873f2d1f7310b46e9282fd0443b8d2126475f0f2d3c7de7d08cd': [476]
+    line_numbers:
+      overflow_single_tx.sol: [21]

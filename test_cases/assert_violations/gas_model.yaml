@@ -1,8 +1,9 @@
-description: "Gas modeling check"
+description: Gas modeling check
 issues:
-- id: "SWC-110"
+- id: SWC-110
   count: 1
   locations:
-  - bytecode_offsets: [112]
-    line_numbers: [13]
-
+  - bytecode_offset:
+      '0x84040ccf72d8e942448a29ba1b9b6c225c78f934b36b0bd395c7248b74073236': [112]
+    line_numbers:
+      gas_model.sol: [13]

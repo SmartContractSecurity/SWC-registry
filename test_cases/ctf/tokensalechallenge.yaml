@@ -1,16 +1,24 @@
-description: "Integer overflow leading into Ether theft"
+description: Integer overflow leading into Ether theft
 issues:
-- id: "SWC-101"
+- id: SWC-101
   count: 3
   locations:
-  - bytecode_offsets: [390]
-    line_numbers: [21]
-  - bytecode_offsets: [472]
-    line_numbers: [23]
-  - bytecode_offsets: [672]
-    line_numbers: [30]
-- id: "SWC-105"
+  - bytecode_offset:
+      '0xf2e4a7c1895b4ada88b656c34d46296086bf6f4ed3fb5709657b06c0c8bad621': [390]
+    line_numbers:
+      tokensalechallenge.sol: [21]
+  - bytecode_offset:
+      '0xf2e4a7c1895b4ada88b656c34d46296086bf6f4ed3fb5709657b06c0c8bad621': [472]
+    line_numbers:
+      tokensalechallenge.sol: [23]
+  - bytecode_offset:
+      '0xf2e4a7c1895b4ada88b656c34d46296086bf6f4ed3fb5709657b06c0c8bad621': [672]
+    line_numbers:
+      tokensalechallenge.sol: [30]
+- id: SWC-105
   count: 1
   locations:
-  - bytecode_offsets: [693]
-    line_numbers: [30]
+  - bytecode_offset:
+      '0xf2e4a7c1895b4ada88b656c34d46296086bf6f4ed3fb5709657b06c0c8bad621': [693]
+    line_numbers:
+      tokensalechallenge.sol: [30]

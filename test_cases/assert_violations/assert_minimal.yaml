@@ -1,8 +1,9 @@
-description: "Simple assert violation"
+description: Simple assert violation
 issues:
-- id: "SWC-110"
+- id: SWC-110
   count: 1
   locations:
-  - bytecode_offsets: [96]
-    line_numbers: [10]
-
+  - bytecode_offset:
+      '0x0d23e32714997552c1d9cbb8e0d14e2689154aa2ac695f5ae671fe51f2742992': [96]
+    line_numbers:
+      assert_minimal.sol: [10]

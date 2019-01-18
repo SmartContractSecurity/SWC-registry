@@ -1,7 +1,10 @@
-description: "Attacker can withdraw unlimited funds due erroneous comparison operator in withdraw function"
+description: Attacker can withdraw unlimited funds due erroneous comparison operator
+  in withdraw function
 issues:
-- id: "SWC-105"
+- id: SWC-105
   count: 1
   locations:
-  - bytecode_offsets: [340]
-    line_numbers: [24]
+  - bytecode_offset:
+      '0xb58b9bda75dd28b728d08082a192e62959f4d5c149ca4ce473bffb52f3013e41': [340]
+    line_numbers:
+      wallet_04_confused_sign.sol: [24]

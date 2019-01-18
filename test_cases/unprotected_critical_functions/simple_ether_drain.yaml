@@ -1,7 +1,9 @@
-description: "Anybody can withdraw all Ether from the contract account"
+description: Anybody can withdraw all Ether from the contract account
 issues:
-- id: "SWC-105"
+- id: SWC-105
   count: 1
   locations:
-  - bytecode_offsets: [156]
-    line_numbers: [4]
+  - bytecode_offset:
+      '0x76f854a5d1c579334001f42f4f326bb3ef25f76c6e8dddbd8e538603d7496f2a': [156]
+    line_numbers:
+      simple_ether_drain.sol: [4]

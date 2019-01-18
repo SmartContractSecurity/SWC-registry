@@ -1,6 +1,9 @@
-description: "Typographical error in an operation of summing a variable (uint) with 1, it also includes a safe way to do it."
+description: Typographical error in an operation of summing a variable (uint) with
+  1, it also includes a safe way to do it.
 issues:
-- id: "SWC-129"
+- id: SWC-129
   count: 1
   locations:
-  - line_numbers: [75]
+  - bytecode_offset: {}
+    line_numbers:
+      typo_safe_math.sol: [75]

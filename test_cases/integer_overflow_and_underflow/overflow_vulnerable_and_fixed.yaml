@@ -1,7 +1,8 @@
-description: "ADD overflow example from ConsenSys best practices (vulnerable and fixed)"
+description: ADD overflow example from ConsenSys best practices (vulnerable and fixed)
 issues:
-- id: "SWC-101"
+- id: SWC-101
   count: 1
   locations:
-  - bytecode_offsets: []
-    line_numbers: [18]
+  - bytecode_offset: {}
+    line_numbers:
+      overflow_vulnerable_and_fixed.sol: [18]

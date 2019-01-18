@@ -1,7 +1,8 @@
-description: "Single transaction overflow in mapping"
+description: Single transaction overflow in mapping
 issues:
-- id: "SWC-101"
+- id: SWC-101
   count: 1
   locations:
-  - bytecode_offsets: []
-    line_numbers: [9]
+  - bytecode_offset: {}
+    line_numbers:
+      integer_overflow_mapping_sym_1.sol: [9]

@@ -1,7 +1,9 @@
-description: "Multiple sends in a single transaction"
+description: Multiple sends in a single transaction
 issues:
-- id: "SWC-113"
+- id: SWC-113
   count: 1
   locations:
-  - bytecode_offsets: [431]
-    line_numbers: [21,22,23]
+  - bytecode_offset:
+      '0x33856f1a04f48eb0d14d21b5c84063cddfe3629c57eea7639534dae5b9238614': [431]
+    line_numbers:
+      send_loop.sol: [23]

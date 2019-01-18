@@ -1,4 +1,5 @@
-description: "Unreachable SUICIDE instruction"
+description: Unreachable SUICIDE instruction
 issues:
-- id: "SWC-106"
+- id: SWC-106
   count: 0
+  locations: []

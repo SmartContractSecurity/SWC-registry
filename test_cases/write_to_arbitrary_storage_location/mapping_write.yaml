@@ -1,7 +1,8 @@
-description: "Write to arbitrary storage location using dynamic arrays"
+description: Write to arbitrary storage location using dynamic arrays
 issues:
-- id: "SWC-124"
+- id: SWC-124
   count: 1
   locations:
-  - bytecode_offsets: []
-    line_numbers: [14]
+  - bytecode_offset: {}
+    line_numbers:
+      mapping_write.sol: [14]
