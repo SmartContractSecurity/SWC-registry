@@ -1,7 +1,9 @@
-description: "Contract can be killed with 2 transactions"
+description: Contract can be killed with 2 transactions
 issues:
-- id: "SWC-106"
-  count: 1
+- count: 1
+  id: SWC-106
   locations:
-  - bytecode_offsets: [233]
-    line_numbers: [16]
+  - bytecode_offset:
+      '0x44793d2ea75a211f5df517cb71bce08a27cd56ccf144d8717c6ed96158cc2235': [233]
+    line_numbers:
+      suicide_multitx_feasible.sol: [16]

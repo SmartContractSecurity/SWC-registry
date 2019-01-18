@@ -1,7 +1,5 @@
-description: "Check of non-collision between two maps that use SHA as a keys"
+description: Check of non-collision between two maps that use SHA as a keys
 issues:
-- id: "SWC-110"
-  count: 0
-  locations:
-  - bytecode_offsets: []
-    line_numbers: []
+- count: 0
+  id: SWC-110
+  locations: []

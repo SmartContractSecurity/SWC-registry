@@ -1,8 +1,9 @@
-description: "Check for collision in maps that use SHA hashes as keys"
+description: Check for collision in maps that use SHA hashes as keys
 issues:
-- id: "SWC-110"
-  count: 1
+- count: 1
+  id: SWC-110
   locations:
-  - bytecode_offsets: [319]
-    line_numbers: [18]
-
+  - bytecode_offset:
+      '0xe5a6385ce4dccc4f08bb1ff79c558b5ab267ac13bfa257fa787219a34533b1ad': [319]
+    line_numbers:
+      sha_of_sha_collision.sol: [18]

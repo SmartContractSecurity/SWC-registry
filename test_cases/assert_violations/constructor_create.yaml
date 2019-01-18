@@ -1,8 +1,9 @@
-description: "Assert violation after call to concretely created contract"
+description: Assert violation after call to concretely created contract
 issues:
-- id: "SWC-110"
-  count: 1
+- count: 1
+  id: SWC-110
   locations:
-  - bytecode_offsets: [277]
-    line_numbers: [12]
-
+  - bytecode_offset:
+      '0x3eede5579ef5a25cef6020319996a1deb1b0b15cd4786c0a7e91c1f18dee0f3c': [277]
+    line_numbers:
+      constructor_create.sol: [12]

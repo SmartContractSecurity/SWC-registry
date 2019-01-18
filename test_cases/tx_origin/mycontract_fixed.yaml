@@ -1,7 +1,5 @@
-description: "Use tx.origin to authorize ETH withdrawls"
+description: Use tx.origin to authorize ETH withdrawls
 issues:
-- id: "SWC-115"
-  count: 0
-  locations:
-  - bytecode_offsets:
-    line_numbers: []
+- count: 0
+  id: SWC-115
+  locations: []

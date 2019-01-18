@@ -1,7 +1,8 @@
-description: "Guess the number from a predictable on chain source"
+description: Guess the number from a predictable on chain source
 issues:
-- id: "SWC-120"
-  count: 1
+- count: 1
+  id: SWC-120
   locations:
-  - bytecode_offsets: []
-    line_numbers: [14]
+  - bytecode_offset: {}
+    line_numbers:
+      guess_the_random_number.sol: [14]

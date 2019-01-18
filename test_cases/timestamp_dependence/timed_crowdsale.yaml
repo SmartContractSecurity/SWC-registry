@@ -1,7 +1,9 @@
-description: "Timestamp Dependence"
+description: Timestamp Dependence
 issues:
-- id: "SWC-116"
-  count: 1
+- count: 1
+  id: SWC-116
   locations:
-  - bytecode_offsets: [120]
-    line_numbers: [6]
+  - bytecode_offset:
+      '0xdf68300506c6bdfb86b9cf1bc13b9d8913f10b435503956dfa9d0aa4dfc79bcd': [120]
+    line_numbers:
+      timed_crowdsale.sol: [6]

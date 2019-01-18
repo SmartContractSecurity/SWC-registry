@@ -1,7 +1,8 @@
-description: "Plain and simple ADD overflow example"
+description: Plain and simple ADD overflow example
 issues:
-- id: "SWC-101"
-  count: 1
+- count: 1
+  id: SWC-101
   locations:
-  - bytecode_offsets: []
-    line_numbers: [7]
+  - bytecode_offset: {}
+    line_numbers:
+      overflow_simple_add.sol: [7]

@@ -1,8 +1,9 @@
-description: "Assert violation after call to user input contract"
+description: Assert violation after call to user input contract
 issues:
-- id: "SWC-110"
-  count: 1
+- count: 1
+  id: SWC-110
   locations:
-  - bytecode_offsets: [269]
-    line_numbers: [10]
-
+  - bytecode_offset:
+      '0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470': [269]
+    line_numbers:
+      runtime_user_input_call.sol: [10]

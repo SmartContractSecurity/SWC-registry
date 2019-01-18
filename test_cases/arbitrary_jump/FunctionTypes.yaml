@@ -1,7 +1,8 @@
-description: "Arbitrary jump with function type variable"
+description: Arbitrary jump with function type variable
 issues:
-- id: "SWC-127"
-  count: 1
+- count: 1
+  id: SWC-127
   locations:
-  - bytecode_offsets: []
-    line_numbers: [26]
+  - bytecode_offset: {}
+    line_numbers:
+      FunctionTypes.sol: [26]

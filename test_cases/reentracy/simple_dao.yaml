@@ -1,7 +1,10 @@
-description: "Reentrancy (state change after external call)"
+description: Reentrancy (state change after external call)
 issues:
-- id: "SWC-107"
-  count: 1
+- count: 1
+  id: SWC-107
   locations:
-  - bytecode_offsets: [565, 655]
-    line_numbers: [17,18]
+  - bytecode_offset:
+      '0x71b1ffe5bd0eeabf79cd3a8d5b2a68cf64762c54f218505d4ed54c142c7af8b9': [565,
+        655]
+    line_numbers:
+      simple_dao.sol: [18]

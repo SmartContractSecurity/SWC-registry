@@ -1,7 +1,10 @@
-description: "Simple requirement violation"
+description: Simple requirement violation
 issues:
-- id: "SWC-123"
-  count: 1
+- count: 1
+  id: SWC-123
   locations:
-  - bytecode_offsets: [263,145]
-    line_numbers: [6,12]
+  - bytecode_offset:
+      '0x6d495e3a88f13bc07c83b77efaef8fbf8c3be609d576bf8d22fffce856d250e3': [263,
+        145]
+    line_numbers:
+      requirement_simple.sol: [12]

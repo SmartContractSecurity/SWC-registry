@@ -1,7 +1,8 @@
-description: "Floating pragma"
+description: Floating pragma
 issues:
-- id: "SWC-103"
-  count: 1
+- count: 1
+  id: SWC-103
   locations:
-  - bytecode_offsets:
-    line_numbers: [1]
+  - bytecode_offset: {}
+    line_numbers:
+      no_pragma.sol: [1]

@@ -1,7 +1,9 @@
-description: "Assertion can be violated with 3 transactions"
+description: Assertion can be violated with 3 transactions
 issues:
-- id: "SWC-110"
-  count: 1
+- count: 1
+  id: SWC-110
   locations:
-  - bytecode_offsets: [698]
-    line_numbers: [28]
+  - bytecode_offset:
+      '0xd6c4a28b385d39d4faaefdb119b2d6db731067ff14b6e46ec1bbd8b0539fc600': [698]
+    line_numbers:
+      token-with-backdoor.sol: [28]

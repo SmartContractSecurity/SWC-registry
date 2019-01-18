@@ -1,7 +1,8 @@
-description: "Ether withdrawal function and correclty named constructor (not vulnerable)"
+description: Ether withdrawal function and correclty named constructor (not vulnerable)
 issues:
-- id: "SWC-105"
-  count: 1
+- count: 1
+  id: SWC-105
   locations:
-  - bytecode_offsets: []
-    line_numbers: [50]
+  - bytecode_offset: {}
+    line_numbers:
+      multiowned_vulnerable.sol: [50]

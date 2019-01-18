@@ -1,7 +1,5 @@
-description: "Gas modeling check fixed"
+description: Gas modeling check fixed
 issues:
-- id: "SWC-110"
-  count: 0
-  locations:
-  - bytecode_offsets: []
-    line_numbers: []
+- count: 0
+  id: SWC-110
+  locations: []

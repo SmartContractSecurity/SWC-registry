@@ -1,4 +1,5 @@
-description: "Reentrancy (state change after external call)"
+description: Reentrancy (state change after external call)
 issues:
-- id: "SWC-107"
-  count: 0
+- count: 0
+  id: SWC-107
+  locations: []

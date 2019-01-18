@@ -1,7 +1,9 @@
-description: "Simple proxy pattern with delegatecall"
+description: Simple proxy pattern with delegatecall
 issues:
-- id: "SWC-112"
-  count: 1
+- count: 1
+  id: SWC-112
   locations:
-  - bytecode_offsets: [337]
-    line_numbers: [8]
+  - bytecode_offset:
+      '0xe0455b6367a2e4515edec3c38e1352e15bd9e141aa75eb6bd15325f1a3eeaf45': [337]
+    line_numbers:
+      proxy.sol: [8]

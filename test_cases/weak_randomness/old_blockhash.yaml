@@ -1,7 +1,8 @@
-description: "Weak Sources of Randomness"
+description: Weak Sources of Randomness
 issues:
-- id: "SWC-120"
-  count: 1
+- count: 1
+  id: SWC-120
   locations:
-  - bytecode_offsets: []
-    line_numbers: [29]
+  - bytecode_offset: {}
+    line_numbers:
+      old_blockhash.sol: [29]

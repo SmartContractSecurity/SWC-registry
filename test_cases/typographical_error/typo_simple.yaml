@@ -1,6 +1,9 @@
-description: "Typographical error in an operation of summing a variable (uint) with 1"
+description: Typographical error in an operation of summing a variable (uint) with
+  1
 issues:
-- id: "SWC-129"
-  count: 1
+- count: 1
+  id: SWC-129
   locations:
-  - line_numbers: [9]
+  - bytecode_offset: {}
+    line_numbers:
+      typo_simple.sol: [9]

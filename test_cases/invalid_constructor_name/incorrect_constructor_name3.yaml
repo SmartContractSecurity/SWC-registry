@@ -1,7 +1,8 @@
-description: "Invalid contructor name variant 3"
+description: Invalid contructor name variant 3
 issues:
-- id: "SWC-118"
-  count: 1
+- count: 1
+  id: SWC-118
   locations:
-  - bytecode_offsets: 
-    line_numbers: [17]
+  - bytecode_offset: {}
+    line_numbers:
+      incorrect_constructor_name3.sol: [17]

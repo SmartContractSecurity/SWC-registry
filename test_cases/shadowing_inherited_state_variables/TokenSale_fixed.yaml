@@ -1,7 +1,5 @@
-description: "Shadowing a state variable in a inherited contract"
+description: Shadowing a state variable in a inherited contract
 issues:
-- id: "SWC-119"
-  count: 0
-  locations:
-  - bytecode_offsets:
-    line_numbers: []
+- count: 0
+  id: SWC-119
+  locations: []

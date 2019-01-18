@@ -1,7 +1,8 @@
-description: "Calculates transaction identifier with signature"
+description: Calculates transaction identifier with signature
 issues:
-- id: "SWC-117"
-  count: 1
+- count: 1
+  id: SWC-117
   locations:
-  - bytecode_offsets:
-    line_numbers: [23]
+  - bytecode_offset: {}
+    line_numbers:
+      transaction_malleablity.sol: [23]

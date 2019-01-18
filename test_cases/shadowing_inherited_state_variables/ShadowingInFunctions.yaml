@@ -1,13 +1,17 @@
-description: "Shadowing a state variable in functions"
+description: Shadowing a state variable in functions
 issues:
-- id: "SWC-119"
-  count: 4
+- count: 4
+  id: SWC-119
   locations:
-  - bytecode_offsets:
-    line_numbers: [7]
-  - bytecode_offsets:
-    line_numbers: [11]
-  - bytecode_offsets:
-    line_numbers: [16]    
-  - bytecode_offsets:
-    line_numbers: [17]
+  - bytecode_offset: {}
+    line_numbers:
+      ShadowingInFunctions.sol: [7]
+  - bytecode_offset: {}
+    line_numbers:
+      ShadowingInFunctions.sol: [11]
+  - bytecode_offset: {}
+    line_numbers:
+      ShadowingInFunctions.sol: [16]
+  - bytecode_offset: {}
+    line_numbers:
+      ShadowingInFunctions.sol: [17]

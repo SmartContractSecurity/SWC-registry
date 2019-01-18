@@ -1,7 +1,5 @@
-description: "Multi-transactional, single function"
+description: Multi-transactional, single function
 issues:
-- id: "SWC-101"
-  count: 0
-  locations:
-  - bytecode_offsets: []
-    line_numbers: []
+- count: 0
+  id: SWC-101
+  locations: []

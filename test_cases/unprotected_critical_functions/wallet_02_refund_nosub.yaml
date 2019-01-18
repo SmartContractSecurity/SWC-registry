@@ -1,7 +1,10 @@
-description: "Attacker can pay in a small amount of Ether and call refund() repeatedly to empty the contract"
+description: Attacker can pay in a small amount of Ether and call refund() repeatedly
+  to empty the contract
 issues:
-- id: "SWC-105"
-  count: 1
+- count: 1
+  id: SWC-105
   locations:
-  - bytecode_offsets: [776]
-    line_numbers: [29]
+  - bytecode_offset:
+      '0x655499bb790f841d310ab6072cfc1e97fab8270a34c850d7556c47ba2bec1549': [776]
+    line_numbers:
+      wallet_02_refund_nosub.sol: [29]

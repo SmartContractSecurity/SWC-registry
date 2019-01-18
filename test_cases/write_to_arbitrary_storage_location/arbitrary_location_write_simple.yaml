@@ -1,12 +1,16 @@
-description: "Simple variant of write to arbitrary storage location"
+description: Simple variant of write to arbitrary storage location
 issues:
-- id: "SWC-124"
-  count: 1
+- count: 1
+  id: SWC-124
   locations:
-  - bytecode_offsets: [294]
-    line_numbers: [26]
-- id: "SWC-101"
-  count: 1
+  - bytecode_offset:
+      '0x9c539a86d4b4126e0b8693408400cb2da394f771cf58d5614a080c60847122f2': [294]
+    line_numbers:
+      arbitrary_location_write_simple.sol: [26]
+- count: 1
+  id: SWC-101
   locations:
-  - bytecode_offsets: [331]
-    line_numbers: [21]
+  - bytecode_offset:
+      '0x9c539a86d4b4126e0b8693408400cb2da394f771cf58d5614a080c60847122f2': [331]
+    line_numbers:
+      arbitrary_location_write_simple.sol: [21]
