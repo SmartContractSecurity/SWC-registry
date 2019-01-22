@@ -3,8 +3,6 @@ const path = require('path');
 const yaml = require('js-yaml');
 
 const keccak256 = require('js-sha3').keccak256;
-const Web3 = require('web3');
-var web3 = new Web3();
 
 let files = [];
 
@@ -93,7 +91,7 @@ const hashValidator = (config, content, hash) => {
     const contractKey = contractsKeys[0];
     const { bin } = contracts[contractKey];
 
-    const generatedHash = web3.utils.keccak256(web3.utils.toHex(bin));
+    // const generatedHash = web3.utils.keccak256(web3.utils.toHex(bin));
     // TODO: fix this check
     // if(hash !== generatedHash) {
     //     HAS_ISSUE = true;
