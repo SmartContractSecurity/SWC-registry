@@ -32,7 +32,7 @@ jobs:
           name: Validate test case YAML config schema
           shell: /bin/sh
           command: |
-            cd scripts/ && npm install && npm run yaml-schema-lint
+            cd scripts/ && npm run yaml-schema-lint
 
   swc-markdown:
     <<: *defaults
@@ -42,7 +42,7 @@ jobs:
           name: Validate Markdown structure
           shell: /bin/sh
           command: |
-            cd scripts/ && npm install && npm run markdown-validate
+            cd scripts/ && npm run markdown-validate
 
   swc-json-lint:
     <<: *defaults
@@ -52,7 +52,7 @@ jobs:
           name: Validate JSON files
           shell: /bin/sh
           command: |
-            cd scripts/ && npm install jsonlint && npm run json-lint
+            cd scripts/ && npm run json-lint
 
   swc-yaml-config-content:
     <<: *defaults
@@ -62,7 +62,7 @@ jobs:
           name: Validate content of YAML config files
           shell: /bin/sh
           command: |
-            cd scripts/ && npm install && npm run yaml-content-validate
+            cd scripts/ && npm run yaml-content-validate
 
   deploy-gh-pages:
     <<: *defaults

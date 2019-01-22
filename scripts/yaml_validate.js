@@ -2,6 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
 
+const keccak256 = require('js-sha3').keccak256;
+const Web3 = require('web3');
+var web3 = new Web3();
+
 let files = [];
 
 const walkSync = (dir) => {
@@ -19,76 +23,107 @@ const walkSync = (dir) => {
     return files;
 };
 
-let hasIssue = false;
-const pattern = /^(SWC-)\d{3}$/;
+const KECCAK256_HASH_LENGTH = 64;
+const HASH_PREFIX_LENGTH = "0x".length;
+ 
+let HAS_ISSUE = false;
+
+
+const logError = (config, content, message) => {
+    console.log('================')
+    console.log(`ERROR: ${config} . ${message}`)
+    console.log(content);
+}
+
+
+const GITHUB_CHECKERS = {
+    description: (jsonContent) => jsonContent.description.length > 0,
+    issues: {
+        swcID: (id) => /^(SWC-)\d{3}$/.test(id),
+        count: (issue) => issue.count === issue.locations.length,
+        hash: {
+            length: (hash) => hash.length === KECCAK256_HASH_LENGTH + HASH_PREFIX_LENGTH,
+            prefix: (hash) => hash.slice(0, 2) === '0x',
+            generate: (input) => keccak256(input),
+        }
+    }
+}
+
+
+const configValidator = (config) => {
+    const configContent = fs.readFileSync(config, 'utf8');
+    const configContentJson = yaml.safeLoad(configContent);
+
+    if (!GITHUB_CHECKERS.description(configContentJson)) {
+        HAS_ISSUE = true;
+        logError(config, configContent, 'Missing description!');
+    }
+    configContentJson.issues.map(issue => issueValidator(config, configContent, issue));
+}
+
+const issueValidator = (config, content, issue) => {
+    if (!GITHUB_CHECKERS.issues.swcID(issue.id)) {
+        HAS_ISSUE = true;
+        logError(config, content, 'Wrong SWC-ID format!');
+    }
+    if (!GITHUB_CHECKERS.issues.count(issue)) {
+        HAS_ISSUE = true;
+        logError(config, content, 'Wrong issue count and locations length!');
+    }
+    issue.locations.map(location => locationValidator(config, content, location));
+}
+
+const hashValidator = (config, content, hash) => {
+    const { issues } = GITHUB_CHECKERS;
+
+    if(!issues.hash.length(hash)) {
+        HAS_ISSUE = true;
+        logError(config, content, 'Wrong hash length!');
+    }
+
+    if(!issues.hash.prefix(hash)) {
+        HAS_ISSUE = true;
+        logError(config, content, 'Missing hash prefix!');
+    }
+
+    const jsonContentRaw = fs.readFileSync(config.replace('.yaml', '.json'), 'utf8')
+    const { contracts } = JSON.parse(jsonContentRaw);
+
+    const contractsKeys = Object.keys(contracts);
+    const contractKey = contractsKeys[0];
+    const { bin } = contracts[contractKey];
+
+    const generatedHash = web3.utils.keccak256(web3.utils.toHex(bin));
+    // TODO: fix this check
+    // if(hash !== generatedHash) {
+    //     HAS_ISSUE = true;
+    //     logError(config, content, `Wrong generated keccak!\n Expected != Actual\n${generatedHash} != ${hash}`);
+    // }
+};
+
+const linenoValidator = (lineno) => {
+
+}
+
+const locationValidator = (config, content, location) => {
+    const { bytecode_offset, line_numbers} = location;
+    const hashes = Object.keys(bytecode_offset);
+    const linenums = Object.keys(line_numbers);
+
+    hashes.map(hash => hashValidator(config, content, hash));
+
+    linenums.map(lineno => linenoValidator(lineno));
+}
+
 
 const validateYamlConfig = () => {
     const configs = walkSync('../test_cases');
-    configs.map(file => {
-        const content = fs.readFileSync(file, 'utf8');
-        const jsonContent = yaml.safeLoad(content);
-
-        if (jsonContent.description.length === 0) {
-            // Issue count description
-            hasIssue = true;
-            console.log('================')
-            console.log(`ERROR: ${file} . Missing description.`)
-            console.log(content);
-        }
-
-        jsonContent.issues.map((issue) => {
-            // TODO: test SWC-[\d+] pattern
-            if (!pattern.test(issue.id)) {
-                // Issue count description
-                hasIssue = true;
-                console.log('================')
-                console.log(`ERROR: ${file} . Wrong SWC-ID format!`)
-                console.log(content);
-            }
-
-            // issue count is a valid integer
-            if (issue.count > 0) {
-                if (issue.count !== issue.locations.length) {
-                    // the sum of location pairs have to match count: except when count is zero.
-                    hasIssue = true;
-                    console.log('================')
-                    console.log(`Error in ${file}\n`)
-                    console.log('Wrong issue count and locations length:\n');
-                    console.log(content);
-                }
-            } else {
-                // In case if 0
-                if (issue.locations) {
-                    // Or 1 location paris
-                    if (issue.locations.length == 1) {
-                        // with no location settings
-                        issue.locations.map(location => {
-                            if (location.bytecode_offsets && location.bytecode_offsets.length > 0 ||
-                                location.line_numbers && location.line_numbers.length > 0) {
-                                hasIssue = true;
-                                console.log('================')
-                                console.log(`Error in ${file}\n`)
-                                console.log('Wrong issue count and locations:\n');
-                                console.log(content);
-                            }
-                        })
-                    } else {
-                        hasIssue = true;
-                        console.log('================')
-                        console.log(`Error in ${file}\n`)
-                        console.log('Wrong issue count and locations:\n');
-                        console.log(content);
-                    }
-                }
-            }
-
-        })
-    });
+    configs.map(config => configValidator(config));
 }
 
 validateYamlConfig();
 
-if (hasIssue) {
+if (HAS_ISSUE) {
     process.exit(1);
 } else  {
     process.exit();
