@@ -4,10 +4,10 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "js-sha3": "^0.8.0",
     "js-yaml": "^3.12.1",
     "jsonlint": "^1.6.3",
     "md-2-json": "^1.0.5",
+    "web3": "^1.0.0-beta.37",
     "yaml-schema-validator": "^1.1.7"
   },
   "devDependencies": {},

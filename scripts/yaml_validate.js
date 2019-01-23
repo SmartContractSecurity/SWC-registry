@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
+const Web3 = require('web3');
 
-const keccak256 = require('js-sha3').keccak256;
+var web3 = new Web3();
 
 let files = [];
 
@@ -29,7 +30,7 @@ let HAS_ISSUE = false;
 
 const logError = (config, content, message) => {
     console.log('================')
-    console.log(`ERROR: ${config} . ${message}`)
+    console.log(`ERROR: ${config}\n${message}`)
     console.log(content);
 }
 
@@ -42,7 +43,7 @@ const GITHUB_CHECKERS = {
         hash: {
             length: (hash) => hash.length === KECCAK256_HASH_LENGTH + HASH_PREFIX_LENGTH,
             prefix: (hash) => hash.slice(0, 2) === '0x',
-            generate: (input) => keccak256(input),
+            generate: (input) => keccak256(`0x${input}`),
         }
     }
 }
@@ -90,13 +91,11 @@ const hashValidator = (config, content, hash) => {
     const contractsKeys = Object.keys(contracts);
     const contractKey = contractsKeys[0];
     const { bin } = contracts[contractKey];
-
-    // const generatedHash = web3.utils.keccak256(web3.utils.toHex(bin));
-    // TODO: fix this check
-    // if(hash !== generatedHash) {
-    //     HAS_ISSUE = true;
-    //     logError(config, content, `Wrong generated keccak!\n Expected != Actual\n${generatedHash} != ${hash}`);
-    // }
+    const generatedHash = web3.utils.keccak256(web3.utils.toHex(`0x${bin}`));
+    if(hash !== generatedHash) {
+        HAS_ISSUE = true;
+        logError(config, content, `Wrong hash!\nExpected != Actual\n${generatedHash} != ${hash}`);
+    }
 };
 
 const linenoValidator = (lineno) => {
