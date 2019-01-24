@@ -1,9 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
-const Web3 = require('web3');
-
-var web3 = new Web3();
+const web3 = require('web3');
 
 let files = [];
 
