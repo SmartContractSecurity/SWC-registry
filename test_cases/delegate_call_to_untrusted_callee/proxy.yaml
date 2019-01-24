@@ -1,4 +1,4 @@
-description: Simple proxy pattern with delegatecall
+description: Simple proxy's pattern with delegatecall
 issues:
 - id: SWC-112
   count: 1
