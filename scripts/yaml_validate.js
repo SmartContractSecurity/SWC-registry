@@ -101,7 +101,8 @@ const hashValidator = (config, content, hash) => {
             logError(config, content, `Wrong hash!\nExpected != Actual\n${generatedHash} != ${hash}`);
         }
     } catch(err) {
-        console.log(contractKey)
+        HAS_ISSUE = true;
+        logError(config, content, `Issue in JSON config, couldnt load bytecode`);
     }
 };
 
