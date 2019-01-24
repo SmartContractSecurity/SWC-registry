@@ -4,6 +4,6 @@ issues:
   count: 1
   locations:
   - bytecode_offset:
-      '0xce1f32832ca5d852a4e364a8bdf9a9311fec8718c0af8fa0944f050332751271': [337]
+      '0xce1f32832ca5d852a4e364a8bdf9a9311fec8718c0af8fa0944f050332751277': [337]
     line_numbers:
-      proxy.sol: [8]
+      proxay.sol: [8]
