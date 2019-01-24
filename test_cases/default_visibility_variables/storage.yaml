@@ -3,21 +3,21 @@ issues:
 - id: SWC-108
   count: 6
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       storage.sol: [5]
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       storage.sol: [7]
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       storage.sol: [9]
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       storage.sol: [14]
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       storage.sol: [16]
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       storage.sol: [17]

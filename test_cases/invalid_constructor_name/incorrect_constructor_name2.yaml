@@ -3,6 +3,6 @@ issues:
 - id: SWC-118
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       incorrect_constructor_name2.sol: [18]

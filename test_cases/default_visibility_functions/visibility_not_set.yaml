@@ -3,9 +3,9 @@ issues:
 - id: SWC-100
   count: 2
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       visibility_not_set.sol: [11]
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       visibility_not_set.sol: [17]

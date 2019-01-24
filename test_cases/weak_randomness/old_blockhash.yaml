@@ -3,6 +3,6 @@ issues:
 - id: SWC-120
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       old_blockhash.sol: [29]

@@ -3,6 +3,6 @@ issues:
 - id: SWC-119
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       TokenSale.sol: [4]

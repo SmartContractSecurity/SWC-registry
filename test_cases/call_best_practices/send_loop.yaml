@@ -3,7 +3,7 @@ issues:
 - id: SWC-113
   count: 1
   locations:
-  - bytecode_offset:
+  - bytecode_offsets:
       '0x0740310f63ff97d41fdc9170b44535586a824d54c710dd0e9f75d7103bf71ce8': [431]
     line_numbers:
-      send_loop.sol: [23]
+      send_loop.sol: [21, 22, 23]

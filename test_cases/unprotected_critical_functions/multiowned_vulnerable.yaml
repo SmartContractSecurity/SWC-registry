@@ -3,6 +3,6 @@ issues:
 - id: SWC-105
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       multiowned_vulnerable.sol: [50]

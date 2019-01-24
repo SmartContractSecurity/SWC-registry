@@ -3,6 +3,6 @@ issues:
 - id: SWC-125
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       MDTCrowdsale.sol: [162]

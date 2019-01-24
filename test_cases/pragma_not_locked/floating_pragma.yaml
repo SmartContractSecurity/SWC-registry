@@ -3,6 +3,6 @@ issues:
 - id: SWC-103
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       floating_pragma.sol: [1]

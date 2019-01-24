@@ -3,7 +3,7 @@ issues:
 - id: SWC-110
   count: 1
   locations:
-  - bytecode_offset:
+  - bytecode_offsets:
       '0x690c2eeed2f8c6066a8f49b6cde15e144b389390f9b2d7fd6c8de98712def144': [24]
     line_numbers:
       assert_constructor.sol: [10]

@@ -3,6 +3,6 @@ issues:
 - id: SWC-124
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       mapping_write.sol: [14]

@@ -3,6 +3,6 @@ issues:
 - id: SWC-117
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       transaction_malleablity.sol: [23]

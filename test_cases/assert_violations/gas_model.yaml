@@ -3,7 +3,7 @@ issues:
 - id: SWC-110
   count: 1
   locations:
-  - bytecode_offset:
+  - bytecode_offsets:
       '0x1d0245bf42c590285bb4751565a6fabbdb6825e95c009d8e5392b63d9851d9ab': [112]
     line_numbers:
       gas_model.sol: [13]

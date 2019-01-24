@@ -3,6 +3,6 @@ issues:
 - id: SWC-106
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
-      WalletLibrary.sol: [226]
+      WalletLibrary.sol: [225, 226]

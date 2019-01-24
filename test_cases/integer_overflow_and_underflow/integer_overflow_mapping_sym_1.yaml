@@ -3,6 +3,6 @@ issues:
 - id: SWC-101
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       integer_overflow_mapping_sym_1.sol: [9]

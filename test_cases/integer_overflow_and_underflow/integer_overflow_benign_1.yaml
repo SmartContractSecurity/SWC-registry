@@ -3,6 +3,6 @@ issues:
 - id: SWC-101
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       integer_overflow_benign_1.sol: [10]

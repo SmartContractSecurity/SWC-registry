@@ -3,6 +3,6 @@ issues:
 - id: SWC-127
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       FunctionTypes.sol: [26]

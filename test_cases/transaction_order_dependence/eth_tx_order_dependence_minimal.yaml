@@ -3,6 +3,6 @@ issues:
 - id: SWC-114
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
       eth_tx_order_dependence_minimal.sol: [17]

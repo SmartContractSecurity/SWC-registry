@@ -3,6 +3,6 @@ issues:
 - id: SWC-107
   count: 1
   locations:
-  - bytecode_offset: {}
+  - bytecode_offsets: {}
     line_numbers:
-      modifier_reentrancy.sol: [9]
+      modifier_reentrancy.sol: [8, 9]

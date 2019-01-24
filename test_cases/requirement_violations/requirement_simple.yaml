@@ -3,8 +3,7 @@ issues:
 - id: SWC-123
   count: 1
   locations:
-  - bytecode_offset:
-      '0xba541cbb2ac6dda7664b6ebdc6372297425c2eeabd88e0af5ca6310f9cf7bbd2': [263,
-        145]
+  - bytecode_offsets:
+      '0xba541cbb2ac6dda7664b6ebdc6372297425c2eeabd88e0af5ca6310f9cf7bbd2': [263, 145]
     line_numbers:
-      requirement_simple.sol: [12]
+      requirement_simple.sol: [6, 12]
