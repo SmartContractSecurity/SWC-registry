@@ -88,13 +88,20 @@ const hashValidator = (config, content, hash) => {
     const jsonContentRaw = fs.readFileSync(config.replace('.yaml', '.json'), 'utf8')
     const { contracts } = JSON.parse(jsonContentRaw);
 
-    const contractsKeys = Object.keys(contracts);
-    const contractKey = contractsKeys[0];
-    const { bin } = contracts[contractKey];
-    const generatedHash = web3.utils.keccak256(web3.utils.toHex(`0x${bin}`));
-    if(hash !== generatedHash) {
-        HAS_ISSUE = true;
-        logError(config, content, `Wrong hash!\nExpected != Actual\n${generatedHash} != ${hash}`);
+    const contractKey = Object.keys(contracts).filter(contract =>
+        contracts[contract] && contracts[contract].bin.length > 0
+    );
+    const [contact, ...rest] = contractKey;
+    const contract = contracts[contact];
+    try {
+        const { bin } = contract;
+        const generatedHash = web3.utils.keccak256(web3.utils.toHex(`0x${bin}`));
+        if(hash !== generatedHash) {
+            HAS_ISSUE = true;
+            logError(config, content, `Wrong hash!\nExpected != Actual\n${generatedHash} != ${hash}`);
+        }
+    } catch(err) {
+        console.log(contractKey)
     }
 };
 
@@ -108,7 +115,6 @@ const locationValidator = (config, content, location) => {
     const linenums = Object.keys(line_numbers);
 
     hashes.map(hash => hashValidator(config, content, hash));
-
     linenums.map(lineno => linenoValidator(lineno));
 }
 
