@@ -104,17 +104,25 @@ const hashValidator = (config, content, hash) => {
     }
 };
 
-const linenoValidator = (lineno) => {
+const linenoValidator = (config, content, lineno) => {
+    const pathSplited = config.split('/');
+    pathSplited.pop();
+    pathSplited.push(lineno);
+    const path = pathSplited.join('/');
+
+    if (!fs.existsSync(path)) {
+        logError(config, content, 'Solidity file from `locations` doesn\'t exists.');
+    }
 
 }
 
 const locationValidator = (config, content, location) => {
-    const { bytecode_offset, line_numbers} = location;
-    const hashes = Object.keys(bytecode_offset);
+    const { bytecode_offsets, line_numbers} = location;
+    const hashes = Object.keys(bytecode_offsets);
     const linenums = Object.keys(line_numbers);
 
     hashes.map(hash => hashValidator(config, content, hash));
-    linenums.map(lineno => linenoValidator(lineno));
+    linenums.map(lineno => linenoValidator(config, content, lineno));
 }
 
 
