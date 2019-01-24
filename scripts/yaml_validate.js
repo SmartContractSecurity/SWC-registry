@@ -92,7 +92,7 @@ const hashValidator = (config, content, hash) => {
     const [contact, ...rest] = contractKey;
     const contract = contracts[contact];
     try {
-        const { bin } = contract;
+        const bin = contract['bin-runtime'];
         const generatedHash = web3.utils.keccak256(web3.utils.toHex(`0x${bin}`));
         if(hash !== generatedHash) {
             HAS_ISSUE = true;

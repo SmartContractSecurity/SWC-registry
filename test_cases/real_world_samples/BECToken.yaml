@@ -4,6 +4,6 @@ issues:
   count: 1
   locations:
   - bytecode_offset:
-      '0xca5fb16ecea3ac5d9e3fcc87c2c19d5c7f51ace2246d45d1b5eba5f75b586579': [1587]
+      '0xc7861e3306caf9225c06c773d7d7390d696da69e3ee3c7718080cdbf65b8670d': [1587]
     line_numbers:
       BECToken.sol: [257]

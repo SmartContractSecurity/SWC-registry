@@ -5,6 +5,6 @@ issues:
   count: 1
   locations:
   - bytecode_offset:
-      '0x2306cdee1eeb31aeff5163ac08eea47df7fb85ae25f191e2694205fcebf97b55': [705]
+      '0xed3adab60fdd20b999b0656f703a23055371a57fb8813fe33a5d9a954bcd5484': [705]
     line_numbers:
       wallet_03_wrong_constructor.sol: [31]

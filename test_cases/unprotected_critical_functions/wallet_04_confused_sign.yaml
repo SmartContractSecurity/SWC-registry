@@ -5,6 +5,6 @@ issues:
   count: 1
   locations:
   - bytecode_offset:
-      '0xb58b9bda75dd28b728d08082a192e62959f4d5c149ca4ce473bffb52f3013e41': [340]
+      '0xabb778ab80a415887f74d7f545bcb219e03ff41cc152ed99fa9d2122adf87774': [340]
     line_numbers:
       wallet_04_confused_sign.sol: [24]

@@ -4,21 +4,21 @@ issues:
   count: 3
   locations:
   - bytecode_offset:
-      '0xf2e4a7c1895b4ada88b656c34d46296086bf6f4ed3fb5709657b06c0c8bad621': [390]
+      '0x28bca0703928a8e32ea9dcdc965ef2fc3e5957d467ea62c7df7e29897930512d': [390]
     line_numbers:
       tokensalechallenge.sol: [21]
   - bytecode_offset:
-      '0xf2e4a7c1895b4ada88b656c34d46296086bf6f4ed3fb5709657b06c0c8bad621': [472]
+      '0x28bca0703928a8e32ea9dcdc965ef2fc3e5957d467ea62c7df7e29897930512d': [472]
     line_numbers:
       tokensalechallenge.sol: [23]
   - bytecode_offset:
-      '0xf2e4a7c1895b4ada88b656c34d46296086bf6f4ed3fb5709657b06c0c8bad621': [672]
+      '0x28bca0703928a8e32ea9dcdc965ef2fc3e5957d467ea62c7df7e29897930512d': [672]
     line_numbers:
       tokensalechallenge.sol: [30]
 - id: SWC-105
   count: 1
   locations:
   - bytecode_offset:
-      '0xf2e4a7c1895b4ada88b656c34d46296086bf6f4ed3fb5709657b06c0c8bad621': [693]
+      '0x28bca0703928a8e32ea9dcdc965ef2fc3e5957d467ea62c7df7e29897930512d': [693]
     line_numbers:
       tokensalechallenge.sol: [30]

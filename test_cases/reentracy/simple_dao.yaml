@@ -4,7 +4,7 @@ issues:
   count: 1
   locations:
   - bytecode_offset:
-      '0x69630f4296f1d3efe3059ddd006cd6677b63fb515698b8c1489531834d99878e': [565,
+      '0xe85040f3e719fc3c0e490a0134d2e8daffadf2d2b7f011336f95505f8d9a92f8': [565,
         655]
     line_numbers:
       simple_dao.sol: [18]

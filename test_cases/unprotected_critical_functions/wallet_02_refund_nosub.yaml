@@ -5,6 +5,6 @@ issues:
   count: 1
   locations:
   - bytecode_offset:
-      '0xedbf8ce8da6481fa3360f2977a449cde7ec3812331aa8b1ca6f66ba65c3a743e': [776]
+      '0x06f59ace58eaeefe2d2c5d359776c2b853b1aecb16c2cb1b35b4eacec3d3e7a5': [776]
     line_numbers:
       wallet_02_refund_nosub.sol: [29]

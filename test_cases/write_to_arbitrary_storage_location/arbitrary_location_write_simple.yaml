@@ -4,13 +4,13 @@ issues:
   count: 1
   locations:
   - bytecode_offset:
-      '0xcee7cc4b1200dae49691391c8be9ee73cca66d14a0ec070997646b147b363141': [294]
+      '0x4d778370f4fe1789bc427ab08efc768fcb4c6c8b68d2ee41178340423445bd45': [294]
     line_numbers:
       arbitrary_location_write_simple.sol: [26]
 - id: SWC-101
   count: 1
   locations:
   - bytecode_offset:
-      '0xcee7cc4b1200dae49691391c8be9ee73cca66d14a0ec070997646b147b363141': [331]
+      '0x4d778370f4fe1789bc427ab08efc768fcb4c6c8b68d2ee41178340423445bd45': [331]
     line_numbers:
       arbitrary_location_write_simple.sol: [21]

@@ -4,6 +4,6 @@ issues:
   count: 1
   locations:
   - bytecode_offset:
-      '0xc34b7a7d9dd61232e1c54c28a4acc1e20c2fbc6682e1c7d7388be9d1b7d03726': [294]
+      '0x7730ba96fa0915f6bea9c502afd405e682425ed27e0759775efdb4d3e75a74fb': [294]
     line_numbers:
       unchecked_return_value.sol: [12]

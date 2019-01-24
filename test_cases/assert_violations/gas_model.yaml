@@ -4,6 +4,6 @@ issues:
   count: 1
   locations:
   - bytecode_offset:
-      '0x84040ccf72d8e942448a29ba1b9b6c225c78f934b36b0bd395c7248b74073236': [112]
+      '0x1d0245bf42c590285bb4751565a6fabbdb6825e95c009d8e5392b63d9851d9ab': [112]
     line_numbers:
       gas_model.sol: [13]

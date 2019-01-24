@@ -4,6 +4,6 @@ issues:
   count: 1
   locations:
   - bytecode_offset:
-      '0x2fa202a403ca9c293abb2db026c302c80bdc6b4f3cb532fda8f34e8f8c97790a': [319]
+      '0x7cb9e07513139d72ea4ef963082a4b9f9474e7add211816a1b537bdfdd6750f8': [319]
     line_numbers:
       sha_of_sha_collision.sol: [18]

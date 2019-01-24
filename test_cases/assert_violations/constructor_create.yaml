@@ -4,6 +4,6 @@ issues:
   count: 1
   locations:
   - bytecode_offset:
-      '0xf2860c5af6127932df6dd853fb21006a3935693113fe9758002b856bf02e2a9c': [277]
+      '0xfd73371b884f20a50acfd8f790496e905a7c397d16cf5a30dd5fcb461499d470': [277]
     line_numbers:
       constructor_create.sol: [12]
