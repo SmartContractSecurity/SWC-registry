@@ -1,6 +1,9 @@
 find ../test_cases -name '*.yaml' -print | while read line; do
-    command=$(./node_modules/yaml-schema-validator/index.js validate -s swc-config-schema.yaml -f $line)
-    if [[ $command = *"ERROR : ====== Schema Validation Error ======"* ]]; then
+    command=$(./node_modules/pajv/index.js -s swc-config-schema.json -d $line)
+    if [[ $command = *".yaml valid"* ]]; then
+        echo "PASSED: $line"
+        
+    else
         echo "$command" >&2
         echo ""
         export VALIDATION_ERROR=1
