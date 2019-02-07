@@ -22,14 +22,20 @@ const walkSync = (dir) => {
 
 const KECCAK256_HASH_LENGTH = 64;
 const HASH_PREFIX_LENGTH = "0x".length;
- 
-let HAS_ISSUE = false;
+
+const ERRORS = {};
 
 
-const logError = (config, content, message) => {
-    console.log('================')
-    console.log(`ERROR: ${config}\n${message}`)
-    console.log(content);
+const logError = (config, code, error) => {
+    if (!config) {
+        console.log(code)
+        console.log(error);
+        console.log('testsasfasfasdf')
+    }
+    if (Object.keys(ERRORS).indexOf(config) < 0) {
+        ERRORS[config] = {};
+    }
+    ERRORS[config][code] = error
 }
 
 
@@ -52,55 +58,52 @@ const configValidator = (config) => {
     const configContentJson = yaml.safeLoad(configContent);
 
     if (!GITHUB_CHECKERS.description(configContentJson)) {
-        HAS_ISSUE = true;
-        logError(config, configContent, 'Missing description!');
+        logError(config, 100, 'Missing description!');
     }
     configContentJson.issues.map(issue => issueValidator(config, configContent, issue));
 }
 
 const issueValidator = (config, content, issue) => {
     if (!GITHUB_CHECKERS.issues.swcID(issue.id)) {
-        HAS_ISSUE = true;
-        logError(config, content, 'Wrong SWC-ID format!');
+        logError(config, 101, 'Wrong SWC-ID format!');
     }
     if (!GITHUB_CHECKERS.issues.count(issue)) {
-        HAS_ISSUE = true;
-        logError(config, content, 'Wrong issue count and locations length!');
+        logError(config, 102, 'Wrong issue count and locations length!');
     }
     issue.locations.map(location => locationValidator(config, content, location));
 }
 
-const hashValidator = (config, content, hash) => {
+const generateHash = (hash, config) => {
+    try {
+        const contractHex = web3.utils.toHex('0x' + hash)
+        return web3.utils.keccak256(contractHex);
+    } catch(err) {
+        logError(config, 103, err);
+        return "ERROR";
+    }
+}
+
+const hashValidator = (config, hash) => {
     const { issues } = GITHUB_CHECKERS;
 
     if(!issues.hash.length(hash)) {
-        HAS_ISSUE = true;
-        logError(config, content, 'Wrong hash length!');
+        logError(config, 104, 'Wrong hash length!');
     }
 
     if(!issues.hash.prefix(hash)) {
-        HAS_ISSUE = true;
-        logError(config, content, 'Missing hash prefix!');
+        logError(config, 105, 'Missing hash prefix!');
     }
 
     const jsonContentRaw = fs.readFileSync(config.replace('.yaml', '.json'), 'utf8')
     const { contracts } = JSON.parse(jsonContentRaw);
 
-    const contractKey = Object.keys(contracts).filter(contract =>
+    contractKeys = Object.keys(contracts).filter(contract =>
         contracts[contract] && contracts[contract].bin.length > 0
     );
-    const [contact, ...rest] = contractKey;
-    const contract = contracts[contact];
-    try {
-        const bin = contract['bin-runtime'];
-        const generatedHash = web3.utils.keccak256(web3.utils.toHex(`0x${bin}`));
-        if(hash !== generatedHash) {
-            HAS_ISSUE = true;
-            logError(config, content, `Wrong hash!\nExpected != Actual\n${generatedHash} != ${hash}`);
-        }
-    } catch(err) {
-        HAS_ISSUE = true;
-        logError(config, content, `Issue in JSON config, couldnt load bytecode`);
+    const creation = contractKeys.map(contract => generateHash(contracts[contract]['bin'], config));
+    const runtime = contractKeys.map(contract => generateHash(contracts[contract]['bin-runtime'], config));
+    if(!creation.includes(hash) && !runtime.includes(hash)) {
+        logError(config, 106, `Wrong hash! ${hash}, Possible variants: ${runtime} \n ${creation}`);
     }
 };
 
@@ -111,7 +114,7 @@ const linenoValidator = (config, content, lineno) => {
     const path = pathSplited.join('/');
 
     if (!fs.existsSync(path)) {
-        logError(config, content, 'Solidity file from `locations` doesn\'t exists.');
+        logError(config, 107, 'Solidity file from `locations` doesn\'t exists.');
     }
 
 }
@@ -121,7 +124,7 @@ const locationValidator = (config, content, location) => {
     const hashes = Object.keys(bytecode_offsets);
     const linenums = Object.keys(line_numbers);
 
-    hashes.map(hash => hashValidator(config, content, hash));
+    hashes.map(hash => hashValidator(config, hash));
     linenums.map(lineno => linenoValidator(config, content, lineno));
 }
 
@@ -133,8 +136,11 @@ const validateYamlConfig = () => {
 
 validateYamlConfig();
 
-if (HAS_ISSUE) {
+
+if (Object.keys(ERRORS).length > 0) {
+    console.log(JSON.stringify(ERRORS, null, 2))
     process.exit(1);
-} else  {
+} else {
+    console.log('Passed.')
     process.exit();
 }
