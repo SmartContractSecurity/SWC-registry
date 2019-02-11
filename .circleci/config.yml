@@ -64,7 +64,7 @@ jobs:
           command: |
             cd scripts/ && npm install && npm run yaml-content-validate
 
-  swc-yaml-config-content:
+  swc-folder-structure:
     <<: *defaults
     steps:
       - checkout
