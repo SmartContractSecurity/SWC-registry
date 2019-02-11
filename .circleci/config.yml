@@ -123,3 +123,9 @@ workflows:
               ignore:
                 - gh-pages
                 - website
+      - swc-folder-structure:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+                - website
