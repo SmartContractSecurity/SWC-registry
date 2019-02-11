@@ -1,6 +1,6 @@
 defaults: &defaults
   docker:
-    - image: circleci/node:10.15.1
+    - image: circleci/node:8.11.2
 
 version: 2
 jobs:

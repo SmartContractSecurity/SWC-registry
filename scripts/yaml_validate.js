@@ -4,10 +4,8 @@ const yaml = require('js-yaml');
 const web3 = require('web3');
 const chalk = require('chalk');
 
-let files = [];
 
-const walkSync = (dir) => {
-    let filelist = [];
+const walkSync = (dir, filelist=[]) => {
     fs.readdirSync(dir).forEach((file) => {
         if(fs.statSync(path.join(dir, file)).isDirectory()) {
             filelist =  walkSync(path.join(dir, file), filelist)
@@ -17,8 +15,7 @@ const walkSync = (dir) => {
             }
         }
     });
-    files = [...files, ...filelist];
-    return files;
+    return filelist;
 };
 
 const KECCAK256_HASH_LENGTH = 64;
