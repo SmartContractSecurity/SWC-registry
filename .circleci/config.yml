@@ -64,6 +64,16 @@ jobs:
           command: |
             cd scripts/ && npm install && npm run yaml-content-validate
 
+  swc-yaml-config-content:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Check folder structure
+          shell: /bin/sh
+          command: |
+            cd scripts/ && npm install && npm run validate-dirs
+
   deploy-gh-pages:
     <<: *defaults
     steps:

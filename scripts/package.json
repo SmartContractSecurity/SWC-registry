@@ -17,7 +17,8 @@
     "yaml-schema-lint": "node yaml_schema_validate.js",
     "yaml-content-validate": "node yaml_validate.js",
     "markdown-validate": "node update_swc.js markdown-validate",
-    "update-swc": "node update_swc.js > ../export/swc-definition.json"
+    "update-swc": "node update_swc.js > ../export/swc-definition.json",
+    "validate-dirs": "node dir_structure.js"
   },
   "author": "",
   "license": "ISC"
