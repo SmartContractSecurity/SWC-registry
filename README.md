@@ -13,7 +13,7 @@ The goals of this project are as follows:
 - Define a common language for describing security issues in smart contract systems' architecture, design, or code.
 - Serve as a way to train and increase performance for smart contract security analysis tools.
 
-## Creating a new SWC entry
+## Create a new SWC entry
 
 Make sure that there is no matching weakness in the registry. Ideally, also coordinate with the community in [#swc-registry](https://discord.gg/qcNvR2r) to prevent conflicting entries. Create a file with a new SWC ID in the [entries](./entries) directory. Use the [template](./entries/template.md) and describe all weakness attributes. 
 
@@ -36,26 +36,24 @@ Link to external references that contain useful additional information on the is
 
 ```
 
-## Creating a new Test Case  
+## Create a new Test Case  
 
-Test cases can (and should) be as varied as possible and include both simple test cases and real-world samples of vulnerable smart contracts. The test cases are grouped into subdirectories based on a single weakness variant or based on more complex real world contract systems that can contain various weakness variants. A single test case consists of three files:
+Test cases should be as varied as possible and include both simple test cases and real-world samples of vulnerable smart contracts. The test cases are grouped into subdirectories based on a single weakness variant or based on more complex real world contract systems that can contain various weakness variants. A single test case consists of the following structure:
 
-1. A contract file containing zero or more weaknesses (e.g. [overflow_simple_add.sol](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/integer_overflow_and_underflow/overflow_simple_add.sol)
-2. A JSON file generated with `solc` that contains the byte code, AST and source code mappings (e.g. [overflow_simple_add.json](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/integer_overflow_and_underflow/overflow_simple_add.json))
-3. The configuration file defining the types and number of weaknesses contained in the contract file (e.g. [overflow_simple_add.yaml](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/integer_overflow_and_underflow/overflow_simple_add.yaml))
+1. A directory that contains all files belonging to a single test case (e.g. [overflow_simple_add](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/solidity/integer_overflow_and_underflow/overflow_simple_add))
+2. One or multiple source files containing issues. Zero issues is valid as well. These test cases demonstrate how a vulnerable test case can be fixed (e.g. [overflow_simple_add.sol](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/solidity/integer_overflow_and_underflow/overflow_simple_add/overflow_simple_add.sol) and [overflow_simple_add_fixed.sol](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/solidity/integer_overflow_and_underflow/overflow_simple_add_fixed/overflow_simple_add_fixed.sol)).
+3. A single combined JSON file that contains the compilation result for the main source file and its imports. It should at least include the runtime as well as the creation byte code, ASTs, source code mappings and the used compiler version (e.g. [overflow_simple_add.json](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/solidity/integer_overflow_and_underflow/overflow_simple_add/overflow_simple_add.json))
 
-### Sample
-
-A test sample consists of a single smart contract and must contain both the source code file and compiled version of that contract. To compile the Solidity code to the correct output format run `solc` as follows:
-
+The combined JSON can be generated in the following way:
 
 ```bash
-$ solc --pretty-json --combined-json ast,bin,bin-runtime,srcmap,srcmap-runtime overflow_simple_add.sol > overflow_simple_add.json
+$ solc --pretty-json --combined-json ast,bin,bin-runtime,srcmap,srcmap-runtime overflow_simple_add.sol > overflow_simple_add.json 
 ```
 
-Copy the Solidity and JSON files into an existing subdirectory in `test_cases` (or create a new subdirectory if necessary). 
+4. The configuration file defining the types and number of weaknesses contained in the contract file (e.g. [overflow_simple_add.yaml](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/solidity/integer_overflow_and_underflow/overflow_simple_add/overflow_simple_add.yaml))
 
-Make sure the credit the author and mention the source if you don't write the contract sample yourself.
+
+One more thing, make sure the credit the author and mention the source if you don't write the contract sample yourself.
 
 ```
 /*
@@ -69,28 +67,31 @@ Make sure the credit the author and mention the source if you don't write the co
 The configuration contains meta-information about the weaknesses contained in a particular sample. E.g.:
 
 ```
-1: description: "Test a simple integer overflow"
+1: description: Plain and simple ADD overflow example
 2: issues:
-3: - id: "SWC-101"
+3: - id: SWC-101
 4:   count: 1
 5:   locations:
-6:   - bytecode_offsets: [101]
-7:     line_numbers: [7]
+6:   - bytecode_offsets:
+7:       '0x75ad68f906456e1cbfd6190a8f2e2dc5cb2794af4a4929448378642c992e151a': [168]
+8:     line_numbers:
+9:        overflow_simple_add.sol: [7]
 ```
 
-- Line 1: `description` provides additional information and context for the test case
+- Line 1: `description` provides additional information and context for the test case.
 - Line 2: A test case has zero, one or multiple `issues` that are listed in the configuration file.
 - Line 3: `id` contains the SWC identifier for the particular weakness. Each weakness is described in a markdown file in the [entries](./entries) directory. 
-- Line 4: `count` is the number of times that the weakness occurs in the sample.
-- Line 5: `locations` has sub attributes that allow humans and tools to easier identify where a weakness exists in the test case's contract. 
-- Line 6: `bytecode_offsets` is a list of valid byte code offsets that can be reported to identify a weakness.  
-- Line 7: `line_numbers` is a list of valid line numbers that can be reported to identify a weakness.
+- Line 4: `count` is the number of times that the weakness occurs in the test case.
+- Line 5: `locations` has sub attributes that allow humans and tools to easier identify where issues exists in the test case. 
+- Line 6-7: `bytecode_offsets` is a tuple consisting of the keccak256 hash of the runtime or creation byte code and a list of valid offsets. 
+* the source file and the line number 
+- Line 8-9: `line_numbers` is a tuple consisting of the source file and a list of valid line numbers. 
 
 ## Contributing
 
 Before you create a PR for the first time make sure you have read:
 
-- the sections [Create a new SWC entry](#create-a-new-swc-entry) and [Create a test case](#create-a-test-case).
+- the sections [Create a new SWC entry](#create-a-new-swc-entry) and [Create a test case](#create-a-new-test-case).
 - read several existing SWC definitions and their test cases. 
 
 From time to time there will be challenges on [Gitcoin](https://gitcoin.co). Follow the below link to check what challenges are currently open.  
