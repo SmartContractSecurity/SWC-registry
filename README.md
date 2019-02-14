@@ -84,7 +84,6 @@ The configuration contains meta-information about the weaknesses contained in a 
 - Line 4: `count` is the number of times that the weakness occurs in the test case.
 - Line 5: `locations` has sub attributes that allow humans and tools to easier identify where issues exists in the test case. 
 - Line 6-7: `bytecode_offsets` is a tuple consisting of the keccak256 hash of the runtime or creation byte code and a list of valid offsets. 
-* the source file and the line number 
 - Line 8-9: `line_numbers` is a tuple consisting of the source file and a list of valid line numbers. 
 
 ## Contributing
