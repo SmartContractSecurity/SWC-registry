@@ -1,0 +1,5 @@
+description: Single transaction overflow using mul
+issues:
+- id: SWC-101
+  count: 0
+  locations: []

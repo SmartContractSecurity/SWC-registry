@@ -1,0 +1,5 @@
+description: Shadowing a state variable in a inherited contract
+issues:
+- id: SWC-119
+  count: 0
+  locations: []

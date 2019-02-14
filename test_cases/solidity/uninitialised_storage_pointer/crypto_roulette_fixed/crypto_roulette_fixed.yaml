@@ -1,0 +1,5 @@
+description: Test for uninitialised storage variable
+issues:
+- id: SWC-109
+  count: 0
+  locations: []

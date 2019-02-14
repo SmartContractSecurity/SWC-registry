@@ -1,0 +1,9 @@
+description: Arbitrary jump with function type variable
+issues:
+- id: SWC-127
+  count: 1
+  locations:
+  - bytecode_offsets:
+      '0x10262f9b836c8ce4a7c2807a00b08e278094414ceeb2b5cbf4365c7ced0fd2f9': [264]
+    line_numbers:
+      FunctionTypes.sol: [26]

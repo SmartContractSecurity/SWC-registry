@@ -52,7 +52,7 @@ jobs:
           name: Validate JSON files
           shell: /bin/sh
           command: |
-            cd scripts/ && npm install jsonlint && npm run json-lint
+            cd scripts/ && npm install && npm run json-lint
 
   swc-yaml-config-content:
     <<: *defaults
@@ -63,6 +63,16 @@ jobs:
           shell: /bin/sh
           command: |
             cd scripts/ && npm install && npm run yaml-content-validate
+
+  swc-folder-structure:
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Check folder structure
+          shell: /bin/sh
+          command: |
+            cd scripts/ && npm install && npm run validate-dirs
 
   deploy-gh-pages:
     <<: *defaults
@@ -108,6 +118,12 @@ workflows:
                 - gh-pages
                 - website
       - swc-json-lint:
+          filters:
+            branches:
+              ignore:
+                - gh-pages
+                - website
+      - swc-folder-structure:
           filters:
             branches:
               ignore:

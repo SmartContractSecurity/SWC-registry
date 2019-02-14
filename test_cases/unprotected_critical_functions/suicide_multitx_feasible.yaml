@@ -1,7 +1,0 @@
-description: "Contract can be killed with 2 transactions"
-issues:
-- id: "SWC-106"
-  count: 1
-  locations:
-  - bytecode_offsets: [233]
-    line_numbers: [16]

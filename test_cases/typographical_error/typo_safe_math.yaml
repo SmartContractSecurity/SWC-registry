@@ -1,6 +1,0 @@
-description: "Typographical error in an operation of summing a variable (uint) with 1, it also includes a safe way to do it."
-issues:
-- id: "SWC-129"
-  count: 1
-  locations:
-  - line_numbers: [75]

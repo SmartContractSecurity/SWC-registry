@@ -1,0 +1,5 @@
+description: Ether withdrawal function and correclty named constructor (not vulnerable)
+issues:
+- id: SWC-105
+  count: 0
+  locations: []

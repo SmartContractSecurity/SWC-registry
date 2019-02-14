@@ -1,0 +1,5 @@
+description: Guess the number from a predictable on chain source
+issues:
+- id: SWC-120
+  count: 0
+  locations: []

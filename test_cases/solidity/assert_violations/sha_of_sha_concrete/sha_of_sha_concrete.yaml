@@ -1,0 +1,5 @@
+description: Check the mapping that uses the SHA value as a key does not collide with concretes
+issues:
+- id: SWC-110
+  count: 0
+  locations: []

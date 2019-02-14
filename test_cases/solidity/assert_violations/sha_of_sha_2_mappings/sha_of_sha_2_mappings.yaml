@@ -1,0 +1,5 @@
+description: Check of non-collision between two maps that use SHA as a keys
+issues:
+- id: SWC-110
+  count: 0
+  locations: []

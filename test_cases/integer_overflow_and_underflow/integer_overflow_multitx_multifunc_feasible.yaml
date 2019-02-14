@@ -1,7 +1,0 @@
-description: "Integer overflow (reachable by calling 2 functions over 2 transactions)"
-issues:
-- id: "SWC-101"
-  count: 1
-  locations:
-  - bytecode_offsets: [218]
-    line_numbers: [24]

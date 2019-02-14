@@ -1,0 +1,8 @@
+description: Test for uninitialised storage variable
+issues:
+- id: SWC-109
+  count: 1
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      crypto_roulette.sol: [39]

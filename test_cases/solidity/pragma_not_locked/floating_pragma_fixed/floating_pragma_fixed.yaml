@@ -1,0 +1,8 @@
+description: Floating pragma fixed
+issues:
+- id: SWC-103
+  count: 1
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      floating_pragma_fixed.sol: [1]

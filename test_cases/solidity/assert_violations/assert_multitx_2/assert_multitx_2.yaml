@@ -1,0 +1,9 @@
+description: Assert can be triggered with 2 transactions
+issues:
+- id: SWC-110
+  count: 1
+  locations:
+  - bytecode_offsets:
+      '0x25e5dd25cd6cc2409070e066096e3c426133dc56dae1d6d4ae3d565e305cd28b': [161]
+    line_numbers:
+      assert_multitx_2.sol: [16]

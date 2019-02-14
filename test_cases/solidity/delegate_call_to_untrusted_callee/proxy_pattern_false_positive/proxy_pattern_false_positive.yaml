@@ -1,0 +1,5 @@
+description: Delegatecall to arbitrary address that can never change state
+issues:
+- id: SWC-112
+  count: 0
+  locations: []

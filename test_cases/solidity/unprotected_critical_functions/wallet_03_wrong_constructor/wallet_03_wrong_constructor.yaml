@@ -1,0 +1,9 @@
+description: Attacker can become 'creator' by calling initWallet() and withdraw all funds
+issues:
+- id: SWC-105
+  count: 1
+  locations:
+  - bytecode_offsets:
+      '0xed3adab60fdd20b999b0656f703a23055371a57fb8813fe33a5d9a954bcd5484': [705]
+    line_numbers:
+      wallet_03_wrong_constructor.sol: [31]

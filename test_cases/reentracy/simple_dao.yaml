@@ -1,7 +1,0 @@
-description: "Reentrancy (state change after external call)"
-issues:
-- id: "SWC-107"
-  count: 1
-  locations:
-  - bytecode_offsets: [565, 655]
-    line_numbers: [17,18]

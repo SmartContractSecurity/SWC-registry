@@ -1,0 +1,8 @@
+description: DoS Gas Limit reaches when try to empty the array of addresses
+issues:
+- id: SWC-128
+  count: 1
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      dos_simple.sol: [16]

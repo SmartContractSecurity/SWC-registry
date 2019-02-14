@@ -1,0 +1,9 @@
+description: Unchecked Return Value
+issues:
+- id: SWC-104
+  count: 1
+  locations:
+  - bytecode_offsets:
+      '0x7730ba96fa0915f6bea9c502afd405e682425ed27e0759775efdb4d3e75a74fb': [294]
+    line_numbers:
+      unchecked_return_value.sol: [12]

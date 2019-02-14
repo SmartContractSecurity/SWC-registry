@@ -1,0 +1,8 @@
+description: Test for outdated Solidity compiler
+issues:
+- id: SWC-102
+  count: 1
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      version_0_4_13.sol: [1]

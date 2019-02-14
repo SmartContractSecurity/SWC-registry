@@ -1,0 +1,17 @@
+description: Weak Sources of Randomness
+issues:
+- id: SWC-120
+  count: 4
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      random_number_generator.sol: [5]
+  - bytecode_offsets: {}
+    line_numbers:
+      random_number_generator.sol: [10]
+  - bytecode_offsets: {}
+    line_numbers:
+      random_number_generator.sol: [11]
+  - bytecode_offsets: {}
+    line_numbers:
+      random_number_generator.sol: [12]

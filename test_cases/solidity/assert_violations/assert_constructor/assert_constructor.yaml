@@ -1,0 +1,9 @@
+description: Assert violation in constructor
+issues:
+- id: SWC-110
+  count: 1
+  locations:
+  - bytecode_offsets:
+      '0x78a26dc3f4a5757a59e3a9d9872f127cb3941448491b0e903c126462041f2779': [24]
+    line_numbers:
+      assert_constructor.sol: [10]
