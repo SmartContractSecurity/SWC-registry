@@ -1,0 +1,5 @@
+description: User can withdraw Ether, but not more than they paid in
+issues:
+- id: SWC-105
+  count: 0
+  locations: []

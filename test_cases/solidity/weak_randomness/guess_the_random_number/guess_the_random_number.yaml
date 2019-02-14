@@ -1,0 +1,8 @@
+description: Guess the number from a predictable on chain source
+issues:
+- id: SWC-120
+  count: 1
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      guess_the_random_number.sol: [14]

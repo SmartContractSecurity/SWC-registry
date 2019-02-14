@@ -1,0 +1,9 @@
+description: Trivially killable contract
+issues:
+- id: SWC-106
+  count: 1
+  locations:
+  - bytecode_offsets:
+      '0xa297f6363737429d38ab9ff27525596cfcf3315873ada3e93605ec06f465b8f7': [112]
+    line_numbers:
+      simple_suicide.sol: [4]

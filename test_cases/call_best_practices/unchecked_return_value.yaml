@@ -1,8 +1,0 @@
-description: "Unchecked Return Value"
-issues:
-- id: "SWC-104"
-  count: 1
-  locations:
-  - bytecode_offsets: [294]
-    line_numbers: [12]
-

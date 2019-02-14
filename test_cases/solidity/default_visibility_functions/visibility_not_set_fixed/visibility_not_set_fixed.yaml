@@ -1,0 +1,5 @@
+description: Default function visibility
+issues:
+- id: SWC-100
+  count: 0
+  locations: []

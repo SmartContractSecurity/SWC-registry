@@ -1,0 +1,17 @@
+description: Shadowing a state variable in functions
+issues:
+- id: SWC-119
+  count: 4
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      ShadowingInFunctions.sol: [7]
+  - bytecode_offsets: {}
+    line_numbers:
+      ShadowingInFunctions.sol: [11]
+  - bytecode_offsets: {}
+    line_numbers:
+      ShadowingInFunctions.sol: [16]
+  - bytecode_offsets: {}
+    line_numbers:
+      ShadowingInFunctions.sol: [17]

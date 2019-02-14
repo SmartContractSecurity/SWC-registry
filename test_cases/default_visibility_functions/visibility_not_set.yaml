@@ -1,9 +1,0 @@
-description: "Default function visibility"
-issues:
-- id: "SWC-100"
-  count: 2
-  locations:
-  - bytecode_offsets: 
-    line_numbers: [11]
-  - bytecode_offsets: 
-    line_numbers: [17]

@@ -1,0 +1,9 @@
+description: Write to arbitrary storage location using dynamic arrays
+issues:
+- id: SWC-124
+  count: 1
+  locations:
+  - bytecode_offsets:
+      '0xb3f8b66f8449fff6ee9ba17ae5534dfb2d8f4c4281c8a9ad56c1354a55c389d3': [395]
+    line_numbers:
+      mapping_write.sol: [14]

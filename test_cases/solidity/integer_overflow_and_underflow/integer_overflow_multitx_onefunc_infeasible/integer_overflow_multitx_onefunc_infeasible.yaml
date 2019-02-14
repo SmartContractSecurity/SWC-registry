@@ -1,0 +1,5 @@
+description: Integer overflow (unreachable)
+issues:
+- id: SWC-101
+  count: 0
+  locations: []

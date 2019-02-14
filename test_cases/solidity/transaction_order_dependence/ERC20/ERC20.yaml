@@ -1,0 +1,8 @@
+description: ERC20 approve() front running
+issues:
+- id: SWC-114
+  count: 1
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      ERC20.sol: [104]

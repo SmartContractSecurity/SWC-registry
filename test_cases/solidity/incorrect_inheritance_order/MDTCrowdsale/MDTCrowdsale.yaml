@@ -1,0 +1,8 @@
+description: Incorrect inheritance order
+issues:
+- id: SWC-125
+  count: 1
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      MDTCrowdsale.sol: [162]

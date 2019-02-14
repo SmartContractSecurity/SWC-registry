@@ -1,0 +1,5 @@
+description: Unreachable SUICIDE instruction
+issues:
+- id: SWC-106
+  count: 0
+  locations: []

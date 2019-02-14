@@ -1,6 +1,0 @@
-description: "DoS Gas Limit reaches when try to empty the array of addresses for winning the game"
-issues:
-- id: "SWC-128"
-  count: 1
-  locations:
-  - line_numbers: [10]

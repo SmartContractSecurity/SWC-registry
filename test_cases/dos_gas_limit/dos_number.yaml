@@ -1,7 +1,0 @@
-description: "DoS Gas Limit in array empty and optionally in for loop"
-issues:
-- id: "SWC-128"
-  count: 2
-  locations:
-  - line_numbers: [11]
-  - line_numbers: [29]

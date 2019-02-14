@@ -1,0 +1,5 @@
+description: Use tx.origin to authorize ETH withdrawls
+issues:
+- id: SWC-115
+  count: 0
+  locations: []

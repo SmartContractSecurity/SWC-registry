@@ -1,0 +1,26 @@
+description: Use of deprecated functions and aliases
+issues:
+- id: SWC-111
+  count: 7
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      deprecated_simple.sol: [5]
+  - bytecode_offsets: {}
+    line_numbers:
+      deprecated_simple.sol: [9]
+  - bytecode_offsets: {}
+    line_numbers:
+      deprecated_simple.sol: [10]
+  - bytecode_offsets: {}
+    line_numbers:
+      deprecated_simple.sol: [12]
+  - bytecode_offsets: {}
+    line_numbers:
+      deprecated_simple.sol: [15]
+  - bytecode_offsets: {}
+    line_numbers:
+      deprecated_simple.sol: [18]
+  - bytecode_offsets: {}
+    line_numbers:
+      deprecated_simple.sol: [20]

@@ -1,0 +1,8 @@
+description: Parity Walletlibrary 'accidential suicide'
+issues:
+- id: SWC-106
+  count: 1
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      WalletLibrary.sol: [225, 226]

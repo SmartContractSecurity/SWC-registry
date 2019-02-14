@@ -1,0 +1,5 @@
+description: Weak Sources of Randomness
+issues:
+- id: SWC-120
+  count: 0
+  locations: []

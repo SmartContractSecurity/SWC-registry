@@ -1,0 +1,5 @@
+description: Simple proxy pattern with delegatecall (fixed)
+issues:
+- id: SWC-112
+  count: 0
+  locations: []

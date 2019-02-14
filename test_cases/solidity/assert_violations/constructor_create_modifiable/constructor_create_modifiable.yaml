@@ -1,0 +1,9 @@
+description: Assert violation after call to concretely created contract that can be modified
+issues:
+- id: SWC-110
+  count: 1
+  locations:
+  - bytecode_offsets:
+      '0x1c77f218521194c2d487296217ed6bb645d315faf344a09769103a7eee6a8250': [277]
+    line_numbers:
+      constructor_create_modifiable.sol: [15]
