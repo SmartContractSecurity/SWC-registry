@@ -1,14 +1,12 @@
-pragma solidity ^0.4.24;
+pragma solidity 0.4.25;
 
 contract ReturnValue {
 
-  address callee = 0xdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef;
-
-  function callchecked() public {
+  function callchecked(address callee) public {
   	require(callee.call());
   }
 
-  function callnotchecked() public {
+  function callnotchecked(address callee) public {
     callee.call();
   }
 }

@@ -15,9 +15,9 @@ jobs:
             git config --global user.email "$GIT_USER@users.noreply.github.com"
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
-            cd scripts && npm install && npm run updateswc
-            cd ../
-            command=$(git status|grep -c 'export/swc-definition.json')
+            cd scripts/ && npm install && npm run updateswc
+            cd ~/project
+            command=$(git status | grep -c 'export/swc-definition.json')
             if ((command > 0)); then
               git add export/
               git commit -m "Update SWC definition [ci skip]"
@@ -31,8 +31,7 @@ jobs:
       - run:
           name: Validate test case YAML config schema
           shell: /bin/sh
-          command: |
-            cd scripts/ && npm install && npm run yaml-schema-lint
+          command: cd scripts/ && npm install && npm run yaml-schema-lint
 
   swc-markdown:
     <<: *defaults
@@ -41,8 +40,7 @@ jobs:
       - run:
           name: Validate Markdown structure
           shell: /bin/sh
-          command: |
-            cd scripts/ && npm install && npm run markdown-validate
+          command: cd scripts/ && npm install && npm run markdown-validate
 
   swc-json-lint:
     <<: *defaults
@@ -51,8 +49,8 @@ jobs:
       - run:
           name: Validate JSON files
           shell: /bin/sh
-          command: |
-            cd scripts/ && npm install && npm run json-lint
+          working_directory: ~/project/scripts
+          command: npm install && npm run json-lint
 
   swc-yaml-config-content:
     <<: *defaults
@@ -61,8 +59,8 @@ jobs:
       - run:
           name: Validate content of YAML config files
           shell: /bin/sh
-          command: |
-            cd scripts/ && npm install && npm run yaml-content-validate
+          working_directory: ~/project/scripts
+          command: npm install && npm run yaml-content-validate
 
   swc-folder-structure:
     <<: *defaults
@@ -71,8 +69,8 @@ jobs:
       - run:
           name: Check folder structure
           shell: /bin/sh
-          command: |
-            cd scripts/ && npm install && npm run validate-dirs
+          working_directory: ~/project/scripts
+          command: npm install && npm run validate-dirs
 
   deploy-gh-pages:
     <<: *defaults
@@ -80,11 +78,14 @@ jobs:
       - checkout
       - run:
           name: Deploying website GitHub Pages
+          working_directory: ~/project/website
           command: |
             git config --global user.email "$GIT_USER@users.noreply.github.com"
             git config --global user.name "$GIT_USER"
             echo "machine github.com login $GIT_USER password $GITHUB_TOKEN" > ~/.netrc
-            cd website && npm install && npm run generate-content && GIT_USER=$GIT_USER CUSTOM_COMMIT_MESSAGE="[skip ci]" npm run publish-gh-pages
+            npm install && npm run generate-content && GIT_USER=$GIT_USER \
+              CUSTOM_COMMIT_MESSAGE="[skip ci] Deploy website" \
+              npm run publish-gh-pages
 
 workflows:
   version: 2
