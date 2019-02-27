@@ -1,17 +1,9 @@
 const commandExistsSync = require('command-exists').sync;
 const fs = require('fs');
 const spawnSync = require('child_process').spawnSync;
+const web3 = require('Web3');
 const command = process.argv[2];
 
-const checkGeth = () => {
-  if(commandExistsSync('geth')) {
-    console.log('geth installed');
-  } else {
-    console.log('You should have geth installed and running for using this tool.');
-    console.log('exit');
-    process.exit(1);
-  }
-}
 
 const checkMyth = () => {
   if(commandExistsSync('myth')) {
@@ -33,17 +25,7 @@ const printFinalOutput = (fileName, bin, binSha3, binDisasm, binRuntime, binRunt
 }
 
 const getSha3 = (bytecode) => {
-  var spawn = spawnSync('geth',['--exec "web3.sha3(' + bytecode + ')" attach'],{shell:true});
-	var errorText = spawn.stderr.toString().trim();
-
-	if (errorText) {
-	  console.log('Fatal error from `geth attach`.');
-    console.log('You should check if geth is running and the correctness of bin/bin-runtime in compile artifact');
-    process.exit(1);
-	}
-	else {
-	  return spawn.stdout.toString().trim();
-	}
+  return web3.utils.sha3(bytecode);
 }
 
 const getDisasm = (bytecode) => {
@@ -71,8 +53,8 @@ const checkByteCode = () => {
     let bin = artefact.contracts[fileName].bin;
     let binRuntime = artefact.contracts[fileName]['bin-runtime'];
     if(bin && binRuntime) {
-      let binSha3 = getSha3("'" + bin + "'");
-      let binRuntimeSha3 = getSha3("'" + binRuntime + "'");
+      let binSha3 = getSha3(bin);
+      let binRuntimeSha3 = getSha3(binRuntime);
       if(!binSha3 || !binRuntimeSha3) {
         console.log('You should check if geth is running and the correctness of bin/bin-runtime in compile artifact');
         process.exit(1);
@@ -95,7 +77,6 @@ const checkByteCode = () => {
 }
 
 const generateOutput = () => {
-  checkGeth();
   checkMyth();
   checkByteCode();
 }
