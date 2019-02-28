@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "command-exists": "^1.2.8",
     "chalk": "^2.4.2",
     "js-yaml": "^3.12.1",
     "jsonlint": "^1.6.3",
