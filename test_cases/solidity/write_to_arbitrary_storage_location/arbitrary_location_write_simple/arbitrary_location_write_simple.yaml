@@ -11,6 +11,6 @@ issues:
   count: 1
   locations:
   - bytecode_offsets:
-      '0x4d778370f4fe1789bc427ab08efc768fcb4c6c8b68d2ee41178340423445bd45': [331]
+      '0x4d778370f4fe1789bc427ab08efc768fcb4c6c8b68d2ee41178340423445bd45': [331, 534, 536, 471, 483, 493, 291]
     line_numbers:
       arbitrary_location_write_simple.sol: [21]
