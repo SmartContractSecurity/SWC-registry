@@ -17,16 +17,29 @@ let hasError = false;
 const files = walkSync('../test_cases');
 
 files.map(file => {
-    const splitedPath = file.split('/');
-
-    const [filepath, folder, ...rest] = splitedPath.reverse();
-    const [filename, ...restels] = filepath.split('.');
+    if (file.endsWith(".sol")) {
+        const splitedPath = file.split('/');
     
-    if (folder !== filename) {
-        hasError = true;
-        console.log(`Path is wrong: ${file}`);
+        const [filepath, folder, ...rest] = splitedPath.reverse();
+        const [filename, ...restels] = filepath.split('.');
+        
+        if (folder !== filename) {
+            hasError = true;
+            console.log(`Path is wrong: ${file}`);
+        }
+
+        if (!fs.existsSync(file.replace(".sol", ".yaml"))) {
+            hasError = true;
+            console.log(`Test case config is missing for: ${file}`);
+        }
+
+        if (!fs.existsSync(file.replace(".sol", ".json"))) {
+            hasError = true;
+            console.log(`Solc output config is missing for: ${file}`);
+        }
     }
 });
+
 
 if (hasError) {
     process.exit(1);
