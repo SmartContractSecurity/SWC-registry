@@ -1,5 +1,13 @@
 description: Exceptions triggered by out-of-bounds array (not an explicit assert violation).
 issues:
 - id: SWC-110
-  count: 0
-  locations: []
+  count: 2
+  locations:
+  - bytecode_offsets:
+      '0x6851506d5832e8f5286cfaa3eb0181f3934fd480096d583285a0b81d82df3c89': [259]
+    line_numbers:
+      out-of-bounds-exception.sol: []
+  - bytecode_offsets:
+      '0x6851506d5832e8f5286cfaa3eb0181f3934fd480096d583285a0b81d82df3c89': [226]
+    line_numbers:
+      out-of-bounds-exception.sol: []
