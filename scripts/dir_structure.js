@@ -1,10 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const walkSync = (dir, filelist=[]) => {
+const walkSync = (dir, filelist = []) => {
     fs.readdirSync(dir).forEach((file) => {
-        if(fs.statSync(path.join(dir, file)).isDirectory()) {
-            filelist =  walkSync(path.join(dir, file), filelist)
+        if (fs.statSync(path.join(dir, file)).isDirectory()) {
+            filelist = walkSync(path.join(dir, file), filelist)
         } else {
             filelist = filelist.concat(path.join(dir, file));
         }
@@ -19,10 +19,10 @@ const files = walkSync('../test_cases');
 files.map(file => {
     if (file.endsWith(".sol")) {
         const splitedPath = file.split('/');
-    
+
         const [filepath, folder, ...rest] = splitedPath.reverse();
         const [filename, ...restels] = filepath.split('.');
-        
+
         if (folder !== filename) {
             hasError = true;
             console.log(`Path is wrong: ${file}`);
@@ -30,12 +30,12 @@ files.map(file => {
 
         if (!fs.existsSync(file.replace(".sol", ".yaml"))) {
             hasError = true;
-            console.log(`Test case config is missing for: ${file}`);
+            console.log(`Yaml file is missing for: ${file}`);
         }
 
         if (!fs.existsSync(file.replace(".sol", ".json"))) {
             hasError = true;
-            console.log(`Solc output config is missing for: ${file}`);
+            console.log(`JSON file is missing for: ${file}`);
         }
     }
 });
