@@ -6,4 +6,4 @@ issues:
   - bytecode_offsets:
       '0xc6af8128d4c993b2765e9fef1047e9d90551e08379297bcc2f33ffc17cb005e2': [122]
     line_numbers:
-      out-of-bounds-exception.sol: []
+      out-of-bounds-exception.sol: [8]
