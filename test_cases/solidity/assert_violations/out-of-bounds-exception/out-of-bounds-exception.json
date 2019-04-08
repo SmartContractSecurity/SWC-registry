@@ -1,27 +1,27 @@
 {
   "contracts" : 
   {
-    "out-of-bounds-exception.sol:OutOfBoundsException" : 
+    "test_cases/solidity/assert_violations/out-of-bounds-exception/out-of-bounds-exception.sol:OutOfBoundsException" : 
     {
-      "bin" : "608060405234801561001057600080fd5b50610144806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063142edc7a1461005157806338d9419314610092575b600080fd5b34801561005d57600080fd5b5061007c600480360381019080803590602001909291905050506100d3565b6040518082815260200191505060405180910390f35b34801561009e57600080fd5b506100bd600480360381019080803590602001909291905050506100f5565b6040518082815260200191505060405180910390f35b600080828154811015156100e357fe5b90600052602060002001549050919050565b60008181548110151561010457fe5b9060005260206000200160009150905054815600a165627a7a72305820df4443fe510497d00683717133f13d4d21491b942f2b4cb68188bb754b5359ad0029",
-      "bin-runtime" : "60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063142edc7a1461005157806338d9419314610092575b600080fd5b34801561005d57600080fd5b5061007c600480360381019080803590602001909291905050506100d3565b6040518082815260200191505060405180910390f35b34801561009e57600080fd5b506100bd600480360381019080803590602001909291905050506100f5565b6040518082815260200191505060405180910390f35b600080828154811015156100e357fe5b90600052602060002001549050919050565b60008181548110151561010457fe5b9060005260206000200160009150905054815600a165627a7a72305820df4443fe510497d00683717133f13d4d21491b942f2b4cb68188bb754b5359ad0029",
-      "srcmap" : "26:144:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:144:0;;;;;;;",
-      "srcmap-runtime" : "26:144:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;86:81;;8:9:-1;5:2;;;30:1;27;20:12;5:2;86:81:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;60:22;;8:9:-1;5:2;;;30:1;27;20:12;5:2;60:22:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;86:81;133:7;153:5;159:3;153:10;;;;;;;;;;;;;;;;;;146:17;;86:81;;;:::o;60:22::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o"
+      "bin" : "608060405234801561001057600080fd5b5060b98061001f6000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c8063142edc7a14602d575b600080fd5b605660048036036020811015604157600080fd5b8101908080359060200190929190505050606c565b6040518082815260200191505060405180910390f35b60008082815481101515607b57fe5b9060005260206000200154905091905056fea165627a7a7230582010066752b3ce9c0c155268a3a6ddc6fcbdb76f718ced1f412d3c5adc8a29ea790029",
+      "bin-runtime" : "6080604052348015600f57600080fd5b506004361060285760003560e01c8063142edc7a14602d575b600080fd5b605660048036036020811015604157600080fd5b8101908080359060200190929190505050606c565b6040518082815260200191505060405180910390f35b60008082815481101515607b57fe5b9060005260206000200154905091905056fea165627a7a7230582010066752b3ce9c0c155268a3a6ddc6fcbdb76f718ced1f412d3c5adc8a29ea790029",
+      "srcmap" : "25:152:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:152:0;;;;;;;",
+      "srcmap-runtime" : "25:152:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;25:152:0;;;;;;;;;;;;;;;;;;;86:88;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;86:88:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;140:7;160:5;166:3;160:10;;;;;;;;;;;;;;;;;;153:17;;86:88;;;:::o"
     }
   },
   "sourceList" : 
   [
-    "out-of-bounds-exception.sol"
+    "test_cases/solidity/assert_violations/out-of-bounds-exception/out-of-bounds-exception.sol"
   ],
   "sources" : 
   {
-    "out-of-bounds-exception.sol" : 
+    "test_cases/solidity/assert_violations/out-of-bounds-exception/out-of-bounds-exception.sol" : 
     {
       "AST" : 
       {
         "attributes" : 
         {
-          "absolutePath" : "out-of-bounds-exception.sol",
+          "absolutePath" : "test_cases/solidity/assert_violations/out-of-bounds-exception/out-of-bounds-exception.sol",
           "exportedSymbols" : 
           {
             "OutOfBoundsException" : 
@@ -39,13 +39,13 @@
               [
                 "solidity",
                 "^",
-                "0.4",
-                ".19"
+                "0.5",
+                ".0"
               ]
             },
             "id" : 1,
             "name" : "PragmaDirective",
-            "src" : "0:24:0"
+            "src" : "0:23:0"
           },
           {
             "attributes" : 
@@ -80,7 +80,7 @@
                   "storageLocation" : "default",
                   "type" : "uint256[]",
                   "value" : null,
-                  "visibility" : "public"
+                  "visibility" : "private"
                 },
                 "children" : 
                 [
@@ -100,31 +100,30 @@
                         },
                         "id" : 2,
                         "name" : "ElementaryTypeName",
-                        "src" : "60:7:0"
+                        "src" : "59:7:0"
                       }
                     ],
                     "id" : 3,
                     "name" : "ArrayTypeName",
-                    "src" : "60:9:0"
+                    "src" : "59:9:0"
                   }
                 ],
                 "id" : 4,
                 "name" : "VariableDeclaration",
-                "src" : "60:22:0"
+                "src" : "59:23:0"
               },
               {
                 "attributes" : 
                 {
-                  "constant" : false,
                   "documentation" : null,
                   "implemented" : true,
                   "isConstructor" : false,
+                  "kind" : "function",
                   "modifiers" : 
                   [
                     null
                   ],
                   "name" : "getArrayElement",
-                  "payable" : false,
                   "scope" : 17,
                   "stateMutability" : "nonpayable",
                   "superFunction" : null,
@@ -194,17 +193,17 @@
                             },
                             "id" : 8,
                             "name" : "ElementaryTypeName",
-                            "src" : "133:7:0"
+                            "src" : "140:7:0"
                           }
                         ],
                         "id" : 9,
                         "name" : "VariableDeclaration",
-                        "src" : "133:7:0"
+                        "src" : "140:7:0"
                       }
                     ],
                     "id" : 10,
                     "name" : "ParameterList",
-                    "src" : "132:9:0"
+                    "src" : "139:9:0"
                   },
                   {
                     "children" : 
@@ -242,7 +241,7 @@
                                 },
                                 "id" : 11,
                                 "name" : "Identifier",
-                                "src" : "153:5:0"
+                                "src" : "160:5:0"
                               },
                               {
                                 "attributes" : 
@@ -258,39 +257,39 @@
                                 },
                                 "id" : 12,
                                 "name" : "Identifier",
-                                "src" : "159:3:0"
+                                "src" : "166:3:0"
                               }
                             ],
                             "id" : 13,
                             "name" : "IndexAccess",
-                            "src" : "153:10:0"
+                            "src" : "160:10:0"
                           }
                         ],
                         "id" : 14,
                         "name" : "Return",
-                        "src" : "146:17:0"
+                        "src" : "153:17:0"
                       }
                     ],
                     "id" : 15,
                     "name" : "Block",
-                    "src" : "142:25:0"
+                    "src" : "149:25:0"
                   }
                 ],
                 "id" : 16,
                 "name" : "FunctionDefinition",
-                "src" : "86:81:0"
+                "src" : "86:88:0"
               }
             ],
             "id" : 17,
             "name" : "ContractDefinition",
-            "src" : "26:144:0"
+            "src" : "25:152:0"
           }
         ],
         "id" : 18,
         "name" : "SourceUnit",
-        "src" : "0:171:0"
+        "src" : "0:178:0"
       }
     }
   },
-  "version" : "0.4.24+commit.e67f0147.Darwin.appleclang"
+  "version" : "0.5.5+commit.47a71e8f.Darwin.appleclang"
 }

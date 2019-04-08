@@ -1,10 +1,10 @@
-pragma solidity ^0.4.19;
+pragma solidity ^0.5.0;
 
 contract OutOfBoundsException {
 
-	uint256[] public array;
+	uint256[] private array;
 
-	function getArrayElement(uint256 idx) returns (uint256) {
+	function getArrayElement(uint256 idx) public returns (uint256) {
 		return array[idx];
 	}
 
