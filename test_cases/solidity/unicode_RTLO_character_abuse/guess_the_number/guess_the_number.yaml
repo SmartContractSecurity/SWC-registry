@@ -1,0 +1,8 @@
+description: Right-To-Left-Override control character (U+202E) user confusion
+issues:
+- id: SWC-130
+  count: 1
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      guess_the_number.sol: [31]
