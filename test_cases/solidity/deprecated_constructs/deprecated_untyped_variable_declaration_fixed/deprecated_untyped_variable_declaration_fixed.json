@@ -1,7 +1,7 @@
 {
-  "contracts" : 
+  "contracts" :
   {
-    "test_cases/solidity/deprecated_constructs/deprecated_untyped_variable_declaration_fixed/deprecated_untyped_variable_declaration_fixed.sol:DeprecatedVarFixed" : 
+    "deprecated_untyped_variable_declaration_fixed.sol:DeprecatedVarFixed" :
     {
       "bin" : "608060405234801561001057600080fd5b50610122806100206000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063e606d47a146044575b600080fd5b348015604f57600080fd5b5060566058565b005b605e60d3565b600060606000606060405190810160405280600160ff168152602001600260ff168152602001600360ff16815250935060008091506040805190810160405280600481526020017f74657374000000000000000000000000000000000000000000000000000000008152509250925050505050565b6060604051908101604052806003906020820280388339808201915050905050905600a165627a7a72305820d80cc7944e5add0a577c4cba15e0b5fb9e81a448d1145c4c18eb0cb022bd93870029",
       "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063e606d47a146044575b600080fd5b348015604f57600080fd5b5060566058565b005b605e60d3565b600060606000606060405190810160405280600160ff168152602001600260ff168152602001600360ff16815250935060008091506040805190810160405280600481526020017f74657374000000000000000000000000000000000000000000000000000000008152509250925050505050565b6060604051908101604052806003906020820280388339808201915050905050905600a165627a7a72305820d80cc7944e5add0a577c4cba15e0b5fb9e81a448d1145c4c18eb0cb022bd93870029",
@@ -9,33 +9,33 @@
       "srcmap-runtime" : "25:176:0:-;;;;;;;;;;;;;;;;;;;;;;;;59:140;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:140:0;;;;;;;99:17;;:::i;:::-;138:6;146:15;163:7;99:27;;;;;;;;;120:1;99:27;;;;;;122:1;99:27;;;;;;124:1;99:27;;;;;;;175:5;190:1;137:55;;;;;;;;;;;;;;;;;;;;;;;;59:140;;;;:::o;25:176::-;;;;;;;;;;;;29:2:-1;21:6;17:15;117:4;105:10;97:6;88:34;148:4;140:6;136:17;126:27;;0:157;25:176:0;;;;:::o"
     }
   },
-  "sourceList" : 
+  "sourceList" :
   [
-    "test_cases/solidity/deprecated_constructs/deprecated_untyped_variable_declaration_fixed/deprecated_untyped_variable_declaration_fixed.sol"
+    "deprecated_untyped_variable_declaration_fixed.sol"
   ],
-  "sources" : 
+  "sources" :
   {
-    "test_cases/solidity/deprecated_constructs/deprecated_untyped_variable_declaration_fixed/deprecated_untyped_variable_declaration_fixed.sol" : 
+    "deprecated_untyped_variable_declaration_fixed.sol" :
     {
-      "AST" : 
+      "AST" :
       {
-        "attributes" : 
+        "attributes" :
         {
-          "absolutePath" : "test_cases/solidity/deprecated_constructs/deprecated_untyped_variable_declaration_fixed/deprecated_untyped_variable_declaration_fixed.sol",
-          "exportedSymbols" : 
+          "absolutePath" : "deprecated_untyped_variable_declaration_fixed.sol",
+          "exportedSymbols" :
           {
-            "DeprecatedVarFixed" : 
+            "DeprecatedVarFixed" :
             [
               27
             ]
           }
         },
-        "children" : 
+        "children" :
         [
           {
-            "attributes" : 
+            "attributes" :
             {
-              "literals" : 
+              "literals" :
               [
                 "solidity",
                 "0.4",
@@ -47,36 +47,36 @@
             "src" : "0:23:0"
           },
           {
-            "attributes" : 
+            "attributes" :
             {
-              "baseContracts" : 
+              "baseContracts" :
               [
                 null
               ],
-              "contractDependencies" : 
+              "contractDependencies" :
               [
                 null
               ],
               "contractKind" : "contract",
               "documentation" : null,
               "fullyImplemented" : true,
-              "linearizedBaseContracts" : 
+              "linearizedBaseContracts" :
               [
                 27
               ],
               "name" : "DeprecatedVarFixed",
               "scope" : 28
             },
-            "children" : 
+            "children" :
             [
               {
-                "attributes" : 
+                "attributes" :
                 {
                   "constant" : true,
                   "documentation" : null,
                   "implemented" : true,
                   "isConstructor" : false,
-                  "modifiers" : 
+                  "modifiers" :
                   [
                     null
                   ],
@@ -87,12 +87,12 @@
                   "superFunction" : null,
                   "visibility" : "public"
                 },
-                "children" : 
+                "children" :
                 [
                   {
-                    "attributes" : 
+                    "attributes" :
                     {
-                      "parameters" : 
+                      "parameters" :
                       [
                         null
                       ]
@@ -103,9 +103,9 @@
                     "src" : "74:2:0"
                   },
                   {
-                    "attributes" : 
+                    "attributes" :
                     {
-                      "parameters" : 
+                      "parameters" :
                       [
                         null
                       ]
@@ -116,20 +116,20 @@
                     "src" : "89:0:0"
                   },
                   {
-                    "children" : 
+                    "children" :
                     [
                       {
-                        "attributes" : 
+                        "attributes" :
                         {
-                          "assignments" : 
+                          "assignments" :
                           [
                             8
                           ]
                         },
-                        "children" : 
+                        "children" :
                         [
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "constant" : false,
                               "name" : "a",
@@ -140,17 +140,17 @@
                               "value" : null,
                               "visibility" : "internal"
                             },
-                            "children" : 
+                            "children" :
                             [
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "type" : "uint8[3]"
                                 },
-                                "children" : 
+                                "children" :
                                 [
                                   {
-                                    "attributes" : 
+                                    "attributes" :
                                     {
                                       "name" : "uint8",
                                       "type" : "uint8"
@@ -160,7 +160,7 @@
                                     "src" : "99:5:0"
                                   },
                                   {
-                                    "attributes" : 
+                                    "attributes" :
                                     {
                                       "argumentTypes" : null,
                                       "hexvalue" : "33",
@@ -188,7 +188,7 @@
                             "src" : "99:17:0"
                           },
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "argumentTypes" : null,
                               "isConstant" : false,
@@ -198,10 +198,10 @@
                               "lValueRequested" : false,
                               "type" : "uint8[3] memory"
                             },
-                            "children" : 
+                            "children" :
                             [
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
                                   "hexvalue" : "31",
@@ -219,7 +219,7 @@
                                 "src" : "120:1:0"
                               },
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
                                   "hexvalue" : "32",
@@ -237,7 +237,7 @@
                                 "src" : "122:1:0"
                               },
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
                                   "hexvalue" : "33",
@@ -265,19 +265,19 @@
                         "src" : "99:27:0"
                       },
                       {
-                        "attributes" : 
+                        "attributes" :
                         {
-                          "assignments" : 
+                          "assignments" :
                           [
                             15,
                             17,
                             19
                           ]
                         },
-                        "children" : 
+                        "children" :
                         [
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "constant" : false,
                               "name" : "x",
@@ -288,10 +288,10 @@
                               "value" : null,
                               "visibility" : "internal"
                             },
-                            "children" : 
+                            "children" :
                             [
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "name" : "bool",
                                   "type" : "bool"
@@ -306,7 +306,7 @@
                             "src" : "138:6:0"
                           },
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "constant" : false,
                               "name" : "y",
@@ -317,10 +317,10 @@
                               "value" : null,
                               "visibility" : "internal"
                             },
-                            "children" : 
+                            "children" :
                             [
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "name" : "string",
                                   "type" : "string"
@@ -335,7 +335,7 @@
                             "src" : "146:15:0"
                           },
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "constant" : false,
                               "name" : "z",
@@ -346,10 +346,10 @@
                               "value" : null,
                               "visibility" : "internal"
                             },
-                            "children" : 
+                            "children" :
                             [
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "name" : "uint8",
                                   "type" : "uint8"
@@ -364,7 +364,7 @@
                             "src" : "163:7:0"
                           },
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "argumentTypes" : null,
                               "isConstant" : false,
@@ -374,10 +374,10 @@
                               "lValueRequested" : false,
                               "type" : "tuple(bool,literal_string \"test\",int_const 0)"
                             },
-                            "children" : 
+                            "children" :
                             [
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
                                   "hexvalue" : "66616c7365",
@@ -395,7 +395,7 @@
                                 "src" : "175:5:0"
                               },
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
                                   "hexvalue" : "74657374",
@@ -413,7 +413,7 @@
                                 "src" : "182:6:0"
                               },
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
                                   "hexvalue" : "30",
