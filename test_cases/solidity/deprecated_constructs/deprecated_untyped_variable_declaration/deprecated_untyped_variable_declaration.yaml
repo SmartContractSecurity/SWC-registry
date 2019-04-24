@@ -5,7 +5,7 @@ issues:
   locations:
   - bytecode_offsets: {}
     line_numbers:
-      deprecated_simple.sol: [5]
+      deprecated_untyped_variable_declaration.sol: [5]
   - bytecode_offsets: {}
     line_numbers:
-      deprecated_simple.sol: [7]
+      deprecated_untyped_variable_declaration.sol: [7]
