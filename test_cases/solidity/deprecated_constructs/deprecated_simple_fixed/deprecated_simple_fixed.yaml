@@ -1,0 +1,5 @@
+description: Use of deprecated functions and aliases
+issues:
+- id: SWC-111
+  count: 0
+  locations: []

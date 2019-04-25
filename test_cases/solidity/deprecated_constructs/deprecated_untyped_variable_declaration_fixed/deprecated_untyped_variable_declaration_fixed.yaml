@@ -1,5 +1,0 @@
-description: Use of deprecated untyped variable declaration
-issues:
-- id: SWC-111
-  count: 0
-  locations: []
