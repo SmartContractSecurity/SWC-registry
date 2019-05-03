@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
-const web3 = require('web3');
 const chalk = require('chalk');
 const web3Utils = require('web3-utils');
 
