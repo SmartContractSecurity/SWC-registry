@@ -4,12 +4,13 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "command-exists": "^1.2.8",
     "chalk": "^2.4.2",
+    "command-exists": "^1.2.8",
     "js-yaml": "^3.12.1",
     "jsonlint": "^1.6.3",
     "md-2-json": "^1.0.5",
     "pajv": "^1.2.0",
+    "tar": "^4.4.8",
     "web3": "^1.0.0-beta.37"
   },
   "devDependencies": {},
