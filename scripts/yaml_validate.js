@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 const yaml = require('js-yaml');
-const web3 = require('web3');
 const chalk = require('chalk');
+const web3Utils = require('web3-utils');
 
 
 const walkSync = (dir, filelist=[]) => {
@@ -101,17 +101,16 @@ const issueValidator = (config, content, issue) => {
 
 const generateHash = (hash, config) => {
     try {
-        const contractHex = web3.utils.toHex('0x' + hash)
-        return web3.utils.keccak256(contractHex);
+        const contractHex = web3Utils.toHex('0x' + hash)
+        return web3Utils.keccak256(contractHex);
     } catch(err) {
         logError(config, 103, err);
-        return "ERROR";
+        return `ERROR: ${err}`;
     }
 }
 
 const hashValidator = (config, hash) => {
     const { issues } = GITHUB_CHECKERS;
-
     if(!issues.hash.length(hash)) {
         logError(config, 104, 'Wrong hash length!');
     }
