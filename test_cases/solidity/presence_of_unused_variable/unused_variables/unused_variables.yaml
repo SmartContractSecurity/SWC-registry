@@ -1,0 +1,14 @@
+description: Presence of unused variables
+issues:
+- id: SWC-131
+  count: 3
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      unused_variables.sol: [8]
+  - bytecode_offsets: {}
+    line_numbers:
+      unused_variables.sol: [13]
+  - bytecode_offsets: {}
+    line_numbers:
+      unused_variables.sol: [22]
