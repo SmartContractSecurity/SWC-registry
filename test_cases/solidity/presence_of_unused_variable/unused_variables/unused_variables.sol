@@ -2,11 +2,13 @@ pragma solidity ^0.4.20;
 
 contract UnusedVariables {
     int a = 1;
-    int b;
+
+    // b is not used
+    int public b;
 
     // y is not used
-    function unusedArg(int x, int y) public pure returns (int z) {
-        z = x + 1;
+    function unusedArg(int x, int y) public view returns (int z) {
+        z = x + a;
     }
 
     // n is not used
