@@ -5,13 +5,13 @@ issues:
   locations:
   - bytecode_offsets: {}
     line_numbers:
-      unused_variables.sol: [8]
+      unused_state_variables.sol: [8]
   - bytecode_offsets: {}
     line_numbers:
-      unused_variables.sol: [9]
+      unused_state_variables.sol: [9]
   - bytecode_offsets: {}
     line_numbers:
-      unused_variables.sol: [10]
+      unused_state_variables.sol: [10]
   - bytecode_offsets: {}
     line_numbers:
-      unused_variables.sol: [13]
+      unused_state_variables.sol: [13]
