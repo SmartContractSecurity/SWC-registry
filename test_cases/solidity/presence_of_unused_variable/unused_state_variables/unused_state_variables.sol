@@ -1,7 +1,7 @@
 pragma solidity >=0.4.24;
 
 contract UnusedStateVariables {
-    // a is used via accessor in contract SideUsage
+    // a is used via accessor in contract SideUsage (derived.sol)
     int public a = 10;
 
     // b, c and d are not used in current contract or any descendant contracts
@@ -15,35 +15,13 @@ contract UnusedStateVariables {
     // x is referenced locally
     int private x;
 
-    // y is referenced in contract DerivedA
+    // y is referenced in contract DerivedA (derived.sol)
     int internal y;
 
-    // z is referenced in contract DerivedB
+    // z is referenced in contract DerivedB (derived.sol)
     int z;
 
     constructor() public {
         x = 2;
-    }
-}
-
-contract DerivedA is UnusedStateVariables {
-    int e = 100;
-
-    function test() public {
-        y = e;
-    }
-}
-
-contract DerivedB is DerivedA {
-    function test() public {
-        super.test();
-
-        z = 3;
-    }
-}
-
-contract SideUsage {
-    function test(UnusedStateVariables example) public view returns (int) {
-        return example.a();
     }
 }

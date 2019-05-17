@@ -1,8 +1,11 @@
 description: Presence of unused state variables
 issues:
 - id: SWC-131
-  count: 4
+  count: 5
   locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      derived.sol: [10]
   - bytecode_offsets: {}
     line_numbers:
       unused_state_variables.sol: [8]
