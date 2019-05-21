@@ -17,23 +17,23 @@ let hasError = false;
 const files = walkSync('../test_cases');
 
 files.map(file => {
-    if (file.endsWith(".sol")) {
+    if (file.endsWith(".yaml")) {
         const splitedPath = file.split('/');
 
-        const [filepath, folder, ...rest] = splitedPath.reverse();
-        const [filename, ...restels] = filepath.split('.');
+        const [ filepath, folder ] = splitedPath.reverse();
+        const [ filename ] = filepath.split('.');
 
         if (folder !== filename) {
             hasError = true;
             console.log(`Path is wrong: ${file}`);
         }
 
-        if (!fs.existsSync(file.replace(".sol", ".yaml"))) {
+        if (!fs.existsSync(file.replace(".yaml", ".sol"))) {
             hasError = true;
-            console.log(`Yaml file is missing for: ${file}`);
+            console.log(`Sol file is missing for: ${file}`);
         }
 
-        if (!fs.existsSync(file.replace(".sol", ".json"))) {
+        if (!fs.existsSync(file.replace(".yaml", ".json"))) {
             hasError = true;
             console.log(`JSON file is missing for: ${file}`);
         }
