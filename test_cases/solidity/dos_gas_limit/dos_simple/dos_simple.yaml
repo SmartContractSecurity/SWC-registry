@@ -5,4 +5,4 @@ issues:
   locations:
   - bytecode_offsets: {}
     line_numbers:
-      dos_simple.sol: [16]
+      dos_simple.sol: [10,11,12]
