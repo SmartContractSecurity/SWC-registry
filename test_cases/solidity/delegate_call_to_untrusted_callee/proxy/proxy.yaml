@@ -6,4 +6,4 @@ issues:
   - bytecode_offsets:
       '0x0cacc6a10a08e1bfafa8d8feca0d1e899b99bdc57b8455840e21c19db6665bfc': [337]
     line_numbers:
-      proxy.sol: [8]
+      proxy.sol: [12]

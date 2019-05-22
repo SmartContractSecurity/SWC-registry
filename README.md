@@ -2,7 +2,6 @@
 [![CircleCI](https://circleci.com/gh/SmartContractSecurity/SWC-registry/tree/master.svg?style=svg)](https://circleci.com/gh/SmartContractSecurity/SWC-registry/tree/master)
 [![Pages](https://img.shields.io/badge/pages-online-blue.svg)](https://smartcontractsecurity.github.io/SWC-registry/)
 [![Discord](https://img.shields.io/discord/481002907366588416.svg)](https://discord.gg/qcNvR2r)
-[![Waffle.io - Columns and their card count](https://badge.waffle.io/SmartContractSecurity/SWC-registry.svg?columns=all)](https://waffle.io/SmartContractSecurity/SWC-registry)
 
 
 The Smart Contract Weakness Classification Registry is an implementation of the weakness classification scheme proposed in [EIP-1470](https://github.com/ethereum/EIPs/issues/1469). It is loosely aligned to the terminologies and structure used in the Common Weakness Enumeration ([CWE](https://cwe.mitre.org)) while overlaying a wide range of weakness variants that are specific to smart contracts.
