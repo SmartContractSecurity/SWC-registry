@@ -6,4 +6,3 @@ issues:
   - bytecode_offsets: {}
     line_numbers:
       dos_address.sol: [9,10,11,12]
-  }
