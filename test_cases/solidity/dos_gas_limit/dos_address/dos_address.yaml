@@ -1,8 +1,9 @@
-description: DoS Gas Limit reaches when try to empty the array of addresses for winning the game
+description: DoS Gas Limit reached when trying to empty the array of addresses for winning the game
 issues:
 - id: SWC-128
   count: 1
   locations:
-  - bytecode_offsets: {}
+  - bytecode_offsets:
+      '0x757d6992eb9957af6d47433ed1efc2876156d0580cd2fbab68645c51dd919bcd': [408]
     line_numbers:
-      dos_address.sol: [10]
+      dos_address.sol: [9,10,11,12]
