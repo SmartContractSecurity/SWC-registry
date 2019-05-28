@@ -1,25 +1,27 @@
-
-
 contract DeprecatedSimple {
-	
-	function useDeprecated() public constant {
 
-		// Do everything that's deprecated, then commit suicide.
+    // Do everything that's deprecated, then commit suicide.
 
-		bytes32 blockhash = block.blockhash(0);
-		bytes32 hashofhash = sha3(blockhash);
+    function useDeprecated() public constant {
 
-		uint gas = msg.gas;
+        bytes32 blockhash = block.blockhash(0);
+        bytes32 hashofhash = sha3(blockhash);
 
-		if (gas == 0) {
-			throw;
-		}
+        uint gas = msg.gas;
 
-		address(this).callcode();
+        if (gas == 0) {
+            throw;
+        }
 
-		suicide(address(0));
-	}
+        address(this).callcode();
 
-	function () public {}
+        var a = [1,2,3];
+
+        var (x, y, z) = (false, "test", 0);
+
+        suicide(address(0));
+    }
+
+    function () public {}
 
 }

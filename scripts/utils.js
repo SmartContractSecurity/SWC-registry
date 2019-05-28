@@ -1,7 +1,7 @@
 const commandExistsSync = require('command-exists').sync;
 const fs = require('fs');
 const spawnSync = require('child_process').spawnSync;
-const web3 = require('Web3');
+const web3Utils = require('web3-utils');
 const command = process.argv[2];
 
 
@@ -25,7 +25,7 @@ const printFinalOutput = (fileName, bin, binSha3, binDisasm, binRuntime, binRunt
 }
 
 const getSha3 = (bytecode) => {
-  return web3.utils.sha3('0x' + bytecode);
+  return web3Utils.sha3('0x' + bytecode);
 }
 
 const getDisasm = (bytecode) => {
