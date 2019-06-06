@@ -1,9 +1,5 @@
-description: Single transaction overflow
+description: Single transaction overflow, result is never used
 issues:
 - id: SWC-101
-  count: 1
-  locations:
-  - bytecode_offsets: 
-      '0x6eac85a0077d7fbe4a212397613039dd0303f5729738128c6248e3a25c54cf46': [173]
-    line_numbers:
-      integer_overflow_benign_1.sol: [10]
+  count: 0
+  locations: []
