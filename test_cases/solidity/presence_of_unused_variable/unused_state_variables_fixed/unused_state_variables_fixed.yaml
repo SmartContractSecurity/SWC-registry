@@ -1,0 +1,5 @@
+description: Presence of unused state variables
+issues:
+- id: SWC-131
+  count: 0
+  locations: []
