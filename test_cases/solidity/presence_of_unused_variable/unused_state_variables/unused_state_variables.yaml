@@ -1,0 +1,20 @@
+description: Presence of unused state variables
+issues:
+- id: SWC-131
+  count: 5
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      unused_state_variables.sol: [10]
+  - bytecode_offsets: {}
+    line_numbers:
+      base.sol: [8]
+  - bytecode_offsets: {}
+    line_numbers:
+      base.sol: [9]
+  - bytecode_offsets: {}
+    line_numbers:
+      base.sol: [10]
+  - bytecode_offsets: {}
+    line_numbers:
+      base.sol: [13]
