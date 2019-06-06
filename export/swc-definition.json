@@ -268,5 +268,14 @@
       "Description": "Malicious actors can use the Right-To-Left-Override unicode character to force RTL text rendering and confuse users as to the real intent of a contract.",
       "Remediation": "There are very few legitimate uses of the U+202E character. It should not appear in the source code of a smart contract."
     }
+  },
+  "SWC-131": {
+    "markdown": "# Title\nPresence of unused variables\n\n## Relationships\n[CWE-1164: Irrelevant Code](https://cwe.mitre.org/data/definitions/1164.html)\n\n## Description\n Unused variables are allowed in Solidity and they do not pose a direct security issue. It is best practice though to avoid them as they can:\n\n* cause an increase in computations (and unnecessary gas consumption)\n* indicate bugs or malformed data structures and they are generally a sign of poor code quality\n* cause code noise and decrease readability of the code\n\n## Remediation\nRemove all unused variables from the code base. \n\n## References\n* [Unused local variables warnings discussion](https://github.com/ethereum/solidity/issues/718)\n* [Shadowing of inherited state variables discussion](https://github.com/ethereum/solidity/issues/2563)\n",
+    "content": {
+      "Title": "Presence of unused variables",
+      "Relationships": "[CWE-1164: Irrelevant Code](https://cwe.mitre.org/data/definitions/1164.html)",
+      "Description": "Unused variables are allowed in Solidity and they do not pose a direct security issue. It is best practice though to avoid them as they can:\n\n\n- cause an increase in computations (and unnecessary gas consumption)\n- indicate bugs or malformed data structures and they are generally a sign of poor code quality\n- cause code noise and decrease readability of the code",
+      "Remediation": "Remove all unused variables from the code base."
+    }
   }
 }
