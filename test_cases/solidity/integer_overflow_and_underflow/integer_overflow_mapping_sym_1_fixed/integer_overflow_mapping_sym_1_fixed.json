@@ -1,46 +1,46 @@
 {
-  "contracts" : 
+  "contracts" :
   {
-    "integer_overflow_mapping_sym_1_fixed.sol:IntegerOverflowMappingSym1" : 
+    "integer_overflow_mapping_sym_1_fixed.sol:IntegerOverflowMappingSym1" :
     {
-      "bin" : "608060405234801561001057600080fd5b5060f38061001f6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a5843f08146044575b600080fd5b348015604f57600080fd5b50607660048036038101908080359060200190929190803590602001909291905050506078565b005b6092600080848152602001908152602001600020548260ac565b600080848152602001908152602001600020819055505050565b600082821115151560bc57600080fd5b8183039050929150505600a165627a7a723058206579d998779a0688254a01dc2068dca0716cae5335964dd3531a013951c6a89c0029",
-      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a5843f08146044575b600080fd5b348015604f57600080fd5b50607660048036038101908080359060200190929190803590602001909291905050506078565b005b6092600080848152602001908152602001600020548260ac565b600080848152602001908152602001600020819055505050565b600082821115151560bc57600080fd5b8183039050929150505600a165627a7a723058206579d998779a0688254a01dc2068dca0716cae5335964dd3531a013951c6a89c0029",
+      "bin" : "608060405234801561001057600080fd5b5060f38061001f6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a5843f08146044575b600080fd5b348015604f57600080fd5b50607660048036038101908080359060200190929190803590602001909291905050506078565b005b6092600080848152602001908152602001600020548260ac565b600080848152602001908152602001600020819055505050565b600082821115151560bc57600080fd5b8183039050929150505600a165627a7a72305820f4d98351804cb6bccf9295e0da33eb6c926afac1c184fbb7e765aa428f23d84b0029",
+      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a5843f08146044575b600080fd5b348015604f57600080fd5b50607660048036038101908080359060200190929190803590602001909291905050506078565b005b6092600080848152602001908152602001600020548260ac565b600080848152602001908152602001600020819055505050565b600082821115151560bc57600080fd5b8183039050929150505600a165627a7a72305820f4d98351804cb6bccf9295e0da33eb6c926afac1c184fbb7e765aa428f23d84b0029",
       "srcmap" : "72:339:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;72:339:0;;;;;;;",
       "srcmap-runtime" : "72:339:0:-;;;;;;;;;;;;;;;;;;;;;;;;152:83;;8:9:-1;5:2;;;30:1;27;20:12;5:2;152:83:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;214:14;218:3;:6;222:1;218:6;;;;;;;;;;;;226:1;214:3;:14::i;:::-;205:3;:6;209:1;205:6;;;;;;;;;;;:23;;;;152:83;;:::o;261:148::-;319:7;351:1;346;:6;;338:15;;;;;;;;401:1;397;:5;390:12;;261:148;;;;:::o"
     }
   },
-  "sourceList" : 
+  "sourceList" :
   [
     "integer_overflow_mapping_sym_1_fixed.sol"
   ],
-  "sources" : 
+  "sources" :
   {
-    "integer_overflow_mapping_sym_1_fixed.sol" : 
+    "integer_overflow_mapping_sym_1_fixed.sol" :
     {
-      "AST" : 
+      "AST" :
       {
-        "attributes" : 
+        "attributes" :
         {
           "absolutePath" : "integer_overflow_mapping_sym_1_fixed.sol",
-          "exportedSymbols" : 
+          "exportedSymbols" :
           {
-            "IntegerOverflowMappingSym1" : 
+            "IntegerOverflowMappingSym1" :
             [
               45
             ]
           }
         },
-        "children" : 
+        "children" :
         [
           {
-            "attributes" : 
+            "attributes" :
             {
-              "literals" : 
+              "literals" :
               [
                 "solidity",
                 "^",
                 "0.4",
-                ".11"
+                ".16"
               ]
             },
             "id" : 1,
@@ -48,30 +48,30 @@
             "src" : "46:24:0"
           },
           {
-            "attributes" : 
+            "attributes" :
             {
-              "baseContracts" : 
+              "baseContracts" :
               [
                 null
               ],
-              "contractDependencies" : 
+              "contractDependencies" :
               [
                 null
               ],
               "contractKind" : "contract",
               "documentation" : null,
               "fullyImplemented" : true,
-              "linearizedBaseContracts" : 
+              "linearizedBaseContracts" :
               [
                 45
               ],
               "name" : "IntegerOverflowMappingSym1",
               "scope" : 46
             },
-            "children" : 
+            "children" :
             [
               {
-                "attributes" : 
+                "attributes" :
                 {
                   "constant" : false,
                   "name" : "map",
@@ -82,17 +82,17 @@
                   "value" : null,
                   "visibility" : "internal"
                 },
-                "children" : 
+                "children" :
                 [
                   {
-                    "attributes" : 
+                    "attributes" :
                     {
                       "type" : "mapping(uint256 => uint256)"
                     },
-                    "children" : 
+                    "children" :
                     [
                       {
-                        "attributes" : 
+                        "attributes" :
                         {
                           "name" : "uint256",
                           "type" : "uint256"
@@ -102,7 +102,7 @@
                         "src" : "122:7:0"
                       },
                       {
-                        "attributes" : 
+                        "attributes" :
                         {
                           "name" : "uint256",
                           "type" : "uint256"
@@ -122,13 +122,13 @@
                 "src" : "114:31:0"
               },
               {
-                "attributes" : 
+                "attributes" :
                 {
                   "constant" : false,
                   "documentation" : null,
                   "implemented" : true,
                   "isConstructor" : false,
-                  "modifiers" : 
+                  "modifiers" :
                   [
                     null
                   ],
@@ -139,13 +139,13 @@
                   "superFunction" : null,
                   "visibility" : "public"
                 },
-                "children" : 
+                "children" :
                 [
                   {
-                    "children" : 
+                    "children" :
                     [
                       {
-                        "attributes" : 
+                        "attributes" :
                         {
                           "constant" : false,
                           "name" : "k",
@@ -156,10 +156,10 @@
                           "value" : null,
                           "visibility" : "internal"
                         },
-                        "children" : 
+                        "children" :
                         [
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "name" : "uint256",
                               "type" : "uint256"
@@ -174,7 +174,7 @@
                         "src" : "166:9:0"
                       },
                       {
-                        "attributes" : 
+                        "attributes" :
                         {
                           "constant" : false,
                           "name" : "v",
@@ -185,10 +185,10 @@
                           "value" : null,
                           "visibility" : "internal"
                         },
-                        "children" : 
+                        "children" :
                         [
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "name" : "uint256",
                               "type" : "uint256"
@@ -208,9 +208,9 @@
                     "src" : "165:22:0"
                   },
                   {
-                    "attributes" : 
+                    "attributes" :
                     {
-                      "parameters" : 
+                      "parameters" :
                       [
                         null
                       ]
@@ -221,13 +221,13 @@
                     "src" : "195:0:0"
                   },
                   {
-                    "children" : 
+                    "children" :
                     [
                       {
-                        "children" : 
+                        "children" :
                         [
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "argumentTypes" : null,
                               "isConstant" : false,
@@ -237,10 +237,10 @@
                               "operator" : "=",
                               "type" : "uint256"
                             },
-                            "children" : 
+                            "children" :
                             [
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
                                   "isConstant" : false,
@@ -249,13 +249,13 @@
                                   "lValueRequested" : true,
                                   "type" : "uint256"
                                 },
-                                "children" : 
+                                "children" :
                                 [
                                   {
-                                    "attributes" : 
+                                    "attributes" :
                                     {
                                       "argumentTypes" : null,
-                                      "overloadedDeclarations" : 
+                                      "overloadedDeclarations" :
                                       [
                                         null
                                       ],
@@ -268,10 +268,10 @@
                                     "src" : "205:3:0"
                                   },
                                   {
-                                    "attributes" : 
+                                    "attributes" :
                                     {
                                       "argumentTypes" : null,
-                                      "overloadedDeclarations" : 
+                                      "overloadedDeclarations" :
                                       [
                                         null
                                       ],
@@ -289,7 +289,7 @@
                                 "src" : "205:6:0"
                               },
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
                                   "isConstant" : false,
@@ -297,19 +297,19 @@
                                   "isPure" : false,
                                   "isStructConstructorCall" : false,
                                   "lValueRequested" : false,
-                                  "names" : 
+                                  "names" :
                                   [
                                     null
                                   ],
                                   "type" : "uint256",
                                   "type_conversion" : false
                                 },
-                                "children" : 
+                                "children" :
                                 [
                                   {
-                                    "attributes" : 
+                                    "attributes" :
                                     {
-                                      "argumentTypes" : 
+                                      "argumentTypes" :
                                       [
                                         {
                                           "typeIdentifier" : "t_uint256",
@@ -320,7 +320,7 @@
                                           "typeString" : "uint256"
                                         }
                                       ],
-                                      "overloadedDeclarations" : 
+                                      "overloadedDeclarations" :
                                       [
                                         null
                                       ],
@@ -333,7 +333,7 @@
                                     "src" : "214:3:0"
                                   },
                                   {
-                                    "attributes" : 
+                                    "attributes" :
                                     {
                                       "argumentTypes" : null,
                                       "isConstant" : false,
@@ -342,13 +342,13 @@
                                       "lValueRequested" : false,
                                       "type" : "uint256"
                                     },
-                                    "children" : 
+                                    "children" :
                                     [
                                       {
-                                        "attributes" : 
+                                        "attributes" :
                                         {
                                           "argumentTypes" : null,
-                                          "overloadedDeclarations" : 
+                                          "overloadedDeclarations" :
                                           [
                                             null
                                           ],
@@ -361,10 +361,10 @@
                                         "src" : "218:3:0"
                                       },
                                       {
-                                        "attributes" : 
+                                        "attributes" :
                                         {
                                           "argumentTypes" : null,
-                                          "overloadedDeclarations" : 
+                                          "overloadedDeclarations" :
                                           [
                                             null
                                           ],
@@ -382,10 +382,10 @@
                                     "src" : "218:6:0"
                                   },
                                   {
-                                    "attributes" : 
+                                    "attributes" :
                                     {
                                       "argumentTypes" : null,
-                                      "overloadedDeclarations" : 
+                                      "overloadedDeclarations" :
                                       [
                                         null
                                       ],
@@ -423,13 +423,13 @@
                 "src" : "152:83:0"
               },
               {
-                "attributes" : 
+                "attributes" :
                 {
                   "constant" : true,
                   "documentation" : null,
                   "implemented" : true,
                   "isConstructor" : false,
-                  "modifiers" : 
+                  "modifiers" :
                   [
                     null
                   ],
@@ -440,13 +440,13 @@
                   "superFunction" : null,
                   "visibility" : "internal"
                 },
-                "children" : 
+                "children" :
                 [
                   {
-                    "children" : 
+                    "children" :
                     [
                       {
-                        "attributes" : 
+                        "attributes" :
                         {
                           "constant" : false,
                           "name" : "a",
@@ -457,10 +457,10 @@
                           "value" : null,
                           "visibility" : "internal"
                         },
-                        "children" : 
+                        "children" :
                         [
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "name" : "uint256",
                               "type" : "uint256"
@@ -475,7 +475,7 @@
                         "src" : "274:9:0"
                       },
                       {
-                        "attributes" : 
+                        "attributes" :
                         {
                           "constant" : false,
                           "name" : "b",
@@ -486,10 +486,10 @@
                           "value" : null,
                           "visibility" : "internal"
                         },
-                        "children" : 
+                        "children" :
                         [
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "name" : "uint256",
                               "type" : "uint256"
@@ -509,10 +509,10 @@
                     "src" : "273:22:0"
                   },
                   {
-                    "children" : 
+                    "children" :
                     [
                       {
-                        "attributes" : 
+                        "attributes" :
                         {
                           "constant" : false,
                           "name" : "",
@@ -523,10 +523,10 @@
                           "value" : null,
                           "visibility" : "internal"
                         },
-                        "children" : 
+                        "children" :
                         [
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "name" : "uint256",
                               "type" : "uint256"
@@ -546,13 +546,13 @@
                     "src" : "318:9:0"
                   },
                   {
-                    "children" : 
+                    "children" :
                     [
                       {
-                        "children" : 
+                        "children" :
                         [
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "argumentTypes" : null,
                               "isConstant" : false,
@@ -560,26 +560,26 @@
                               "isPure" : false,
                               "isStructConstructorCall" : false,
                               "lValueRequested" : false,
-                              "names" : 
+                              "names" :
                               [
                                 null
                               ],
                               "type" : "tuple()",
                               "type_conversion" : false
                             },
-                            "children" : 
+                            "children" :
                             [
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
-                                  "argumentTypes" : 
+                                  "argumentTypes" :
                                   [
                                     {
                                       "typeIdentifier" : "t_bool",
                                       "typeString" : "bool"
                                     }
                                   ],
-                                  "overloadedDeclarations" : 
+                                  "overloadedDeclarations" :
                                   [
                                     63,
                                     64
@@ -593,10 +593,10 @@
                                 "src" : "338:7:0"
                               },
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
-                                  "commonType" : 
+                                  "commonType" :
                                   {
                                     "typeIdentifier" : "t_uint256",
                                     "typeString" : "uint256"
@@ -608,13 +608,13 @@
                                   "operator" : "<=",
                                   "type" : "bool"
                                 },
-                                "children" : 
+                                "children" :
                                 [
                                   {
-                                    "attributes" : 
+                                    "attributes" :
                                     {
                                       "argumentTypes" : null,
-                                      "overloadedDeclarations" : 
+                                      "overloadedDeclarations" :
                                       [
                                         null
                                       ],
@@ -627,10 +627,10 @@
                                     "src" : "346:1:0"
                                   },
                                   {
-                                    "attributes" : 
+                                    "attributes" :
                                     {
                                       "argumentTypes" : null,
-                                      "overloadedDeclarations" : 
+                                      "overloadedDeclarations" :
                                       [
                                         null
                                       ],
@@ -658,17 +658,17 @@
                         "src" : "338:15:0"
                       },
                       {
-                        "attributes" : 
+                        "attributes" :
                         {
                           "functionReturnParameters" : 32
                         },
-                        "children" : 
+                        "children" :
                         [
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "argumentTypes" : null,
-                              "commonType" : 
+                              "commonType" :
                               {
                                 "typeIdentifier" : "t_uint256",
                                 "typeString" : "uint256"
@@ -680,13 +680,13 @@
                               "operator" : "-",
                               "type" : "uint256"
                             },
-                            "children" : 
+                            "children" :
                             [
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
-                                  "overloadedDeclarations" : 
+                                  "overloadedDeclarations" :
                                   [
                                     null
                                   ],
@@ -699,10 +699,10 @@
                                 "src" : "397:1:0"
                               },
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
-                                  "overloadedDeclarations" : 
+                                  "overloadedDeclarations" :
                                   [
                                     null
                                   ],
@@ -746,5 +746,5 @@
       }
     }
   },
-  "version" : "0.4.25+commit.59dbf8f1.Darwin.appleclang"
+  "version" : "0.4.25+commit.59dbf8f1.Linux.g++"
 }
