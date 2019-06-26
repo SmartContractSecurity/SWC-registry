@@ -40,7 +40,7 @@ const siteConfig = {
   },
   scripts: [],
   footerscripts: [
-    'https://rawgit.com/s0b0lev/SWC-registry/website/website/scripts/lineNumbers.js',
+    'https://cdn.jsdelivr.net/gh/SmartContractSecurity/SWC-registry@website/website/scripts/lineNumbers.js',
   ],
   onPageNav: 'separate',
   cleanUrl: true,
