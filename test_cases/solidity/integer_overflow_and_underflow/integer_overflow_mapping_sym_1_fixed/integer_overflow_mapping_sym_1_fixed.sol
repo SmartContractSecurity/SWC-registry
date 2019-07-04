@@ -1,7 +1,7 @@
 //Single transaction overflow
 //Safe version
 
-pragma solidity ^0.4.11;
+pragma solidity ^0.4.16;
 
 contract IntegerOverflowMappingSym1 {
     mapping(uint256 => uint256) map;

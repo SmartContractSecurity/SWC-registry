@@ -4,6 +4,6 @@ issues:
   count: 1
   locations:
   - bytecode_offsets:
-      '0x7cf1686c8e5a9c323e8dd9379dd743ad928c75e1b6bb69ebea4cd04389101770': [63]
+      '0x68b8b78a805010c7bf2cd5f199e998845c732f1b8265677d4069efd67dca84d8': [63]
     line_numbers:
       timed_crowdsale.sol: [14]

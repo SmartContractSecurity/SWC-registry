@@ -1,4 +1,4 @@
-description: Multiple sends in a single transaction
+description: Send called in a loop
 issues:
 - id: SWC-113
   count: 1
