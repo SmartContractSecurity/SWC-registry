@@ -1,0 +1,9 @@
+digraph Fun{
+   EntryBlock [label="(address) TMP_0 := (address) builtin_msg.sender();
+(address) ((Wallet)(*this)).creator := (address) TMP_0",style=filled,color=lightblue1,shape="box", xlabel="EntryBlock"];
+   ReturnBlock [label="",shape="box",style=filled,color=gold, xlabel="ReturnBlock"];
+   RequireFailBock [label="",shape="circle",style=filled,color=crimson, xlabel="RequireFailBock"];
+   AssertFailBlock [label="",shape="circle",style=filled,color=crimson, xlabel="AssertFailBlock"];
+   OtherRevertBlock [label="",shape="circle",style=filled,color=crimson, xlabel="OtherRevertBlock"];
+   EntryBlock -> ReturnBlock[label="true"];
+}

@@ -1,0 +1,19 @@
+digraph Fun{
+   EntryBlock [label="",style=filled,color=lightblue1,shape="box", xlabel="EntryBlock"];
+   BB7 [label="(address) TMP_11 := (address) builtin_msg.sender();
+(uint256) TMP_12 := (uint256) (*((Wallet)(*this)).balances)[TMP_11]
+(bool) TMP_13 := (bool) ((uint256) amount_73 <= (uint256) TMP_12)",shape="oval",style=filled,color=wheat, xlabel="BB7"];
+   BB8 [label="(address) TMP_14 := (address) builtin_msg.sender();
+builtin_transfer((address) TMP_14,(uint256) amount_73);
+(address) TMP_15 := (address) builtin_msg.sender();
+(address) TMP_16 := (address) builtin_msg.sender();
+(uint256) (*((Wallet)(*this)).balances)[TMP_15] := (uint256) ((uint256) (*((Wallet)(*this)).balances)[TMP_16] - (uint256) amount_73)",style=filled,color=lightblue1,shape="box", xlabel="BB8"];
+   RequireFailBock [label="",shape="circle",style=filled,color=crimson, xlabel="RequireFailBock"];
+   ReturnBlock [label="",shape="box",style=filled,color=gold, xlabel="ReturnBlock"];
+   AssertFailBlock [label="",shape="circle",style=filled,color=crimson, xlabel="AssertFailBlock"];
+   OtherRevertBlock [label="",shape="circle",style=filled,color=crimson, xlabel="OtherRevertBlock"];
+   EntryBlock -> BB7[label="true"];
+   BB7 -> BB8[label="TMP_13"];
+   BB7 -> RequireFailBock[label="(!TMP_13)"];
+   BB8 -> ReturnBlock[label="true"];
+}
