@@ -277,5 +277,14 @@
       "Description": "Unused variables are allowed in Solidity and they do not pose a direct security issue. It is best practice though to avoid them as they can:\n\n\n- cause an increase in computations (and unnecessary gas consumption)\n- indicate bugs or malformed data structures and they are generally a sign of poor code quality\n- cause code noise and decrease readability of the code",
       "Remediation": "Remove all unused variables from the code base."
     }
+  },
+  "SWC-132": {
+    "markdown": "# Title\nUnexpected Ether balance\n\n## Relationships\n[CWE-667: Improper Locking](https://cwe.mitre.org/data/definitions/667.html)\n\n## Description\nContracts can behave erroneously when they strictly assume a specific Ether balance. It is always possible to forcibly send ether to a contract (without triggering its fallback function), using selfdestruct, or by mining to the account. In the worst case scenario this could lead to DOS conditions that might render the contract unusable. \n\n## Remediation\nAvoid strict equality checks for the Ether balance in a contract.\n\n## References\n* [Consensys Best Practices: Forcibly Sending Ether](https://consensys.github.io/smart-contract-best-practices/known_attacks/#forcibly-sending-ether-to-a-contract)\n* [Sigmaprime: Unexpected Ether](https://blog.sigmaprime.io/solidity-security.html#ether)\n* [Gridlock (a smart contract bug)](https://medium.com/@nmcl/gridlock-a-smart-contract-bug-73b8310608a9)\n",
+    "content": {
+      "Title": "Unexpected Ether balance",
+      "Relationships": "[CWE-667: Improper Locking](https://cwe.mitre.org/data/definitions/667.html)",
+      "Description": "Contracts can behave erroneously when they strictly assume a specific Ether balance. It is always possible to forcibly send ether to a contract (without triggering its fallback function), using selfdestruct, or by mining to the account. In the worst case scenario this could lead to DOS conditions that might render the contract unusable.",
+      "Remediation": "Avoid strict equality checks for the Ether balance in a contract."
+    }
   }
 }
