@@ -4,7 +4,6 @@
  * Modified by Gerhard Wagner
  */
 
-
 pragma solidity ^0.4.24;
 
 contract Missing{
@@ -29,4 +28,5 @@ contract Missing{
     {
        owner.transfer(this.balance);
     }
+
 }

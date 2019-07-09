@@ -4,6 +4,7 @@
  * Modified by Gerhard Wagner
  */
 
+
 pragma solidity 0.4.24;
 
 contract Missing{
@@ -13,8 +14,8 @@ contract Missing{
         require(msg.sender==owner);
         _;
     }
-
-    function Constructor()
+    
+    function missing()
         public 
     {
         owner = msg.sender;
@@ -28,5 +29,4 @@ contract Missing{
     {
        owner.transfer(this.balance);
     }
-
 }
