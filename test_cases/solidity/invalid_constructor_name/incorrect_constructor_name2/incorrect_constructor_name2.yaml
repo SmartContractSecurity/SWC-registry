@@ -1,8 +1,8 @@
-description: Invalid contructor name variant 3
+description: Invalid constructor name variant 2
 issues:
 - id: SWC-118
   count: 1
   locations:
   - bytecode_offsets: {}
     line_numbers:
-      incorrect_constructor_name3.sol: [17]
+      incorrect_constructor_name2.sol: [17]
