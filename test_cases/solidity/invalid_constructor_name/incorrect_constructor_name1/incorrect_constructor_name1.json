@@ -1,7 +1,7 @@
 {
   "contracts" : 
   {
-    "incorrect_constructor_name2.sol:Missing" : 
+    "incorrect_constructor_name1.sol:Missing" : 
     {
       "bin" : "608060405234801561001057600080fd5b506101c6806100206000396000f30060806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633ccfd60b1461004e578063a8b0086514610065575b005b34801561005a57600080fd5b5061006361007c565b005b34801561007157600080fd5b5061007a610158565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156100d757600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050158015610155573d6000803e3d6000fd5b50565b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505600a165627a7a723058206c2527ceb74dc9a3287f88a11f7f02988c53f6d129537b03b6dfdc43fe3a27650029",
       "bin-runtime" : "60806040526004361061004c576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633ccfd60b1461004e578063a8b0086514610065575b005b34801561005a57600080fd5b5061006361007c565b005b34801561007157600080fd5b5061007a610158565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156100d757600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050158015610155573d6000803e3d6000fd5b50565b336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505600a165627a7a723058206c2527ceb74dc9a3287f88a11f7f02988c53f6d129537b03b6dfdc43fe3a27650029",
@@ -11,17 +11,17 @@
   },
   "sourceList" : 
   [
-    "incorrect_constructor_name2.sol"
+    "incorrect_constructor_name1.sol"
   ],
   "sources" : 
   {
-    "incorrect_constructor_name2.sol" : 
+    "incorrect_constructor_name1.sol" : 
     {
       "AST" : 
       {
         "attributes" : 
         {
-          "absolutePath" : "incorrect_constructor_name2.sol",
+          "absolutePath" : "incorrect_constructor_name1.sol",
           "exportedSymbols" : 
           {
             "Missing" : 

@@ -1,7 +1,7 @@
 {
   "contracts" : 
   {
-    "incorrect_constructor_name2_fixed.sol:Missing" : 
+    "incorrect_constructor_name1_fixed.sol:Missing" : 
     {
       "bin" : "608060405234801561001057600080fd5b50336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610162806100606000396000f300608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633ccfd60b14610043575b005b34801561004f57600080fd5b5061005861005a565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156100b557600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050158015610133573d6000803e3d6000fd5b505600a165627a7a7230582085440a52a9db4e1e33ab055178edb4df017b164570ecf93e5242a6adbbc936f70029",
       "bin-runtime" : "608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680633ccfd60b14610043575b005b34801561004f57600080fd5b5061005861005a565b005b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156100b557600080fd5b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc3073ffffffffffffffffffffffffffffffffffffffff16319081150290604051600060405180830381858888f19350505050158015610133573d6000803e3d6000fd5b505600a165627a7a7230582085440a52a9db4e1e33ab055178edb4df017b164570ecf93e5242a6adbbc936f70029",
@@ -11,17 +11,17 @@
   },
   "sourceList" : 
   [
-    "incorrect_constructor_name2_fixed.sol"
+    "incorrect_constructor_name1_fixed.sol"
   ],
   "sources" : 
   {
-    "incorrect_constructor_name2_fixed.sol" : 
+    "incorrect_constructor_name1_fixed.sol" : 
     {
       "AST" : 
       {
         "attributes" : 
         {
-          "absolutePath" : "incorrect_constructor_name2_fixed.sol",
+          "absolutePath" : "incorrect_constructor_name1_fixed.sol",
           "exportedSymbols" : 
           {
             "Missing" : 
