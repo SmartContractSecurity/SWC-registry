@@ -1,0 +1,9 @@
+description: Simplified version of Zeppelin's DSChief invariant
+issues:
+- id: SWC-110
+  count: 1
+  locations:
+  - bytecode_offsets:
+      '0x0051bf6aaf22bc6914efdaed05c4b1848e7ce814d1d6bf28da499320cb8b7a55': [1156]
+    line_numbers:
+      simpledschief.sol: [73]
