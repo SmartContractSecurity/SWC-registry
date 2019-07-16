@@ -1,0 +1,9 @@
+description: Simplified version of the MakerDAO DSChief contract with invariant
+issues:
+- id: SWC-110
+  count: 1
+  locations:
+  - bytecode_offsets:
+      '0x1e8071a550b197a299c21ee7089e30a6363f126917e6d308cd5242c612ec63f9': [1156]
+    line_numbers:
+      simpledschief.sol: [70]

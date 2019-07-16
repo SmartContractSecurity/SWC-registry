@@ -1,0 +1,9 @@
+description: Simplified version of Zeppelin's DSChief invariant
+issues:
+- id: SWC-110
+  count: 1
+  locations:
+  - bytecode_offsets:
+      '0x4aa4705ae5bd0ad1640337ff069d078211aa2641d234e79e7f3da8ada3de1dce': [594]
+    line_numbers:
+      return_memory.sol: [36]
