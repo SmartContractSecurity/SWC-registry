@@ -1,9 +1,9 @@
-description: Simplified version of Zeppelin's DSChief invariant
+description: Simplified version of the MakerDAO DSChief contract with invariant
 issues:
 - id: SWC-110
   count: 1
   locations:
   - bytecode_offsets:
-      '0x0051bf6aaf22bc6914efdaed05c4b1848e7ce814d1d6bf28da499320cb8b7a55': [1156]
+      '0x1e8071a550b197a299c21ee7089e30a6363f126917e6d308cd5242c612ec63f9': [1156]
     line_numbers:
-      simpledschief.sol: [73]
+      simpledschief.sol: [70]
