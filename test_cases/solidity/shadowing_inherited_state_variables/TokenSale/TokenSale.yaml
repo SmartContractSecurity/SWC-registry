@@ -5,4 +5,4 @@ issues:
   locations:
   - bytecode_offsets: {}
     line_numbers:
-      TokenSale.sol: [4]
+      TokenSale.sol: [14]

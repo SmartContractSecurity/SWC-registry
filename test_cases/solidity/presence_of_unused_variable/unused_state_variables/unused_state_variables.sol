@@ -3,7 +3,7 @@ pragma solidity >=0.4.24;
 import "./base.sol";
 
 contract DerivedA is Base {
-    // overrides e of Base (unused_state_variables.sol)
+    // overrides e of Base (base.sol)
     int e = 100;
 
     // f is not used in current contract or any descendant contracts

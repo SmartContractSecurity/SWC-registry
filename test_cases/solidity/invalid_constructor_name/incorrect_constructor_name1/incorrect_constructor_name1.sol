@@ -4,7 +4,8 @@
  * Modified by Gerhard Wagner
  */
 
-pragma solidity ^0.4.24;
+
+pragma solidity 0.4.24;
 
 contract Missing{
     address private owner;
@@ -13,10 +14,8 @@ contract Missing{
         require(msg.sender==owner);
         _;
     }
-
-    // The name of the constructor should be Missing
-    // Anyone can call the IamMissing once the contract is deployed
-    function IamMissing()
+    
+    function missing()
         public 
     {
         owner = msg.sender;

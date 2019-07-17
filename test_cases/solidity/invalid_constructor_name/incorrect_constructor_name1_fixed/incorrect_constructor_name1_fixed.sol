@@ -4,6 +4,7 @@
  * Modified by Gerhard Wagner
  */
 
+
 pragma solidity ^0.4.24;
 
 contract Missing{
@@ -14,9 +15,7 @@ contract Missing{
         _;
     }
 
-    // The name of the constructor should be Missing
-    // Anyone can call the IamMissing once the contract is deployed
-    function Missing()
+    constructor()
         public
     {
         owner = msg.sender;
