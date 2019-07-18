@@ -1,0 +1,101 @@
+{
+  "contracts" :
+  {
+    "semver_floating_pragma_fixed.sol:SemVerFloatingPragmaFixed" :
+    {
+      "bin" : "6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820c9d69cd68b5d9e085e35c473bb2a5fae1f5b5b60e1337ed4d5da076787b67d6f0029",
+      "bin-runtime" : "6080604052600080fd00a165627a7a72305820c9d69cd68b5d9e085e35c473bb2a5fae1f5b5b60e1337ed4d5da076787b67d6f0029",
+      "srcmap" : "56:38:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;56:38:0;;;;;;;",
+      "srcmap-runtime" : "56:38:0:-;;;;;"
+    }
+  },
+  "sourceList" :
+  [
+    "semver_floating_pragma_fixed.sol"
+  ],
+  "sources" :
+  {
+    "semver_floating_pragma_fixed.sol" :
+    {
+      "AST" :
+      {
+        "attributes" :
+        {
+          "absolutePath" : "semver_floating_pragma_fixed.sol",
+          "exportedSymbols" :
+          {
+            "SemVerFloatingPragmaFixed" :
+            [
+              3
+            ]
+          }
+        },
+        "children" :
+        [
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                "0.4",
+                ".25"
+              ]
+            },
+            "id" : 1,
+            "name" : "PragmaDirective",
+            "src" : "0:23:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                "=",
+                "0.4",
+                ".25"
+              ]
+            },
+            "id" : 2,
+            "name" : "PragmaDirective",
+            "src" : "30:24:0"
+          },
+          {
+            "attributes" :
+            {
+              "baseContracts" :
+              [
+                null
+              ],
+              "contractDependencies" :
+              [
+                null
+              ],
+              "contractKind" : "contract",
+              "documentation" : null,
+              "fullyImplemented" : true,
+              "linearizedBaseContracts" :
+              [
+                3
+              ],
+              "name" : "SemVerFloatingPragmaFixed",
+              "nodes" :
+              [
+                null
+              ],
+              "scope" : 4
+            },
+            "id" : 3,
+            "name" : "ContractDefinition",
+            "src" : "56:38:0"
+          }
+        ],
+        "id" : 4,
+        "name" : "SourceUnit",
+        "src" : "0:95:0"
+      }
+    }
+  },
+  "version" : "0.4.25+commit.59dbf8f1.Linux.g++"
+}

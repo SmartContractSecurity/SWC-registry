@@ -1,0 +1,295 @@
+{
+  "contracts" :
+  {
+    "semver_floating_pragma.sol:SemVerFloatingPragma" :
+    {
+      "bin" : "6080604052348015600f57600080fd5b50603580601d6000396000f3006080604052600080fd00a165627a7a72305820cc94a3673aa4f7054caa2aa6f1d7a455a0314193511c4bf8c471cff2afbc5cd70029",
+      "bin-runtime" : "6080604052600080fd00a165627a7a72305820cc94a3673aa4f7054caa2aa6f1d7a455a0314193511c4bf8c471cff2afbc5cd70029",
+      "srcmap" : "382:33:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;382:33:0;;;;;;;",
+      "srcmap-runtime" : "382:33:0:-;;;;;"
+    }
+  },
+  "sourceList" :
+  [
+    "semver_floating_pragma.sol"
+  ],
+  "sources" :
+  {
+    "semver_floating_pragma.sol" :
+    {
+      "AST" :
+      {
+        "attributes" :
+        {
+          "absolutePath" : "semver_floating_pragma.sol",
+          "exportedSymbols" :
+          {
+            "SemVerFloatingPragma" :
+            [
+              15
+            ]
+          }
+        },
+        "children" :
+        [
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                ">=",
+                "0.4",
+                ".0",
+                "<",
+                "0.6",
+                ".0"
+              ]
+            },
+            "id" : 1,
+            "name" : "PragmaDirective",
+            "src" : "0:32:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                ">=",
+                "0.4",
+                ".0",
+                "<",
+                "0.6",
+                ".0"
+              ]
+            },
+            "id" : 2,
+            "name" : "PragmaDirective",
+            "src" : "33:30:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                ">=",
+                "0.4",
+                ".14",
+                "<",
+                "0.6",
+                ".0"
+              ]
+            },
+            "id" : 3,
+            "name" : "PragmaDirective",
+            "src" : "64:32:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                ">",
+                "0.4",
+                ".13",
+                "<",
+                "0.6",
+                ".0"
+              ]
+            },
+            "id" : 4,
+            "name" : "PragmaDirective",
+            "src" : "97:31:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                "0.4",
+                ".24",
+                "-",
+                "0.5",
+                ".2"
+              ]
+            },
+            "id" : 5,
+            "name" : "PragmaDirective",
+            "src" : "129:31:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                ">=",
+                "0.4",
+                ".24",
+                "<=",
+                "0.5",
+                ".3",
+                "~",
+                "0.4",
+                ".20"
+              ]
+            },
+            "id" : 6,
+            "name" : "PragmaDirective",
+            "src" : "161:41:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                "<",
+                "0.4",
+                ".26"
+              ]
+            },
+            "id" : 7,
+            "name" : "PragmaDirective",
+            "src" : "203:24:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                "~",
+                "0.4",
+                ".20"
+              ]
+            },
+            "id" : 8,
+            "name" : "PragmaDirective",
+            "src" : "228:24:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                "^",
+                "0.4",
+                ".14"
+              ]
+            },
+            "id" : 9,
+            "name" : "PragmaDirective",
+            "src" : "253:24:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                "0.4",
+                ".",
+                "*"
+              ]
+            },
+            "id" : 10,
+            "name" : "PragmaDirective",
+            "src" : "278:22:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                "0.",
+                "*"
+              ]
+            },
+            "id" : 11,
+            "name" : "PragmaDirective",
+            "src" : "301:20:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                "*"
+              ]
+            },
+            "id" : 12,
+            "name" : "PragmaDirective",
+            "src" : "322:18:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                "0.4"
+              ]
+            },
+            "id" : 13,
+            "name" : "PragmaDirective",
+            "src" : "341:20:0"
+          },
+          {
+            "attributes" :
+            {
+              "literals" :
+              [
+                "solidity",
+                "0"
+              ]
+            },
+            "id" : 14,
+            "name" : "PragmaDirective",
+            "src" : "362:18:0"
+          },
+          {
+            "attributes" :
+            {
+              "baseContracts" :
+              [
+                null
+              ],
+              "contractDependencies" :
+              [
+                null
+              ],
+              "contractKind" : "contract",
+              "documentation" : null,
+              "fullyImplemented" : true,
+              "linearizedBaseContracts" :
+              [
+                15
+              ],
+              "name" : "SemVerFloatingPragma",
+              "nodes" :
+              [
+                null
+              ],
+              "scope" : 16
+            },
+            "id" : 15,
+            "name" : "ContractDefinition",
+            "src" : "382:33:0"
+          }
+        ],
+        "id" : 16,
+        "name" : "SourceUnit",
+        "src" : "0:416:0"
+      }
+    }
+  },
+  "version" : "0.4.25+commit.59dbf8f1.Linux.g++"
+}

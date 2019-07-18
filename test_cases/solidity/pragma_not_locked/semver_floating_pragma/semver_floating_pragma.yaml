@@ -1,0 +1,47 @@
+description: Floating pragma with semantic versioning operators allows multiple compilers to be used
+issues:
+  - id: SWC-103
+    count: 14
+    locations:
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [1]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [2]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [3]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [4]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [5]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [6]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [7]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [8]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [9]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [10]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [11]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [12]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [13]
+      - bytecode_offsets: {}
+        line_numbers:
+          semver_floating_pragma.sol: [14]
