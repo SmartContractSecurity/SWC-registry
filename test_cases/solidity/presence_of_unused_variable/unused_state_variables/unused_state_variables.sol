@@ -1,29 +1,25 @@
-pragma solidity >=0.4.24;
+pragma solidity >=0.5.0;
+pragma experimental ABIEncoderV2;
 
 import "./base.sol";
 
 contract DerivedA is Base {
-    // overrides e of Base (base.sol)
-    int e = 100;
+    // i is not used in the current contract
+    A i = A(1);
 
-    // f is not used in current contract or any descendant contracts
-    int internal f = 500;
-
-    function test() public {
-        y = e;
+    int internal j = 500;
+    
+    function call(int a) public {
+        assign1(a);
     }
-}
-
-contract DerivedB is DerivedA {
-    function test() public {
-        super.test();
-
-        z = 3;
+    
+    function assign3(A memory x) public returns (uint) {
+        return g[1] + x.a + uint(j);
     }
-}
 
-contract SideUsage {
-    function test(Base example) public view returns (int) {
-        return example.a();
+    function ret() public returns (int){
+        return this.e();
+
     }
+    
 }
