@@ -1,21 +1,20 @@
-pragma solidity ^0.4.20;
+pragma solidity ^0.5.0;
 
 contract UnusedVariables {
     int a = 1;
 
-    // b is not used
-    int public b;
-
     // y is not used
     function unusedArg(int x, int y) public view returns (int z) {
-        z = x + a;
+        z = x + a;  
     }
 
-    // n is not used
-    function unusedReturn(int x, int y) public pure returns (int m, int n) {
+    // n is not reported it is part of another SWC category
+    function unusedReturn(int x, int y) public pure returns (int m, int n, int o) {
         m = y - x;
+        o = m/2;
     }
 
+    // x is not accessed 
     function neverAccessed(int test) public pure returns (int) {
         int z = 10;
 
@@ -28,4 +27,11 @@ contract UnusedVariables {
 
         return z;
     }
+    
+    function tupleAssignment(int p) public returns (int q, int r){
+        (q, , r) = unusedReturn(p,2);
+        
+    }
+
+
 }

@@ -1,25 +1,23 @@
-pragma solidity >=0.4.24;
+pragma solidity >=0.5.0;
+pragma experimental ABIEncoderV2;
 
 import "./base_fixed.sol";
 
-contract DerivedAFixed is BaseFixed {
-    int e = 100;
+contract DerivedA is Base {
 
-    function test() public {
-        y = e;
+    int internal j = 500;
+    
+    function call(int a) public {
+        assign1(a);
     }
-}
-
-contract DerivedB is DerivedAFixed {
-    function test() public {
-        super.test();
-
-        z = 3;
+    
+    function assign3(A memory x) public returns (uint) {
+        return g[1] + x.a + uint(j);
     }
-}
 
-contract SideUsage {
-    function test(BaseFixed example) public view returns (int) {
-        return example.a();
+    function ret() public returns (int){
+        return this.e();
+
     }
+    
 }
