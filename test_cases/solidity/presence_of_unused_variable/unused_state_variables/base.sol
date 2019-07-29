@@ -1,27 +1,33 @@
-pragma solidity >=0.4.24;
+pragma solidity >=0.5.0;
+pragma experimental ABIEncoderV2;
 
 contract Base {
-    // a is used via accessor in contract SideUsage (derived.sol)
+    // a and b are public and can be accessed through an external call
     int public a = 10;
-
-    // b, c and d are not used in current contract or any descendant contracts
     int public b;
+
+    // c and d are not used in current contract or descendant contract
     int internal c;
     int private d;
 
-    // e is overriden in DerivedA - original e (current) is not used here and anywhere else in this sample
-    int e;
+    // e is assigned and accessed in assign1
+    int public e;
+    
+    // f can never be accessed 
+    mapping (uint => uint) f;
+    
+    // g is assigned per default and is accessed in descendant contract
+    uint[] g=[1,2,3];
 
-    // x is referenced locally
-    int private x;
-
-    // y is referenced in contract DerivedA (derived.sol)
-    int internal y;
-
-    // z is referenced in contract DerivedB (derived.sol)
-    int z;
-
-    constructor() public {
-        x = 2;
+    struct A { uint a; }
+    
+    function assign1(int x) public {
+        e += x;
     }
+
+    function assign2(uint x,uint y) public {
+        f[x] = y;
+    }
+
 }
+    

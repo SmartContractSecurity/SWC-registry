@@ -1,0 +1,5 @@
+description: Floating pragma with semantic versioning operators allows multiple compilers to be used
+issues:
+  - id: SWC-103
+    count: 0
+    locations: []
