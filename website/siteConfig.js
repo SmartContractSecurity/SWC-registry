@@ -9,14 +9,14 @@ var hljsDefineSolidity = require('highlightjs-solidity');
 const siteConfig = {
   title: 'Overview',
   tagline: 'Smart Contract Weakness Classification and Test Cases',
-  url: 'https://SmartContractSecurity.github.io',
-  baseUrl: '/SWC-registry/',
+  url: 'http://swcregistry.io',
+  baseUrl: '/',
   projectName: 'SWC-registry',
   organizationName: 'SmartContractSecurity',
   customDocsPath: 'website/docs',
   headerLinks: [
     { doc: 'SWC-100', label: 'Registry' },
-    { href: 'https://github.com/SmartContractSecurity/SWC-registry', label: 'Github' },
+    { href: 'http://swcregistry.io', label: 'Github' },
   ],
   headerIcon: 'img/docusaurus.svg',
   footerIcon: 'img/docusaurus.svg',
@@ -40,13 +40,13 @@ const siteConfig = {
   },
   scripts: [],
   footerscripts: [
-    'https://cdn.jsdelivr.net/gh/SmartContractSecurity/SWC-registry@website/website/scripts/lineNumbers.js',
+    'https://rawgit.com/s0b0lev/SWC-registry/website/website/scripts/lineNumbers.js',
   ],
   onPageNav: 'separate',
   cleanUrl: true,
   ogImage: 'img/docusaurus.png',
   twitterImage: 'img/docusaurus.png',
-  repoUrl: 'https://github.com/SmartContractSecurity/SWC-registry',
+  repoUrl: 'http://swcregistry.io',
 };
 
 module.exports = siteConfig;
