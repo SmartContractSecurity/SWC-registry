@@ -10,7 +10,7 @@ const siteConfig = {
   title: 'Overview',
   tagline: 'Smart Contract Weakness Classification and Test Cases',
   url: 'http://swcregistry.io',
-  baseUrl: '/',
+  baseUrl: '/SWC-registry/',
   projectName: 'SWC-registry',
   organizationName: 'SmartContractSecurity',
   customDocsPath: 'website/docs',
