@@ -10,13 +10,13 @@ const siteConfig = {
   title: 'Overview',
   tagline: 'Smart Contract Weakness Classification and Test Cases',
   url: 'http://swcregistry.io',
-  baseUrl: '/SWC-registry/',
+  baseUrl: '/',
   projectName: 'SWC-registry',
   organizationName: 'SmartContractSecurity',
   customDocsPath: 'website/docs',
   headerLinks: [
     { doc: 'SWC-100', label: 'Registry' },
-    { href: 'http://swcregistry.io', label: 'Github' },
+    { href: 'https://github.com/SmartContractSecurity/SWC-registry', label: 'Github' },
   ],
   headerIcon: 'img/docusaurus.svg',
   footerIcon: 'img/docusaurus.svg',
@@ -46,7 +46,7 @@ const siteConfig = {
   cleanUrl: true,
   ogImage: 'img/docusaurus.png',
   twitterImage: 'img/docusaurus.png',
-  repoUrl: 'http://swcregistry.io',
+  repoUrl: 'https://github.com/SmartContractSecurity/SWC-registry',
 };
 
 module.exports = siteConfig;
