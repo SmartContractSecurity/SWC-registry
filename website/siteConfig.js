@@ -34,6 +34,7 @@ const siteConfig = {
       return hljsDefineSolidity(hljs);
     }
   },
+  cname: './CNAME',
   algolia: {
     apiKey: '064ab94cd5d5382009d9640000aeea98',
     indexName: 'smartcontractsecurity',
