@@ -1,0 +1,8 @@
+description: Pure Function Reads State
+issues:
+- id: SWC-133
+  count: 1
+  locations:
+      - bytecode_offsets: {}
+        line_numbers:
+          pure_function_reads_state.sol: [7]
