@@ -98,6 +98,11 @@ From time to time there will be challenges on [Gitcoin](https://gitcoin.co). Fol
     <img src="https://gitcoin.co/funding/embed?repo=https://github.com/SmartContractSecurity/SWC-registry/&max_age=60&badge=1">
 </a>
 
+### Scope of Weaknesses 
+
+SWCs should be concerned with weaknesses that can be identified within the code of a smart contract, typically Solidity. 
+Weaknesses in 'smart contract adjacent' code should not be included. For example, the [gas siphoning attack](https://github.com/SmartContractSecurity/SWC-registry/pull/140) occurs in wallet code, and should be protected against in wallet code.
+
 ## Contact
 
 This repository is maintained by the team behind [MythX](https://mythx.io).
