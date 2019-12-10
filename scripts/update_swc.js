@@ -37,6 +37,7 @@ const generateSWC = () => {
       };
     } catch(e) {
       console.log(`[ERROR] Wrong document format: ${name}.md, provide content for all required headings`)
+      console.log(e)
       if (command && command === 'markdown-validate') {
         process.exit(1);
       }
