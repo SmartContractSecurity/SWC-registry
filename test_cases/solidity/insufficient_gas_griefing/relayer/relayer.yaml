@@ -6,4 +6,3 @@ issues:
   - bytecode_offsets: {}
     line_numbers:
       relayer.sol: [18]
-      
