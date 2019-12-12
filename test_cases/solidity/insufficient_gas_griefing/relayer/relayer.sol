@@ -4,24 +4,33 @@
  * Modified by Kaden Zipfel
  */
 
-pragma solidity ^0.4.21;
+pragma solidity ^0.5.0;
 
 contract Relayer {
-    mapping (bytes => bool) executed;
+    uint transactionId;
 
-    function relay(bytes _data) public {
+    struct Tx {
+        bytes data;
+        bool executed;
+    }
+
+    mapping (uint => Tx) transactions;
+
+    function relay(bytes memory _data) public {
         // replay protection; do not call the same transaction twice
-        require(executed[_data] == false);
-        executed[_data] = true;
+        require(transactions[transactionId].executed == false, 'same transaction twice');
+        transactions[transactionId].data = _data;
+        transactions[transactionId].executed = true;
+        transactionId += 1;
 
-        address executor = new Executor();
-        executor.call(bytes4(keccak256("execute(bytes)")), _data);
+        Target target = new Target();
+        address(target).call(abi.encodeWithSignature("execute(bytes)", _data));
     }
 }
 
 // Contract called by Relayer
-contract Executor {
-    function execute(bytes _data) public {
+contract Target {
+    function execute(bytes memory _data) public {
         // Execute contract code
     }
 }
