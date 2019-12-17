@@ -16,14 +16,15 @@ contract Relayer {
 
     mapping (uint => Tx) transactions;
 
-    function relay(Target target, bytes memory _data) public {
+    function relay(Target target, bytes memory _data) public returns(bool) {
         // replay protection; do not call the same transaction twice
         require(transactions[transactionId].executed == false, 'same transaction twice');
         transactions[transactionId].data = _data;
         transactions[transactionId].executed = true;
         transactionId += 1;
 
-        address(target).call(abi.encodeWithSignature("execute(bytes)", _data));
+        (bool success, ) = address(target).call(abi.encodeWithSignature("execute(bytes)", _data));
+        return success;
     }
 }
 
