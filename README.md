@@ -4,11 +4,11 @@
 [![Discord](https://img.shields.io/discord/481002907366588416.svg)](https://discord.gg/qcNvR2r)
 
 
-The Smart Contract Weakness Classification Registry is an implementation of the weakness classification scheme proposed in [EIP-1470](https://github.com/ethereum/EIPs/issues/1469). It is loosely aligned to the terminologies and structure used in the Common Weakness Enumeration ([CWE](https://cwe.mitre.org)) while overlaying a wide range of weakness variants that are specific to smart contracts.
+The Smart Contract Weakness Classification Registry (SWC Registry) is an implementation of the weakness classification scheme proposed in [EIP-1470](https://github.com/ethereum/EIPs/issues/1469). It is loosely aligned to the terminologies and structure used in the Common Weakness Enumeration ([CWE](https://cwe.mitre.org)) while overlaying a wide range of weakness variants that are specific to smart contracts.
 
 The goals of this project are as follows:
 
-- Provide a straight forward way to classify security issues in smart contract systems.
+- Provide a straightforward way to classify security issues in smart contract systems.
 - Define a common language for describing security issues in smart contract systems' architecture, design, or code.
 - Serve as a way to train and increase performance for smart contract security analysis tools.
 
@@ -35,7 +35,7 @@ Link to external references that contain useful additional information on the is
 
 ```
 
-## Create a new Test Case  
+## Create a new test case  
 
 Test cases should be as varied as possible and include both simple test cases and real-world samples of vulnerable smart contracts. The test cases are grouped into subdirectories based on a single weakness variant or based on more complex real world contract systems that can contain various weakness variants. A single test case consists of the following structure:
 
@@ -89,7 +89,7 @@ The configuration contains meta-information about the weaknesses contained in a 
 
 Before you create a PR for the first time make sure you have read:
 
-- the sections [Create a new SWC entry](#create-a-new-swc-entry) and [Create a test case](#create-a-new-test-case).
+- the sections [Create a new SWC entry](#create-a-new-swc-entry) and [Create a new test case](#create-a-new-test-case).
 - read several existing SWC definitions and their test cases. 
 
 From time to time there will be challenges on [Gitcoin](https://gitcoin.co). Follow the below link to check what challenges are currently open.  
@@ -98,8 +98,13 @@ From time to time there will be challenges on [Gitcoin](https://gitcoin.co). Fol
     <img src="https://gitcoin.co/funding/embed?repo=https://github.com/SmartContractSecurity/SWC-registry/&max_age=60&badge=1">
 </a>
 
+### Scope of Weaknesses 
+
+SWCs should be concerned with weaknesses that can be identified within the code of a smart contract, typically Solidity. 
+Weaknesses in 'smart contract adjacent' code should not be included. For example, the [gas siphoning attack](https://github.com/SmartContractSecurity/SWC-registry/pull/140) occurs in wallet code, and should be protected against in wallet code.
+
 ## Contact
 
-This repository is maintained by the [Mythril](https://mythril.ai) team. Join the #swc-registry channel on the [Mythril Community Discord Server](https://discord.gg/qcNvR2r) for discussions.
+This repository is maintained by the team behind [MythX](https://mythx.io).
 
-
+Please join the #swc-registry channel on the [MythX Discord](https://discord.gg/qcNvR2r) for discussions.

@@ -1,0 +1,5 @@
+description: Relayer contract with protection against insufficient gas griefing
+issues:
+- id: SWC-126
+  count: 0
+  locations: []

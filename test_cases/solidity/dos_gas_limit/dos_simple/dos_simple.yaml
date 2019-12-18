@@ -3,7 +3,6 @@ issues:
 - id: SWC-128
   count: 1
   locations:
-  - bytecode_offsets:
-      '0x81cafe753b96f7315b17b2bb5184b64b8f2cfe66a7077e94569355ce4dfa5208': [150]
+  - bytecode_offsets: {}
     line_numbers:
-      dos_simple.sol: [10,11,12]
+      dos_simple.sol: [16]
