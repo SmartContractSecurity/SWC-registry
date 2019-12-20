@@ -22,9 +22,8 @@ contract ModifierEntrancy {
 }
 
 contract Bank{
-    uint state_var;
+
     function supportsToken() external returns(bytes32){
-        state_var = 1;
         return(keccak256(abi.encodePacked("Nu Token")));
     }
 }
