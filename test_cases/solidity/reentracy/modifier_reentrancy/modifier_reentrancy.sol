@@ -17,9 +17,10 @@ contract ModifierEntrancy {
     require(keccak256(abi.encodePacked("Nu Token")) == bank.supportsToken());
     _;
   }
+  
   //Checks that the caller has a zero balance
   modifier hasNoBalance {
-      //require(tokenBalance[msg.sender] == 0);
+      require(tokenBalance[msg.sender] == 0);
       _;
   }
 }
