@@ -5,4 +5,4 @@ issues:
   locations:
   - bytecode_offsets: {}
     line_numbers:
-      modifier_reentrancy.sol: [8, 9]
+      modifier_reentrancy.sol: [14, 15]
