@@ -5,4 +5,4 @@ issues:
   locations:
   - bytecode_offsets: {}
     line_numbers:
-      Lockdrop.sol: [65]
+      Lockdrop.sol: [69]
