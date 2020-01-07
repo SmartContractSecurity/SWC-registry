@@ -1,0 +1,5 @@
+description: Wallet contract with side-effect-free statement
+issues:
+- id: SWC-135
+  count: 0
+  locations: []
