@@ -1,0 +1,5 @@
+description: Game contract with private data on-chain
+issues:
+- id: SWC-136
+  count: 0
+  locations: []
