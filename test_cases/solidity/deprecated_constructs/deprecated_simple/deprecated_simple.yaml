@@ -5,22 +5,19 @@ issues:
   locations:
   - bytecode_offsets: {}
     line_numbers:
-      deprecated_simple.sol: [5]
-  - bytecode_offsets: {}
-    line_numbers:
       deprecated_simple.sol: [7]
   - bytecode_offsets: {}
     line_numbers:
-      deprecated_simple.sol: [8]
+      deprecated_simple.sol: [9]
   - bytecode_offsets: {}
     line_numbers:
       deprecated_simple.sol: [10]
   - bytecode_offsets: {}
     line_numbers:
-      deprecated_simple.sol: [13]
+      deprecated_simple.sol: [12]
   - bytecode_offsets: {}
     line_numbers:
-      deprecated_simple.sol: [16]
+      deprecated_simple.sol: [15]
   - bytecode_offsets: {}
     line_numbers:
       deprecated_simple.sol: [18]
@@ -30,3 +27,6 @@ issues:
   - bytecode_offsets: {}
     line_numbers:
       deprecated_simple.sol: [22]
+  - bytecode_offsets: {}
+    line_numbers:
+      deprecated_simple.sol: [24]
