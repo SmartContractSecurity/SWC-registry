@@ -4,14 +4,14 @@ issues:
   count: 3
   locations:
   - bytecode_offsets:
-      '0xa99a54e817bb8a1fa4ba0591fed10feb24e937c83492a46cd723c5ddde86465d': [2014]
+      '0x75b95f0d0703584968adc432f4e136f53a6fdb533990144ae554c5e7918d4db4': [2014]
     line_numbers:
-      rubixi.sol: [75]
+      rubixi.sol: [77]
   - bytecode_offsets:
-      '0xa99a54e817bb8a1fa4ba0591fed10feb24e937c83492a46cd723c5ddde86465d': [2644]
+      '0x75b95f0d0703584968adc432f4e136f53a6fdb533990144ae554c5e7918d4db4': [2644]
     line_numbers:
-      rubixi.sol: [85]
+      rubixi.sol: [87]
   - bytecode_offsets:
-      '0xa99a54e817bb8a1fa4ba0591fed10feb24e937c83492a46cd723c5ddde86465d': [1673]
+      '0x75b95f0d0703584968adc432f4e136f53a6fdb533990144ae554c5e7918d4db4': [1673]
     line_numbers:
-      rubixi.sol: [93]
+      rubixi.sol: [95]
