@@ -5,4 +5,4 @@ issues:
   locations: 
   - bytecode_offsets: {}
     line_numbers:
-      relayer.sol: [18]
+      odd_even.sol: [18]
