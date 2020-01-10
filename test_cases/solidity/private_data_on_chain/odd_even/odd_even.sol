@@ -13,7 +13,7 @@ contract OddEven {
     }
 
     Player[2] private players;
-    uint8 count = 0;
+    uint count = 0;
 
     function play(uint number) public payable {
             require(msg.value == 1 ether, 'msg.value must be 1 eth');
