@@ -3,10 +3,10 @@
  * @author: Josselin Feist (adapted for SWC by Bernhard Mueller)
  * Assert violation with 3 message calls:
  * - airdrop()
- * - backdoor() 
+ * - backdoor()
  * - test_invariants()
  */
-
+pragma solidity ^0.4.22;
 
 contract Token{
 
@@ -15,7 +15,7 @@ contract Token{
         balances[msg.sender] = 1000;
     }
 
-    function consume() public{ 
+    function consume() public{
         require(balances[msg.sender]>0);
         balances[msg.sender] -= 1;
     }
@@ -23,7 +23,7 @@ contract Token{
     function backdoor() public{
         balances[msg.sender] += 1;
     }
- 
+
    function test_invariants() {
       assert(balances[msg.sender] <= 1000);
   }

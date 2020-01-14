@@ -1,3 +1,5 @@
+pragma solidity ^0.4.22;
+
 contract TwoMappings{
 
     mapping(uint=>uint) m;

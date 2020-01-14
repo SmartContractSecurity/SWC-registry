@@ -4,6 +4,6 @@ issues:
   count: 1
   locations:
   - bytecode_offsets:
-      '0xa297f6363737429d38ab9ff27525596cfcf3315873ada3e93605ec06f465b8f7': [112]
+      '0x4a7cd89c26299585719540e997a804e52586a1c829c59bee8167a9ac33bbc000': [112]
     line_numbers:
-      simple_suicide.sol: [4]
+      simple_suicide.sol: [6]

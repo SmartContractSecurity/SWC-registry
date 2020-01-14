@@ -1,97 +1,99 @@
 {
-  "contracts" : 
+  "contracts" :
   {
-    "simple_suicide.sol:SimpleSuicide" : 
+    "simple_suicide.sol:SimpleSuicide" :
     {
-      "bin" : "6080604052348015600f57600080fd5b50609d8061001e6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a56a3b5a146044575b600080fd5b348015604f57600080fd5b5060566058565b005b3373ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a72305820ef91c543c51cdd0b7e9142c825b0ee060caa08df8acc375c1e444d8f1ba2f84b0029",
-      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a56a3b5a146044575b600080fd5b348015604f57600080fd5b5060566058565b005b3373ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a72305820ef91c543c51cdd0b7e9142c825b0ee060caa08df8acc375c1e444d8f1ba2f84b0029",
-      "srcmap" : "0:92:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;0:92:0;;;;;;;",
-      "srcmap-runtime" : "0:92:0:-;;;;;;;;;;;;;;;;;;;;;;;;28:61;;8:9:-1;5:2;;;30:1;27;20:12;5:2;28:61:0;;;;;;;73:10;60:24;;"
+      "bin" : "6080604052348015600f57600080fd5b50609d8061001e6000396000f300608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a56a3b5a146044575b600080fd5b348015604f57600080fd5b5060566058565b005b3373ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a723058203201bfda555b2fe5c335016e7d26f26c42321cc905aaa83f5e2d5dd361e642ec0029",
+      "bin-runtime" : "608060405260043610603f576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063a56a3b5a146044575b600080fd5b348015604f57600080fd5b5060566058565b005b3373ffffffffffffffffffffffffffffffffffffffff16ff00a165627a7a723058203201bfda555b2fe5c335016e7d26f26c42321cc905aaa83f5e2d5dd361e642ec0029",
+      "srcmap" : "26:92:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;26:92:0;;;;;;;",
+      "srcmap-runtime" : "26:92:0:-;;;;;;;;;;;;;;;;;;;;;;;;54:61;;8:9:-1;5:2;;;30:1;27;20:12;5:2;54:61:0;;;;;;;99:10;86:24;;"
     }
   },
-  "sourceList" : 
+  "sourceList" :
   [
     "simple_suicide.sol"
   ],
-  "sources" : 
+  "sources" :
   {
-    "simple_suicide.sol" : 
+    "simple_suicide.sol" :
     {
-      "AST" : 
+      "AST" :
       {
-        "attributes" : 
+        "attributes" :
         {
           "absolutePath" : "simple_suicide.sol",
-          "exportedSymbols" : 
+          "exportedSymbols" :
           {
-            "SimpleSuicide" : 
+            "SimpleSuicide" :
             [
-              10
+              11
             ]
           }
         },
-        "children" : 
+        "children" :
         [
           {
-            "attributes" : 
+            "attributes" :
             {
-              "baseContracts" : 
+              "literals" :
+              [
+                "solidity",
+                "^",
+                "0.4",
+                ".22"
+              ]
+            },
+            "id" : 1,
+            "name" : "PragmaDirective",
+            "src" : "0:24:0"
+          },
+          {
+            "attributes" :
+            {
+              "baseContracts" :
               [
                 null
               ],
-              "contractDependencies" : 
+              "contractDependencies" :
               [
                 null
               ],
               "contractKind" : "contract",
               "documentation" : null,
               "fullyImplemented" : true,
-              "linearizedBaseContracts" : 
+              "linearizedBaseContracts" :
               [
-                10
+                11
               ],
               "name" : "SimpleSuicide",
-              "scope" : 11
+              "scope" : 12
             },
-            "children" : 
+            "children" :
             [
               {
-                "attributes" : 
+                "attributes" :
                 {
                   "constant" : false,
                   "documentation" : null,
                   "implemented" : true,
                   "isConstructor" : false,
-                  "modifiers" : 
+                  "modifiers" :
                   [
                     null
                   ],
                   "name" : "sudicideAnyone",
                   "payable" : false,
-                  "scope" : 10,
+                  "scope" : 11,
                   "stateMutability" : "nonpayable",
                   "superFunction" : null,
                   "visibility" : "public"
                 },
-                "children" : 
+                "children" :
                 [
                   {
-                    "attributes" : 
+                    "attributes" :
                     {
-                      "parameters" : 
-                      [
-                        null
-                      ]
-                    },
-                    "children" : [],
-                    "id" : 1,
-                    "name" : "ParameterList",
-                    "src" : "51:2:0"
-                  },
-                  {
-                    "attributes" : 
-                    {
-                      "parameters" : 
+                      "parameters" :
                       [
                         null
                       ]
@@ -99,16 +101,29 @@
                     "children" : [],
                     "id" : 2,
                     "name" : "ParameterList",
-                    "src" : "54:0:0"
+                    "src" : "77:2:0"
                   },
                   {
-                    "children" : 
+                    "attributes" :
+                    {
+                      "parameters" :
+                      [
+                        null
+                      ]
+                    },
+                    "children" : [],
+                    "id" : 3,
+                    "name" : "ParameterList",
+                    "src" : "80:0:0"
+                  },
+                  {
+                    "children" :
                     [
                       {
-                        "children" : 
+                        "children" :
                         [
                           {
-                            "attributes" : 
+                            "attributes" :
                             {
                               "argumentTypes" : null,
                               "isConstant" : false,
@@ -116,39 +131,39 @@
                               "isPure" : false,
                               "isStructConstructorCall" : false,
                               "lValueRequested" : false,
-                              "names" : 
+                              "names" :
                               [
                                 null
                               ],
                               "type" : "tuple()",
                               "type_conversion" : false
                             },
-                            "children" : 
+                            "children" :
                             [
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
-                                  "argumentTypes" : 
+                                  "argumentTypes" :
                                   [
                                     {
                                       "typeIdentifier" : "t_address",
                                       "typeString" : "address"
                                     }
                                   ],
-                                  "overloadedDeclarations" : 
+                                  "overloadedDeclarations" :
                                   [
                                     null
                                   ],
-                                  "referencedDeclaration" : 33,
+                                  "referencedDeclaration" : 34,
                                   "type" : "function (address)",
                                   "value" : "selfdestruct"
                                 },
-                                "id" : 3,
+                                "id" : 4,
                                 "name" : "Identifier",
-                                "src" : "60:12:0"
+                                "src" : "86:12:0"
                               },
                               {
-                                "attributes" : 
+                                "attributes" :
                                 {
                                   "argumentTypes" : null,
                                   "isConstant" : false,
@@ -159,60 +174,60 @@
                                   "referencedDeclaration" : null,
                                   "type" : "address"
                                 },
-                                "children" : 
+                                "children" :
                                 [
                                   {
-                                    "attributes" : 
+                                    "attributes" :
                                     {
                                       "argumentTypes" : null,
-                                      "overloadedDeclarations" : 
+                                      "overloadedDeclarations" :
                                       [
                                         null
                                       ],
-                                      "referencedDeclaration" : 25,
+                                      "referencedDeclaration" : 26,
                                       "type" : "msg",
                                       "value" : "msg"
                                     },
-                                    "id" : 4,
+                                    "id" : 5,
                                     "name" : "Identifier",
-                                    "src" : "73:3:0"
+                                    "src" : "99:3:0"
                                   }
                                 ],
-                                "id" : 5,
+                                "id" : 6,
                                 "name" : "MemberAccess",
-                                "src" : "73:10:0"
+                                "src" : "99:10:0"
                               }
                             ],
-                            "id" : 6,
+                            "id" : 7,
                             "name" : "FunctionCall",
-                            "src" : "60:24:0"
+                            "src" : "86:24:0"
                           }
                         ],
-                        "id" : 7,
+                        "id" : 8,
                         "name" : "ExpressionStatement",
-                        "src" : "60:24:0"
+                        "src" : "86:24:0"
                       }
                     ],
-                    "id" : 8,
+                    "id" : 9,
                     "name" : "Block",
-                    "src" : "54:35:0"
+                    "src" : "80:35:0"
                   }
                 ],
-                "id" : 9,
+                "id" : 10,
                 "name" : "FunctionDefinition",
-                "src" : "28:61:0"
+                "src" : "54:61:0"
               }
             ],
-            "id" : 10,
+            "id" : 11,
             "name" : "ContractDefinition",
-            "src" : "0:92:0"
+            "src" : "26:92:0"
           }
         ],
-        "id" : 11,
+        "id" : 12,
         "name" : "SourceUnit",
-        "src" : "0:93:0"
+        "src" : "0:119:0"
       }
     }
   },
-  "version" : "0.4.24+commit.e67f0147.Darwin.appleclang"
+  "version" : "0.4.25+commit.59dbf8f1.Linux.g++"
 }

@@ -1,3 +1,5 @@
+pragma solidity ^0.4.24;
+
 contract DeprecatedSimple {
 
     // Do everything that's deprecated, then commit suicide.

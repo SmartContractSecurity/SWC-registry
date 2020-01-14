@@ -4,6 +4,6 @@ issues:
   count: 1
   locations:
   - bytecode_offsets:
-      '0xc810f8fbf957d5a04cf056b60acf88a61e41c161ef62cc572333b318b688a88b': [698]
+      '0x78c4c9ab906637a8d3453dd8c6c6a8357e2459ec6c52f0e48fea0437fbca6910': [698]
     line_numbers:
       token-with-backdoor.sol: [28]
