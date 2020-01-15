@@ -1,0 +1,5 @@
+description: Access control contract without protection against multiple variable length argument hash collisions
+issues:
+- id: SWC-133
+  count: 0
+  locations: []

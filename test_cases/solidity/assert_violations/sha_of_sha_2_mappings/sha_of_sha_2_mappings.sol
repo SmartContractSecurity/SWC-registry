@@ -2,6 +2,8 @@
  * @source: ChainSecurity
  * @author: Anton Permenev
  */
+pragma solidity ^0.4.22;
+
 contract ShaOfSha2Mappings{
 
     mapping(bytes32=>uint) m;
