@@ -1,5 +1,5 @@
 description: Game contract with private data on-chain
 issues:
-- id: SWC-136
+- id: SWC-135
   count: 0
   locations: []
