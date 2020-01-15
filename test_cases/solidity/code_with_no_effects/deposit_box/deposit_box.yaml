@@ -1,6 +1,6 @@
 description: Deposit box with side-effect-free statement
 issues:
-- id: SWC-135
+- id: SWC-134
   count: 1
   locations: 
   - bytecode_offsets: {}
