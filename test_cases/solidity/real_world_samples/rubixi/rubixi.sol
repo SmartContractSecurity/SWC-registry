@@ -1,3 +1,5 @@
+pragma solidity ^0.4.22;
+
 contract Rubixi {
 
         //Declare variables for storage critical to contract
@@ -45,7 +47,7 @@ contract Rubixi {
                 addPayout(_fee);
         }
 
-        //Function called for valid tx to the contract 
+        //Function called for valid tx to the contract
         function addPayout(uint _fee) private {
                 //Adds new address to participant array
                 participants.push(Participant(msg.sender, (msg.value * pyramidMultiplier) / 100));
