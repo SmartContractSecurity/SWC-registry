@@ -5,14 +5,13 @@ issues:
   locations:
   - bytecode_offsets: {}
     line_numbers:
-      hardcoded_has_limits.sol: [20]
+      hardcoded_gas_limits.sol: [20]
   - bytecode_offsets: {}
     line_numbers:
-      hardcoded_has_limits.sol: [24]
+      hardcoded_gas_limits.sol: [24]
   - bytecode_offsets: {}
     line_numbers:
-      hardcoded_has_limits.sol: [28]
+      hardcoded_gas_limits.sol: [28]
   - bytecode_offsets: {}
     line_numbers:
-      hardcoded_has_limits.sol: [32]
-
+      hardcoded_gas_limits.sol: [32]
