@@ -15,4 +15,4 @@ issues:
   - bytecode_offsets: {}
     line_numbers:
       hardcoded_has_limits.sol: [32]
-  - bytecode_offsets: {}
+
