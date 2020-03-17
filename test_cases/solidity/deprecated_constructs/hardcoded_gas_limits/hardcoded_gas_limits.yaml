@@ -1,6 +1,6 @@
 description: Hardcoded gas limit
 issues:
-- id: SWC-137
+- id: SWC-134
   count: 4
   locations:
   - bytecode_offsets: {}
