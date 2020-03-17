@@ -1,4 +1,4 @@
-description: Deposit box with side-effect-free statement
+description: Deposit box with effect-free statement
 issues:
 - id: SWC-135
   count: 1
