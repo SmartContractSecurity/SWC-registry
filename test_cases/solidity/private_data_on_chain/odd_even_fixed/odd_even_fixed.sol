@@ -32,7 +32,8 @@ contract OddEven {
         else revert("only two players allowed");
 
         // Require proper amount deposited
-        require(msg.value == 1 ether, 'msg.value must be 1 eth');
+        // 1 ETH as a bet + 1 ETH as a bond
+        require(msg.value == 2 ether, 'msg.value must be 2 eth');
 
         // Store the commitment
         players[playerIndex] = Player(msg.sender, commitment, 0);
@@ -67,9 +68,15 @@ contract OddEven {
         // Only run during distribution stage
         require(stage == Stage.Distribution, "wrong stage");
 
-        // Find winner and payout
+        // Find winner
         uint n = players[0].number + players[1].number;
-        (bool success, ) = players[n%2].addr.call.value(address(this).balance)("");
+
+        // Payout winners winnings and bond
+        (bool success, ) = players[n%2].addr.call.value(3 ether)("");
+        require(success, "transfer failed");
+
+        // Payback losers bond
+        (bool success, ) = players[(n+1)%2].addr.call.value(1 ether)("");
         require(success, "transfer failed");
 
         // Reset the state
