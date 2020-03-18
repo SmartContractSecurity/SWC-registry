@@ -1,0 +1,8 @@
+description: Deposit box with effect-free statement
+issues:
+- id: SWC-135
+  count: 1
+  locations: 
+  - bytecode_offsets: {}
+    line_numbers:
+      deposit_box.sol: [10]
