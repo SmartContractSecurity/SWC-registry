@@ -72,12 +72,10 @@ contract OddEven {
         uint n = players[0].number + players[1].number;
 
         // Payout winners winnings and bond
-        (bool success, ) = players[n%2].addr.call.value(3 ether)("");
-        require(success, "transfer failed");
+        players[n%2].addr.call.value(3 ether)("");
 
         // Payback losers bond
-        (bool success, ) = players[(n+1)%2].addr.call.value(1 ether)("");
-        require(success, "transfer failed");
+        players[(n+1)%2].addr.call.value(1 ether)("");
 
         // Reset the state
         delete players;
