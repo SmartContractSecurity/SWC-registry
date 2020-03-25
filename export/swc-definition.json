@@ -322,5 +322,14 @@
       "Description": "In Solidity, it's possible to write code that does not produce the intended effects. Currently, the solidity compiler will not return a warning for effect-free code. This can lead to the introduction of \"dead\" code that does not properly performing an intended action.\n\n\nFor example, it's easy to miss the trailing parentheses in `msg.sender.call.value(address(this).balance)(\"\");`, which could lead to a function proceeding without transferring funds to `msg.sender`. Although, this should be avoided by [checking the return value of the call](./SWC-104.md).",
       "Remediation": "It's important to carefully ensure that your contract works as intended. Write  unit tests to verify correct behaviour of the code."
     }
+  },
+  "SWC-136": {
+    "markdown": "# Title\nUnencrypted Private Data On-Chain\n\n## Relationships\n[CWE-767: Access to Critical Private Variable via Public Method](https://cwe.mitre.org/data/definitions/767.html)\n\n## Description\nIt is a common misconception that `private` type variables cannot be read. Even if your contract is not published, attackers can look at contract transactions to determine values stored in the state of the contract. For this reason, it's important that unencrypted private data is not stored in the contract code or state.\n\n## Remediation\nAny private data should either be stored off-chain, or carefully encrypted.\n\n## References\n- [Keeping secrets on Ethereum](https://medium.com/solidified/keeping-secrets-on-ethereum-5b556c3bb1ee)\n- [A Survey of Attacks on Ethereum Smart Contracts (SoK)](https://www.semanticscholar.org/paper/A-Survey-of-Attacks-on-Ethereum-Smart-Contracts-Atzei-Bartoletti/aec843c0f38aff6c7901391a75ec10114a3d60f8)\n- [Unencrypted Secrets](https://github.com/KadenZipfel/smart-contract-attack-vectors/blob/master/vulnerabilities/unencrypted-secrets.md)\n- [Stack Overflow - Decrypt message on-chain](https://ethereum.stackexchange.com/questions/69825/decrypt-message-on-chain)\n",
+    "content": {
+      "Title": "Unencrypted Private Data On-Chain",
+      "Relationships": "[CWE-767: Access to Critical Private Variable via Public Method](https://cwe.mitre.org/data/definitions/767.html)",
+      "Description": "It is a common misconception that `private` type variables cannot be read. Even if your contract is not published, attackers can look at contract transactions to determine values stored in the state of the contract. For this reason, it's important that unencrypted private data is not stored in the contract code or state.",
+      "Remediation": "Any private data should either be stored off-chain, or carefully encrypted."
+    }
   }
 }
