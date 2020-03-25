@@ -1,0 +1,8 @@
+description: Time lock contract using block number as proxy for time
+issues:
+- id: SWC-116
+  count: 1
+  locations: 
+  - bytecode_offsets: {}
+    line_numbers:
+      time_lock.sol: [18]

@@ -1,0 +1,8 @@
+description: Game contract with private data on-chain
+issues:
+- id: SWC-136
+  count: 1
+  locations: 
+  - bytecode_offsets: {}
+    line_numbers:
+      odd_even.sol: [18]
