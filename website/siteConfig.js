@@ -48,6 +48,7 @@ const siteConfig = {
   ogImage: 'img/docusaurus.png',
   twitterImage: 'img/docusaurus.png',
   repoUrl: 'https://github.com/SmartContractSecurity/SWC-registry',
+  gaTrackingId: 'UA-64552723-12'
 };
 
 module.exports = siteConfig;
