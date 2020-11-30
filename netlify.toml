@@ -1,4 +1,3 @@
 [build]
-  command = "yarn build"
-  functions = "pages/api/"
+  command = "yarn build-out"
   publish = "out/"

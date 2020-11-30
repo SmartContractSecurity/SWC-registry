@@ -1,11 +1,12 @@
 {
-  "name": "certik-security-oracle-swc-registry",
-  "version": "0.1.0",
+  "name": "certik-swc-registry",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build:swc": "cd scripts && npm install && npm run update-swc && cd ..",
-    "build": "yarn build:swc && next build && next export",
+    "build": "yarn build:swc && next build",
+    "build-out": "yarn build && next export",
     "start": "next start"
   },
   "dependencies": {
