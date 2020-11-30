@@ -23,7 +23,7 @@ const generateSWC = () => {
   files.map(file => {
     const content = fs.readFileSync(file, 'utf8');
     const parsed = md2json.parse(content);
-    const [name] = /(SWC)-[0-9]+/.exec(file);
+    const [name] = /(SWC)-(CTK-)?[0-9]+/.exec(file);
     const root = parsed.Title;
     try {
       result[name] = {

@@ -331,5 +331,14 @@
       "Description": "It is a common misconception that `private` type variables cannot be read. Even if your contract is not published, attackers can look at contract transactions to determine values stored in the state of the contract. For this reason, it's important that unencrypted private data is not stored in the contract code or state.",
       "Remediation": "Any private data should either be stored off-chain, or carefully encrypted."
     }
+  },
+  "SWC-CTK-1": {
+    "markdown": "# Title \nMissing Certificates\n\n## Relationships \n[CertiK Whitepaper](https://certik.foundation/whitepaper)\n\n## Description \nCertiK chain stores auditing certificates as an evidence of historical auditing on chain. The certificate indicates that a deployed smart contract has been validated to be the same as the version that was audited and proved to be safe, thus has a strong quality assurance.\n\n## Remediation\n\nA project would have to request auditing from [CertiK](https://certik.io) in order to receive a certificate.\n\n## References \n* [CertiK.io](https://certik.io)\n",
+    "content": {
+      "Title": "Missing Certificates",
+      "Relationships": "[CertiK Whitepaper](https://certik.foundation/whitepaper)",
+      "Description": "CertiK chain stores auditing certificates as an evidence of historical auditing on chain. The certificate indicates that a deployed smart contract has been validated to be the same as the version that was audited and proved to be safe, thus has a strong quality assurance.",
+      "Remediation": "A project would have to request auditing from [CertiK](https://certik.io) in order to receive a certificate."
+    }
   }
 }
