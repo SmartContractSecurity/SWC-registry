@@ -6,18 +6,24 @@ import Footer from "../components/footer";
 
 import definitions from "../export/swc-definition.json";
 
-export default function Home() {
+export async function getStaticProps() {
+  return {
+    props: { swcs: definitions }
+  };
+}
+
+export default function Home({ swcs }) {
   return (
     <div>
       <Head>
-        <title>CertiK Security Oracle SWC Registry</title>
+        <title>CertiK SWC Registry</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header hasHero />
 
       <main className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:py-8 lg:px-8">
-        <SWCTable swcs={definitions} />
+        <SWCTable swcs={swcs} />
       </main>
 
       <Footer />
@@ -73,7 +79,7 @@ export function SWCTable({ swcs }) {
                     key={id}
                   >
                     <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-900">
-                      <Link href={`/swcs/${id}`}>
+                      <Link href={`/${id}`}>
                         <a className="text-indigo-600 hover:text-indigo-900">
                           {id}
                         </a>

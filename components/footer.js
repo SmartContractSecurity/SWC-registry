@@ -5,14 +5,11 @@ export default function Footer() {
         Footer
       </h2>
       <div className="max-w-7xl mx-auto pb-8 px-4 sm:px-6 lg:pb-12 lg:px-8">
-        <div className="border-t border-gray-200">
-          <p className="text-base text-gray-400 xl:text-center">
-            &copy; {new Date().getFullYear()} CertiK Foundation. All rights
-            reserved.
-          </p>
-        </div>
+        <p className="text-base text-gray-400 xl:text-center">
+          &copy; {new Date().getFullYear()} CertiK Foundation. All rights
+          reserved.
+        </p>
       </div>
     </footer>
   );
 }
-

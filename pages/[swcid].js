@@ -3,26 +3,41 @@ import { useRouter } from "next/router";
 import ReactMarkdown from "react-markdown";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { dark } from "react-syntax-highlighter/dist/cjs/styles/prism";
-import Header from "../../components/header";
-import Footer from "../../components/footer";
+import Header from "../components/header";
+import Footer from "../components/footer";
 
-import definitions from "../../export/swc-definition.json";
+import definitions from "../export/swc-definition.json";
 
-export default function SWC() {
+export async function getStaticProps() {
+  return {
+    props: { swcs: definitions }
+  };
+}
+
+export async function getStaticPaths() {
+  const swcs = Object.keys(definitions);
+
+  return {
+    paths: swcs.map(swcid => ({ params: { swcid } })),
+    fallback: false
+  };
+}
+
+export default function SWC({ swcs }) {
   const router = useRouter();
-  const { id } = router.query;
+  const { swcid } = router.query;
 
   return (
     <div>
       <Head>
-        <title>CertiK Security Oracle SWC Registry</title>
+        <title>{swcid} - CertiK SWC Registry</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Header />
 
       <main className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:py-8 lg:px-8">
-        <SWCDetail id={id} />
+        <SWCDetail id={swcid} {...swcs[swcid]} />
       </main>
 
       <Footer />
@@ -45,9 +60,7 @@ const renderers = {
   }
 };
 
-function SWCDetail({ id }) {
-  const { content } = definitions[id];
-
+function SWCDetail({ id, content }) {
   return (
     <div className="bg-white shadow overflow-hidden sm:rounded-lg">
       <div className="px-4 py-5 sm:px-6">
