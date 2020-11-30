@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "predev": "cd scripts && npm install && npm run update-swc && cd ..",
+    "update-swc": "cd scripts && npm install && npm run update-swc && cd ..",
+    "predev": "yarn update-swc",
     "dev": "next dev",
-    "prebuild": "cd scripts && npm install && npm run update-swc && cd ..",
+    "prebuild": "yarn update-swc",
     "build": "next build",
     "postbuild": "next-on-netlify",
     "start": "next start"
