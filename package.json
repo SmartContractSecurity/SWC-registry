@@ -6,12 +6,13 @@
     "dev": "next dev",
     "build:swc": "cd scripts && npm install && npm run update-swc && cd ..",
     "build": "yarn build:swc && next build",
-    "build-out": "yarn build && next export",
+    "postbuild": "next-on-netlify",
     "start": "next start"
   },
   "dependencies": {
     "autoprefixer": "^10.0.4",
     "next": "10.0.3",
+    "next-on-netlify": "^2.6.3",
     "postcss": "^8.1.10",
     "react": "17.0.1",
     "react-dom": "17.0.1",
