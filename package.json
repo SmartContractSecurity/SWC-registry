@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build:swc": "cd scripts && npm install && npm run update-swc && cd ..",
-    "build": "yarn build:swc && next build",
+    "build": "yarn build:swc && next build && next export",
     "start": "next start"
   },
   "dependencies": {
