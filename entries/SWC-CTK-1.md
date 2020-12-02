@@ -1,5 +1,5 @@
 # Title 
-Missing Certificates
+No Certificates
 
 ## Relationships 
 [CertiK Whitepaper](https://certik.foundation/whitepaper)
