@@ -1,5 +1,5 @@
 # Title 
-Built-in Symbol Shadowing
+Shadowing Built-in Symbol
 
 ## Relationships 
 [CWE-710: Improper Adherence to Coding Standards](https://cwe.mitre.org/data/definitions/710.html)

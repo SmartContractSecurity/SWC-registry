@@ -1,5 +1,5 @@
 # Title 
-Incorrect ERC721 interfaces
+Incorrect ERC721 Interfaces
 
 ## Relationships 
 [CWE-1076: Insufficient Adherence to Expected Conventions](https://cwe.mitre.org/data/definitions/1076.html)

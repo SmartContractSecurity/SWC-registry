@@ -1,5 +1,5 @@
 # Title 
-External Calls Inside Loops
+External Calls inside Loops
 
 ## Relationships 
 [CWE-670: Always-Incorrect Control Flow Implementation](https://cwe.mitre.org/data/definitions/670.html)

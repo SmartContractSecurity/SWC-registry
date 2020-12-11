@@ -1,5 +1,5 @@
 # Title 
-State Variable Shadowing From Abstract Contracts
+State Variable Shadowing from Abstract Contracts
 
 ## Relationships 
 [CWE-710: Improper Adherence to Coding Standards](https://cwe.mitre.org/data/definitions/710.html)

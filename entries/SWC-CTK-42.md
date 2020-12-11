@@ -1,5 +1,5 @@
 # Title 
-Reentrancy Without Theft of Ethers
+Reentrancy without Theft of Ethers
 
 ## Relationships 
 [CWE-841: Improper Enforcement of Behavioral Workflow](https://cwe.mitre.org/data/definitions/841.html)
