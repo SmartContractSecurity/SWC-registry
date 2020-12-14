@@ -11,4 +11,4 @@ Detection of state variables shadowed from abstract/inherited contracts.
 Rename the state variables that shadow the abstract/inherited component.
 
 ## References 
-* [CertiK.io](https://certik.io)
+* [Variable Shadowing](https://en.wikipedia.org/wiki/Variable_shadowing)

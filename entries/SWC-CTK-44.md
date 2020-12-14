@@ -11,4 +11,4 @@ When a resource has not been properly initialized, the smart contract may behave
 Initialize all the variables. If a variable is meant to be initialized to zero, explicitly set it to zero.
 
 ## References 
-* [CertiK.io](https://certik.io)
+* [Solidity List of Know Bugs](https://docs.soliditylang.org/en/latest/bugs.html?highlight=uninitialized#list-of-known-bugs)

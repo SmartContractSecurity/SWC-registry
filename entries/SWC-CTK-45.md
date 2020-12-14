@@ -11,5 +11,4 @@ Detection of shadowing using built-in symbols. For example, built-in symbols inc
 Rename the variables or functions that shadow the built-in components.
 
 ## References 
-* [CertiK.io](https://certik.io)
 * [Special Variables and Functions](https://docs.soliditylang.org/en/latest/units-and-global-variables.html#special-variables-and-functions)

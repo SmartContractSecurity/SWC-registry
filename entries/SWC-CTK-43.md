@@ -11,4 +11,5 @@ The return value of `send` is not checked, so if the `send` fails, the Ether wil
 Ensure that the return value of `send` is checked or logged. 
 
 ## References 
-* [CertiK.io](https://certik.io)
+* [Unchecked Low Level Calls](https://dasp.co/#item-4)
+* [Smart Contract Best Practices](https://consensys.github.io/smart-contract-best-practices/recommendations/)

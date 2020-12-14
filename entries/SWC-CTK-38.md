@@ -11,4 +11,4 @@ Detection of the misuse of a Boolean constant. Boolean constants in code have on
 Verify and simplify the condition.
 
 ## References 
-* [CertiK.io](https://certik.io)
+* [Solidity Types](https://docs.soliditylang.org/en/v0.5.3/types.html#booleans)

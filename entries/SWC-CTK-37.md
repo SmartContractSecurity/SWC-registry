@@ -12,4 +12,4 @@ Detection of expressions that are tautologies or contradiction, which means the 
 Fix the incorrect comparison/condition/return by changing the value type or the logic.
 
 ## References 
-* [CertiK.io](https://certik.io)
+* [Tautology](https://en.wikipedia.org/wiki/Tautology_(logic))

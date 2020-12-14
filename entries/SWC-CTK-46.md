@@ -11,4 +11,4 @@ Detection of shadowing using local variables.
 Rename the local variables that shadow another component.
 
 ## References 
-* [CertiK.io](https://certik.io)
+* [Variable Shadowing](https://en.wikipedia.org/wiki/Variable_shadowing)

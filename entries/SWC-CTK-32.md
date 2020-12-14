@@ -11,4 +11,4 @@ The contract does not restrict or incorrectly restricts access to an address fro
 Ensure that an arbitrary user cannot withdraw unauthorized funds.
 
 ## References 
-* [CertiK.io](https://certik.io)
+* [Smart Contract Best Practices](https://consensys.github.io/smart-contract-best-practices/tokens/)

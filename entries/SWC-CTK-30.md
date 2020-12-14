@@ -11,4 +11,4 @@ In the same codebase, if there are two contracts having the same contract name, 
 Rename the contracts with duplicate names to be different.
 
 ## References 
-* [CertiK.io](https://certik.io)
+* [Solidity Contracts](https://docs.soliditylang.org/en/latest/contracts.html#contracts)
