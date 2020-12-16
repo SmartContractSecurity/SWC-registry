@@ -41,8 +41,19 @@ const renderers = {
   }
 };
 
+function swcIdToWeight(id) {
+  if (id.startsWith("SWC-CTK-")) {
+    return parseInt(id.slice("SWC-CTK-".length), 10);
+  } else {
+    // add 9999 to make swc after SWC-CTK
+    return parseInt(id.slice("SWC-".length), 10) + 9999;
+  }
+}
+
 export function SWCTable({ swcs }) {
-  const swcIDs = Object.keys(swcs).sort().reverse();
+  const swcIDs = Object.keys(swcs).sort(
+    (id1, id2) => swcIdToWeight(id1) - swcIdToWeight(id2)
+  );
 
   return (
     <div className="flex flex-col">
