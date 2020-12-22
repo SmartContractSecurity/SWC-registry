@@ -4,6 +4,6 @@ issues:
   count: 1
   locations:
   - bytecode_offsets:
-      '0xb5277138e87869e9e71cf9737221a19a68d46fdb979a6c9b4837100a5ba8eb8f': [204]
+      '0xb5277138e87869e9e71cf9737221a19a68d46fdb979a6c9b4837100a5ba8eb8f': [233]
     line_numbers:
       mycontract.sol: [18]
