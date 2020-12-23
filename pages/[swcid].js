@@ -32,26 +32,28 @@ export default function SWC({ swcs }) {
   // if (transferring) setTransferring(false);
   return (
     <Layout>
-      <Row className={styles["detail-page"]} style={{ paddingTop: 65 }}>
-        <Col
-          span={0}
-          md={6}
-          style={{ boxShadow: "1px 4px 1px rgba(0, 0, 0, 0.1)" }}
-        >
-          <WeaknessList
-            swcIds={swcIds}
-            // transfer={() => setTransferring(true)}
-          />
-        </Col>
-        <Col span={24} md={18}>
-          <Content
-            swc={swc}
-            // transferring={transferring}
-            // transfer={() => setTransferring(true)}
-          />
-        </Col>
-        <MobileWeaknessList swcIds={swcIds} />
-      </Row>
+      <div className="centered-container">
+        <Row className={styles["detail-page"]} style={{ paddingTop: 65 }}>
+          <Col
+            span={0}
+            md={6}
+            style={{ boxShadow: "1px 4px 1px rgba(0, 0, 0, 0.1)" }}
+          >
+            <WeaknessList
+              swcIds={swcIds}
+              // transfer={() => setTransferring(true)}
+            />
+          </Col>
+          <Col span={24} md={18}>
+            <Content
+              swc={swc}
+              // transferring={transferring}
+              // transfer={() => setTransferring(true)}
+            />
+          </Col>
+          <MobileWeaknessList swcIds={swcIds} />
+        </Row>
+      </div>
     </Layout>
   );
 }

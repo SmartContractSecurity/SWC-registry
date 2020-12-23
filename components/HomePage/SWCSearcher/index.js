@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import { Grid, Card, Row, Col, AutoComplete, Input, Typography } from "antd";
+import { Card, Row, Col, AutoComplete, Input, Typography } from "antd";
+import { getFirstNumIdx, isNumber } from "../../../utils";
 
 import styles from "./index.module.css";
 
-const { useBreakpoint } = Grid;
 const { Search } = Input;
 const { Title } = Typography;
 
@@ -31,7 +31,6 @@ export default function SWCSearcher({ swcs }) {
                   value={keyword}
                   placeholder="Search a SWC by id / title"
                   onChange={(value) => setKeyword(value.target.value)}
-                  onSearch={(value) => router.push(value.toUpperCase())}
                 />
               </AutoComplete>
             </Col>
@@ -132,15 +131,4 @@ function isValidNumericString(str) {
     isNumber(numericSearchTerm) &&
     numericSearchTerm.toString().length === str.length
   );
-}
-
-function getFirstNumIdx(str) {
-  return str.split("").findIndex((char) => {
-    const n = parseInt(char, 10);
-    return isNumber(n) && n >= 0;
-  });
-}
-
-function isNumber(input) {
-  return typeof input === "number";
 }

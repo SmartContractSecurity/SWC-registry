@@ -1,17 +1,19 @@
-.weakness-list {
-  margin: 48px 0 48px 145px;
+:global(.App) .weakness-list {
+  margin: 48px 0 48px 15px;
 }
 
-.weakness-list h1 {
+:global(.App) .weakness-list h1 {
   color: #333;
+  display: block;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
   margin-bottom: 12px;
 }
 
-.mobile-weakness-list h1 {
+.mobile-weakness-list h1:global(.ant-typography) {
   color: #333;
+  display: block;
   font-size: 24px;
   font-weight: 500;
   margin-bottom: 12px;
@@ -39,19 +41,13 @@
   transform: translateX(-6px);
 }
 
+.mobile-weakness-list ul,
+.weakness-list ul {
+  list-style: none;
+  padding: 0;
+}
+
 .mobile-weakness-list ul li:not(:last-child),
 .weakness-list ul li:not(:last-child) {
   margin-bottom: 8px;
-}
-
-@media screen and (max-width: 1280px) {
-  .weakness-list {
-    margin: 48px 0 48px 75px;
-  }
-}
-
-@media screen and (max-width: 991px) {
-  .weakness-list {
-    margin: 48px 0 48px 60px;
-  }
 }

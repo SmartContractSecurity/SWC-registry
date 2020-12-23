@@ -149,11 +149,4 @@ const renderers = {
       <SyntaxHighlighter style={dark} language={language} children={value} />
     );
   },
-  link: ({ children, href }) => {
-    return (
-      <a href={href} className="text-indigo-600 hover:text-indigo-900">
-        {children}
-      </a>
-    );
-  },
 };
