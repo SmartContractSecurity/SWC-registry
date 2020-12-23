@@ -1,0 +1,262 @@
+.AppBanner {
+  background: url("/radar-bg.svg");
+  background-position-x: 90%;
+  background-repeat: no-repeat;
+  background-color: #354559;
+  padding-top: 50px;
+}
+
+.AppBanner-dots-bg {
+  position: absolute;
+}
+
+.AppBanner-centered-container {
+  padding: 20px 0 0;
+}
+
+.AppBanner .banner-title {
+  color: #e8e8e8;
+  font-family: Inter;
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 60px;
+  margin: 0 0 12px;
+}
+
+.AppBanner .banner-background {
+  width: 736px;
+}
+
+.AppBanner .link-row .playcol {
+  border-right: 1px solid #e1aa4c;
+}
+
+.AppBanner .link-row button {
+  padding: 0;
+}
+
+.AppBanner .one-line-text {
+  white-space: nowrap;
+}
+
+.AppBanner .security-step .step-name {
+  color: #d7d8dc;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 16px;
+}
+
+.AppBanner .security-step .step-icon {
+  height: 25px;
+}
+
+.AppBanner .security-step .step-description {
+  color: rgba(251, 251, 251, 0.8);
+  display: block;
+  font-family: Roboto;
+  font-weight: 300;
+}
+
+.AppBanner .security-step a {
+  color: #e1aa4c;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: underline;
+}
+
+.AppBanner .security-step .play-button {
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+
+.AppBanner .security-step .play-button:hover {
+  transform: scale(1.05);
+}
+
+.AppBanner .security-step .arrow {
+  margin: 0 20px;
+  max-width: 40px;
+}
+
+@media screen and (max-width: 1330px) {
+  .AppBanner .security-step .arrow {
+    margin: 0 14px 0 8px;
+  }
+}
+
+@media screen and (max-width: 1286px) {
+  .AppBanner-centered-container {
+    padding: 20px 0 40px;
+  }
+
+  .AppBanner .banner-background {
+    width: 600px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .AppBanner .security-step .step-description {
+    font-size: 13px;
+  }
+
+  .AppBanner .banner-background {
+    width: 480px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .AppBanner {
+    background-position-y: 100%;
+  }
+
+  .AppBanner .banner-background {
+    width: 440px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .AppBanner .centered-container {
+    background-position-x: right;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .AppBanner .banner-background {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .AppBanner .arrow {
+    max-width: 50px;
+  }
+}
+
+@media screen and (max-width: 663px) {
+  .AppBanner {
+    background-position-y: 75%;
+  }
+
+  .AppBanner .security-steps,
+  .AppBanner .security-step {
+    flex-direction: column;
+  }
+
+  .AppBanner .security-step:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .AppBanner .security-step .step-name {
+    font-size: 24px;
+  }
+
+  .AppBanner .security-step .step-icon {
+    height: 40px;
+  }
+
+  .AppBanner .security-step .step-description {
+    font-size: 18px;
+  }
+
+  .AppBanner .security-step .arrow {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .AppBanner .banner-title {
+    font-size: 36px;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .AppBanner .dots-bg {
+    width: 100vw;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .AppBanner {
+    max-height: 885px;
+  }
+
+  .AppBanner .banner-titles .banner-title {
+    text-align: center;
+  }
+
+  .AppBanner .banner-buttons button {
+    width: 100%;
+  }
+
+  .AppBanner .link-row .ant-col:first-child {
+    display: none;
+  }
+
+  .AppBanner .security-step .step-icon {
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  .AppBanner .banner-title {
+    max-width: 285px;
+  }
+
+  .AppBanner .security-step .step-name {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .AppBanner {
+    max-height: 885px;
+  }
+
+  .AppBanner .security-step .step-icon {
+    width: 48px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .AppBanner .banner-title {
+    font-size: 30px;
+    white-space: nowrap;
+  }
+
+  .AppBanner h5 {
+    font-size: 14px;
+    /* font-size: 16px !important; */
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .AppBanner .security-step .step-icon {
+    width: 36px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .AppBanner .security-step:nth-child(2) .ant-row {
+    flex-wrap: nowrap;
+  }
+
+  .AppBanner .security-step .step-icon {
+    width: 32px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .AppBanner .security-step:nth-child(2) .one-line-text {
+    white-space: break-spaces;
+  }
+
+  .AppBanner .security-step {
+    padding-left: 0;
+  }
+
+  .AppBanner .security-step .step-icon {
+    width: 24px;
+  }
+}

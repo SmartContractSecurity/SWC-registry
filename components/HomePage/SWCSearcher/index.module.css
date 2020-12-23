@@ -1,0 +1,198 @@
+.search-card-wrapper {
+  height: 31px;
+}
+
+.search-card-wrapper :global(.centered-container) {
+  transform: translateY(-50%);
+}
+
+.search-card {
+  border-radius: 4px;
+}
+
+.search-card :global(.ant-select) {
+  width: 100%;
+}
+
+.search-card
+  :global(.ant-select:not(.ant-select-disabled)):hover
+  :global(.ant-select-selector) {
+  border-right: 0;
+}
+
+.search-card :global(.ant-input-affix-wrapper:focus),
+.search-card :global(.ant-input-affix-wrapper-focused) {
+  box-shadow: none;
+}
+
+.search-card :global(.ant-input-search) {
+  background-color: transparent;
+  /* border: 1px solid var(--ctk-white); */
+  /* border-radius: 0 4px 4px 0; */
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.05);
+  color: #595959;
+  cursor: pointer;
+  padding: 0;
+}
+
+.search-card :global(.ant-input-search) input {
+  /* background-color: rgba(225, 170, 76, 0.2); */
+  border: none;
+  border-radius: 4px 0 0 4px;
+  color: var(--ctk-dark-gray);
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  padding: 20px 24px;
+}
+
+.search-card :global(.ant-input-search) input:hover,
+.search-card :global(.ant-input-search) input:focus {
+  background-color: rgba(225, 170, 76, 0.05);
+  border: 0;
+  box-shadow: none;
+  outline: none;
+}
+
+.search-card :global(.ant-input-search) :global(.ant-input::placeholder) {
+  color: rgba(51, 51, 51, 0.5);
+}
+
+.search-card :global(.ant-input-search) :global(.ant-input-group-addon) {
+  background-color: #4d6380;
+  border-radius: 0 4px 4px 0;
+  height: 60px;
+  left: 0 !important;
+  width: 116px;
+}
+
+.search-card :global(.ant-input-search) :global(.ant-input-group-addon) button,
+.search-card
+  :global(.ant-input-search)
+  :global(.ant-input-group-addon)
+  button:hover {
+  background-color: #4d6380 !important;
+  border-color: #4d6380 !important;
+  height: 100%;
+  width: 100%;
+}
+
+.search-card
+  :global(.ant-input-search)
+  :global(.ant-input-group-addon)
+  button
+  :global(.anticon-search) {
+  color: #fff;
+  font-size: 24px;
+}
+
+.search-card
+  :global(.ant-input-search)
+  :global(.ant-input-group-addon)
+  button:focus {
+  outline: none;
+}
+
+.search-card :global(.ant-input-search-icon::before) {
+  border-left: none;
+}
+
+.search-card :global(.ant-input-search-icon::after) {
+  width: 32px;
+}
+
+.search-card :global(.ant-input-search) :global(.ant-input-suffix) {
+  align-items: center;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 35%;
+  width: 48px;
+}
+
+.search-card
+  :global(.ant-input-search)
+  :global(.ant-input-suffix)
+  :global(.anticon) {
+  color: #727272;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+.search-card a:global(.ant-btn) {
+  align-items: center;
+  border-radius: 2px;
+  border-width: 1.5px;
+  display: flex;
+  font-size: 18px;
+  height: 100%;
+  min-height: 48px;
+  justify-content: center;
+  padding: 0;
+  width: 100%;
+}
+
+.search-card a:global(.ant-btn:hover) {
+  opacity: 1;
+}
+
+.search-result .icon {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  margin-right: 18px;
+}
+
+.search-result .primary {
+  color: var(--ctk-dark-gray);
+  font-family: Inter;
+  font-weight: 600;
+}
+
+.search-result .secondary-data :global(.ant-col:not(:last-child)) {
+  border-right: 1px solid #e1aa4c;
+  color: #4d6380;
+  font-family: Inter;
+  font-weight: 400;
+}
+
+.search-result .secondary {
+  color: #4d6380;
+  font-family: Inter;
+  font-weight: 400;
+}
+
+@media (max-width: 1280px) {
+  .search-card a:global(.ant-btn) {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .search-card .cta {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 989px) {
+  .search-card :global(.ant-input-search) :global(.ant-input-group-addon) {
+    left: 1px !important;
+  }
+}
+
+@media (max-width: 450px) {
+  .search-card :global(.ant-input-search) input {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 414px) {
+  .search-card :global(.ant-input-search) input {
+    padding: 16px 24px;
+  }
+}

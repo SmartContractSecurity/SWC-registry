@@ -1,0 +1,96 @@
+.feature-highlighter {
+  transform: translate(30px, -6px);
+  height: 40px;
+  position: absolute;
+  width: 40px;
+  z-index: 2;
+}
+
+.feature-highlighter .spinner {
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-name: outterBounce;
+  background-color: #e7d1aa; /* variable doesn't work in MobileNavbar for unknown reason  */
+  border-radius: 100%;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+}
+
+.feature-highlighter .spinner-outer {
+  width: 14px;
+  height: 14px;
+  background-color: #e1aa4c; /* variable doesn't work in MobileNavbar for unknown reason  */
+  border-radius: 100%;
+  animation-duration: 1.6s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-name: smallBounce;
+}
+
+.MobileNavbar .menu a .feature-highlighter {
+  transform: translate(30px, -20px);
+}
+
+@keyframes outterBounce {
+  0% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  60%,
+  100% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes outterBounce {
+  0% {
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+  }
+
+  60%,
+  100% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+  }
+}
+
+@keyframes smallBounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
+
+@-webkit-keyframes smallBounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+  }
+
+  50% {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+}
