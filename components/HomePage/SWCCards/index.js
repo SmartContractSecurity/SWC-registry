@@ -37,6 +37,9 @@ export default function SWCCards({ swcs, t }) {
                     fontWeight: 400,
                     lineHeight: "40px",
                     marginBottom: 12,
+                    overflow: "hidden",
+                    textOverflow: "ellipsis",
+                    whiteSpace: "nowrap",
                   }}
                 >
                   {swc.content.Title}
