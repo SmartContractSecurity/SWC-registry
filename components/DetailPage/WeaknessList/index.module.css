@@ -1,0 +1,53 @@
+:global(.App) .weakness-list {
+  margin: 48px 0 48px 15px;
+}
+
+:global(.App) .weakness-list h1 {
+  color: #333;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+
+.mobile-weakness-list h1:global(.ant-typography) {
+  color: #333;
+  display: block;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.weakness-list a,
+.weakness-list a:hover {
+  border-left: 2px solid transparent;
+  color: #4d6380;
+  display: block;
+  font-family: Inter;
+  line-height: 20px;
+  padding-left: 4px;
+  transform: translateX(-6px);
+}
+
+.mobile-weakness-list a,
+.mobile-weakness-list a:hover {
+  border-left: 2px solid transparent;
+  color: #4d6380;
+  display: block;
+  font-family: Inter;
+  font-size: 18px;
+  padding-left: 4px;
+  transform: translateX(-6px);
+}
+
+.mobile-weakness-list ul,
+.weakness-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.mobile-weakness-list ul li:not(:last-child),
+.weakness-list ul li:not(:last-child) {
+  margin-bottom: 8px;
+}

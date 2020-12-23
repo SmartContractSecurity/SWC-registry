@@ -1,0 +1,37 @@
+.content {
+  margin: 48px 130px;
+}
+
+.content :global(.ant-breadcrumb) {
+  margin-bottom: 12px;
+}
+
+.content :global(.ant-breadcrumb-link) {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.content :global(.ant-breadcrumb-link) a,
+.content :global(.ant-breadcrumb-link) a:hover {
+  color: #4d6380;
+}
+
+.content :global(.ant-breadcrumb-separator) {
+  color: #bfbfbf;
+  margin: 0 4px;
+}
+
+.content
+  :global(.ant-breadcrumb)
+  > span:last-child
+  :global(.ant-breadcrumb-link) {
+  color: #5b5b5b;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 991px) {
+  .content {
+    margin: 48px 15px;
+  }
+}

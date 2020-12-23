@@ -1,0 +1,71 @@
+.AppFooter {
+  background-color: var(--ctk-bluish-gray);
+  padding: 80px 20px;
+  line-height: 24px;
+}
+
+.AppFooter :global(.ant-list-header),
+.AppFooter :global(.ant-list-item) {
+  border: 0;
+  padding: 0;
+}
+
+.AppFooter :global(.ant-list-header) {
+  display: block;
+  margin-bottom: 24px;
+}
+
+.AppFooter .nav-header {
+  border-bottom: 0;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.AppFooter :global(.ant-list-item:not(:last-child)) {
+  margin-bottom: 16px;
+}
+
+.AppFooter a:not(.ant-btn) {
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.AppFooter a:hover {
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 0.7;
+}
+
+.AppFooter .AppFooter-social-links {
+  margin: 0;
+}
+
+.AppFooter .AppFooter-social-links a:hover {
+  display: block;
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.AppFooter :global(.ant-col) .subscribe-button {
+  border-color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+.AppFooter :global(.ant-col) .subscribe-button:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: var(--ctk-dark-gray);
+}
+
+@media (min-width: 1220px) {
+  .AppFooter-inner {
+    width: 1220px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 529px) {
+  .AppFooter {
+    /* display: none; */
+  }
+}

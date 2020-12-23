@@ -1,0 +1,439 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.page {
+  margin: auto;
+  padding: 10px;
+}
+
+.page h1 {
+  margin-bottom: 10px;
+}
+
+@import "~antd/dist/antd.css";
+
+@font-face {
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Inter-Regular.eot"),
+    url("/fonts/Inter-Regular.woff2") format("woff2"),
+    url("/fonts/Inter-Regular.woff") format("woff"),
+    url("/fonts/Inter-Regular.ttf") format("truetype"),
+    url("/fonts/Inter-Regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Lato-Regular.eot"),
+    url("/fonts/Lato-Regular.woff2") format("woff2"),
+    url("/fonts/Lato-Regular.woff") format("woff"),
+    url("/fonts/Lato-Regular.ttf") format("truetype"),
+    url("/fonts/Lato-Regular.svg") format("svg");
+}
+
+@font-face {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Roboto-Regular.ttf") format("truetype");
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
+
+  font-family: "Roboto", sans-serif;
+
+  --ctk-white: #fff;
+  --ctk-black: black;
+  --ctk-bluish-gray: #354559;
+  --ctk-dark-red: #c10a00;
+  --ctk-red: #e5453d;
+  --ctk-light-red: #ff7b75;
+  --ctk-lighter-red: rgba(255, 123, 117, 0.7);
+  --ctk-dark-gray: #333;
+  --ctk-gray: #4a4a4a;
+  --ctk-light-gray: #8e8e8e;
+  --ctk-lighter-gray: #f2f2f2;
+  --ctk-another-gray: #5d626c;
+  --ctk-pink: #ffe6e6;
+  --ctk-orange: #fec37f;
+  --ctk-dark-yellow: #f79f39;
+  --ctk-yellow: #e1aa4c;
+  --ctk-light-yellow: #e7d1aa;
+  --ctk-darker-green: #020302;
+  --ctk-green: #b6eb8f;
+  --ctk-light-green: #def5ec;
+  --ctk-light-purple: #ff80ff;
+  --ctk-darker-blue: #105b98;
+  --ctk-blue: #80a6f9;
+  --ctk-light-blue: #dce6fd;
+
+  --ctk-primary-color: var(--ctk-yellow);
+
+  --screen-size-xs: 480px;
+  --screen-size-sm: 576px;
+  --screen-size-md: 768px;
+  --screen-size-lg: 992px;
+  --screen-size-xl: 1200px;
+  --screen-size-xxl: 1600px;
+
+  background-color: #fbfbfb;
+  background-repeat: no-repeat;
+  background-position: 50% 80%;
+  background-attachment: fixed;
+
+  min-height: 100%;
+}
+
+.App .centered-container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.App .content.centered-container {
+  padding-bottom: 24px;
+}
+
+.App .card {
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.ant-card {
+  border-radius: 0;
+}
+
+.certik-card {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16);
+  margin-bottom: 12px;
+  padding: 20px 20px;
+}
+
+.certik-card > .ant-card-head {
+  padding: 0;
+  border-bottom-width: 0;
+  font-weight: 900;
+  min-height: 36px;
+}
+
+.certik-card > .ant-card-head .ant-card-head-title {
+  padding: 0;
+}
+
+.certik-card > .ant-card-body {
+  padding: 9px 0;
+}
+
+.certik-global-error {
+  display: flex;
+  justify-content: center;
+}
+
+.App iframe body {
+  background-color: #fff;
+}
+
+.App .ant-typography,
+.App h1,
+.App h2,
+.App h3,
+.App h4,
+.App h5,
+.App p,
+.App span {
+  font-family: Inter;
+  margin: 0;
+}
+
+.App .ant-btn-primary {
+  box-shadow: none;
+  text-shadow: none;
+}
+
+a,
+.App .ant-btn-link {
+  color: var(--ctk-blue);
+  transition: 0.3s all ease;
+}
+
+a:hover,
+.App .ant-btn-link:hover {
+  opacity: 0.9;
+}
+
+.App .page {
+  min-height: 652px;
+}
+
+.App .ant-tag {
+  margin: 0;
+}
+
+.App .ant-table {
+  color: var(--ctk-dark-gray);
+}
+
+.App .ant-pagination-item-active {
+  border-color: var(--ctk-orange);
+}
+
+.App .ant-pagination-item-active a {
+  background: var(--ctk-orange);
+  color: var(--ctk-white);
+}
+
+.App .ant-pagination-item,
+.App .ant-pagination-item a {
+  transition: 0.3s all ease;
+}
+
+.App .ant-pagination-item:hover,
+.App .ant-pagination-item-link:hover {
+  border-color: var(--ctk-yellow);
+}
+
+.App .ant-pagination-item:not(.ant-pagination-item-active):hover > a {
+  color: var(--ctk-yellow);
+}
+
+.App .ant-pagination-item-link:not(.ant-pagination-disabled):hover > .anticon {
+  color: var(--ctk-yellow);
+}
+
+.App .ant-statistic-content {
+  font-family: Roboto;
+}
+
+.App .ant-table .ant-table-cell {
+  background-color: var(--ctk-white);
+  color: rgba(53, 69, 89, 0.8);
+  font-family: Inter;
+  font-weight: 600;
+}
+
+.App
+  .ant-table
+  .ant-table-tbody
+  .ant-table-row:nth-child(2n - 1)
+  .ant-table-cell {
+  background-color: #fafafa;
+}
+
+.App .ant-table-tbody .ant-table-row:hover .ant-table-cell {
+  background-color: var(--ctk-lighter-gray) !important;
+  cursor: pointer;
+}
+
+.App
+  .ant-select-dropdown-menu
+  .ant-select-dropdown-menu-item.ant-select-dropdown-menu-item-active {
+  background: #e7d1aa;
+}
+
+.App
+  .ant-select-dropdown-menu
+  .ant-select-dropdown-menu-item.ant-select-dropdown-menu-item-selected,
+.App
+  .ant-select-dropdown-menu
+  .ant-select-dropdown-menu-item.ant-select-dropdown-menu-item-selected:hover {
+  background: #fec37f;
+}
+
+.App .ant-table-wrapper {
+  overflow-x: scroll;
+}
+
+.App .ant-table-thead .ant-table-column-sorters {
+  padding: 0;
+}
+
+.App .ant-table-thead > tr > th:first-child,
+.App .ant-table-tbody > tr > td:first-child {
+  padding-left: 24px;
+}
+
+.App .ant-table-thead > tr > th:last-child,
+.App .ant-table-tbody > tr > td:last-child {
+  padding-right: 24px;
+}
+
+.App .ant-table-thead > tr > th {
+  border: none;
+  color: var(--ctk-dark-gray);
+  font-family: "Inter";
+  font-size: 14px;
+  line-height: 1;
+  opacity: 0.5;
+  padding: 25px 24px 12px;
+}
+
+.App .ant-table-tbody > tr > td {
+  border-bottom: none;
+  padding: 16px 24px;
+}
+
+.App
+  .ant-pagination-jump-prev.ant-pagination-jump-prev-custom-icon
+  .ant-pagination-item-link-icon,
+.App
+  .ant-pagination-jump-next.ant-pagination-jump-next-custom-icon
+  .ant-pagination-item-link-icon {
+  color: var(--ctk-yellow);
+}
+
+.App button.ant-btn,
+.App a.ant-btn {
+  background-color: transparent;
+  border-color: #e1aa4c;
+  color: #e1aa4c;
+}
+
+.App button.ant-btn:hover,
+.App a.ant-btn:hover {
+  background-color: #e1aa4c;
+  color: #fff;
+}
+
+.App button.ant-btn.ant-btn-text {
+  border-color: transparent;
+}
+
+.App a.ant-btn.ant-btn-primary,
+.App button.ant-btn.ant-btn-primary {
+  background-color: rgba(225, 170, 76, 1);
+  border-color: rgba(225, 170, 76, 1);
+  color: #fff;
+}
+
+.App a.ant-btn.ant-btn-primary:hover,
+.App button.ant-btn.ant-btn-primary:hover {
+  background-color: rgba(225, 170, 76, 0.8);
+  border-color: rgba(225, 170, 76, 0.8);
+}
+
+.App .ant-radio-button-wrapper:first-child:last-child {
+  border-radius: 4px;
+}
+
+.App a {
+  color: #e1aa4c;
+}
+
+.App a:hover,
+.App .ant-breadcrumb a:hover {
+  color: #e1aa4c;
+  opacity: 0.8;
+}
+
+.App .ant-list-item {
+  border-bottom: 0;
+}
+
+.App .form-toggler {
+  font-family: Inter;
+  font-size: 12px;
+  text-decoration: underline;
+  color: rgba(51, 51, 51, 0.5);
+}
+
+.Empty-Coming-Soon {
+  margin: auto;
+  padding: 10px;
+}
+
+.Empty-Coming-Soon .base .ant-empty {
+  margin: 0px;
+}
+
+.Empty .ant-empty-image {
+  height: 100%;
+  width: 100%;
+}
+
+.Empty .ant-empty-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.App .oracle-tooltip .ant-tooltip-inner {
+  padding: 12px;
+}
+
+.App .active,
+.App .unit {
+  color: var(--ctk-yellow);
+  font-size: inherit;
+}
+
+@media (min-width: 1250px) {
+  .centered-container {
+    max-width: 1180px;
+    width: 82%;
+  }
+}
+
+@media (max-width: 560px) {
+  .Empty .ant-empty-image img {
+    height: 85%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 540px) {
+  .search-card-wrapper {
+    height: 35px;
+  }
+
+  .search-card-wrapper .centered-container {
+    transform: translateY(-45%);
+  }
+}
+
+@media (max-width: 414px) {
+  .App {
+    overflow-x: hidden;
+  }
+}
+
+.progress-bar {
+  width: 100%;
+}
+
+.progress-bar.rounded,
+.progress-bar.rounded .progress {
+  border-radius: 100px;
+}
+
+.progress-bar .progress {
+  cursor: pointer;
+  height: 100%;
+  transition: 1s all ease;
+}

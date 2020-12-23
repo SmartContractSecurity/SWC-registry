@@ -1,0 +1,51 @@
+.MobileNavbar :global(.ant-drawer-content-wrapper) {
+  height: 100vh;
+  border-left: 1px solid #f2f2f2;
+}
+
+.MobileNavbar :global(.ant-drawer-wrapper-body) {
+  display: flex;
+  flex-direction: column;
+}
+
+.MobileNavbar :global(.ant-drawer-body) {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+  justify-content: space-between;
+  /* padding: 0; */
+}
+
+.MobileNavbar .menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  border-right: 1px solid #e8e8e8;
+}
+
+.MobileNavbar .menu a {
+  align-items: center;
+  display: flex;
+  padding: 2em;
+  min-width: 14em;
+  cursor: pointer;
+}
+
+.MobileNavbar .menu a i {
+  margin-right: 0.6em;
+}
+
+.MobileNavbar .menu a.active {
+  color: #105b98;
+  background: #f2f2f2;
+  border-right: 2px solid #105b98;
+}
+
+.MobileNavbar .menu a.active:hover {
+  transform: none;
+}
+
+.MobileNavbar .lower {
+  display: flex;
+  justify-content: space-around;
+}

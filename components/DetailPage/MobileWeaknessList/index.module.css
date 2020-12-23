@@ -1,0 +1,18 @@
+.mobile-weakness-list-toggler {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .mobile-weakness-list-toggler {
+    align-items: center;
+    box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.05);
+    display: flex;
+    height: 60px;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 35%;
+    width: 30px;
+    z-index: 5;
+  }
+}
