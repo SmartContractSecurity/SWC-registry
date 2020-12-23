@@ -31,7 +31,7 @@ export default function SWC({ swcs }) {
   const swc = { id: swcid, ...swcs[swcid] };
   // if (transferring) setTransferring(false);
   return (
-    <Layout>
+    <Layout title={`CertiK SWC Registry - ${swcid}`}>
       <div className="centered-container">
         <Row className={styles["detail-page"]} style={{ paddingTop: 65 }}>
           <Col
