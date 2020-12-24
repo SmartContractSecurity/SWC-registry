@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { Row, Col } from "antd";
 import Layout from "../components/Layout";
 import WeaknessList from "../components/DetailPage/WeaknessList/";
@@ -10,7 +9,7 @@ import styles from "./[swcid].module.css";
 
 export async function getStaticProps() {
   return {
-    props: { swcs: definitions },
+    props: { swcs: definitions }
   };
 }
 
@@ -18,18 +17,17 @@ export async function getStaticPaths() {
   const swcs = Object.keys(definitions);
 
   return {
-    paths: swcs.map((swcid) => ({ params: { swcid } })),
-    fallback: false,
+    paths: swcs.map(swcid => ({ params: { swcid } })),
+    fallback: false
   };
 }
 
 export default function SWC({ swcs }) {
-  // const [transferring, setTransferring] = useState(false);
   const router = useRouter();
   const { swcid } = router.query;
   const swcIds = Object.keys(swcs);
   const swc = { id: swcid, ...swcs[swcid] };
-  // if (transferring) setTransferring(false);
+
   return (
     <Layout title={`CertiK SWC Registry - ${swcid}`}>
       <div className="centered-container">

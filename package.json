@@ -10,7 +10,7 @@
     "build": "next build",
     "postbuild": "next-on-netlify",
     "format": "prettier --write 'components/**/*' 'pages/**/*' '!**/*/.DS_Store'",
-    "start": "next start"
+    "start": "next dev"
   },
   "dependencies": {
     "@ant-design/icons": "^4.3.0",

@@ -7,7 +7,7 @@ import definitions from "../export/swc-definition.json";
 
 export async function getStaticProps() {
   return {
-    props: { swcs: definitions },
+    props: { swcs: definitions }
   };
 }
 

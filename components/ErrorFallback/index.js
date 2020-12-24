@@ -168,8 +168,8 @@ const ErrorSvg = () => (
         gradientTransform="matrix(136.07 0 0 68.0349 142.715 183.288)"
         gradientUnits="userSpaceOnUse"
       >
-        <stop stop-color="#F6F9FB" />
-        <stop offset="1" stop-color="#fff" />
+        <stop stopColor="#F6F9FB" />
+        <stop offset="1" stopColor="#fff" />
       </radialGradient>
     </defs>
   </svg>

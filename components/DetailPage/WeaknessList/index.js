@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import { Typography } from "antd";
 import { FormattedLink } from "../../FormattedLink/";
 import styles from "./index.module.css";
+import { sortBySwcId } from "../../HomePage/SWCCards";
 
 const { Title } = Typography;
 
@@ -16,7 +17,7 @@ export default function WeaknessList({ swcIds, transfer, isMobile }) {
     >
       <Title>Weakness ID</Title>
       <ul>
-        {swcIds.map((swcId, i) => (
+        {swcIds.sort(sortBySwcId).map((swcId, i) => (
           <li key={i + 1}>
             <Link href={swcId} passHref>
               <FormattedLink
