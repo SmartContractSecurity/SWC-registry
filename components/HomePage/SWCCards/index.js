@@ -31,7 +31,7 @@ export default function SWCCards({ swcs, t }) {
                     border: "1px solid rgba(77, 99, 128, 0.3)",
                     borderRadius: 4,
                     boxShadow: "0px 2px 16px rgba(0, 0, 0, 0.05)",
-                    cursor: "pointer"
+                    cursor: "pointer",
                   }}
                 >
                   <Title
@@ -40,7 +40,7 @@ export default function SWCCards({ swcs, t }) {
                       color: "#4D6380",
                       fontWeight: 600,
                       lineHeight: "20px",
-                      marginBottom: 12
+                      marginBottom: 12,
                     }}
                   >
                     {id}
@@ -54,7 +54,7 @@ export default function SWCCards({ swcs, t }) {
                       marginBottom: 12,
                       overflow: "hidden",
                       textOverflow: "ellipsis",
-                      whiteSpace: "nowrap"
+                      whiteSpace: "nowrap",
                     }}
                   >
                     {swc.content.Title}
@@ -64,7 +64,7 @@ export default function SWCCards({ swcs, t }) {
                     style={{
                       color: "#55A683",
                       display: "block",
-                      width: "fit-content"
+                      width: "fit-content",
                     }}
                   >
                     {"CertiK Whitepaper"}

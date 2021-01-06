@@ -9,7 +9,7 @@ import styles from "./[swcid].module.css";
 
 export async function getStaticProps() {
   return {
-    props: { swcs: definitions }
+    props: { swcs: definitions },
   };
 }
 
@@ -17,8 +17,8 @@ export async function getStaticPaths() {
   const swcs = Object.keys(definitions);
 
   return {
-    paths: swcs.map(swcid => ({ params: { swcid } })),
-    fallback: false
+    paths: swcs.map((swcid) => ({ params: { swcid } })),
+    fallback: false,
   };
 }
 

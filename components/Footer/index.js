@@ -1,5 +1,5 @@
 import React from "react";
-import { Grid, Row, Col, List, Typography, Button } from "antd";
+import { Grid, Row, Col, List, Tooltip, Typography, Button } from "antd";
 import Badge from "../Badge/";
 import styles from "./index.module.css";
 
@@ -56,6 +56,16 @@ function Footer({ t }) {
       url: "https://twitter.com/certikorg",
     },
     {
+      name: "Medium",
+      icon: "/medium.svg",
+      url: "https://medium.com/certik-foundation",
+    },
+    {
+      name: "WeChat",
+      icon: "/wechat.svg",
+      img: "/wechat-qr-code.jpg",
+    },
+    {
       name: "Discord",
       icon: "/discord.svg",
       url: "https://discord.gg/NcmCMSH",
@@ -67,7 +77,7 @@ function Footer({ t }) {
       <Row
         justify="space-between"
         gutter={[0, isMobile ? 36 : 0]}
-        className={styles["AppFooter-inner"]}
+        className="centered-container"
       >
         <Col
           span={isMobile ? 24 : null}
@@ -135,27 +145,42 @@ function Footer({ t }) {
           span={isMobile ? 12 : null}
           style={{ paddingLeft: isMobile ? "10%" : 0 }}
         >
-          <Text
-            className={styles["ant-list-header"]}
-            style={{
-              color: "rgba(255, 255, 255, 0.8)",
-              fontSize: 14,
-              fontWeight: 500,
-            }}
-          >
-            JOIN
-          </Text>
           <Row gutter={[16, 8]} className={styles["AppFooter-social-links"]}>
-            {socialMedia.map(({ name, icon, url }, i) => (
+            {socialMedia.map(({ name, icon, url, img }, i) => (
               <Col key={i + 1}>
-                <a href={url} rel="noopener noreferrer" target="_blank">
-                  <Badge
-                    icon={icon}
-                    alt={name}
-                    size={36}
-                    backgroundColor="rgba(255, 255, 255, 0.1)"
-                  />
-                </a>
+                {url ? (
+                  <a href={url} rel="noopener noreferrer" target="_blank">
+                    <Badge
+                      icon={icon}
+                      alt={name}
+                      size={36}
+                      backgroundColor="rgba(255, 255, 255, 0.1)"
+                    />
+                  </a>
+                ) : (
+                  <Tooltip
+                    title={
+                      <img
+                        src={img}
+                        alt="icon"
+                        style={{
+                          height: 150,
+                          width: 150,
+                        }}
+                      />
+                    }
+                    color="#f2f2f2"
+                    placement="bottom"
+                  >
+                    <Badge
+                      icon={icon}
+                      alt={name}
+                      size={36}
+                      backgroundColor="rgba(255, 255, 255, 0.1)"
+                      style={{ cursor: "pointer" }}
+                    />
+                  </Tooltip>
+                )}
               </Col>
             ))}
           </Row>
