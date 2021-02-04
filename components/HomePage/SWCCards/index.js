@@ -67,7 +67,7 @@ export default function SWCCards({ swcs, t }) {
                       width: "fit-content"
                     }}
                   >
-                    {"CertiK Whitepaper"}
+                    {getRelationName(swc.content.Relationships)}
                   </Tag>
                 </Card>
               </Link>
@@ -76,4 +76,16 @@ export default function SWCCards({ swcs, t }) {
         })}
     </Row>
   );
+}
+
+function getRelationName(relationships) {
+  const endingSquareBracketIdx = relationships.indexOf("]");
+
+  const name = relationships.slice(1, endingSquareBracketIdx);
+
+  if (name.length > 40) {
+    return `${name.slice(0, 40)}...`;
+  } else {
+    return name;
+  }
 }

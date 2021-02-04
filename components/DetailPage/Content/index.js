@@ -22,8 +22,10 @@ export default function Content({
   transfer,
 }) {
   const endingSquareBracketIdx = relationships.indexOf("]");
+
   const relationshipsName = relationships.slice(1, endingSquareBracketIdx);
-  const relationshipsLink = relationships.slice(endingSquareBracketIdx + 2);
+  const relationshipsLink = relationships.slice(endingSquareBracketIdx + 2, relationships.length - 1);
+
   return (
     <div className={styles["content"]}>
       <Row gutter={[24, 0]}>
