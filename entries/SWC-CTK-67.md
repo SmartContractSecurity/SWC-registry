@@ -2,7 +2,7 @@
 Weak Randomness
 
 ## Relationships
-[CWE-338](https://cwe.mitre.org/data/definitions/338.html)
+[CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)](https://cwe.mitre.org/data/definitions/338.html)
 
 ## Description
 When a non-cryptographic PRNG is used in a cryptographic context, it can expose the cryptography to certain types of attacks.
