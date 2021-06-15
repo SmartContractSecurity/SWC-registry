@@ -1,5 +1,5 @@
 # Title
-Improper Input Validation
+Insufficient Input Validation
 
 ## Relationships
 [CWE-20: Improper Input Validation](https://cwe.mitre.org/data/definitions/20.html)
