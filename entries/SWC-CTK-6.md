@@ -8,7 +8,7 @@ Not Open Sourced
 The project is not yet open sourced.
 
 ## Remediation
-N/A
+Open source the project to increase its transparency.
 
 ## References 
 * [CertiK.io](https://certik.io)

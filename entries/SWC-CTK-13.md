@@ -8,7 +8,7 @@ Not Actively Used in Weeks
 The project is not actively used on a weekly frequency.
 
 ## Remediation
-N/A
+Keep the project active and being used more frequently.
 
 ## References 
 * [CertiK.io](https://certik.io)

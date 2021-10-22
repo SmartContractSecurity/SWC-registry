@@ -8,7 +8,7 @@ Market price drop
 The project's token price dropped, pricing data based on Binance
 
 ## Remediation
-N/A
+Investigate the reason of significant price drop and make an announcement to the public if it is necessary.
 
 ## References 
 * [CertiK.io](https://certik.io)

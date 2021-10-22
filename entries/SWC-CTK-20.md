@@ -8,7 +8,7 @@ Very Low Comment Ratio
 The comment ratio in the source code is comparatively low, less than 20%.
 
 ## Remediation
-N/A
+Write more clear comments in the source code to improve the code readability.
 
 ## References 
 * [CertiK.io](https://certik.io)
