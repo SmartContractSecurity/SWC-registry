@@ -8,7 +8,7 @@ Highly Controlled Centralized
 The project is considered highly controlled centralized. On the scale of decentralization to centralization, it's in the place beyond middle and approaching to centralization.
 
 ## Remediation
-N/A
+Introduce decentralized mechanism, such as Timelock contracts, multi-signature wallets and DAO, to avoid centralization risks.
 
 ## References 
 * [CertiK.io](https://certik.io)

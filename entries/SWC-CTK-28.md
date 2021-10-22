@@ -8,7 +8,7 @@ Not Listed on Major Exchanges
 The project has listed on some exchanges, but not yet on the major ones.
 
 ## Remediation
-N/A
+Make sure the project meets the requirements and can be listed on major exchanges.
 
 ## References 
 * [CertiK.io](https://certik.io)

@@ -8,7 +8,7 @@ Open Hacks
 The project is recently hacked, and it is still hackable.
 
 ## Remediation
-N/A
+Investigate the reason of the incident/hack and fix the vulnerability.
 
 ## References 
 * [CertiK.io](https://certik.io)

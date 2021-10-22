@@ -8,7 +8,7 @@ No Audits
 The project is not yet audited.
 
 ## Remediation
-N/A
+Request and complete security audits for the project.
 
 ## References 
 * [CertiK.io](https://certik.io)

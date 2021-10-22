@@ -8,7 +8,7 @@ Lower Quality Audits
 The project has been audited but not by the top auditing firms.
 
 ## Remediation
-N/A
+Request and complete security audits from the top auditing firms.
 
 ## References 
 * [CertiK.io](https://certik.io)

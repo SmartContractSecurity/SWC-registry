@@ -8,7 +8,7 @@ No Documentations
 There are no documentations to explain the business logic and the code implementation.
 
 ## Remediation
-N/A
+Provide documentations to explain the business logic and the code implementation.
 
 ## References 
 * [CertiK.io](https://certik.io)
