@@ -1,3 +1,3 @@
 module.exports = {
-  target: "serverless"
+  distDir: "out_publish"
 };

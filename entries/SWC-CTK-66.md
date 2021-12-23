@@ -11,4 +11,4 @@ Smart contract traffic moving average dropped comparing to the last period.
 Improve marketing strategy and community interactions.
 
 ## References
-* [CertiK.io](https://certik.io)
+* [CertiK.com](https://certik.com)
