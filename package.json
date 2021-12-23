@@ -8,7 +8,6 @@
     "dev": "next dev",
     "prebuild": "yarn update-swc",
     "build": "next build",
-    "postbuild": "next-on-netlify",
     "format": "prettier --write 'components/**/*' 'pages/**/*' '!**/*/.DS_Store'",
     "start": "next dev"
   },
