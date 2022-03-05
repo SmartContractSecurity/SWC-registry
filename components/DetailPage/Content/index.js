@@ -15,16 +15,19 @@ export default function Content({
       Title: title,
       Description: description,
       Relationships: relationships,
-      Remediation: remediation,
-    },
+      Remediation: remediation
+    }
   },
   transferring,
-  transfer,
+  transfer
 }) {
   const endingSquareBracketIdx = relationships.indexOf("]");
 
   const relationshipsName = relationships.slice(1, endingSquareBracketIdx);
-  const relationshipsLink = relationships.slice(endingSquareBracketIdx + 2, relationships.length - 1);
+  const relationshipsLink = relationships.slice(
+    endingSquareBracketIdx + 2,
+    relationships.length - 1
+  );
 
   return (
     <div className={styles["content"]}>
@@ -50,7 +53,7 @@ export default function Content({
           fontSize: 32,
           fontWeight: 500,
           lineHeight: "32px",
-          marginBottom: 48,
+          marginBottom: 48
         }}
       >
         {id}
@@ -60,7 +63,7 @@ export default function Content({
         style={{
           fontWeight: 500,
           lineHeight: "32px",
-          marginBottom: 12,
+          marginBottom: 12
         }}
       >
         Title
@@ -69,40 +72,44 @@ export default function Content({
         style={{
           color: "rgba(51, 51, 51, 0.8)",
           lineHeight: "20px",
-          marginBottom: 24,
+          marginBottom: 24
         }}
       >
         {title}
       </Paragraph>
+      {relationshipsName && (
+        <Title
+          level={3}
+          style={{
+            fontWeight: 500,
+            lineHeight: "32px",
+            marginBottom: 12
+          }}
+        >
+          Relationships
+        </Title>
+      )}
+      {relationshipsName && (
+        <a
+          href={relationshipsLink}
+          style={{
+            color: "#4D6380",
+            display: "block",
+            fontSize: 14,
+            fontWeight: 600,
+            lineHeight: "20px",
+            marginBottom: 24
+          }}
+        >
+          {relationshipsName}
+        </a>
+      )}
       <Title
         level={3}
         style={{
           fontWeight: 500,
           lineHeight: "32px",
-          marginBottom: 12,
-        }}
-      >
-        Relationships
-      </Title>
-      <a
-        href={relationshipsLink}
-        style={{
-          color: "#4D6380",
-          display: "block",
-          fontSize: 14,
-          fontWeight: 600,
-          lineHeight: "20px",
-          marginBottom: 24,
-        }}
-      >
-        {relationshipsName}
-      </a>
-      <Title
-        level={3}
-        style={{
-          fontWeight: 500,
-          lineHeight: "32px",
-          marginBottom: 12,
+          marginBottom: 12
         }}
       >
         Description
@@ -112,7 +119,7 @@ export default function Content({
           color: "rgba(51, 51, 51, 0.8)",
           lineHeight: "20px",
           marginBottom: 24,
-          maxWidth: 648,
+          maxWidth: 648
         }}
       >
         {description}
@@ -122,7 +129,7 @@ export default function Content({
         style={{
           fontWeight: 500,
           lineHeight: "32px",
-          marginBottom: 12,
+          marginBottom: 12
         }}
       >
         Remediation
@@ -140,7 +147,7 @@ const renderers = {
       style={{
         color: "rgba(51, 51, 51, 0.8)",
         lineHeight: "20px",
-        marginBottom: 24,
+        marginBottom: 24
       }}
     >
       {children}
@@ -150,5 +157,5 @@ const renderers = {
     return (
       <SyntaxHighlighter style={dark} language={language} children={value} />
     );
-  },
+  }
 };

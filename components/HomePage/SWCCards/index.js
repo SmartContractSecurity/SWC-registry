@@ -59,16 +59,6 @@ export default function SWCCards({ swcs, t }) {
                   >
                     {swc.content.Title}
                   </Text>
-                  <Tag
-                    color="rgba(85, 166, 131, 0.2)"
-                    style={{
-                      color: "#55A683",
-                      display: "block",
-                      width: "fit-content"
-                    }}
-                  >
-                    {getRelationName(swc.content.Relationships)}
-                  </Tag>
                 </Card>
               </Link>
             </Col>

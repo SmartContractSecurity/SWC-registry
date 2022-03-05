@@ -1,9 +1,6 @@
 # Title 
 Owner Overprivileged
 
-## Relationships 
-[CertiK Whitepaper](https://certik.foundation/whitepaper)
-
 ## Description 
 Function with strict access controls that might result in less centralized for decentralized projects
 

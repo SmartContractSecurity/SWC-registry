@@ -13,7 +13,7 @@ export async function getStaticProps() {
 
 export default function Home({ swcs }) {
   return (
-    <Layout title="CertiK SWC Registry">
+    <Layout title="CertiK SWC Registry" hasHeader={false}>
       <Banner />
       <SWCSearcher swcs={swcs} />
       <div className="centered-container" style={{ marginTop: 44 }}>

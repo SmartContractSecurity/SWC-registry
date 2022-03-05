@@ -1,9 +1,6 @@
 # Title
 Dropped Traffic
 
-## Relationships
-[CertiK Whitepaper](https://certik.foundation/whitepaper)
-
 ## Description
 Smart contract traffic moving average dropped comparing to the last period.
 

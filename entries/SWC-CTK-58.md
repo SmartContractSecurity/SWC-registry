@@ -1,9 +1,6 @@
 # Title 
 Project Website Was Unaccessible
 
-## Relationships 
-[CertiK Whitepaper](https://certik.foundation/whitepaper)
-
 ## Description 
 The project website become unaccessible. Which is a strong signal of rug pull.
 

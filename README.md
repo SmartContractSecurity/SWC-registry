@@ -109,6 +109,6 @@ Weaknesses in 'smart contract adjacent' code should not be included. For example
 
 ## Contact
 
-This repository is maintained by the team behind [MythX](https://mythx.io) and [CertiK Foundation](https://certik.foundation).
+This repository is maintained by the team behind [MythX](https://mythx.io) and [CertiK](https://www.certik.com).
 
 Please join the #swc-registry channel on the [MythX Discord](https://discord.gg/qcNvR2r) for discussions.

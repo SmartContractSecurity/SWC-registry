@@ -1,9 +1,6 @@
 # Title 
 No Audits
 
-## Relationships 
-[CertiK Whitepaper](https://certik.foundation/whitepaper)
-
 ## Description 
 The project is not yet audited.
 

@@ -11,6 +11,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body, #__next {
+  height: 100%;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }
@@ -110,6 +114,7 @@ code {
 }
 
 .App .centered-container {
+  flex-grow: 2;
   margin: 0 auto;
   width: 90%;
 }

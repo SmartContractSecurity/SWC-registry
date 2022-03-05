@@ -1,9 +1,6 @@
 # Title 
 No Code Coverage
 
-## Relationships 
-[CertiK Whitepaper](https://certik.foundation/whitepaper)
-
 ## Description 
 There are no code coverage data/statics shown in the project repository.
 

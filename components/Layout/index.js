@@ -4,7 +4,7 @@ import Navbar from "../Navbar/";
 import Footer from "../Footer/";
 import { useTranslation } from "react-i18next";
 
-export default function Layout({ children, title }) {
+export default function Layout({ children, title, hasHeader = true }) {
   const { t } = useTranslation();
   const childrenWithProps = React.Children.map(children, (child) => {
     // checking isValidElement is the safe way and avoids a typescript error too
@@ -15,12 +15,12 @@ export default function Layout({ children, title }) {
   });
 
   return (
-    <div className="App">
+    <div className="App" style={{ height: "100%" }}>
       <Head>
         <title>{title}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Navbar t={t} />
+      {hasHeader && <Navbar t={t} />}
       {childrenWithProps}
       <Footer t={t} />
     </div>

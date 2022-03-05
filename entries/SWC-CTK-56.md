@@ -1,9 +1,6 @@
 # Title 
 Project Twitter Account Was Deleted
 
-## Relationships 
-[CertiK Whitepaper](https://certik.foundation/whitepaper)
-
 ## Description 
 The twitter account for the project was deleted. Which is a strong signal of rug pull.
 

@@ -37,7 +37,7 @@ export default function Banner({ t }) {
               margin: 0,
             }}
           >
-            {t("SWC Registry with Security Oracle Extensions")}
+            {t("CertiK Security Vulnerability Collections")}
           </Title>
         </Col>
         <Col>

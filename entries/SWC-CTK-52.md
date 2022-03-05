@@ -1,9 +1,6 @@
 # Title 
 Abnormal Peak of Transactions
 
-## Relationships 
-[CertiK Whitepaper](https://certik.foundation/whitepaper)
-
 ## Description 
 A project has significantly higher transaction volume occuring in the past 24 hours comparing to its long term average.
 

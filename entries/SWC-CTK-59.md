@@ -1,9 +1,6 @@
 # Title 
 Project Exchange Listing Was Unlisted
 
-## Relationships 
-[CertiK Whitepaper](https://certik.foundation/whitepaper)
-
 ## Description 
 The project was unlisted in exchanges. Which could a strong signal of rug pull.
 

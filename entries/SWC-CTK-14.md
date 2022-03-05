@@ -1,9 +1,6 @@
 # Title 
 Not Actively Used in Days
 
-## Relationships 
-[CertiK Whitepaper](https://certik.foundation/whitepaper)
-
 ## Description 
 The project is not actively used on a daily frequency.
 

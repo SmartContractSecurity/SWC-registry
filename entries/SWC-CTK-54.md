@@ -1,9 +1,6 @@
 # Title 
 Negative Twitter Sentiment
 
-## Relationships 
-[CertiK Whitepaper](https://certik.foundation/whitepaper)
-
 ## Description 
 Communities are sending negative tweets about the project in the past 24 hours.
 

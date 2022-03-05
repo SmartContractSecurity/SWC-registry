@@ -1,8 +1,3 @@
-.detail-page {
-  height: 650px;
-  overflow: auto;
-}
-
 .detail-page > :global(.ant-col):first-child {
   max-height: 800px;
   overflow: auto;

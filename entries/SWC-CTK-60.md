@@ -1,9 +1,6 @@
 # Title 
 Community Warnings
 
-## Relationships 
-[CertiK Whitepaper](https://certik.foundation/whitepaper)
-
 ## Description 
 Community members talking about rug pull or security incidents.
 
