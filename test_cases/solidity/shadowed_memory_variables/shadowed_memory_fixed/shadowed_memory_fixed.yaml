@@ -1,0 +1,5 @@
+description: Shadowed Memory Variable in Function Body by Named Returns Statement
+issues:
+- id: SWC-137
+  count: 0
+  locations: []

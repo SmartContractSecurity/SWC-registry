@@ -1,0 +1,8 @@
+description: Shadowed Memory Variable in Function Body by Named Returns Statement
+issues:
+- id: SWC-137
+  count: 1
+  locations:
+  - bytecode_offsets: {}
+    line_numbers:
+      shadowed_memory.sol: [6]
