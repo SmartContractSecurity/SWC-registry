@@ -2,7 +2,7 @@
 High Volume of whales
 
 ## Description 
-There are significant volume of whales detected in this project. 
+A significant volume of whales detected in this project. 
 
 ## Remediation
 N/A
