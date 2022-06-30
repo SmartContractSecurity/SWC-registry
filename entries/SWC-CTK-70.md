@@ -5,7 +5,5 @@ High Volume of whales
 There are significant volume of whales detected in this project. 
 
 ## Remediation
- 
-
-## References 
+N/A
  
