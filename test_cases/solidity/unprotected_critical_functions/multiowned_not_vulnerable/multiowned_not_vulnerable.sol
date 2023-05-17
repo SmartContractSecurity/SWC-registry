@@ -26,7 +26,7 @@ contract MultiOwnable {
   
   /**
   * @dev Adding new owners
-  * Note that the "onlyOwner" modifier is missing here.
+  * Note that the "onlyOwner" modifier is used here.
   */ 
   function newOwner(address _owner) onlyOwner external returns (bool) {
     require(_owner != 0);
