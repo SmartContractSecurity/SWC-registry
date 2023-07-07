@@ -1,4 +1,15 @@
+## This content is not actively maintained 
+
+In large part, the content in this registry is still accurate and useful, but **it has not been significantly updated** since about 2020.
+
+All the work in here was incorporated into the **[EEA EthTrust Security Levels specification v1](https://entethalliance.org/specs/ethtrust-sl)**. 
+
+The [EEA EthTrust Security Levels](https://entethalliance.org/groups/ethtrust) project is actively maintained. 
+The **[Editor's draft for a new version](https://entethalliance.github.io/eta-registry/security-levels-spec.html)** is publicly available,
+is updated roughly every two weeks, and a formal release is expected to be published in Q4 2023 as version 2 of the specification.
+
 # Smart Contract Weakness Classification Registry
+
 [![CircleCI](https://circleci.com/gh/SmartContractSecurity/SWC-registry/tree/master.svg?style=svg)](https://circleci.com/gh/SmartContractSecurity/SWC-registry/tree/master)
 [![Pages](https://img.shields.io/badge/pages-online-blue.svg)](https://smartcontractsecurity.github.io/SWC-registry/)
 [![Discord](https://img.shields.io/discord/481002907366588416.svg)](https://discord.gg/qcNvR2r)
@@ -12,30 +23,19 @@ The goals of this project are as follows:
 - Define a common language for describing security issues in smart contract systems' architecture, design, or code.
 - Serve as a way to train and increase performance for smart contract security analysis tools.
 
-## Create a new SWC entry
+## Contributing
 
-Make sure that there is no matching weakness in the registry. Ideally, also coordinate with the community in [#swc-registry](https://discord.gg/qcNvR2r) to prevent conflicting entries. Create a file with a new SWC ID in the [entries](./entries) directory. Use the [template](./entries/template.md) and describe all weakness attributes. 
+### Create a new SWC entry
 
-```
-# Title 
-Pick a meaningful title.
+Because this content is no longer actively maintained, there is little point submitting new entries to the registry.
 
-## Relationships
-Link a CWE Base or Class type to the CWS variant. 
-e.g.  [CWE-682: Incorrect Calculation](https://cwe.mitre.org/data/definitions/682.html)
+Instead, please consider contributing to an active and up to date project such as the [EEA EthTrust Security Levels WG](https://entethalliance.org/groups/ethtrust)'s [EEA EthTrust Security Levels specification Editor's draft for a new version](https://entethalliance.github.io/eta-registry/security-levels-spec.html) 
 
-## Description 
-Describe the nature and potential impact of the weakness on the contract system. 
+### Create a new test case  
 
-## Remediation
-Describe ways on how to fix the weakness. 
+### New test cases may or may not be reviewed and added, since this repository is no longer actively maintained
 
-## References 
-Link to external references that contain useful additional information on the issue. 
-
-```
-
-## Create a new test case  
+(The advice here is retained because it is good advice in general).
 
 Test cases should be as varied as possible and include both simple test cases and real-world samples of vulnerable smart contracts. The test cases are grouped into subdirectories based on a single weakness variant or based on more complex real world contract systems that can contain various weakness variants. A single test case consists of the following structure:
 
@@ -51,8 +51,7 @@ $ solc --pretty-json --combined-json ast,bin,bin-runtime,srcmap,srcmap-runtime o
 
 4. The configuration file defining the types and number of weaknesses contained in the contract file (e.g. [overflow_simple_add.yaml](https://github.com/SmartContractSecurity/SWC-registry/blob/master/test_cases/solidity/integer_overflow_and_underflow/overflow_simple_add/overflow_simple_add.yaml))
 
-
-One more thing, make sure the credit the author and mention the source if you don't write the contract sample yourself.
+Please make sure to credit other authors and mention the source if you don't write the entire contract sample yourself.
 
 ```
 /*
@@ -85,26 +84,14 @@ The configuration contains meta-information about the weaknesses contained in a 
 - Line 6-7: `bytecode_offsets` is a tuple consisting of the keccak256 hash of the runtime or creation byte code and a list of valid offsets. 
 - Line 8-9: `line_numbers` is a tuple consisting of the source file and a list of valid line numbers. 
 
-## Contributing
 
-Before you create a PR for the first time make sure you have read:
 
-- the sections [Create a new SWC entry](#create-a-new-swc-entry) and [Create a new test case](#create-a-new-test-case).
-- read several existing SWC definitions and their test cases. 
 
-From time to time there will be challenges on [Gitcoin](https://gitcoin.co). Follow the below link to check what challenges are currently open.  
-
-<a href="https://gitcoin.co/explorer?q=SWC">
-    <img src="https://gitcoin.co/funding/embed?repo=https://github.com/SmartContractSecurity/SWC-registry/&max_age=60&badge=1">
-</a>
-
-### Scope of Weaknesses 
+## Scope of Weaknesses 
 
 SWCs should be concerned with weaknesses that can be identified within the code of a smart contract, typically Solidity. 
 Weaknesses in 'smart contract adjacent' code should not be included. For example, the [gas siphoning attack](https://github.com/SmartContractSecurity/SWC-registry/pull/140) occurs in wallet code, and should be protected against in wallet code.
 
 ## Contact
 
-This repository is maintained by the team behind [MythX](https://mythx.io).
-
-Please join the #swc-registry channel on the [MythX Discord](https://discord.gg/qcNvR2r) for discussions.
+This repository is no longer actively maintained.
