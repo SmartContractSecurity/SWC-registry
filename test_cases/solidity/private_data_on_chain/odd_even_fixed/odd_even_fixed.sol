@@ -2,6 +2,7 @@
  * @source: https://github.com/yahgwai/rps
  * @author: Chris Buckland
  * Modified by Kaden Zipfel
+ * Modified by Kacper Żuk
  */
 
 pragma solidity ^0.5.0;
@@ -18,6 +19,7 @@ contract OddEven {
     struct Player {
         address addr;
         bytes32 commitment;
+        bool revealed;
         uint number;
     }
 
@@ -36,7 +38,7 @@ contract OddEven {
         require(msg.value == 2 ether, 'msg.value must be 2 eth');
 
         // Store the commitment
-        players[playerIndex] = Player(msg.sender, commitment, 0);
+        players[playerIndex] = Player(msg.sender, commitment, false, 0);
 
         // Move to next stage
         if(stage == Stage.FirstCommit) stage = Stage.SecondCommit;
@@ -53,11 +55,17 @@ contract OddEven {
         else if(players[1].addr == msg.sender) playerIndex = 1;
         else revert("unknown player");
 
+        // Protect against double-reveal, which would trigger move to Stage.Distribution too early
+        require(!players[playerIndex].revealed, "already revealed");
+
         // Check the hash to prove the player's honesty
         require(keccak256(abi.encodePacked(msg.sender, number, blindingFactor)) == players[playerIndex].commitment, "invalid hash");
 
         // Update player number if correct
         players[playerIndex].number = number;
+
+        // Protect against double-reveal
+        players[playerIndex].revealed = true;
 
         // Move to next stage
         if(stage == Stage.FirstReveal) stage = Stage.SecondReveal;
