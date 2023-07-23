@@ -1,8 +1,0 @@
-description: Gridlock bug in Edgeware’s Lockdrop smart contract
-issues:
-- id: SWC-132
-  count: 1
-  locations:
-  - bytecode_offsets: {}
-    line_numbers:
-      Lockdrop.sol: [69]

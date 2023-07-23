@@ -1,9 +1,0 @@
-description: Simple variant of write to arbitrary storage location
-issues:
-- id: SWC-124
-  count: 1
-  locations:
-  - bytecode_offsets:
-      '0x4d778370f4fe1789bc427ab08efc768fcb4c6c8b68d2ee41178340423445bd45': [294]
-    line_numbers:
-      arbitrary_location_write_simple.sol: [26]

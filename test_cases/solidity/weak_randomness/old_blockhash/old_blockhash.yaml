@@ -1,9 +1,0 @@
-description: Weak Sources of Randomness
-issues:
-- id: SWC-120
-  count: 1
-  locations:
-  - bytecode_offsets:
-      '0x80e6291d79fe0fafbb9c90d16e87a28fc8666591fb40a875ec974b95462002d1': [442]
-    line_numbers:
-      old_blockhash.sol: [29,33]

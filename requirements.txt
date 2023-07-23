@@ -1,4 +1,5 @@
 mkdocs
 mkdocs-material
+pygments
 pygments-lexer-solidity
 pymdown-extensions

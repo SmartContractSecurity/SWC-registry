@@ -1,5 +1,0 @@
-description: Assert is triggered through constructor argument
-issues:
-- id: SWC-110
-  count: 0
-  locations: []

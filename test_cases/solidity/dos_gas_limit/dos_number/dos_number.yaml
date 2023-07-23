@@ -1,8 +1,0 @@
-description: DoS Gas Limit in array empty and optionally in for loop
-issues:
-- id: SWC-128
-  count: 1
-  locations:
-  - bytecode_offsets: {}
-    line_numbers:
-      dos_number.sol: [29]
