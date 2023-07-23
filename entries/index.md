@@ -1,9 +1,9 @@
-#
+# 
 
 The following table contains an overview of the SWC registry. Each row consists of an SWC identifier (ID), weakness title, CWE parent and list of related code samples. The links in the ID and Test Cases columns link to the respective SWC definition. Links in the Relationships column link to the CWE Base or Class type.
 
-| ID                      | Title                                                   | Relationships                                                                                                                                           |
-| ----------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ID                           | Title                                                   | Relationships                                                                                                                                           |
+| ---------------------------- | ------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | [SWC-136](./docs/SWC-136.md) | Unencrypted Private Data On-Chain                       | [CWE-767: Access to Critical Private Variable via Public Method](https://cwe.mitre.org/data/definitions/767.html)                                       |
 | [SWC-135](./docs/SWC-135.md) | Code With No Effects                                    | [CWE-1164: Irrelevant Code](https://cwe.mitre.org/data/definitions/1164.html)                                                                           |
 | [SWC-134](./docs/SWC-134.md) | Message call with hardcoded gas amount                  | [CWE-655: Improper Initialization](https://cwe.mitre.org/data/definitions/665.html)                                                                     |

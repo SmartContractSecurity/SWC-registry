@@ -54,3 +54,7 @@ nav:
 theme:
   name: "material"
   language: en
+
+markdown_extensions:
+  - pymdownx.highlight:
+      linenums: true
