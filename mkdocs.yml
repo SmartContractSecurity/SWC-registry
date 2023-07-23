@@ -1,0 +1,56 @@
+site_name: Smart Contract Weakness Classification (SWC)
+site_url: https://swcregistry.io/docs/
+site_description: Smart Contract Weakness Classification and Test Cases
+site_author: Dominik Muhs
+
+repo_url: https://github.com/SmartContractSecurity/SWC-registry
+repo_name: SWC Registry
+remote_branch: gh-pages
+remote_name: origin
+
+strict: true
+docs_dir: entries
+
+nav:
+  - index.md
+  - SWC-100: SWC-100.md
+  - SWC-101: SWC-101.md
+  - SWC-102: SWC-102.md
+  - SWC-103: SWC-103.md
+  - SWC-104: SWC-104.md
+  - SWC-105: SWC-105.md
+  - SWC-106: SWC-106.md
+  - SWC-107: SWC-107.md
+  - SWC-108: SWC-108.md
+  - SWC-109: SWC-109.md
+  - SWC-110: SWC-110.md
+  - SWC-111: SWC-111.md
+  - SWC-112: SWC-112.md
+  - SWC-113: SWC-113.md
+  - SWC-114: SWC-114.md
+  - SWC-115: SWC-115.md
+  - SWC-116: SWC-116.md
+  - SWC-117: SWC-117.md
+  - SWC-118: SWC-118.md
+  - SWC-119: SWC-119.md
+  - SWC-120: SWC-120.md
+  - SWC-121: SWC-121.md
+  - SWC-122: SWC-122.md
+  - SWC-123: SWC-123.md
+  - SWC-124: SWC-124.md
+  - SWC-125: SWC-125.md
+  - SWC-126: SWC-126.md
+  - SWC-127: SWC-127.md
+  - SWC-128: SWC-128.md
+  - SWC-129: SWC-129.md
+  - SWC-130: SWC-130.md
+  - SWC-131: SWC-131.md
+  - SWC-132: SWC-132.md
+  - SWC-133: SWC-133.md
+  - SWC-134: SWC-134.md
+  - SWC-135: SWC-135.md
+  - SWC-136: SWC-136.md
+
+theme:
+  name: "material"
+  language: en
