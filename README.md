@@ -5,6 +5,12 @@ to enhance or clarify the status of the current content, and pointers will be ad
 [EEA EthTrust Security Levels Specification](https://entethalliance.org/specs/ethtrust-sl/), new SWCs are no longer being added,
 and readers should check external sources to clarify the relevance of existing content.
 
+All the work in here was incorporated into the **[EEA EthTrust Security Levels specification v1](https://entethalliance.org/specs/ethtrust-sl)**. 
+
+The [EEA EthTrust Security Levels](https://entethalliance.org/groups/ethtrust) project is actively maintained. 
+The **[Editor's draft for a new version](https://entethalliance.github.io/eta-registry/security-levels-spec.html)** is publicly available,
+is updated roughly every two weeks, and a formal release is expected to be published in Q4 2023 as version 2 of the specification.
+
 # Smart Contract Weakness Classification Registry
 
 The Smart Contract Weakness Classification Registry (SWC Registry) is an implementation of the weakness classification scheme proposed in [EIP-1470](https://github.com/ethereum/EIPs/issues/1469). It is loosely aligned to the terminologies and structure used in the Common Weakness Enumeration ([CWE](https://cwe.mitre.org)) while overlaying a wide range of weakness variants that are specific to smart contracts.
