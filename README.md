@@ -27,6 +27,6 @@ The goals of this project are as follows:
 ### Scope of Weaknesses
 
 SWCs are concerned with weaknesses that can be identified within Solidity code of a smart contract.
-Weaknesses in 'smart contract adjacent' code are not covered. 
+Weaknesses in 'smart contract adjacent' code are not covered by this registry of Weaknesses. 
 For example, the [gas siphoning attack](https://github.com/SmartContractSecurity/SWC-registry/pull/140) occurs in wallet code,
 and should be protected against in wallet code.
