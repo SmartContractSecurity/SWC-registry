@@ -1,4 +1,15 @@
-# 
+# Please note, this content is no longer actively maintained.
+
+The content of the SWC registry has not been thoroughly updated since 2020. It is known to be incomplete and may contain errors as well as crucial omissions.
+
+For currently maintained guidance on known Smart Contract vulnerabilities written primarily as guidance for security reviewers, please see the
+[EEA EthTrust Security Levels specification](https://entethalliance.org/specs/ethtrust-sl). As well as the latest release version, an
+[Editor's draft](https://entethalliance.github.io/eta-registry/security-levels-spec.html) is available, 
+that represents the latest work of the group developing the specification.
+
+General guidance for developers on how to ensure security, that is currently maintained, is also available through the 
+[Smart Contract Security Verification Standard (SCSVS)](https://github.com/ComposableSecurity/SCSVS), or
+the [Smart Contract Security Field Guide](https://scsfg.io).
 
 The following table contains an overview of the SWC registry. Each row consists of an SWC identifier (ID), weakness title, CWE parent and list of related code samples. The links in the ID and Test Cases columns link to the respective SWC definition. Links in the Relationships column link to the CWE Base or Class type.
 
