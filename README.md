@@ -12,7 +12,7 @@ The **[Editor's draft for a new version](https://entethalliance.github.io/eta-re
 
 [EthTrust Security Leveles Version 2](https://entethalliance.org/specs/ethtrust-sl/v2) was published in December 2023, with publication of version 3 expected in early 2025.
 
-Another project that has been maintained over a number of years is the [Smart Contrat Security Verification Standard](https://github.com/ComposableSecurity/SCSVS).
+Another project that has been maintained over a number of years is the [Smart Contract Security Verification Standard](https://github.com/ComposableSecurity/SCSVS).
 
 The EthTrust specification is specific to Solidity code, and aims to comprehensively identify vulnerabilities that need to be checked for, and if present eliminated. The SCSVS is a more general development guideline for security testing and remediation, applicable to a large range of projects.
 
