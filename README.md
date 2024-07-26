@@ -1,5 +1,7 @@
 # This registry is no longer actively maintained
 
+## New SWC entries have not not been added since 2020
+
 This registry has not been significantly updated since 2020, and is no longer actively maintained. While some maintenance may be done
 to enhance or clarify the status of the current content, and pointers will be added to new work that is maintained such as the 
 [EEA EthTrust Security Levels Specification](https://entethalliance.org/specs/ethtrust-sl/), new SWCs are no longer being added,
@@ -26,7 +28,6 @@ The goals of this project were as follows:
 - Define a common language for describing security issues in smart contract systems' architecture, design, or code.
 - Serve as a way to train and increase performance for smart contract security analysis tools.
 
-## New SWC entries have not not been added since 2020
 
 
 ### Scope of Weaknesses
