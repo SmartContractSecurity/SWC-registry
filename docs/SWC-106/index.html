@@ -1,0 +1,1553 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Smart Contract Weakness Classification and Test Cases">
+      
+      
+        <meta name="author" content="Dominik Muhs">
+      
+      
+        <link rel="canonical" href="https://swcregistry.io/docs/SWC-106/">
+      
+      
+        <link rel="prev" href="../SWC-105/">
+      
+      
+        <link rel="next" href="../SWC-107/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.31">
+    
+    
+      
+        <title>SWC-106 - Smart Contract Weakness Classification (SWC)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3cba04c6.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#please-note-this-content-is-no-longer-actively-maintained" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Smart Contract Weakness Classification (SWC)" class="md-header__button md-logo" aria-label="Smart Contract Weakness Classification (SWC)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Smart Contract Weakness Classification (SWC)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              SWC-106
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SmartContractSecurity/SWC-registry" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SWC Registry
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Smart Contract Weakness Classification (SWC)" class="md-nav__button md-logo" aria-label="Smart Contract Weakness Classification (SWC)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Smart Contract Weakness Classification (SWC)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SmartContractSecurity/SWC-registry" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    SWC Registry
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-100/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-100
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-101/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-101
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-102/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-102
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-103/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-103
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-104/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-104
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-105/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-105
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    SWC-106
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-107/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-107
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-108/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-108
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-109/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-109
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-110/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-110
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-111/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-111
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-112/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-112
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-113/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-113
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-114/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-114
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-115/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-115
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-116/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-116
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-117/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-117
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-118/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-118
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-119/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-119
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-120/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-120
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-121/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-121
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-122/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-122
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-123/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-123
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-124/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-124
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-125/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-125
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-126/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-126
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-127/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-127
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-128/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-128
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-129/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-129
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-130/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-130
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-131/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-131
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-132/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-132
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-133/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-133
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-134/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-134
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-135/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-135
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SWC-136/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SWC-136
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="please-note-this-content-is-no-longer-actively-maintained">Please note, this content is no longer actively maintained.</h1>
+<p>The content of the SWC registry has not been thoroughly updated since 2020. It is known to be incomplete and may contain errors as well as crucial omissions.</p>
+<p>For currently maintained guidance on known Smart Contract vulnerabilities written primarily as guidance for security reviewers, please see the
+<a href="https://entethalliance.org/specs/ethtrust-sl">EEA EthTrust Security Levels specification</a>. As well as the latest release version, an
+<a href="https://entethalliance.github.io/eta-registry/security-levels-spec.html">Editor's draft</a> is available,
+that represents the latest work of the group developing the specification.</p>
+<p>General guidance for developers on what to consider to ensure security, that is currently maintained, is also available through the
+<a href="https://github.com/ComposableSecurity/SCSVS">Smart Contract Security Verification Standard (SCSVS)</a>.</p>
+<h1 id="title">Title</h1>
+<p>Unprotected SELFDESTRUCT Instruction</p>
+<h2 id="relationships">Relationships</h2>
+<ul>
+<li><a href="https://cwe.mitre.org/data/definitions/284.html">CWE-284: Improper Access Control</a></li>
+<li>EthTrust Security Levels:</li>
+<li><a href="https://entethalliance.github.io/eta-registry/security-levels-spec.html#req-2-self-destruct"><strong>[M] Protect Self-destruction</strong></a></li>
+<li><a href="https://entethalliance.github.io/eta-registry/security-levels-spec.html#req-3-access-control"><strong>[Q] Enforce Least Privilege</strong></a></li>
+</ul>
+<h2 id="description">Description</h2>
+<p>Due to missing or insufficient access controls, malicious parties can self-destruct the contract.</p>
+<h2 id="remediation">Remediation</h2>
+<p>Consider removing the self-destruct functionality unless it is absolutely required. If there is a valid use-case, it is recommended to implement a multisig scheme so that multiple parties must approve the self-destruct action.</p>
+<h2 id="references">References</h2>
+<ul>
+<li><a href="https://www.parity.io/a-postmortem-on-the-parity-multi-sig-library-self-destruct/">Parity "I accidentally killed it" bug</a></li>
+</ul>
+<h2 id="samples">Samples</h2>
+<h3 id="walletlibrarysol">WalletLibrary.sol</h3>
+<div class="highlight"><pre><span></span><code><span class="c1">//sol Wallet</span>
+<span class="c1">// Multi-sig, daily-limited account proxy/wallet.</span>
+<span class="c1">// @authors:</span>
+<span class="c1">// Gav Wood &lt;g@ethdev.com&gt;</span>
+<span class="c1">// inheritable &quot;property&quot; contract that enables methods to be protected by requiring the acquiescence of either a</span>
+<span class="c1">// single, or, crucially, each of a number of, designated owners.</span>
+<span class="c1">// usage:</span>
+<span class="c1">// use modifiers onlyowner (just own owned) or onlymanyowners(hash), whereby the same hash must be provided by</span>
+<span class="c1">// some number (specified in constructor) of the set of owners (specified in the constructor, modifiable) before the</span>
+<span class="c1">// interior is executed.</span>
+
+<span class="k">pragma solidity</span><span class="w"> </span><span class="o">^</span><span class="k">0.4.9</span><span class="p">;</span>
+
+<span class="k">contract</span><span class="w"> </span><span class="ni">WalletEvents</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// EVENTS</span>
+
+<span class="w">  </span><span class="c1">// this contract only has six types of events: it can accept a confirmation, in which case</span>
+<span class="w">  </span><span class="c1">// we record owner and operation (hash) alongside it.</span>
+<span class="w">  </span><span class="kt">event</span><span class="w"> </span><span class="nv">Confirmation</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">owner</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">operation</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">event</span><span class="w"> </span><span class="nv">Revoke</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">owner</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">operation</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// some others are in the case of an owner changing.</span>
+<span class="w">  </span><span class="kt">event</span><span class="w"> </span><span class="nv">OwnerChanged</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">oldOwner</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">newOwner</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">event</span><span class="w"> </span><span class="nv">OwnerAdded</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">newOwner</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">event</span><span class="w"> </span><span class="nv">OwnerRemoved</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">oldOwner</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// the last one is emitted if the required signatures change</span>
+<span class="w">  </span><span class="kt">event</span><span class="w"> </span><span class="nv">RequirementChanged</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">newRequirement</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// Funds has arrived into the wallet (record how much).</span>
+<span class="w">  </span><span class="kt">event</span><span class="w"> </span><span class="nv">Deposit</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_from</span><span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nv">value</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Single transaction going out of the wallet (record who signed for it, how much, and to whom it&#39;s going).</span>
+<span class="w">  </span><span class="kt">event</span><span class="w"> </span><span class="nv">SingleTransact</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">owner</span><span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nv">value</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">to</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">data</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">created</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Multi-sig transaction going out of the wallet (record who signed for it last, the operation hash, how much, and to whom it&#39;s going).</span>
+<span class="w">  </span><span class="kt">event</span><span class="w"> </span><span class="nv">MultiTransact</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">owner</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">operation</span><span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nv">value</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">to</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">data</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">created</span><span class="p">);</span>
+<span class="w">  </span><span class="c1">// Confirmation still needed for a transaction.</span>
+<span class="w">  </span><span class="kt">event</span><span class="w"> </span><span class="nv">ConfirmationNeeded</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">operation</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">initiator</span><span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nv">value</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">to</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">data</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">contract</span><span class="w"> </span><span class="ni">WalletAbi</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// Revokes a prior confirmation of the given operation</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">revoke</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">_operation</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// Replaces an owner `_from` with another `_to`.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">changeOwner</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_from</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">_to</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">addOwner</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_owner</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">removeOwner</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_owner</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">changeRequirement</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">_newRequired</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">isOwner</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_addr</span><span class="p">)</span><span class="w"> </span><span class="kt">constant</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">hasConfirmed</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">_operation</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">_owner</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">constant</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">);</span>
+
+<span class="w">  </span><span class="c1">// (re)sets the daily limit. needs many of the owners to confirm. doesn&#39;t alter the amount already spent today.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">setDailyLimit</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">_newLimit</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">execute</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_to</span><span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nv">_value</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">_data</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">o_hash</span><span class="p">);</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">confirm</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">_h</span><span class="p">)</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="nv">o_success</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="k">contract</span><span class="w"> </span><span class="ni">WalletLibrary</span><span class="w"> </span><span class="kt">is</span><span class="w"> </span>WalletEvents<span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="c1">// TYPES</span>
+
+<span class="w">  </span><span class="c1">// struct for the status of a pending operation.</span>
+<span class="w">  </span><span class="kt">struct</span><span class="w"> </span><span class="nv">PendingState</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">yetNeeded</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">ownersDone</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">index</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Transaction structure to remember details of transaction lest it need be saved for a later call.</span>
+<span class="w">  </span><span class="kt">struct</span><span class="w"> </span><span class="nv">Transaction</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">address</span><span class="w"> </span><span class="nv">to</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">value</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">data</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// MODIFIERS</span>
+
+<span class="w">  </span><span class="c1">// simple single-sig function modifier.</span>
+<span class="w">  </span><span class="kt">modifier</span><span class="w"> </span>onlyowner<span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>isOwner<span class="p">(</span><span class="k">msg.sender</span><span class="p">))</span>
+<span class="w">      </span>_<span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// multi-sig function modifier: the operation must have an intrinsic hash in order</span>
+<span class="w">  </span><span class="c1">// that later attempts can be realised as the same underlying operation and</span>
+<span class="w">  </span><span class="c1">// thus count as confirmations.</span>
+<span class="w">  </span><span class="kt">modifier</span><span class="w"> </span>onlymanyowners<span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">_operation</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>confirmAndCheck<span class="p">(</span>_operation<span class="p">))</span>
+<span class="w">      </span>_<span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// METHODS</span>
+
+<span class="w">  </span><span class="c1">// gets called when no other function matches</span>
+<span class="w">  </span><span class="kt">function</span><span class="p">()</span><span class="w"> </span><span class="kt">payable</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// just being sent some cash?</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span><span class="k">msg.value</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span>
+<span class="w">      </span>Deposit<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span><span class="k">msg.value</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// constructor is given number of sigs required to do protected &quot;onlymanyowners&quot; transactions</span>
+<span class="w">  </span><span class="c1">// as well as the selection of addresses capable of confirming them.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">initMultiowned</span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>_owners<span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nv">_required</span><span class="p">)</span><span class="w"> </span>only_uninitialized<span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>m_numOwners<span class="w"> </span><span class="o">=</span><span class="w"> </span>_owners<span class="p">.</span>length<span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">;</span>
+<span class="w">    </span>m_owners<span class="p">[</span><span class="m m-Decimal">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">uint</span><span class="p">(</span><span class="k">msg.sender</span><span class="p">);</span>
+<span class="w">    </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span><span class="k">msg.sender</span><span class="p">)]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span><span class="w"> </span>i<span class="w"> </span><span class="o">&lt;</span><span class="w"> </span>_owners<span class="p">.</span>length<span class="p">;</span><span class="w"> </span><span class="o">++</span>i<span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span>m_owners<span class="p">[</span><span class="m m-Decimal">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>i<span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">uint</span><span class="p">(</span>_owners<span class="p">[</span>i<span class="p">]);</span>
+<span class="w">      </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span>_owners<span class="p">[</span>i<span class="p">])]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>i<span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span>m_required<span class="w"> </span><span class="o">=</span><span class="w"> </span>_required<span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Revokes a prior confirmation of the given operation</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">revoke</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">_operation</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">ownerIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span><span class="k">msg.sender</span><span class="p">)];</span>
+<span class="w">    </span><span class="c1">// make sure they&#39;re an owner</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>ownerIndex<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="kt">return</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">ownerIndexBit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">2</span><span class="o">**</span>ownerIndex<span class="p">;</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span>pending<span class="w"> </span><span class="o">=</span><span class="w"> </span>m_pending<span class="p">[</span>_operation<span class="p">];</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>pending<span class="p">.</span>ownersDone<span class="w"> </span><span class="o">&amp;</span><span class="w"> </span>ownerIndexBit<span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span>pending<span class="p">.</span>yetNeeded<span class="o">++</span><span class="p">;</span>
+<span class="w">      </span>pending<span class="p">.</span>ownersDone<span class="w"> </span><span class="o">-=</span><span class="w"> </span>ownerIndexBit<span class="p">;</span>
+<span class="w">      </span>Revoke<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>_operation<span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Replaces an owner `_from` with another `_to`.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">changeOwner</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_from</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">_to</span><span class="p">)</span><span class="w"> </span>onlymanyowners<span class="p">(</span>sha3<span class="p">(</span><span class="k">msg.data</span><span class="p">))</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>isOwner<span class="p">(</span>_to<span class="p">))</span><span class="w"> </span><span class="kt">return</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">ownerIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span>_from<span class="p">)];</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>ownerIndex<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="kt">return</span><span class="p">;</span>
+
+<span class="w">    </span>clearPending<span class="p">();</span>
+<span class="w">    </span>m_owners<span class="p">[</span>ownerIndex<span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">uint</span><span class="p">(</span>_to<span class="p">);</span>
+<span class="w">    </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span>_from<span class="p">)]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span>
+<span class="w">    </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span>_to<span class="p">)]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>ownerIndex<span class="p">;</span>
+<span class="w">    </span>OwnerChanged<span class="p">(</span>_from<span class="p">,</span><span class="w"> </span>_to<span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">addOwner</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_owner</span><span class="p">)</span><span class="w"> </span>onlymanyowners<span class="p">(</span>sha3<span class="p">(</span><span class="k">msg.data</span><span class="p">))</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>isOwner<span class="p">(</span>_owner<span class="p">))</span><span class="w"> </span><span class="kt">return</span><span class="p">;</span>
+
+<span class="w">    </span>clearPending<span class="p">();</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>m_numOwners<span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span>c_maxOwners<span class="p">)</span>
+<span class="w">      </span>reorganizeOwners<span class="p">();</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>m_numOwners<span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span>c_maxOwners<span class="p">)</span>
+<span class="w">      </span><span class="kt">return</span><span class="p">;</span>
+<span class="w">    </span>m_numOwners<span class="o">++</span><span class="p">;</span>
+<span class="w">    </span>m_owners<span class="p">[</span>m_numOwners<span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">uint</span><span class="p">(</span>_owner<span class="p">);</span>
+<span class="w">    </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span>_owner<span class="p">)]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>m_numOwners<span class="p">;</span>
+<span class="w">    </span>OwnerAdded<span class="p">(</span>_owner<span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">removeOwner</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_owner</span><span class="p">)</span><span class="w"> </span>onlymanyowners<span class="p">(</span>sha3<span class="p">(</span><span class="k">msg.data</span><span class="p">))</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">ownerIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span>_owner<span class="p">)];</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>ownerIndex<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="kt">return</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>m_required<span class="w"> </span><span class="o">&gt;</span><span class="w"> </span>m_numOwners<span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">)</span><span class="w"> </span><span class="kt">return</span><span class="p">;</span>
+
+<span class="w">    </span>m_owners<span class="p">[</span>ownerIndex<span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span>
+<span class="w">    </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span>_owner<span class="p">)]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span>
+<span class="w">    </span>clearPending<span class="p">();</span>
+<span class="w">    </span>reorganizeOwners<span class="p">();</span><span class="w"> </span><span class="c1">//make sure m_numOwner is equal to the number of owners and always points to the optimal free slot</span>
+<span class="w">    </span>OwnerRemoved<span class="p">(</span>_owner<span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">changeRequirement</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">_newRequired</span><span class="p">)</span><span class="w"> </span>onlymanyowners<span class="p">(</span>sha3<span class="p">(</span><span class="k">msg.data</span><span class="p">))</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>_newRequired<span class="w"> </span><span class="o">&gt;</span><span class="w"> </span>m_numOwners<span class="p">)</span><span class="w"> </span><span class="kt">return</span><span class="p">;</span>
+<span class="w">    </span>m_required<span class="w"> </span><span class="o">=</span><span class="w"> </span>_newRequired<span class="p">;</span>
+<span class="w">    </span>clearPending<span class="p">();</span>
+<span class="w">    </span>RequirementChanged<span class="p">(</span>_newRequired<span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Gets an owner by 0-indexed position (using numOwners as the count)</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">getOwner</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">ownerIndex</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">constant</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">return</span><span class="w"> </span><span class="kt">address</span><span class="p">(</span>m_owners<span class="p">[</span>ownerIndex<span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">]);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">isOwner</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_addr</span><span class="p">)</span><span class="w"> </span><span class="kt">constant</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">return</span><span class="w"> </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span>_addr<span class="p">)]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">hasConfirmed</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">_operation</span><span class="p">,</span><span class="w"> </span><span class="kt">address</span><span class="w"> </span><span class="nv">_owner</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="kt">constant</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span>pending<span class="w"> </span><span class="o">=</span><span class="w"> </span>m_pending<span class="p">[</span>_operation<span class="p">];</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">ownerIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span>_owner<span class="p">)];</span>
+
+<span class="w">    </span><span class="c1">// make sure they&#39;re an owner</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>ownerIndex<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="kt">return</span><span class="w"> </span><span class="kt">false</span><span class="p">;</span>
+
+<span class="w">    </span><span class="c1">// determine the bit to set for this owner.</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">ownerIndexBit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">2</span><span class="o">**</span>ownerIndex<span class="p">;</span>
+<span class="w">    </span><span class="kt">return</span><span class="w"> </span><span class="o">!</span><span class="p">(</span>pending<span class="p">.</span>ownersDone<span class="w"> </span><span class="o">&amp;</span><span class="w"> </span>ownerIndexBit<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// constructor - stores initial daily limit and records the present day&#39;s index.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">initDaylimit</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">_limit</span><span class="p">)</span><span class="w"> </span>only_uninitialized<span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>m_dailyLimit<span class="w"> </span><span class="o">=</span><span class="w"> </span>_limit<span class="p">;</span>
+<span class="w">    </span>m_lastDay<span class="w"> </span><span class="o">=</span><span class="w"> </span>today<span class="p">();</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// (re)sets the daily limit. needs many of the owners to confirm. doesn&#39;t alter the amount already spent today.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">setDailyLimit</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">_newLimit</span><span class="p">)</span><span class="w"> </span>onlymanyowners<span class="p">(</span>sha3<span class="p">(</span><span class="k">msg.data</span><span class="p">))</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>m_dailyLimit<span class="w"> </span><span class="o">=</span><span class="w"> </span>_newLimit<span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="w">  </span><span class="c1">// resets the amount already spent today. needs many of the owners to confirm.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">resetSpentToday</span><span class="p">()</span><span class="w"> </span>onlymanyowners<span class="p">(</span>sha3<span class="p">(</span><span class="k">msg.data</span><span class="p">))</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>m_spentToday<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// throw unless the contract is not yet initialized.</span>
+<span class="w">  </span><span class="kt">modifier</span><span class="w"> </span>only_uninitialized<span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>m_numOwners<span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="kt">throw</span><span class="p">;</span><span class="w"> </span>_<span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// constructor - just pass on the owner array to the multiowned and</span>
+<span class="w">  </span><span class="c1">// the limit to daylimit</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">initWallet</span><span class="p">(</span><span class="kt">address</span><span class="p">[]</span><span class="w"> </span>_owners<span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nv">_required</span><span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nv">_daylimit</span><span class="p">)</span><span class="w"> </span>only_uninitialized<span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>initDaylimit<span class="p">(</span>_daylimit<span class="p">);</span>
+<span class="w">    </span>initMultiowned<span class="p">(</span>_owners<span class="p">,</span><span class="w"> </span>_required<span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// kills the contract sending everything to `_to`.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">kill</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_to</span><span class="p">)</span><span class="w"> </span>onlymanyowners<span class="p">(</span>sha3<span class="p">(</span><span class="k">msg.data</span><span class="p">))</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">suicide</span><span class="p">(</span>_to<span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// Outside-visible transact entry point. Executes transaction immediately if below daily spend limit.</span>
+<span class="w">  </span><span class="c1">// If not, goes into multisig process. We provide a hash on return to allow the sender to provide</span>
+<span class="w">  </span><span class="c1">// shortcuts for the other confirmations (allowing them to avoid replicating the _to, _value</span>
+<span class="w">  </span><span class="c1">// and _data arguments). They still get the option of using them if they want, anyways.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">execute</span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">_to</span><span class="p">,</span><span class="w"> </span><span class="kt">uint</span><span class="w"> </span><span class="nv">_value</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">_data</span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>onlyowner<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">o_hash</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// first, take the opportunity to check that we&#39;re under the daily limit.</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">((</span>_data<span class="p">.</span>length<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>underLimit<span class="p">(</span>_value<span class="p">))</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>m_required<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// yes - just execute the call.</span>
+<span class="w">      </span><span class="kt">address</span><span class="w"> </span><span class="nv">created</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>_to<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>created<span class="w"> </span><span class="o">=</span><span class="w"> </span>create<span class="p">(</span>_value<span class="p">,</span><span class="w"> </span>_data<span class="p">);</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="kt">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span>_to<span class="p">.</span>call<span class="p">.</span>value<span class="p">(</span>_value<span class="p">)(</span>_data<span class="p">))</span>
+<span class="w">          </span><span class="kt">throw</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span>SingleTransact<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>_value<span class="p">,</span><span class="w"> </span>_to<span class="p">,</span><span class="w"> </span>_data<span class="p">,</span><span class="w"> </span>created<span class="p">);</span>
+<span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="kt">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// determine our operation hash.</span>
+<span class="w">      </span>o_hash<span class="w"> </span><span class="o">=</span><span class="w"> </span>sha3<span class="p">(</span><span class="k">msg.data</span><span class="p">,</span><span class="w"> </span><span class="k">block.number</span><span class="p">);</span>
+<span class="w">      </span><span class="c1">// store if it&#39;s new</span>
+<span class="w">      </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>m_txs<span class="p">[</span>o_hash<span class="p">].</span>to<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>m_txs<span class="p">[</span>o_hash<span class="p">].</span>value<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>m_txs<span class="p">[</span>o_hash<span class="p">].</span>data<span class="p">.</span>length<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>m_txs<span class="p">[</span>o_hash<span class="p">].</span>to<span class="w"> </span><span class="o">=</span><span class="w"> </span>_to<span class="p">;</span>
+<span class="w">        </span>m_txs<span class="p">[</span>o_hash<span class="p">].</span>value<span class="w"> </span><span class="o">=</span><span class="w"> </span>_value<span class="p">;</span>
+<span class="w">        </span>m_txs<span class="p">[</span>o_hash<span class="p">].</span>data<span class="w"> </span><span class="o">=</span><span class="w"> </span>_data<span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span>confirm<span class="p">(</span>o_hash<span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>ConfirmationNeeded<span class="p">(</span>o_hash<span class="p">,</span><span class="w"> </span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>_value<span class="p">,</span><span class="w"> </span>_to<span class="p">,</span><span class="w"> </span>_data<span class="p">);</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">create</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">_value</span><span class="p">,</span><span class="w"> </span><span class="kt">bytes</span><span class="w"> </span><span class="nv">_code</span><span class="p">)</span><span class="w"> </span><span class="kt">internal</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">address</span><span class="w"> </span><span class="nv">o_addr</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="cm">/*</span>
+<span class="cm">    assembly {</span>
+<span class="cm">      o_addr := create(_value, add(_code, 0x20), mload(_code))</span>
+<span class="cm">      jumpi(invalidJumpLabel, iszero(extcodesize(o_addr)))</span>
+<span class="cm">    }</span>
+<span class="cm">    */</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// confirm a transaction through just the hash. we use the previous transactions map, m_txs, in order</span>
+<span class="w">  </span><span class="c1">// to determine the body of the transaction from the hash provided.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">confirm</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">_h</span><span class="p">)</span><span class="w"> </span>onlymanyowners<span class="p">(</span>_h<span class="p">)</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="w"> </span><span class="nv">o_success</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>m_txs<span class="p">[</span>_h<span class="p">].</span>to<span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>m_txs<span class="p">[</span>_h<span class="p">].</span>value<span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="w"> </span><span class="o">||</span><span class="w"> </span>m_txs<span class="p">[</span>_h<span class="p">].</span>data<span class="p">.</span>length<span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">address</span><span class="w"> </span><span class="nv">created</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>m_txs<span class="p">[</span>_h<span class="p">].</span>to<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>created<span class="w"> </span><span class="o">=</span><span class="w"> </span>create<span class="p">(</span>m_txs<span class="p">[</span>_h<span class="p">].</span>value<span class="p">,</span><span class="w"> </span>m_txs<span class="p">[</span>_h<span class="p">].</span>data<span class="p">);</span>
+<span class="w">      </span><span class="p">}</span><span class="w"> </span><span class="kt">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span>m_txs<span class="p">[</span>_h<span class="p">].</span>to<span class="p">.</span>call<span class="p">.</span>value<span class="p">(</span>m_txs<span class="p">[</span>_h<span class="p">].</span>value<span class="p">)(</span>m_txs<span class="p">[</span>_h<span class="p">].</span>data<span class="p">))</span>
+<span class="w">          </span><span class="kt">throw</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+
+<span class="w">      </span>MultiTransact<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>_h<span class="p">,</span><span class="w"> </span>m_txs<span class="p">[</span>_h<span class="p">].</span>value<span class="p">,</span><span class="w"> </span>m_txs<span class="p">[</span>_h<span class="p">].</span>to<span class="p">,</span><span class="w"> </span>m_txs<span class="p">[</span>_h<span class="p">].</span>data<span class="p">,</span><span class="w"> </span>created<span class="p">);</span>
+<span class="w">      </span>delete<span class="w"> </span>m_txs<span class="p">[</span>_h<span class="p">];</span>
+<span class="w">      </span><span class="kt">return</span><span class="w"> </span><span class="kt">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// INTERNAL METHODS</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">confirmAndCheck</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="nv">_operation</span><span class="p">)</span><span class="w"> </span><span class="kt">internal</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// determine what index the present sender is:</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">ownerIndex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>m_ownerIndex<span class="p">[</span><span class="kt">uint</span><span class="p">(</span><span class="k">msg.sender</span><span class="p">)];</span>
+<span class="w">    </span><span class="c1">// make sure they&#39;re an owner</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>ownerIndex<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="kt">return</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">var</span><span class="w"> </span>pending<span class="w"> </span><span class="o">=</span><span class="w"> </span>m_pending<span class="p">[</span>_operation<span class="p">];</span>
+<span class="w">    </span><span class="c1">// if we&#39;re not yet working on this operation, switch over and reset the confirmation status.</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>pending<span class="p">.</span>yetNeeded<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="c1">// reset count of confirmations needed.</span>
+<span class="w">      </span>pending<span class="p">.</span>yetNeeded<span class="w"> </span><span class="o">=</span><span class="w"> </span>m_required<span class="p">;</span>
+<span class="w">      </span><span class="c1">// reset which owners have confirmed (none) - set our bitmap to 0.</span>
+<span class="w">      </span>pending<span class="p">.</span>ownersDone<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span>
+<span class="w">      </span>pending<span class="p">.</span>index<span class="w"> </span><span class="o">=</span><span class="w"> </span>m_pendingIndex<span class="p">.</span>length<span class="o">++</span><span class="p">;</span>
+<span class="w">      </span>m_pendingIndex<span class="p">[</span>pending<span class="p">.</span>index<span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>_operation<span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// determine the bit to set for this owner.</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">ownerIndexBit</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">2</span><span class="o">**</span>ownerIndex<span class="p">;</span>
+<span class="w">    </span><span class="c1">// make sure we (the message sender) haven&#39;t confirmed this operation previously.</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>pending<span class="p">.</span>ownersDone<span class="w"> </span><span class="o">&amp;</span><span class="w"> </span>ownerIndexBit<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span>Confirmation<span class="p">(</span><span class="k">msg.sender</span><span class="p">,</span><span class="w"> </span>_operation<span class="p">);</span>
+<span class="w">      </span><span class="c1">// ok - check if count is enough to go ahead.</span>
+<span class="w">      </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>pending<span class="p">.</span>yetNeeded<span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// enough confirmations: reset and run interior.</span>
+<span class="w">        </span>delete<span class="w"> </span>m_pendingIndex<span class="p">[</span>m_pending<span class="p">[</span>_operation<span class="p">].</span>index<span class="p">];</span>
+<span class="w">        </span>delete<span class="w"> </span>m_pending<span class="p">[</span>_operation<span class="p">];</span>
+<span class="w">        </span><span class="kt">return</span><span class="w"> </span><span class="kt">true</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">      </span><span class="kt">else</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="c1">// not enough: record that this owner in particular confirmed.</span>
+<span class="w">        </span>pending<span class="p">.</span>yetNeeded<span class="o">--</span><span class="p">;</span>
+<span class="w">        </span>pending<span class="p">.</span>ownersDone<span class="w"> </span><span class="o">|=</span><span class="w"> </span>ownerIndexBit<span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">reorganizeOwners</span><span class="p">()</span><span class="w"> </span><span class="kt">private</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">free</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">while</span><span class="w"> </span><span class="p">(</span>free<span class="w"> </span><span class="o">&lt;</span><span class="w"> </span>m_numOwners<span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="kt">while</span><span class="w"> </span><span class="p">(</span>free<span class="w"> </span><span class="o">&lt;</span><span class="w"> </span>m_numOwners<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>m_owners<span class="p">[</span>free<span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span>free<span class="o">++</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">while</span><span class="w"> </span><span class="p">(</span>m_numOwners<span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>m_owners<span class="p">[</span>m_numOwners<span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span>m_numOwners<span class="o">--</span><span class="p">;</span>
+<span class="w">      </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>free<span class="w"> </span><span class="o">&lt;</span><span class="w"> </span>m_numOwners<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>m_owners<span class="p">[</span>m_numOwners<span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>m_owners<span class="p">[</span>free<span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span>m_owners<span class="p">[</span>free<span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>m_owners<span class="p">[</span>m_numOwners<span class="p">];</span>
+<span class="w">        </span>m_ownerIndex<span class="p">[</span>m_owners<span class="p">[</span>free<span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>free<span class="p">;</span>
+<span class="w">        </span>m_owners<span class="p">[</span>m_numOwners<span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// checks to see if there is at least `_value` left from the daily limit today. if there is, subtracts it and</span>
+<span class="w">  </span><span class="c1">// returns true. otherwise just returns false.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">underLimit</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">_value</span><span class="p">)</span><span class="w"> </span><span class="kt">internal</span><span class="w"> </span>onlyowner<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">bool</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// reset the spend limit if we&#39;re on a different day to last time.</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>today<span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span>m_lastDay<span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span>m_spentToday<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span>
+<span class="w">      </span>m_lastDay<span class="w"> </span><span class="o">=</span><span class="w"> </span>today<span class="p">();</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="c1">// check to see if there&#39;s enough left - if so, subtract and return true.</span>
+<span class="w">    </span><span class="c1">// overflow protection                    // dailyLimit check</span>
+<span class="w">    </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>m_spentToday<span class="w"> </span><span class="o">+</span><span class="w"> </span>_value<span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span>m_spentToday<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>m_spentToday<span class="w"> </span><span class="o">+</span><span class="w"> </span>_value<span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span>m_dailyLimit<span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span>m_spentToday<span class="w"> </span><span class="o">+=</span><span class="w"> </span>_value<span class="p">;</span>
+<span class="w">      </span><span class="kt">return</span><span class="w"> </span><span class="kt">true</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kt">return</span><span class="w"> </span><span class="kt">false</span><span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// determines today&#39;s index.</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">today</span><span class="p">()</span><span class="w"> </span><span class="kt">private</span><span class="w"> </span><span class="kt">constant</span><span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="kt">return</span><span class="w"> </span>now<span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="w"> </span>days<span class="p">;</span><span class="w"> </span><span class="p">}</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">clearPending</span><span class="p">()</span><span class="w"> </span><span class="kt">internal</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint</span><span class="w"> </span><span class="nv">length</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>m_pendingIndex<span class="p">.</span>length<span class="p">;</span>
+
+<span class="w">    </span><span class="kt">for</span><span class="w"> </span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="nv">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span><span class="w"> </span>i<span class="w"> </span><span class="o">&lt;</span><span class="w"> </span>length<span class="p">;</span><span class="w"> </span><span class="o">++</span>i<span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span>delete<span class="w"> </span>m_txs<span class="p">[</span>m_pendingIndex<span class="p">[</span>i<span class="p">]];</span>
+
+<span class="w">      </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>m_pendingIndex<span class="p">[</span>i<span class="p">]</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span>
+<span class="w">        </span>delete<span class="w"> </span>m_pending<span class="p">[</span>m_pendingIndex<span class="p">[</span>i<span class="p">]];</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span>delete<span class="w"> </span>m_pendingIndex<span class="p">;</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="w">  </span><span class="c1">// FIELDS</span>
+<span class="w">  </span><span class="kt">address</span><span class="w"> </span><span class="nv">constant</span><span class="w"> </span>_walletLibrary<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mh">0xcafecafecafecafecafecafecafecafecafecafe</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// the number of owners that must confirm the same operation before it is run.</span>
+<span class="w">  </span><span class="kt">uint</span><span class="w"> </span><span class="k">public </span><span class="nv">m_required</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// pointer used to find a free slot in m_owners</span>
+<span class="w">  </span><span class="kt">uint</span><span class="w"> </span><span class="k">public </span><span class="nv">m_numOwners</span><span class="p">;</span>
+
+<span class="w">  </span><span class="kt">uint</span><span class="w"> </span><span class="k">public </span><span class="nv">m_dailyLimit</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint</span><span class="w"> </span><span class="k">public </span><span class="nv">m_spentToday</span><span class="p">;</span>
+<span class="w">  </span><span class="kt">uint</span><span class="w"> </span><span class="k">public </span><span class="nv">m_lastDay</span><span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// list of owners</span>
+<span class="w">  </span><span class="kt">uint</span><span class="p">[</span><span class="m m-Decimal">256</span><span class="p">]</span><span class="w"> </span>m_owners<span class="p">;</span>
+
+<span class="w">  </span><span class="kt">uint</span><span class="w"> </span><span class="nv">constant</span><span class="w"> </span>c_maxOwners<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">250</span><span class="p">;</span>
+<span class="w">  </span><span class="c1">// index on the list of owners to allow reverse lookup</span>
+<span class="w">  </span><span class="kt">mapping</span><span class="p">(</span><span class="kt">uint</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span><span class="kt">uint</span><span class="p">)</span><span class="w"> </span>m_ownerIndex<span class="p">;</span>
+<span class="w">  </span><span class="c1">// the ongoing operations.</span>
+<span class="w">  </span><span class="kt">mapping</span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span>PendingState<span class="p">)</span><span class="w"> </span>m_pending<span class="p">;</span>
+<span class="w">  </span><span class="kt">bytes32</span><span class="p">[]</span><span class="w"> </span>m_pendingIndex<span class="p">;</span>
+
+<span class="w">  </span><span class="c1">// pending transactions we have at present.</span>
+<span class="w">  </span><span class="kt">mapping</span><span class="w"> </span><span class="p">(</span><span class="kt">bytes32</span><span class="w"> </span><span class="o">=&gt;</span><span class="w"> </span>Transaction<span class="p">)</span><span class="w"> </span>m_txs<span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="simple_suicidesol">simple_suicide.sol</h3>
+<div class="highlight"><pre><span></span><code><span class="k">pragma solidity</span><span class="w"> </span><span class="o">^</span><span class="k">0.4.22</span><span class="p">;</span>
+
+<span class="k">contract</span><span class="w"> </span><span class="ni">SimpleSuicide</span><span class="w"> </span><span class="p">{</span>
+
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">sudicideAnyone</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span>selfdestruct<span class="p">(</span><span class="k">msg.sender</span><span class="p">);</span>
+<span class="w">  </span><span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="suicide_multitx_feasiblesol">suicide_multitx_feasible.sol</h3>
+<div class="highlight"><pre><span></span><code><span class="k">pragma solidity</span><span class="w"> </span><span class="o">^</span><span class="k">0.4.23</span><span class="p">;</span>
+
+<span class="k">contract</span><span class="w"> </span><span class="ni">SuicideMultiTxFeasible</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint256</span><span class="w"> </span><span class="k">private </span><span class="nv">initialized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint256</span><span class="w"> </span><span class="k">public </span><span class="nv">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">init</span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>initialized<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">run</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>initialized<span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">return</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span>selfdestruct<span class="p">(</span><span class="k">msg.sender</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="suicide_multitx_infeasiblesol">suicide_multitx_infeasible.sol</h3>
+<div class="highlight"><pre><span></span><code><span class="k">pragma solidity</span><span class="w"> </span><span class="o">^</span><span class="k">0.4.23</span><span class="p">;</span>
+
+<span class="k">contract</span><span class="w"> </span><span class="ni">SuicideMultiTxFeasible</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kt">uint256</span><span class="w"> </span><span class="k">private </span><span class="nv">initialized</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">0</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">uint256</span><span class="w"> </span><span class="k">public </span><span class="nv">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">init</span><span class="p">()</span><span class="w"> </span><span class="kt">public</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span>initialized<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m m-Decimal">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="kt">function</span><span class="w"> </span><span class="nv">run</span><span class="p">(</span><span class="kt">uint256</span><span class="w"> </span><span class="nv">input</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="kt">if</span><span class="w"> </span><span class="p">(</span>initialized<span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="m m-Decimal">2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">return</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+
+<span class="w">        </span>selfdestruct<span class="p">(</span><span class="k">msg.sender</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.fe8b6f2b.min.js"></script>
+      
+    
+  </body>
+</html>
